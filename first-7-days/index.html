@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Your First 7 Days Abroad — a free mini-journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 110px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar a.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine);text-decoration:none}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 24px}
+header.hero .mark{width:38px;height:38px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:50px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:30ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:8px 0 6px}
+.intro p{margin:0 0 10px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:11px 15px;border-radius:0 8px 8px 0;margin-top:12px;line-height:1.5}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px 8px;margin:18px 0}
+.module .day{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:11.5px;color:var(--clay);font-weight:600}
+.module h3{font-family:var(--serif);font-weight:600;font-size:27px;margin:3px 0 8px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:18px;color:#494033;line-height:1.5;margin:0 0 16px}
+.prompt{margin:0 0 18px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+textarea.grow{width:100%;min-height:58px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.endcard{background:var(--pine);color:var(--cream);border-radius:14px;padding:30px 28px;margin:30px 0 0;text-align:center}
+.endcard h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:0 0 10px}
+.endcard p{font-size:15px;color:#D8D3C6;margin:0 auto;max-width:48ch;line-height:1.6}
+.foot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}textarea.grow{background:#fff;border:1px solid #ccc}.endcard{background:#fff;color:#000;border:1px solid #ccc}.endcard p{color:#333}}
+@media(max-width:560px){header.hero h1{font-size:38px}}
+</style></head><body>
+<div class="toolbar"><a class="brand" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></a><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">A free mini-journal</div>
+<h1>Your First 7 Days Abroad</h1>
+<div class="sub">One small page a day, for the week you land.</div>
+<div class="by">Created by Stephanie Johnson, LICSW · The Grounded Expat</div>
+</header>
+<div class="intro"><p>You just arrived. Before any of the big questions, this is a gentle companion for your first week — <strong>one small page a day</strong>. It won’t fix everything; it’ll just help you land.</p><p><strong>Your writing saves automatically</strong> on this device and stays completely private to you. Use <em>Print / Save as PDF</em> to keep it, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This is an educational, self-reflection resource — not therapy, diagnosis, or a crisis service. If you’re struggling beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or local emergency services. You deserve real support.</div></div>
+
+<section class="module"><div class="day">Day One</div><h3>You’re Here</h3>
+<p class="where">You don’t have to feel at home yet. Today, the only task is to arrive.</p>
+<div class="prompt"><div class="plabel">Where are you, right now, as you write this? Describe the actual room — the light, the sounds, the temperature. Let yourself be exactly here.</div>
+<textarea class="j-field grow" id="d1_q1" data-module="Day 1 — You’re Here" data-label="Where you are, right now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">One thing that already feels okay — even something tiny:</div>
+<textarea class="j-field grow" id="d1_q2" data-module="Day 1 — You’re Here" data-label="One thing that feels okay" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Two</div><h3>Your Body First</h3>
+<p class="where">Your nervous system reads ‘new’ as ‘unsafe’ and works overtime to keep up. Settle the body before the big questions.</p>
+<div class="prompt"><div class="plabel">What is your body asking you for today — rest, food, air, movement, stillness? Name it, and give it one.</div>
+<textarea class="j-field grow" id="d2_q1" data-module="Day 2 — Your Body First" data-label="What your body is asking for" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Three</div><h3>One Anchor</h3>
+<p class="where">Abroad, routine is medicine. One familiar thing, repeated, is how your system learns it’s safe here.</p>
+<div class="prompt"><div class="plabel">One small daily anchor you’ll keep — a coffee, a walk, a song, a stretch — starting today:</div>
+<textarea class="j-field grow" id="d3_q1" data-module="Day 3 — One Anchor" data-label="Your one daily anchor" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Four</div><h3>Step Outside</h3>
+<p class="where">A small, low-stakes exploration. Not the whole city — just a little further than yesterday.</p>
+<div class="prompt"><div class="plabel">One small thing you’ll go see or do today — and afterward, one good thing you noticed:</div>
+<textarea class="j-field grow" id="d4_q1" data-module="Day 4 — Step Outside" data-label="A small exploration + what you noticed" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Five</div><h3>Reach Out</h3>
+<p class="where">Connection is a regulator. One message — here or back home — genuinely counts.</p>
+<div class="prompt"><div class="plabel">One person you’ll reach out to today, and what you’ll say:</div>
+<textarea class="j-field grow" id="d5_q1" data-module="Day 5 — Reach Out" data-label="One person you’ll reach out to" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Six</div><h3>Name the Hard Part</h3>
+<p class="where">Naming a hard thing shrinks it. Whatever you’re finding hard is normal — and allowed.</p>
+<div class="prompt"><div class="plabel">What’s been hardest so far? Just name it — no fixing required.</div>
+<textarea class="j-field grow" id="d6_q1" data-module="Day 6 — Name the Hard Part" data-label="What’s been hardest" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Day Seven</div><h3>One Intention</h3>
+<p class="where">You made it a week. That’s not nothing — that’s the hardest part, begun.</p>
+<div class="prompt"><div class="plabel">What do you want the next stretch to feel like? One word — and one small step toward it:</div>
+<textarea class="j-field grow" id="d7_q1" data-module="Day 7 — One Intention" data-label="Your intention + one small step" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="endcard">
+<h2>Seven days down.</h2>
+<p>Be gentle with yourself — you’re doing the work just by showing up. When you’re ready to go deeper, the full <em>Relocation Journal</em> walks the whole arc of life abroad. You’re on the list, so you’ll be the first to know the moment it lands. 🌿</p>
+</div>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-first7-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='YOUR FIRST 7 DAYS ABROAD\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n──────────────\n'+m+'\n──────────────\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My First 7 Days Abroad.txt';a.click();
+}
+</script></body></html>

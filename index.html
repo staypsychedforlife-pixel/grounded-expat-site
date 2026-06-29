@@ -99,7 +99,7 @@ img{max-width:100%}
 
 /* about */
 .about{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,4vw,56px);align-items:center}
-.avatar{width:128px;height:128px;border-radius:50%;background:var(--pine);color:var(--cream);font-family:var(--serif);font-size:46px;font-weight:500;display:flex;align-items:center;justify-content:center;flex:none}
+.avatar{width:128px;height:128px;border-radius:50%;background:var(--pine);color:var(--cream);font-family:var(--serif);font-size:46px;font-weight:500;display:flex;align-items:center;justify-content:center;flex:none;object-fit:cover}
 .about p{font-size:17px;line-height:1.7;color:var(--ink);margin:0 0 14px;max-width:60ch}
 .about .name{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--pine)}
 
@@ -140,7 +140,7 @@ img{max-width:100%}
       <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
       <span><span class="the">The</span> Grounded <b>Expat</b></span>
     </a>
-    <a class="btn btn--clay" href="#join">Join the list</a>
+    <a class="btn btn--clay" href="#join">Get the free journal</a>
   </div>
 </header>
 
@@ -157,9 +157,9 @@ img{max-width:100%}
         <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" autocomplete="email">
         <input type="hidden" name="_form" value="grounded-waitlist">
         <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn" type="submit">Keep me posted</button>
+        <button class="btn" type="submit">Send me the free journal</button>
       </form>
-      <p class="note" role="status" aria-live="polite">Be first when the workbooks drop. No noise — just useful things, occasionally.</p>
+      <p class="note" role="status" aria-live="polite">Join the list and I&rsquo;ll send you the free mini-journal &mdash; <em>Your First 7 Days Abroad</em> &mdash; right away.</p>
     </div>
   </div>
 </section>
@@ -229,7 +229,7 @@ img{max-width:100%}
 
 <section class="section">
   <div class="wrap about">
-    <div class="avatar" aria-hidden="true">S</div>
+    <img class="avatar" src="assets/stephanie.jpg" alt="Stephanie Johnson, LICSW — founder of The Grounded Expat" width="128" height="128">
     <div>
       <div class="kicker"><span class="seed"></span>Who&rsquo;s behind it</div>
       <p style="margin-top:14px;"><span class="name">Hi, I&rsquo;m Stephanie.</span> I&rsquo;m a licensed clinical social worker with nearly twenty years in human services &mdash; and I&rsquo;ve spent the last three living the expat life myself, across Southeast Asia and South America.</p>
@@ -240,15 +240,15 @@ img{max-width:100%}
 
 <section class="section cta">
   <div class="wrap">
-    <h2 class="serif">The first tools are coming soon.</h2>
+    <h2 class="serif">Start with the free mini-journal.</h2>
     <div class="signup" style="max-width:480px;">
       <form class="join-form" novalidate aria-label="Join the early list">
         <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" autocomplete="email">
         <input type="hidden" name="_form" value="grounded-waitlist">
         <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--cream" type="submit">Join the list</button>
+        <button class="btn btn--cream" type="submit">Send me the free journal</button>
       </form>
-      <p class="note" role="status" aria-live="polite">One email when there&rsquo;s something worth your time. Unsubscribe anytime.</p>
+      <p class="note" role="status" aria-live="polite"><em>Your First 7 Days Abroad</em>, free &mdash; plus first word when the full workbooks land. Unsubscribe anytime.</p>
     </div>
   </div>
 </section>
@@ -298,7 +298,7 @@ img{max-width:100%}
         .then(function(res){
           if(res.ok){
             form.reset();
-            note.textContent = "You’re on the list — thank you. I’ll be in touch.";
+            note.innerHTML = 'You’re in! Your free journal is ready — <a href="/first-7-days/" style="color:inherit;font-weight:600;text-decoration:underline">open it here →</a>';
             note.className = "note ok";
           } else {
             note.textContent = "Something went wrong — please try again in a moment.";
