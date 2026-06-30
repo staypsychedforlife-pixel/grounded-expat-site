@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inside The Circle — the community | The Grounded Expat</title>
+<meta name="description" content="A peek inside The Circle: a calm, always-on community for the inner side of living abroad. Spaces for each theme, member-started support threads, and a licensed clinical social worker as your host.">
+<link rel="canonical" href="https://thegroundedexpat.com/the-circle/community/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inside The Circle — The Grounded Expat">
+<meta property="og:description" content="A calm, always-on community for the inner side of living abroad — spaces for each theme, member-started support threads, and a clinician as host.">
+<meta property="og:url" content="https://thegroundedexpat.com/the-circle/community/">
+<meta property="og:site_name" content="The Grounded Expat">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;
+  --oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;
+  --muted:#6E6557;--line:rgba(42,38,34,.13);--line-light:rgba(251,248,241,.22);
+  --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--clay)}
+.kicker .seed{width:8px;height:8px;border-radius:50%;background:var(--clay);flex:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;border:1.5px solid var(--pine);background:var(--pine);color:var(--cream);cursor:pointer}
+.btn--clay{background:var(--clay);border-color:var(--clay)}
+.btn--cream{background:var(--cream);border-color:var(--cream);color:var(--pine)}
+.site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--pine)}
+.brand .mark{width:26px;height:26px;flex:none}
+.brand .the{color:var(--sage);font-weight:500}
+.hero{position:relative;overflow:hidden;padding:clamp(52px,7vw,92px) 0 clamp(34px,4vw,52px);text-align:center}
+.hero .halo{position:absolute;left:50%;top:-160px;transform:translateX(-50%);width:560px;height:560px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(194,103,74,.14),rgba(194,103,74,0) 68%);pointer-events:none}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.4vw,68px);line-height:1.03;letter-spacing:-.015em;margin:18px auto 0;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--clay)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:54ch;margin:20px auto 0}
+.section{padding:clamp(40px,6vw,76px) 0}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,3.5vw,46px);line-height:1.08;margin:14px 0 0;max-width:22ch}
+.section .sub{font-size:17px;color:var(--muted);max-width:56ch;margin:14px 0 0}
+.s-alt{background:var(--oat-alt)}
+.center{text-align:center}.center h2,.center .sub{margin-left:auto;margin-right:auto}
+.peeklabel{text-align:center;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:16px}
+/* board preview */
+.board{display:flex;gap:16px;background:var(--cream);border:1px solid var(--line);border-radius:20px;padding:16px;align-items:flex-start;max-width:880px;margin:0 auto;box-shadow:0 18px 50px rgba(42,38,34,.06)}
+.board-side{width:188px;flex:none}
+.board-side .bt{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--pine);padding:2px 10px 0}
+.board-side .bsub{font-size:11px;color:var(--muted);padding:0 10px 12px}
+.space{display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:10px;font-size:13.5px;color:var(--muted)}
+.space.on{background:var(--oat-alt);color:var(--pine);font-weight:600}
+.feed{flex:1;min-width:0}
+.feed-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.feed-head .ft{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.newbtn{background:var(--clay);color:var(--cream);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;display:inline-flex;gap:5px;align-items:center}
+.thread{background:var(--oat);border:1px solid var(--line);border-radius:13px;padding:13px 15px;margin-bottom:10px}
+.thread:last-child{margin-bottom:0}
+.av{width:34px;height:34px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;color:var(--cream)}
+.trow{display:flex;gap:10px;align-items:flex-start}
+.meta{font-size:12.5px;color:var(--muted)}
+.tt{font-size:14.5px;font-weight:600;color:var(--ink);margin-top:1px}
+.tsnip{font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.55}
+.reply{display:flex;gap:9px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.host{background:var(--pine);color:var(--cream);font-size:10.5px;padding:1px 7px;border-radius:999px;font-weight:600;vertical-align:1px}
+.pin{background:var(--oat-alt);color:var(--sage);font-size:10.5px;padding:1px 7px;border-radius:999px;font-weight:600}
+.repcount{font-size:12.5px;color:var(--sage);font-weight:600;margin-top:9px}
+/* spaces grid */
+.spaces{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:clamp(28px,4vw,44px)}
+.sp{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 22px}
+.sp .ic{font-size:24px}
+.sp h3{font-family:var(--serif);font-weight:600;font-size:19px;margin:10px 0 5px;color:var(--pine)}
+.sp p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55}
+/* how + vibe */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:22px 34px;margin-top:clamp(28px,4vw,44px)}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step .n{flex:none;width:32px;height:32px;border-radius:50%;background:rgba(194,103,74,.14);color:var(--clay);font-family:var(--serif);font-weight:600;font-size:16px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.step h4{font-family:var(--serif);font-weight:600;font-size:19px;margin:0 0 4px}
+.step p{font-size:15px;color:var(--muted);margin:0;line-height:1.55}
+.vibe{list-style:none;padding:0;margin:clamp(26px,4vw,40px) 0 0;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.vibe li{position:relative;padding-left:30px;font-size:15.5px;color:#D8D3C6;line-height:1.55}
+.vibe li b{color:var(--cream);font-weight:600}
+.vibe li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--clay)}
+.cta{background:var(--clay);color:var(--cream);text-align:center}
+.cta h2{color:var(--cream);max-width:20ch;margin:0 auto}
+.cta p{color:#FBEFE9;max-width:46ch;margin:16px auto 0}
+.foot{background:var(--pine-deep);color:#CFC9BC;font-size:14px}
+.foot .wrap{padding:46px 28px 36px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot a:hover{color:var(--cream)}
+.foot .links{display:flex;gap:20px;flex-wrap:wrap}
+@media(max-width:820px){.spaces{grid-template-columns:1fr 1fr}.steps,.vibe{grid-template-columns:1fr}.board{flex-direction:column}.board-side{width:100%;display:flex;flex-wrap:wrap;gap:4px}.board-side .bt,.board-side .bsub{width:100%}}
+@media(max-width:560px){.spaces{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="The Grounded Expat — home">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><span class="the">The</span> Grounded <b>Expat</b></span>
+    </a>
+    <a class="btn btn--clay" href="/the-circle#join">Join the founding circle</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <span class="halo" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Inside The Circle</div>
+    <h1>A calm place to land &mdash; with people who <em>get it</em>.</h1>
+    <p class="lead">The Circle isn&rsquo;t another noisy feed. It&rsquo;s a quiet, always-on community for the inner side of living abroad &mdash; a space for each theme, room to start your own thread when you need support, and a licensed clinical social worker as your host. Here&rsquo;s a peek inside.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="peeklabel">A glimpse of the space</div>
+    <div class="board" role="img" aria-label="Preview of The Circle community board: a sidebar of spaces and a feed of member-started support threads with replies.">
+      <div class="board-side">
+        <div class="bt">The Circle</div>
+        <div class="bsub">community</div>
+        <div class="space">👋&nbsp; Welcome &amp; intros</div>
+        <div class="space">🌱&nbsp; This month</div>
+        <div class="space">📚&nbsp; The workshops</div>
+        <div class="space on">💬&nbsp; What I&rsquo;m navigating</div>
+        <div class="space">🎉&nbsp; Small wins</div>
+        <div class="space">🧭&nbsp; Ask Stephanie</div>
+      </div>
+      <div class="feed">
+        <div class="feed-head">
+          <div class="ft">What I&rsquo;m navigating</div>
+          <span class="newbtn">+ New thread</span>
+        </div>
+        <div class="thread">
+          <div class="trow">
+            <div class="av" style="background:var(--pine)">SJ</div>
+            <div style="flex:1;min-width:0">
+              <div class="meta"><b style="color:var(--ink)">Stephanie</b> <span class="host">Host</span> <span class="pin">pinned</span></div>
+              <div class="tt">How this space works &mdash; read me first</div>
+            </div>
+          </div>
+        </div>
+        <div class="thread">
+          <div class="trow">
+            <div class="av" style="background:var(--clay)">JK</div>
+            <div style="flex:1;min-width:0">
+              <div class="meta"><b style="color:var(--ink)">Jon</b> &middot; 5h ago</div>
+              <div class="tt">Month 4 and I think I made a mistake. Does the dip actually pass?</div>
+              <div class="tsnip">Everything felt fine when we arrived, and now I just want to go home. Tell me it gets better&hellip;</div>
+              <div class="reply">
+                <div class="av" style="width:26px;height:26px;font-size:11px;background:var(--sage)">LM</div>
+                <div style="font-size:13px;color:var(--muted);line-height:1.55"><b style="color:var(--ink)">Lena</b> &mdash; month 4 was my lowest too. It genuinely lifted around month 7. You&rsquo;re not crazy, and you&rsquo;re not alone. 💛</div>
+              </div>
+              <div class="reply">
+                <div class="av" style="width:26px;height:26px;font-size:11px;background:var(--pine)">SJ</div>
+                <div style="font-size:13px;color:var(--muted);line-height:1.55"><b style="color:var(--ink)">Stephanie</b> <span class="host">Host</span> &mdash; this is the Dip, Jon, and it&rsquo;s the most predictable stage there is. Workshop 02 maps it. So glad you said it out loud here.</div>
+              </div>
+              <div class="repcount">14 replies</div>
+            </div>
+          </div>
+        </div>
+        <div class="thread">
+          <div class="trow">
+            <div class="av" style="background:#B98A4B">PR</div>
+            <div style="flex:1;min-width:0">
+              <div class="meta"><b style="color:var(--ink)">Priya</b> &middot; 1d ago</div>
+              <div class="tt">Tips for making friends when you work from home?</div>
+              <div class="repcount">9 replies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="center" style="font-size:13.5px;color:var(--muted);margin-top:16px;max-width:52ch;margin-left:auto;margin-right:auto;">A preview of the feel. The live community opens to founding members soon.</p>
+  </div>
+</section>
+
+<section class="section s-alt">
+  <div class="wrap center">
+    <div class="kicker"><span class="seed"></span>The spaces</div>
+    <h2>Six calm corners &mdash; and room to start your own.</h2>
+    <div class="spaces" style="text-align:left;">
+      <div class="sp"><div class="ic">👋</div><h3>Welcome &amp; intros</h3><p>Everyone says hello. The easiest first post, and instant belonging.</p></div>
+      <div class="sp"><div class="ic">🌱</div><h3>This month</h3><p>The current theme&rsquo;s hub &mdash; the workshop, the prompt, the conversation.</p></div>
+      <div class="sp"><div class="ic">📚</div><h3>The workshops</h3><p>A thread for each workshop, so you can reflect and compare notes as you go.</p></div>
+      <div class="sp"><div class="ic">💬</div><h3>What I&rsquo;m navigating</h3><p>Start a thread about whatever you need support with. Someone here has been there.</p></div>
+      <div class="sp"><div class="ic">🎉</div><h3>Small wins</h3><p>Tiny victories &mdash; a friend made, a form survived, a sentence understood.</p></div>
+      <div class="sp"><div class="ic">🧭</div><h3>Ask Stephanie</h3><p>Post your questions; I answer through the week. Support and perspective, always.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>How it works</div>
+    <h2>No scheduled calls. No pressure. Just a place that&rsquo;s always there.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h4>On your time</h4><p>It&rsquo;s async, so it works in every time zone. Drop in at midnight or never &mdash; lurking is welcome.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Start a thread anytime</h4><p>Carrying something heavy? Post it in <em>What I&rsquo;m navigating</em>. You don&rsquo;t have to wait for a meeting.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Real peer support</h4><p>People living the same in-between, who answer with &ldquo;me too&rdquo; instead of &ldquo;how exciting.&rdquo;</p></div></div>
+      <div class="step"><div class="n">4</div><div><h4>A clinician in the room</h4><p>I&rsquo;m here as your host &mdash; sharing prompts, holding the space, and answering questions. Support and education, never therapy.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section s-alt" style="background:var(--pine);">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--clay);"><span class="seed"></span>The vibe</div>
+    <h2 style="color:var(--cream);">What keeps it safe and warm.</h2>
+    <ul class="vibe">
+      <li><b>What&rsquo;s shared here, stays here.</b> Confidentiality is our one firm rule.</li>
+      <li><b>Come as you are.</b> No pressure to perform being okay.</li>
+      <li><b>We support, we don&rsquo;t diagnose.</b> Lived-experience support and education &mdash; not therapy or crisis care.</li>
+      <li><b>Presence before advice.</b> &ldquo;Me too&rdquo; goes further than fixing.</li>
+      <li><b>Be kind; assume good intent.</b> We&rsquo;re all tired and far from home.</li>
+      <li><b>Your people are here.</b> Quietly, in the same in-between as you.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <div class="kicker" style="color:var(--cream);"><span class="seed" style="background:var(--cream);"></span>Founding members</div>
+    <h2 style="margin-top:14px;">Your people are already here.</h2>
+    <p>The Circle opens to a small founding group first &mdash; locked-in rate, first through the doors, and a real say in what it becomes.</p>
+    <a class="btn btn--cream" style="margin-top:26px;" href="/the-circle#join">Join the founding circle</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="The Grounded Expat — home" style="color:var(--cream)">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#FBF8F1" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span style="color:var(--cream)"><span style="color:var(--sage)">The</span> Grounded <b>Expat</b></span>
+    </a>
+    <div class="links">
+      <a href="/the-circle">The Circle</a>
+      <a href="/">Home</a>
+      <a href="mailto:hello@thegroundedexpat.com">hello@thegroundedexpat.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
