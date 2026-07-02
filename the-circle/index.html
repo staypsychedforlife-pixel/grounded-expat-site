@@ -260,6 +260,7 @@ img{max-width:100%}
 <script>
 (function(){
   var ENDPOINT = "/api/submit";
+  var KIT_FORM_ID = "9638944"; // The Grounded Expat — The Circle Waitlist (kit.com)
   document.querySelectorAll("form.join-form").forEach(function(form){
     var note = form.parentNode.querySelector(".note");
     var btn = form.querySelector("button");
@@ -274,6 +275,21 @@ img{max-width:100%}
       var data = {}; new FormData(form).forEach(function(v,k){ data[k]=v; });
       btn.disabled = true; var label = btn.textContent; btn.textContent = "Sending…";
       note.textContent = ""; note.className = "note";
+
+      // Add the subscriber to Kit (ConvertKit) — The Circle waitlist form — fire-and-forget.
+      // Kept separate from the free-journal list so the founding list can be emailed on its own.
+      // Never blocks or breaks the signup if Kit is unreachable.
+      if (KIT_FORM_ID) {
+        try {
+          var kitData = new FormData();
+          kitData.append("email_address", email);
+          if (data.name) { kitData.append("fields[first_name]", data.name); }
+          fetch("https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
+            method: "POST", headers: { "Accept": "application/json" }, body: kitData
+          });
+        } catch (e) { /* best-effort only */ }
+      }
+
       fetch(ENDPOINT, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
         .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok&&j.ok, j:j}; }); })
         .then(function(res){
