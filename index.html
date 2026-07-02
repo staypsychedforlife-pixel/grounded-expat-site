@@ -43,6 +43,9 @@ img{max-width:100%}
 /* header */
 .site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.site-nav{display:flex;align-items:center;gap:24px}
+.nav-link{font-weight:600;font-size:15px;color:var(--pine);transition:color .12s ease}
+.nav-link:hover{color:var(--clay)}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--pine);letter-spacing:.01em}
 .brand .mark{width:26px;height:26px;flex:none}
 .brand b{font-weight:600}
@@ -129,6 +132,8 @@ img{max-width:100%}
   body{font-size:16px}
   .cards,.who,.rel{grid-template-columns:1fr}
   .site-head .btn{padding:10px 18px;font-size:14px}
+  .site-nav{gap:16px}
+  .nav-link{font-size:14px}
 }
 </style>
 </head>
@@ -140,7 +145,10 @@ img{max-width:100%}
       <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
       <span><span class="the">The</span> Grounded <b>Expat</b></span>
     </a>
-    <a class="btn btn--clay" href="#join">Get the free journal</a>
+    <nav class="site-nav">
+      <a href="/the-circle" class="nav-link">The Circle</a>
+      <a class="btn btn--clay" href="#join">Get the free journal</a>
+    </nav>
   </div>
 </header>
 
