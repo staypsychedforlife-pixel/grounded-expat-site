@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Making Friends in a New Country — a reflective journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 110px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar a.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine);text-decoration:none}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 24px}
+header.hero .mark{width:38px;height:38px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:46px;line-height:1.04;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:8px 0 6px}
+.intro p{margin:0 0 10px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:11px 15px;border-radius:0 8px 8px 0;margin-top:12px;line-height:1.5}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px 8px;margin:18px 0}
+.module .day{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:11.5px;color:var(--clay);font-weight:600}
+.module h3{font-family:var(--serif);font-weight:600;font-size:27px;margin:3px 0 8px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:18px;color:#494033;line-height:1.5;margin:0 0 16px}
+.prompt{margin:0 0 18px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+textarea.grow{width:100%;min-height:58px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;opacity:1;font-style:italic}
+textarea.grow{cursor:text;-webkit-user-select:text;user-select:text}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.endcard{background:var(--pine);color:var(--cream);border-radius:14px;padding:30px 28px;margin:30px 0 0;text-align:center}
+.endcard h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:0 0 10px}
+.endcard p{font-size:15px;color:#D8D3C6;margin:0 auto;max-width:48ch;line-height:1.6}
+.foot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}textarea.grow{background:#fff;border:1px solid #ccc}.endcard{background:#fff;color:#000;border:1px solid #ccc}.endcard p{color:#333}}
+@media(max-width:560px){header.hero h1{font-size:34px}}
+</style></head><body>
+<div class="toolbar"><a class="brand" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></a><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">A reflective journal</div>
+<h1>Making Friends in a New Country</h1>
+<div class="sub">For the lonely, exhausting, brave work of building your people from scratch.</div>
+<div class="by">Created by Stephanie Johnson, LICSW · The Grounded Expat</div>
+</header>
+<div class="intro"><p>Building a social life from nothing, in a place that isn’t yours yet, is genuinely hard — and it is not a sign that something is wrong with you. Longing for connection while dreading the effort of it is one of the most human things there is. If you’ve been feeling lonely, or “bad at this,” this is a gentle place to soften that story.</p><p>This isn’t a fix. It’s a place to look honestly at what’s hard, and take the pressure off — one small page at a time.</p><p><strong>Your writing saves automatically</strong> on this device and stays completely private to you. Use <em>Print / Save as PDF</em> to keep it, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This is an educational, self-reflection resource — not therapy, diagnosis, or a crisis service. If you’re struggling beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or local emergency services. You deserve real support.</div></div>
+
+<section class="module"><div class="day">Part One</div><h3>Starting from Scratch (Again)</h3>
+<p class="where">Rebuilding your people in a new country is real work — the kind that quietly drains you. Naming where you actually are is the honest place to start.</p>
+<div class="prompt"><div class="plabel">Where are you right now with friendship in your new place? Be honest — lonely, tired, hopeful, all of it.</div>
+<textarea class="j-field grow" id="f1_q1" data-module="Part 1 — Starting from Scratch" data-label="Where I am with friendship right now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s the story you’ve been telling yourself about why it’s hard?</div>
+<textarea class="j-field grow" id="f1_q2" data-module="Part 1 — Starting from Scratch" data-label="The story I tell myself" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Two</div><h3>You’re Not Cursed</h3>
+<p class="where">When connection is hard, the mind hands us the meanest explanation: “it must be me.” But friendships are hard to build for a hundred reasons that have nothing to do with whether you’re lovable.</p>
+<div class="prompt"><div class="plabel">What do you secretly fear it says about you that this has been hard?</div>
+<textarea class="j-field grow" id="f2_q1" data-module="Part 2 — You’re Not Cursed" data-label="What I fear it says about me" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Now argue the other side. What are the real, <em>external</em> reasons it’s hard here — the language, the newness, people’s full lives, the constant starting over?</div>
+<textarea class="j-field grow" id="f2_q2" data-module="Part 2 — You’re Not Cursed" data-label="The real external reasons it’s hard" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Three</div><h3>Do It Anxious</h3>
+<p class="where">The nerves are almost always loudest right before, and they settle once you’re actually in the room. You don’t have to feel ready. You just have to be a slightly nervous person who showed up anyway.</p>
+<div class="prompt"><div class="plabel">What situations make you most anxious about meeting people? What’s the fear underneath?</div>
+<textarea class="j-field grow" id="f3_q1" data-module="Part 3 — Do It Anxious" data-label="What makes me anxious about meeting people" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">One small, low-stakes thing you could do <em>anxious</em> this week — no waiting to feel brave:</div>
+<textarea class="j-field grow" id="f3_q2" data-module="Part 3 — Do It Anxious" data-label="One small thing I’ll do anxious" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Four</div><h3>The Same Faces</h3>
+<p class="where">Friendship rarely comes from one-off coffees. It comes from familiarity — the same people, on repeat, in a low-pressure setting. Showing up regularly does the heavy lifting for you.</p>
+<div class="prompt"><div class="plabel">What recurring activity could you show up to again and again — a class, a club, a run group, a weekly something?</div>
+<textarea class="j-field grow" id="f4_q1" data-module="Part 4 — The Same Faces" data-label="A recurring activity I could join" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did you used to love back home that you could do here, alongside other people?</div>
+<textarea class="j-field grow" id="f4_q2" data-module="Part 4 — The Same Faces" data-label="Something I loved that I could do here" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Five</div><h3>Lowering the Stakes</h3>
+<p class="where">“I need these people to become my best friends” is a lot of weight to carry into a first hangout. Aim for one nice conversation, not a lifelong bond. Relationships grow slowly, on their own time.</p>
+<div class="prompt"><div class="plabel">What pressure have you been putting on new interactions? Where does “they have to like me” show up?</div>
+<textarea class="j-field grow" id="f5_q1" data-module="Part 5 — Lowering the Stakes" data-label="The pressure I put on it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would “good enough” look like for a first hangout — a bar so low it takes the fear out of it?</div>
+<textarea class="j-field grow" id="f5_q2" data-module="Part 5 — Lowering the Stakes" data-label="What ‘good enough’ looks like" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Six</div><h3>The Revolving Door</h3>
+<p class="where">Abroad, people come and go — and losing a friend who moves on hurts in a particular way. That grief is real. It’s also not a reason to stop opening your hands.</p>
+<div class="prompt"><div class="plabel">Have you lost friends here who moved on or moved away? What did that cost you?</div>
+<textarea class="j-field grow" id="f6_q1" data-module="Part 6 — The Revolving Door" data-label="Friends I’ve lost to the revolving door" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What helps you keep reaching out and opening up, even knowing some people won’t stay?</div>
+<textarea class="j-field grow" id="f6_q2" data-module="Part 6 — The Revolving Door" data-label="What helps me keep opening up" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Seven</div><h3>A Note for the Next Invite</h3>
+<p class="where">There will be a moment this week when you could reach out but want to talk yourself out of it. Leave yourself something to read first.</p>
+<div class="prompt"><div class="plabel">Write a few lines of encouragement to yourself for the next time you want to reach out but feel scared. What do you most need to hear?</div>
+<textarea class="j-field grow" id="f7_q1" data-module="Part 7 — A Note for the Next Invite" data-label="Encouragement for the next reach-out" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="endcard">
+<h2>Reaching out at all is the brave part.</h2>
+<p>Connection abroad is slow, unglamorous, real work — and the people who seem effortlessly social are white-knuckling it far more than you’d guess. You’re not cursed, and you’re not behind. You’re building something that takes time. Be gentle with yourself. When you’re ready to go deeper, the full <em>Relocation Journal</em> walks the whole arc of life abroad — you’re on the list, so you’ll be first to know the moment it lands. 🌿</p>
+</div>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-friends-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='MAKING FRIENDS IN A NEW COUNTRY\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n──────────────\n'+m+'\n──────────────\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Making Friends Journal.txt';a.click();
+}
+</script></body></html>

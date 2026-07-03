@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Goodbye Journal — a reflective journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 110px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar a.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine);text-decoration:none}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 24px}
+header.hero .mark{width:38px;height:38px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:50px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:8px 0 6px}
+.intro p{margin:0 0 10px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:11px 15px;border-radius:0 8px 8px 0;margin-top:12px;line-height:1.5}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px 8px;margin:18px 0}
+.module .day{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:11.5px;color:var(--clay);font-weight:600}
+.module h3{font-family:var(--serif);font-weight:600;font-size:27px;margin:3px 0 8px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:18px;color:#494033;line-height:1.5;margin:0 0 16px}
+.prompt{margin:0 0 18px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+textarea.grow{width:100%;min-height:58px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;opacity:1;font-style:italic}
+textarea.grow{cursor:text;-webkit-user-select:text;user-select:text}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.endcard{background:var(--pine);color:var(--cream);border-radius:14px;padding:30px 28px;margin:30px 0 0;text-align:center}
+.endcard h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:0 0 10px}
+.endcard p{font-size:15px;color:#D8D3C6;margin:0 auto;max-width:48ch;line-height:1.6}
+.foot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}textarea.grow{background:#fff;border:1px solid #ccc}.endcard{background:#fff;color:#000;border:1px solid #ccc}.endcard p{color:#333}}
+@media(max-width:560px){header.hero h1{font-size:38px}}
+</style></head><body>
+<div class="toolbar"><a class="brand" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></a><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">A reflective journal</div>
+<h1>The Goodbye Journal</h1>
+<div class="sub">For the airport goodbyes, the guilt, and loving people from far away.</div>
+<div class="by">Created by Stephanie Johnson, LICSW · The Grounded Expat</div>
+</header>
+<div class="intro"><p>Nobody warns you that one of the hardest parts of a life abroad is the leaving — the gut-punch at the airport, the goodbye that never quite gets easier, the guilt that follows you home. If that ache is yours right now, you are not doing this wrong. You are loving people across a distance, and that is simply a tender thing to do.</p><p>This isn’t a fix. It’s a gentle place to set the heavy feelings down and look at them honestly, one page at a time.</p><p><strong>Your writing saves automatically</strong> on this device and stays completely private to you. Use <em>Print / Save as PDF</em> to keep it, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This is an educational, self-reflection resource — not therapy, diagnosis, or a crisis service. If you’re struggling beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or local emergency services. You deserve real support.</div></div>
+
+<section class="module"><div class="day">Part One</div><h3>The Ache Has a Name</h3>
+<p class="where">The goodbye at the gate, the quiet that follows, the missing that lives in your chest. Naming it doesn’t make it smaller, but it does make it yours to hold.</p>
+<div class="prompt"><div class="plabel">What does saying goodbye feel like for you — at the airport, and in the days after? Describe it honestly. No fixing required.</div>
+<textarea class="j-field grow" id="g1_q1" data-module="Part 1 — The Ache Has a Name" data-label="What goodbye feels like" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is hardest for you to leave — and what is it about them?</div>
+<textarea class="j-field grow" id="g1_q2" data-module="Part 1 — The Ache Has a Name" data-label="Who is hardest to leave" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Two</div><h3>Grief, Not Guilt</h3>
+<p class="where">Guilt says “I did something wrong.” Grief says “this is hard because I love them.” They feel almost identical from the inside — but they’re not the same thing.</p>
+<div class="prompt"><div class="plabel">What do you feel guilty about, when it comes to the people you’ve left? Write it plainly.</div>
+<textarea class="j-field grow" id="g2_q1" data-module="Part 2 — Grief, Not Guilt" data-label="What I feel guilty about" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Read it back. Is that guilt (you truly did something wrong) or grief (you love them, and the distance is hard)? What do you notice?</div>
+<textarea class="j-field grow" id="g2_q2" data-module="Part 2 — Grief, Not Guilt" data-label="Guilt or grief — what I notice" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Three</div><h3>What the Distance Costs — and Gives</h3>
+<p class="where">Both are true at once. Pretending the cost isn’t real doesn’t help; neither does forgetting what this life has given you.</p>
+<div class="prompt"><div class="plabel">What has the distance genuinely cost you? Let yourself be honest about the missing.</div>
+<textarea class="j-field grow" id="g3_q1" data-module="Part 3 — What the Distance Costs and Gives" data-label="What the distance has cost" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">And what has this life given you that staying would not have?</div>
+<textarea class="j-field grow" id="g3_q2" data-module="Part 3 — What the Distance Costs and Gives" data-label="What this life has given" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Four</div><h3>Bridging the Distance</h3>
+<p class="where">You can’t close the miles, but you can tend the thread between you. Small, steady contact is how love survives the geography.</p>
+<div class="prompt"><div class="plabel">How do you stay close now — the calls, the messages, the rituals? What’s actually working?</div>
+<textarea class="j-field grow" id="g4_q1" data-module="Part 4 — Bridging the Distance" data-label="How I stay close now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">One small way you could make the connection feel warmer this month:</div>
+<textarea class="j-field grow" id="g4_q2" data-module="Part 4 — Bridging the Distance" data-label="One way to make it warmer" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Five</div><h3>The Fear Underneath</h3>
+<p class="where">Often the goodbye carries a quieter grief: the not-knowing. Aging parents, changing lives, time you can’t get back. It helps to say it out loud.</p>
+<div class="prompt"><div class="plabel">When it comes to the people you’ve left, what are you most afraid of? Name it gently.</div>
+<textarea class="j-field grow" id="g5_q1" data-module="Part 5 — The Fear Underneath" data-label="What I’m most afraid of" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If you could say one thing to them right now, what would you want them to know?</div>
+<textarea class="j-field grow" id="g5_q2" data-module="Part 5 — The Fear Underneath" data-label="What I’d want them to know" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Six</div><h3>Making the Visit Count</h3>
+<p class="where">Dread of the goodbye can quietly eat the good days you’re actually in. Being fully present is its own kind of gift — to them, and to you.</p>
+<div class="prompt"><div class="plabel">What do you want your next visit, and your next goodbye, to hold?</div>
+<textarea class="j-field grow" id="g6_q1" data-module="Part 6 — Making the Visit Count" data-label="What I want the next visit to hold" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">One thing you’ll do to be fully <em>there</em>, instead of bracing for the leaving:</div>
+<textarea class="j-field grow" id="g6_q2" data-module="Part 6 — Making the Visit Count" data-label="One way I’ll be fully there" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Part Seven</div><h3>A Note for the Next Airport</h3>
+<p class="where">There will be another goodbye. When it comes, you’ll be glad you left yourself something tender to hold onto.</p>
+<div class="prompt"><div class="plabel">Write a few lines to yourself for the next time you have to say goodbye. What do you most need to hear?</div>
+<textarea class="j-field grow" id="g7_q1" data-module="Part 7 — A Note for the Next Airport" data-label="A note for the next goodbye" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="endcard">
+<h2>The goodbye is the price of the love.</h2>
+<p>It doesn’t get easy, exactly — but it does get more bearable, and the ache is only ever the size of how much you care. Be gentle with yourself; you’re carrying more than most people ever see. When you’re ready to go deeper, the full <em>Relocation Journal</em> walks the whole arc of life abroad. You’re on the list, so you’ll be first to know the moment it lands. 🌿</p>
+</div>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-goodbye-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE GOODBYE JOURNAL\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n──────────────\n'+m+'\n──────────────\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Goodbye Journal.txt';a.click();
+}
+</script></body></html>
