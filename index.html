@@ -317,6 +317,7 @@ img{max-width:100%}
         .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok&&j.ok, j:j}; }); })
         .then(function(res){
           if(res.ok){
+            try{localStorage.setItem('tge-gate-unlocked','1');}catch(e){}
             form.reset();
             note.innerHTML = 'You’re in! Your free journal is ready — <a href="/first-7-days/" style="color:inherit;font-weight:600;text-decoration:underline">open it here →</a>';
             note.className = "note ok";
