@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Library — journals & workbooks · The Grounded Expat</title>
+<meta name="description" content="Honest, clinically grounded journals and workbooks for the inner side of moving abroad. Start free.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.13);--serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif)}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--clay)}
+.kicker .seed{width:8px;height:8px;border-radius:50%;background:var(--clay);position:relative;flex:none}
+.kicker .seed::after{content:"";position:absolute;left:-3px;top:9px;width:14px;height:1.5px;background:var(--clay);opacity:.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px;border:1.5px solid var(--pine);background:var(--pine);color:var(--cream);cursor:pointer;transition:transform .12s ease,opacity .12s ease}
+.btn:hover{transform:translateY(-1px);opacity:.93}
+.btn--clay{background:var(--clay);border-color:var(--clay)}
+.btn--ghost{background:transparent;color:var(--pine)}
+.site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.site-nav{display:flex;align-items:center;gap:24px}
+.nav-link{font-weight:600;font-size:15px;color:var(--pine);transition:color .12s ease}
+.nav-link:hover{color:var(--clay)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--pine);letter-spacing:.01em}
+.brand .mark{width:26px;height:26px;flex:none}
+.brand .the{color:var(--sage);font-weight:500}
+.hero{padding:clamp(52px,7vw,88px) 0 clamp(30px,4vw,48px)}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,5.4vw,68px);line-height:1.03;letter-spacing:-.015em;margin:18px 0 0;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--clay)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:52ch;margin:20px 0 0;line-height:1.6}
+.section{padding:clamp(20px,3vw,34px) 0}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.08;margin:0 0 4px}
+.section .sub{font-size:16px;color:var(--muted);max-width:56ch;margin:6px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:26px}
+.j{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:28px 26px 26px;display:flex;flex-direction:column}
+.j .tag{align-self:flex-start;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:5px 11px;border-radius:999px}
+.tag-free{color:var(--pine);background:rgba(140,155,130,.22)}
+.tag-soon{color:var(--clay);background:rgba(194,103,74,.12)}
+.tag-member{color:var(--cream);background:var(--pine)}
+.j h3{font-family:var(--serif);font-weight:600;font-size:26px;margin:16px 0 0;line-height:1.12;color:var(--pine)}
+.j p{font-size:15px;color:var(--muted);margin:9px 0 0;line-height:1.55}
+.j .foot{margin-top:auto;padding-top:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.j .price{font-family:var(--serif);font-size:18px;color:var(--pine);font-weight:600}
+.j .price span{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:500}
+.list{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:26px 28px;margin-top:26px}
+.list .row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 26px;margin:0 0 18px}
+.list .row div{display:flex;align-items:center;gap:12px;font-weight:500;font-size:15.5px}
+.list .dot{width:9px;height:9px;border-radius:50%;background:var(--sage);flex:none}
+.list .cta{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:18px}
+.list .cta .price{font-family:var(--serif);font-size:18px;color:var(--pine);font-weight:600}
+.finalcta{background:var(--pine);color:var(--cream);border-radius:20px;padding:clamp(30px,5vw,52px);text-align:center;margin:40px 0 0}
+.finalcta h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.2vw,40px);color:var(--cream);margin:0 auto;max-width:20ch}
+.finalcta p{color:#D8D3C6;max-width:50ch;margin:12px auto 22px}
+.foot{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 60px;text-align:center;color:var(--muted);font-size:14px}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:17px}
+.disclaimer{font-size:13px;color:var(--muted);max-width:70ch;margin:14px auto 0;line-height:1.55}
+@media(max-width:720px){.grid,.list .row{grid-template-columns:1fr}}
+@media(max-width:560px){.site-nav{gap:16px}.nav-link{font-size:14px}.site-head .btn{padding:10px 16px;font-size:14px}}
+</style></head><body>
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="/" aria-label="The Grounded Expat — home">
+    <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+    <span><span class="the">The</span> Grounded <b>Expat</b></span>
+  </a>
+  <nav class="site-nav">
+    <a href="/the-circle" class="nav-link">The Circle</a>
+    <a class="btn btn--clay" href="/first-7-days/">Start free</a>
+  </nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div class="kicker"><span class="seed"></span>The Library</div>
+  <h1>Tools for the <em>inner</em> side of moving abroad.</h1>
+  <p class="lead">Honest, clinically grounded journals and workbooks — for culture shock, homesickness, lost identity, and starting over. Some are free to open right now; the rest are on the way, and you can be first in line.</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="kicker"><span class="seed"></span>Free to open now</div>
+  <h2>Start here.</h2>
+  <p class="sub">Real journals you can read and write in today — private to you, saved automatically on your device.</p>
+  <div class="grid">
+    <article class="j">
+      <span class="tag tag-free">Free · available now</span>
+      <h3>Your First 7 Days Abroad</h3>
+      <p>A gentle, day-by-day companion for the overwhelming first week in a new country. One small page a day — the kind of thing you actually finish.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--clay" href="/first-7-days/">Read it now →</a></div>
+    </article>
+    <article class="j">
+      <span class="tag tag-free">Free · available now</span>
+      <h3>The Month-3 Dip</h3>
+      <p>For the stretch when the shine wears off and you quietly wonder if you made a mistake. A reflective journal for the most normal — and least talked about — part of the whole arc.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--clay" href="/month-3-dip/">Read it now →</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="kicker"><span class="seed"></span>In the works</div>
+  <h2>The workbook line.</h2>
+  <p class="sub">Self-paced guides for the harder chapters of life abroad. Join the list and you'll hear the moment each one is ready — founders get first access and the best price.</p>
+  <div class="list">
+    <div class="row">
+      <div><span class="dot"></span>The Relocation Journal</div>
+      <div><span class="dot"></span>The Culture Shock Workbook</div>
+      <div><span class="dot"></span>The Moving Abroad Planner</div>
+      <div><span class="dot"></span>Starting Over Abroad</div>
+      <div><span class="dot"></span>The Reinvention Workbook</div>
+      <div><span class="dot"></span>The Expat Marriage Workbook</div>
+    </div>
+    <div class="cta"><span class="price">$39&ndash;149 <span style="font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:500">· one-time, when they launch</span></span><a class="btn btn--clay" href="/#join">Join the list to get them first →</a></div>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="kicker"><span class="seed"></span>Go deeper, together</div>
+  <h2>The Circle.</h2>
+  <p class="sub">When you're ready for more than a page at a time.</p>
+  <div class="grid">
+    <article class="j" style="grid-column:1 / -1">
+      <span class="tag tag-member">Membership · founding rate</span>
+      <h3>The Circle</h3>
+      <p>Monthly workshops, live Q&amp;A, a growing resource library, and a community of people who genuinely get it. Founding members lock in the lowest rate for good.</p>
+      <div class="foot"><span class="price">$19 <span>/ month</span></span><a class="btn btn--clay" href="/the-circle">Join the founding circle →</a></div>
+    </article>
+  </div>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <div class="finalcta">
+    <h2 class="serif">Feel grounded, wherever you land.</h2>
+    <p>Start with the free journal, and I'll let you know the moment each new one is ready.</p>
+    <a class="btn btn--clay" href="/#join">Join the list →</a>
+  </div>
+</div></section>
+
+<footer class="foot"><div class="wrap">
+  <div class="b">The Grounded Expat</div>
+  Created by Stephanie Johnson, LICSW · thegroundedexpat.com
+  <p class="disclaimer">The Grounded Expat offers educational, self-reflection resources — not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
+</div></footer>
+</body></html>
