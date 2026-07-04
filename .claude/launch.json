@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "ge-site", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "8891"], "port": 8891 }
+  ]
+}
