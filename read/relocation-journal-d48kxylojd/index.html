@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Relocation Journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 110px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar a.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine);text-decoration:none}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 24px}
+header.hero .mark{width:38px;height:38px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:46px;line-height:1.04;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero h1 em{font-style:italic;color:var(--clay)}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:34ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:8px 0 6px}
+.intro p{margin:0 0 10px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:11px 15px;border-radius:0 8px 8px 0;margin-top:12px;line-height:1.5}
+.phasehead{text-align:center;margin:40px 0 4px}
+.phasehead .pk{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:11.5px;color:var(--sage);font-weight:600}
+.phasehead h2{font-family:var(--serif);font-weight:500;font-size:32px;color:var(--pine);margin:4px 0 0;letter-spacing:-.01em}
+.phasehead .pline{width:38px;height:2px;background:var(--clay);margin:14px auto 0;border-radius:2px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px 8px;margin:18px 0}
+.module .day{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:11.5px;color:var(--clay);font-weight:600}
+.module h3{font-family:var(--serif);font-weight:600;font-size:27px;margin:3px 0 8px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:18px;color:#494033;line-height:1.5;margin:0 0 16px}
+.prompt{margin:0 0 18px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+textarea.grow{width:100%;min-height:58px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;opacity:1;font-style:italic}
+textarea.grow{cursor:text;-webkit-user-select:text;user-select:text}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.endcard{background:var(--pine);color:var(--cream);border-radius:14px;padding:30px 28px;margin:30px 0 0;text-align:center}
+.endcard h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:0 0 10px}
+.endcard p{font-size:15px;color:#D8D3C6;margin:0 auto 10px;max-width:50ch;line-height:1.6}
+.endcard p:last-child{margin-bottom:0}
+.foot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}textarea.grow{background:#fff;border:1px solid #ccc}.endcard{background:#fff;color:#000;border:1px solid #ccc}.endcard p{color:#333}.phasehead h2{color:#000}}
+@media(max-width:560px){header.hero h1{font-size:34px}.phasehead h2{font-size:26px}}
+</style></head><body>
+<div class="toolbar"><a class="brand" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></a><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The flagship journal</div>
+<h1>The <em>Relocation</em> Journal</h1>
+<div class="sub">For the whole inner arc of moving abroad — from the landing to carrying it home.</div>
+<div class="by">Created by Stephanie Johnson, LICSW · The Grounded Expat</div>
+</header>
+<div class="intro"><p>Moving abroad asks something of you that no checklist prepares you for — a whole inner journey that runs alongside the visas and the boxes. This journal walks that arc with you: the disorientation of landing, the hard middle where the shine wears off, the slow becoming, and the tender work of carrying it all home.</p><p>There are nine guided entries, grouped into four phases. You don&rsquo;t have to do them in order, and you don&rsquo;t have to do them all at once. Open the one that meets where you are today. Come back and answer again as you change — that&rsquo;s the whole point.</p><p><strong>Your writing saves automatically</strong> on this device and stays completely private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export everything as a text file.</p><div class="disclaimer">This is an educational, self-reflection resource — not therapy, diagnosis, or a crisis service. If you&rsquo;re struggling beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or local emergency services. You deserve real support.</div></div>
+
+<div class="phasehead"><div class="pk">Phase One</div><h2>Landing</h2><div class="pline"></div></div>
+
+<section class="module"><div class="day">Entry One</div><h3>Grounding in a New Place</h3>
+<p class="where">The first task after a move isn&rsquo;t to thrive — it&rsquo;s simply to land. Before the mind can settle, the body needs to learn that it&rsquo;s safe here. Start where your feet are.</p>
+<div class="prompt"><div class="plabel">Where are you writing from right now? Describe this new place through your senses — what you can see, hear, and smell around you.</div>
+<textarea class="j-field grow" id="e1_q1" data-module="Phase 1 · Landing — Grounding in a New Place" data-label="Where I'm writing from, through my senses" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What has felt hardest about this first stretch? Name it plainly, without softening it.</div>
+<textarea class="j-field grow" id="e1_q2" data-module="Phase 1 · Landing — Grounding in a New Place" data-label="What's felt hardest so far" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What&rsquo;s one small thing — a corner, a café, a walk, a routine — that already feels the tiniest bit like yours?</div>
+<textarea class="j-field grow" id="e1_q3" data-module="Phase 1 · Landing — Grounding in a New Place" data-label="One thing that already feels a little mine" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Entry Two</div><h3>Understanding Your Adjustment Arc</h3>
+<p class="where">Culture shock isn&rsquo;t a personal failing — it&rsquo;s a predictable arc almost every mover travels: the honeymoon, the frustrated dip, the slow adjustment, and a hard-won at-home-ness. Seeing the map ahead of time makes the low points far less frightening.</p>
+<div class="prompt"><div class="plabel">Where do you think you are on that arc today — the shiny honeymoon, the frustrated middle, or somewhere in between?</div>
+<textarea class="j-field grow" id="e2_q1" data-module="Phase 1 · Landing — Understanding Your Adjustment Arc" data-label="Where I am on the arc" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did you expect this move to feel like — and how does the reality compare?</div>
+<textarea class="j-field grow" id="e2_q2" data-module="Phase 1 · Landing — Understanding Your Adjustment Arc" data-label="Expectation vs. reality" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If you truly believed the low points were normal and temporary, what would you stop being so hard on yourself about?</div>
+<textarea class="j-field grow" id="e2_q3" data-module="Phase 1 · Landing — Understanding Your Adjustment Arc" data-label="What I'd stop being hard on myself about" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Entry Three</div><h3>Your First Weeks</h3>
+<p class="where">The first weeks ask a lot all at once — logistics and grief and newness, stacked on top of each other. This is a place to set some of that weight down.</p>
+<div class="prompt"><div class="plabel">What are you carrying right now — practical, emotional, all of it? Empty your pockets onto the page.</div>
+<textarea class="j-field grow" id="e3_q1" data-module="Phase 1 · Landing — Your First Weeks" data-label="Everything I'm carrying right now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What&rsquo;s one need you&rsquo;ve been ignoring — rest, real food, a call home, a walk outside — that you could meet this week?</div>
+<textarea class="j-field grow" id="e3_q2" data-module="Phase 1 · Landing — Your First Weeks" data-label="A need I could meet this week" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who or what back home are you missing most today?</div>
+<textarea class="j-field grow" id="e3_q3" data-module="Phase 1 · Landing — Your First Weeks" data-label="What I'm missing most today" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="phasehead"><div class="pk">Phase Two</div><h2>The Hard Middle</h2><div class="pline"></div></div>
+
+<section class="module"><div class="day">Entry Four</div><h3>Culture Shock and the Nervous System</h3>
+<p class="where">Culture shock isn&rsquo;t only in your head — it&rsquo;s in your body. A nervous system doing constant low-grade translation gets tired and touchy. That exhaustion is real, and it is not weakness.</p>
+<div class="prompt"><div class="plabel">How does the strain show up in your body — the short fuse, the deep fatigue, the tears that come from nowhere?</div>
+<textarea class="j-field grow" id="e4_q1" data-module="Phase 2 · The Hard Middle — Culture Shock and the Nervous System" data-label="How the strain shows up in my body" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What small, ordinary things drain you here that were effortless back home?</div>
+<textarea class="j-field grow" id="e4_q2" data-module="Phase 2 · The Hard Middle — Culture Shock and the Nervous System" data-label="Ordinary things that drain me here" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What actually settles your system, even a little? List a few, so they&rsquo;re ready the next time you need them.</div>
+<textarea class="j-field grow" id="e4_q3" data-module="Phase 2 · The Hard Middle — Culture Shock and the Nervous System" data-label="What settles my system" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Entry Five</div><h3>Identity on the Move</h3>
+<p class="where">A move can quietly unstitch the parts of you a place used to hold — your competence, your humour, your easy sense of who you are. Feeling like a stranger to yourself is one of the least-talked-about costs of leaving.</p>
+<div class="prompt"><div class="plabel">Who were you back home that you can&rsquo;t quite be here — yet? What do you miss most about that version of yourself?</div>
+<textarea class="j-field grow" id="e5_q1" data-module="Phase 2 · The Hard Middle — Identity on the Move" data-label="The version of me I miss" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where do you feel most incapable, or most &ldquo;not yourself,&rdquo; in your new life?</div>
+<textarea class="j-field grow" id="e5_q2" data-module="Phase 2 · The Hard Middle — Identity on the Move" data-label="Where I feel not-myself" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What part of you has survived the move fully intact — the thing that&rsquo;s still unmistakably, stubbornly you?</div>
+<textarea class="j-field grow" id="e5_q3" data-module="Phase 2 · The Hard Middle — Identity on the Move" data-label="The part of me that's still intact" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="phasehead"><div class="pk">Phase Three</div><h2>Becoming</h2><div class="pline"></div></div>
+
+<section class="module"><div class="day">Entry Six</div><h3>Belonging Abroad</h3>
+<p class="where">Belonging abroad rarely arrives as a lightning bolt. It&rsquo;s built slowly, in repeated small moments — a familiar face, a phrase you finally understand, a place that starts to greet you back.</p>
+<div class="prompt"><div class="plabel">When have you felt even a flicker of belonging here? What was happening in that moment?</div>
+<textarea class="j-field grow" id="e6_q1" data-module="Phase 3 · Becoming — Belonging Abroad" data-label="A flicker of belonging" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would this place need to feel like for it to feel like home — and what&rsquo;s one small step toward that?</div>
+<textarea class="j-field grow" id="e6_q2" data-module="Phase 3 · Becoming — Belonging Abroad" data-label="What home here would need, and one step" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where might you still be holding back from fully arriving — maybe to keep one foot in the old life?</div>
+<textarea class="j-field grow" id="e6_q3" data-module="Phase 3 · Becoming — Belonging Abroad" data-label="Where I'm holding back from arriving" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Entry Seven</div><h3>Who You&rsquo;re Becoming</h3>
+<p class="where">The move doesn&rsquo;t only take — it remakes. Somewhere inside the difficulty, you&rsquo;re becoming someone with a wider life and a bigger heart. It&rsquo;s worth stopping to notice her.</p>
+<div class="prompt"><div class="plabel">What have you learned about yourself here that you couldn&rsquo;t have learned anywhere else?</div>
+<textarea class="j-field grow" id="e7_q1" data-module="Phase 3 · Becoming — Who You're Becoming" data-label="What I've learned about myself here" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What are you more capable of now than the day you arrived?</div>
+<textarea class="j-field grow" id="e7_q2" data-module="Phase 3 · Becoming — Who You're Becoming" data-label="What I'm more capable of now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If the version of you from before the move could see you now, what would surprise her most?</div>
+<textarea class="j-field grow" id="e7_q3" data-module="Phase 3 · Becoming — Who You're Becoming" data-label="What would surprise my old self" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="phasehead"><div class="pk">Phase Four</div><h2>Carrying It Home</h2><div class="pline"></div></div>
+
+<section class="module"><div class="day">Entry Eight</div><h3>Coming Home</h3>
+<p class="where">Reverse culture shock is the one nobody warns you about: returning &ldquo;home&rdquo; to find that it — and you — no longer fit the way you did. The disorientation of coming back is real, and it deserves the same gentleness as the leaving.</p>
+<div class="prompt"><div class="plabel">If you&rsquo;ve returned — or when you imagine it — what feels different? About home, and about you?</div>
+<textarea class="j-field grow" id="e8_q1" data-module="Phase 4 · Carrying It Home — Coming Home" data-label="What feels different about home and me" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did living abroad change in you that the people back home might not be able to see?</div>
+<textarea class="j-field grow" id="e8_q2" data-module="Phase 4 · Carrying It Home — Coming Home" data-label="What changed in me that others can't see" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How do you want to hold onto what the move gave you, even back in familiar places?</div>
+<textarea class="j-field grow" id="e8_q3" data-module="Phase 4 · Carrying It Home — Coming Home" data-label="How I'll hold onto what the move gave me" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Entry Nine</div><h3>Year One — Your Legacy</h3>
+<p class="where">A year on — wherever &ldquo;here&rdquo; is now — is a chance to look back across the whole arc and name what it made of you. Not the highlight reel; the real one.</p>
+<div class="prompt"><div class="plabel">Looking back across this move, what are you most proud of surviving?</div>
+<textarea class="j-field grow" id="e9_q1" data-module="Phase 4 · Carrying It Home — Year One, Your Legacy" data-label="What I'm most proud of surviving" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you most want to remember about this chapter, years from now?</div>
+<textarea class="j-field grow" id="e9_q2" data-module="Phase 4 · Carrying It Home — Year One, Your Legacy" data-label="What I want to remember about this chapter" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Write a few lines to someone about to make the leap you made. What do you most want them to know?</div>
+<textarea class="j-field grow" id="e9_q3" data-module="Phase 4 · Carrying It Home — Year One, Your Legacy" data-label="A note to someone about to make the leap" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="endcard">
+<h2>You carried a whole life across the world.</h2>
+<p>However far along the arc you are — landing, deep in the middle, or looking back — the fact that you&rsquo;re here, doing this honest inner work, is the quiet proof of how much you&rsquo;re capable of.</p>
+<p>Come back to these pages whenever you need them. Your answers will change as you do, and that&rsquo;s exactly right. Be gentle with yourself. 🌿</p>
+</div>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-relocation-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE RELOCATION JOURNAL\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n──────────────\n'+m+'\n──────────────\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Relocation Journal.txt';a.click();
+}
+</script></body></html>
