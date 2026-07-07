@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Moving Abroad Planner · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.checklist{margin:0 0 18px;border-top:1px solid var(--line)}
+.check{display:flex;align-items:flex-start;gap:11px;font-size:15.5px;color:var(--ink);padding:9px 2px;border-bottom:1px solid var(--line);cursor:pointer}
+.check input{margin-top:2px;width:18px;height:18px;accent-color:var(--clay);flex:none;cursor:pointer}
+.check input:checked+span{color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(42,38,34,.3)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.checklist-c{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.bbtn{display:none}.bpath{display:block!important}}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my plan</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Moving Abroad Planner</h1>
+<div class="sub">The practical <em>and</em> emotional prep, in one place.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Most moving guides cover the logistics and stop there. But the part that decides how this actually goes — the inner preparation — usually gets none. This planner holds both: the checklists that get you out the door, and the quieter work that helps you arrive whole.</p><p>Tick the checklists as you go, write where it helps, and let the rest stop living in your head. <strong>Everything saves automatically</strong> on this device — your ticks and your writing — and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my plan</em> to export it.</p><div class="disclaimer">This planner is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. If you’re struggling in a way that feels beyond what a planner can hold, please reach out to someone you trust, a licensed professional, or your local emergency services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Before You Go</h2><div class="ph-sub">The weeks &amp; months before</div></div>
+<section class="module">
+<h3>The Goodbye You Don’t Skip</h3>
+<p class="where">The logistics of a move scream for attention; the emotional preparation gets almost none. But a move you’ve grieved a little in advance is one you arrive to more whole. Before the boxes, let’s tend to the leaving.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Letting yourself feel the loss of what you’re leaving isn’t being negative about the move. It’s how you carry those people and places lightly, instead of being ambushed by them later.</p></div>
+<div class="checkin">
+<label>Target moving date<input type="text" class="j-field" id="m1_date" data-module="The Goodbye You Don’t Skip" data-label="Target moving date" placeholder="e.g. 12 September"></label>
+<label>Where you’re moving<input type="text" class="j-field" id="m1_dest" data-module="The Goodbye You Don’t Skip" data-label="Destination" placeholder="city, country"></label>
+</div>
+<div class="prompt"><div class="plabel">What — and who — are you setting down with this move? Name the people, routines, and version of your life you’re leaving.</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Goodbye You Don’t Skip" data-label="What and who you’re setting down" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is there a goodbye — to a person, a place, a chapter — you want to do properly before you leave? What would that look like?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Goodbye You Don’t Skip" data-label="A goodbye you want to do properly" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small thing you’ll bring that carries home with you — an object, a recipe, a ritual? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Goodbye You Don’t Skip" data-label="Something that carries home with you" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Practical Runway</h3>
+<p class="where">Here’s the practical backbone — the admin that’s far less stressful handled early than in a panic the week before. Tick what’s done, note what’s pending, and let the rest stop living in your head.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to hold all of this in your head at once. That’s exactly what a list is for.</p></div>
+<div class="plabel">Pre-departure checklist <span class="chip checklist-c">tick as you go</span></div>
+<div class="checklist">
+<label class="check"><input type="checkbox" class="j-field" id="m2_c1" data-module="The Practical Runway" data-label="Passport valid 6+ months · visa / residence permit sorted"><span>Passport valid 6+ months · visa / residence permit sorted</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c2" data-module="The Practical Runway" data-label="Key documents copied & backed up (IDs, certificates, medical, school records)"><span>Key documents copied &amp; backed up (IDs, certificates, medical, school records)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c3" data-module="The Practical Runway" data-label="Banking sorted (notify bank, international cards, a way to access money on arrival)"><span>Banking sorted (notify bank, international cards, a way to access money on arrival)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c4" data-module="The Practical Runway" data-label="Health: prescriptions stocked, records gathered, any vaccinations"><span>Health: prescriptions stocked, records gathered, any vaccinations</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c5" data-module="The Practical Runway" data-label="Home decided (lease/sale, storage; what ships, sells, stays)"><span>Home decided (lease/sale, storage; what ships, sells, stays)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c6" data-module="The Practical Runway" data-label="Mail forwarding & address changes set"><span>Mail forwarding &amp; address changes set</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c7" data-module="The Practical Runway" data-label="Phone & internet plan for arrival (SIM/eSIM; keep a home number?)"><span>Phone &amp; internet plan for arrival (SIM/eSIM; keep a home number?)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c8" data-module="The Practical Runway" data-label="Insurance reviewed (health, contents, travel)"><span>Insurance reviewed (health, contents, travel)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c9" data-module="The Practical Runway" data-label="Money admin: taxes, pensions, subscriptions to cancel or keep"><span>Money admin: taxes, pensions, subscriptions to cancel or keep</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m2_c10" data-module="The Practical Runway" data-label="Pets (if any): paperwork & transport booked"><span>Pets (if any): paperwork &amp; transport booked</span></label>
+</div>
+<div class="prompt"><div class="plabel">What’s still outstanding — and what’s the next deadline you don’t want to miss?</div>
+<textarea class="j-field grow" id="m2_notes" data-module="The Practical Runway" data-label="Still outstanding / next deadlines" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who can help you with the heaviest items — and what could you ask them for this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_help" data-module="The Practical Runway" data-label="Who can help, and with what" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Setting Honest Expectations</h3>
+<p class="where">The move itself may go smoothly — and then, somewhere in the first few months, things often get harder than people expect. Knowing that in advance takes away half its power. Let’s set expectations you can actually live with.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You’re not going to feel at home right away. You’re not supposed to. Knowing the dip is coming is what keeps it from knocking you over.</p></div>
+<div class="prompt"><div class="plabel">What are you quietly most excited about — and most afraid of — about this move?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="Setting Honest Expectations" data-label="Most excited / most afraid of" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Realistically, what would ‘this is going well’ look like six months in — not the highlight reel, the honest version?</div>
+<textarea class="j-field grow" id="m3_q2" data-module="Setting Honest Expectations" data-label="What ‘going well’ realistically looks like" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name the one or two things you absolutely refuse to let this move cost you (your relationship, your health, a sense of who you are). <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_q3" data-module="Setting Honest Expectations" data-label="What you refuse to let this move cost you" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is this your first big move abroad, or have you done this before?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">My first</button><button class="bbtn" data-branch="b1" data-val="no">I’ve done this before</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then set the bar gently — you don’t yet know what you don’t know, and that’s completely normal.</div>
+<div class="prompt"><div class="plabel">What are you assuming this will be like that you’re not actually sure about? Naming your assumptions now makes the surprises smaller later.</div>
+<textarea class="j-field grow" id="m3_y1" data-module="Setting Honest Expectations" data-label="Assumptions you’re not sure about" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who do you know who’s moved abroad that you could ask what they wish they’d known? Note one person to reach out to. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_y2" data-module="Setting Honest Expectations" data-label="Someone to ask what they wish they’d known" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then you have real data — let’s use it.</div>
+<div class="prompt"><div class="plabel">What did your last move teach you — what went harder than expected, and what actually helped?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="Setting Honest Expectations" data-label="What your last move taught you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you’ll do differently this time because of what you learned? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_n2" data-module="Setting Honest Expectations" data-label="One thing you’ll do differently" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Your Arrival Kit</h3>
+<p class="where">Arriving is easier when a few things are lined up in advance — the people you’ll stay close to, the routine you’ll try to recreate, the first small thing that will make the new place feel like yours.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t need it all figured out. You just need a few anchors waiting for you on the other side.</p></div>
+<div class="prompt"><div class="plabel">Who back home will you stay genuinely connected to — and how will you protect those few relationships across the distance?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Your Arrival Kit" data-label="Who you’ll stay connected to, and how" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What daily routine or ritual will you try to recreate in the new place, to give your system something familiar?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="Your Arrival Kit" data-label="A routine you’ll recreate" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s the first small thing you’ll do on arrival to make the new place feel even slightly like yours? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q3" data-module="Your Arrival Kit" data-label="First small thing to make it yours" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>The First Weeks</h2><div class="ph-sub">Landing well on the other side</div></div>
+<section class="module">
+<h3>Landing Checklist</h3>
+<p class="where">The first weeks are a blur of setup. Here’s a starting checklist — adapt it to your country. Done is better than perfect; the goal is to get the essentials handled so your nervous system can finally exhale.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You won’t get it all sorted in week one, and that’s fine. Each small thing handled is one less open loop.</p></div>
+<div class="plabel">First-weeks checklist <span class="chip checklist-c">tick as you go</span></div>
+<div class="checklist">
+<label class="check"><input type="checkbox" class="j-field" id="m5_c1" data-module="Landing Checklist" data-label="Register with local authorities (if your country requires it)"><span>Register with local authorities (if your country requires it)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c2" data-module="Landing Checklist" data-label="Local bank account opened"><span>Local bank account opened</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c3" data-module="Landing Checklist" data-label="Local SIM / phone number active"><span>Local SIM / phone number active</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c4" data-module="Landing Checklist" data-label="Doctor, pharmacy & nearest hospital identified"><span>Doctor, pharmacy &amp; nearest hospital identified</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c5" data-module="Landing Checklist" data-label="Transport sorted (transit card / driving rules / license)"><span>Transport sorted (transit card / driving rules / license)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c6" data-module="Landing Checklist" data-label="Everyday shops & essentials located"><span>Everyday shops &amp; essentials located</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c7" data-module="Landing Checklist" data-label="Home running (utilities, wifi, the basics)"><span>Home running (utilities, wifi, the basics)</span></label>
+<label class="check"><input type="checkbox" class="j-field" id="m5_c8" data-module="Landing Checklist" data-label="One social or community thing found to try"><span>One social or community thing found to try</span></label>
+</div>
+<div class="prompt"><div class="plabel">What still feels overwhelming or unfinished — and what’s the single next step on it?</div>
+<textarea class="j-field grow" id="m5_notes" data-module="Landing Checklist" data-label="What still feels unfinished / next step" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one social or community thing you’ll actually try in the next two weeks? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_social" data-module="Landing Checklist" data-label="One social/community thing to try" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your Support Plan</h3>
+<p class="where">This is the one most people skip — and the one that matters most when a hard week comes. Set it up now, while you’re clear-headed: the simple architecture of who and what you’ll reach for.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Planning for the hard days isn’t pessimism. It’s the same reason you’d find the exits before there’s ever a fire.</p></div>
+<div class="prompt"><div class="plabel">What are your earliest warning signs that you’re struggling — the ordinary ones specific to you (sleep, irritability, flatness, withdrawing, an extra drink)?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Your Support Plan" data-label="Your earliest warning signs" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Your regulators: what genuinely settles you when things get hard? List the real ones, not the ones that should work.</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Your Support Plan" data-label="Your regulators (what really settles you)" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is your one honest person — here or back home — you can tell the truth to? If you don’t have one here yet, how might you build that?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="Your Support Plan" data-label="Your one honest person" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What professional or community support is available where you’re going — and what’s confidential? (Worth finding out before you need it.) <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_q4" data-module="Your Support Plan" data-label="Support available / what’s confidential" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You’re not just relocating your life. You’re relocating yourself — and you’ve already begun.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-planner-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{const v=el.type==='checkbox'?(el.checked?'1':'0'):el.value;localStorage.setItem(KEY+el.id,v);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null){if(el.type==='checkbox')el.checked=(v==='1');else el.value=v;}}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  const ev=el.type==='checkbox'?'change':'input';
+  el.addEventListener(ev,()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE MOVING ABROAD PLANNER\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(el.type==='checkbox'){out+=(el.checked?'[x] ':'[ ] ')+l+'\n';}
+  else{const v=(el.value||'').trim();if(v){out+='\n• '+l+'\n'+v+'\n';}}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Moving Abroad Plan.txt';a.click();
+}
+</script></body></html>

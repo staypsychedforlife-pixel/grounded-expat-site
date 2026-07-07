@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Culture Shock Workbook · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Culture Shock Workbook</h1>
+<div class="sub">Understand it, settle it, and find your footing.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Culture shock is the most universal — and most misunderstood — part of moving abroad. It isn’t a sign you’ve made a mistake, and it isn’t weakness. It’s what happens when your nervous system has to consciously process a thousand things it used to handle on autopilot. This workbook helps you understand what’s actually happening, settle your system, and take small, real steps toward footing.</p><p>Work through it in order or dip in where you need it. There are no wrong answers — only honest ones. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This workbook is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. If you’re struggling in a way that feels beyond what a workbook can hold, please reach out to someone you trust, a licensed professional, or your local emergency services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Understand It</h2><div class="ph-sub">What’s actually happening to you</div></div>
+<section class="module">
+<h3>What Culture Shock Actually Is</h3>
+<p class="where">Culture shock isn’t rudeness toward your new home, and it isn’t proof you can’t do this. It’s the genuine exhaustion of a nervous system that has to think its way through what used to be automatic — the money, the manners, the language, the unspoken rules. Let’s start by naming where you are.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>If you’re not enjoying every minute of this ‘adventure,’ you are not failing at it. Culture shock is the normal, universal cost of moving between worlds — and naming it is the first relief.</p></div>
+<div class="exp long"><div class="lab"><span class="dot">S</span>From my experience</div><p>A few months after we moved, I burst into tears because the grocery store didn’t have the yogurt I wanted.</p><p>It wasn’t about the yogurt. It was the first time I realized how exhausted I had become.</p><p>For months, my brain had been translating, adapting, problem-solving, and making thousands of decisions that used to happen automatically.</p><p>I thought I was becoming impatient. I was experiencing culture shock.</p><p>The moment I understood the difference, I stopped judging myself and started offering myself the same compassion I would have given anyone else adapting to a completely new life.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="What Culture Shock Actually Is" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="What Culture Shock Actually Is" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What’s been hardest about being here that you didn’t expect — the thing that’s quietly worn you down?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="What Culture Shock Actually Is" data-label="What’s been hardest, unexpectedly" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Culture shock tends to move through stages — the early shine, the crash, the slow adjustment, and feeling at home. Where do you honestly feel you are right now?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="What Culture Shock Actually Is" data-label="Which stage you’re in right now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did you assume this would feel like — and how is the reality different from the picture you had?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="What Culture Shock Actually Is" data-label="Expectation vs. reality" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you could be honest with about how hard this actually is? Could you tell them this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="What Culture Shock Actually Is" data-label="One person you could be honest with" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Daily Drain</h3>
+<p class="where">Much of culture shock isn’t the big dramatic moments — it’s the constant, low-level translation. Every errand, conversation, and transaction costs a little more than it would at home. It adds up invisibly, until you’re depleted and can’t say why. Let’s make it visible.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You’re not ‘too sensitive’ or ‘not cut out for this.’ You’re paying a hidden tax on your energy all day long. Seeing it is how you stop blaming yourself for being tired.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="The Daily Drain" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="The Daily Drain" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">The translation audit: list the small, constant things that take more out of you here than they did at home — the grocery store, the bank, small talk, reading the room, the silence. Don’t filter; write them all. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m2_q1" data-module="The Daily Drain" data-label="Translation audit — what drains you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which of these drains you the most — and why that one in particular?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="The Daily Drain" data-label="Which drains you most, and why" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">On a scale of 1–10, how full is your tank at the end of an ordinary day here? What number feels true today? <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m2_q3" data-module="The Daily Drain" data-label="Energy tank, 1–10, at day’s end" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one draining task you could simplify, batch, outsource, or skip entirely this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_q4" data-module="The Daily Drain" data-label="One draining task to simplify or drop" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your Body Knows First</h3>
+<p class="where">Culture shock lives in the body before it reaches your thoughts. Your system reads ‘unfamiliar’ as ‘unsafe’ and stays subtly on guard — which surfaces as fatigue, poor sleep, irritability, flatness, or feeling wired. Learning your own signals turns them from frightening into useful.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Your irritation and exhaustion aren’t character flaws. They’re a tired nervous system asking for care, not judgment.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="Your Body Knows First" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="Your Body Knows First" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">When did you last feel dysregulated — irritable, tearful, flat, or wired? What was happening right before?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="Your Body Knows First" data-label="Last time you felt dysregulated" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Right now, is your system more wired — anxious, on edge, can’t settle — or more flat: numb, low, checked out?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">More wired</button><button class="bbtn" data-branch="b1" data-val="no">More flat</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">A wired system needs downshifting — signals of safety, not more input.</div>
+<div class="prompt"><div class="plabel">Where does ‘wired’ show up in your body — jaw, chest, shoulders, stomach? Rest a hand there. What is it asking for? <span class="chip grounding">body · grounding</span></div>
+<textarea class="j-field grow" id="m3_y1" data-module="Your Body Knows First" data-label="Where wired lives in your body" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What actually helps you come down — not what should, but what does? (Slow breath, a walk, water, quiet, a familiar voice.) List your real ones.</div>
+<textarea class="j-field grow" id="m3_y2" data-module="Your Body Knows First" data-label="Your real down-regulators" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one way you could build a little more rest or predictability into this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_y3" data-module="Your Body Knows First" data-label="One way to add calm this week" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">A flat system doesn’t need pushing — it needs gentle, low-effort reconnection.</div>
+<div class="prompt"><div class="plabel">What does ‘flat’ feel like from the inside right now — and when did it start?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="Your Body Knows First" data-label="What flat feels like" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s the smallest thing that has reliably given you even a flicker of feeling or energy here? Coffee counts.</div>
+<textarea class="j-field grow" id="m3_n2" data-module="Your Body Knows First" data-label="The smallest spark" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one tiny, low-effort act of care you could do today — not to fix the flatness, just to be kind to it? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_n3" data-module="Your Body Knows First" data-label="One tiny act of care" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Settle It</h2><div class="ph-sub">Bringing your system back to baseline</div></div>
+<section class="module">
+<h3>Building Your Regulation Toolkit</h3>
+<p class="where">You can’t think your way out of a dysregulated nervous system — you settle it first, then think. This is about assembling a small, reliable kit of things that bring you back to baseline, and enough predictability that your system can finally lower its guard.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Routines aren’t rigid or boring — abroad, they’re medicine. Predictability is how your nervous system learns it’s safe here.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Building Your Regulation Toolkit" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="Building Your Regulation Toolkit" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Your regulation menu: list what genuinely steadies you — fast ones (a walk, a song, a few slow breaths) and slower ones (a bath, a call home, time outdoors). Keep this where you’ll find it on a hard day. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m4_q1" data-module="Building Your Regulation Toolkit" data-label="Your regulation menu (fast + slow)" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What one small daily routine could you protect no matter what — an anchor that stays the same every day?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="Building Your Regulation Toolkit" data-label="One daily anchor to protect" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where in your week could you build in more rest or quiet — even twenty minutes that are reliably yours?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="Building Your Regulation Toolkit" data-label="Where to build in rest this week" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one regulating thing from your menu you’ll actually do today? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="Building Your Regulation Toolkit" data-label="One regulating thing you’ll do today" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Homesickness &amp; the Comparison Trap</h3>
+<p class="where">Homesickness isn’t weakness — it’s love, displaced. And the phone makes it harder: scrolling everyone’s ordinary life back home can convince you that you’re missing the ‘real’ thing while you struggle. Both stories — ‘I’m missing out’ and ‘I should just be grateful’ — are distortions.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You’re not missing your old life; you’re living a different one. Both are real. Neither cancels the other.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Homesickness &amp; the Comparison Trap" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="Homesickness &amp; the Comparison Trap" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you miss most about home right now? Let yourself actually feel it, without rushing to ‘but I’m lucky.’</div>
+<textarea class="j-field grow" id="m5_q1" data-module="Homesickness &amp; the Comparison Trap" data-label="What you miss most about home" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Which story runs louder for you — ‘I’m missing out on the real thing back home,’ or ‘I should just be grateful, so I shouldn’t even feel this’?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">‘I’m missing out’</button><button class="bbtn" data-branch="b2" data-val="no">‘I should be grateful’</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then the phone is probably making it worse — comparison feeds on everyone’s highlight reel. Let’s put some guardrails on it.</div>
+<div class="prompt"><div class="plabel">When does the ‘missing out’ feeling hit hardest — a time of day, the phone, a particular situation?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="Homesickness &amp; the Comparison Trap" data-label="When comparison hits" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one boundary with your phone or social media that would protect you this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y2" data-module="Homesickness &amp; the Comparison Trap" data-label="One phone/social boundary" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then the trap is guilt — telling yourself you have no right to struggle. Let’s gently take that apart.</div>
+<div class="prompt"><div class="plabel">Can you let two things be true at once: you’re genuinely lucky to be here, AND this is genuinely hard? Write both, side by side.</div>
+<textarea class="j-field grow" id="m5_n1" data-module="Homesickness &amp; the Comparison Trap" data-label="Both true at once" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who are the two or three people back home you most want to stay genuinely connected to? What would staying close ‘on purpose’ look like? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_n2" data-module="Homesickness &amp; the Comparison Trap" data-label="Who to stay close to" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Finding Your Footing</h3>
+<p class="where">Settling isn’t a single decision — it’s a series of small experiments. Belonging grows in repeated, ordinary places (the same café, the same class, the same faces), and confidence grows from tiny wins. This last section turns insight into a gentle plan.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to love it here yet, or feel at home overnight. You just have to take one small step toward footing — and then another.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Finding Your Footing" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="Finding Your Footing" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Where do you already feel even a flicker of ease or belonging here? What’s creating it?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Finding Your Footing" data-label="Where you feel a flicker of ease" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name one repeated context — a class, a group, a regular spot — you could return to enough times to become a familiar face.</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Finding Your Footing" data-label="One repeated context to return to" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small experiment you could run this week to make this place feel five percent more like yours? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_q3" data-module="Finding Your Footing" data-label="One small experiment this week" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Your culture-shock plan, in three lines — my earliest warning sign is… / what settles me is… / the one person I’ll reach out to is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q4" data-module="Finding Your Footing" data-label="Your three-line culture-shock plan" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">Culture shock is not forever — and you’re already doing the work of moving through it.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-cultureshock-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE CULTURE SHOCK WORKBOOK\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Culture Shock Workbook.txt';a.click();
+}
+</script></body></html>

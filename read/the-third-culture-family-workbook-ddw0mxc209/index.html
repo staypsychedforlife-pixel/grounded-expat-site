@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Third-Culture Family Workbook · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Third-Culture Family Workbook</h1>
+<div class="sub">Helping your children — and yourself — feel at home abroad.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Moving abroad as a family carries a particular weight: you’re not only finding your own footing, you’re watching the people you love most try to find theirs. You worry whether you did the right thing. You hold your children’s grief on top of your own. And your kids are becoming ‘third-culture’ — shaped by more than one world, belonging fully to none in the usual way.</p><p>This workbook is for the parent’s heart and the family’s life together. It helps you tend your own ground, understand what the move asks of your children, and build the anchors that make a family feel at home anywhere. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This workbook is an educational, self-reflection resource for parents — not therapy, diagnosis, treatment, or a crisis service, and not a substitute for professional support for a struggling child. If you’re seriously worried about your child’s wellbeing, please reach out to a qualified professional or your local services. You both deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Your Own Ground First</h2><div class="ph-sub">Because they steady off you</div></div>
+<section class="module">
+<h3>You Can’t Pour From Empty</h3>
+<p class="where">On a plane, they tell you to fix your own oxygen mask first — and it’s truer than ever abroad. Your children co-regulate off you; your steadiness is part of their safety. Tending your own adjustment isn’t selfish — it’s foundational.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Taking care of your own footing isn’t taking something from your children. It’s giving them a steadier parent to come home to.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>In my work with families who’ve moved abroad, the parent’s own adjustment is the piece that quietly gets skipped — everyone’s watching the kids. But children read our nervous systems long before they hear our words. Again and again I’ve seen a child settle not because anything outside changed, but because their parent finally got some support and steadied. Tending your own footing isn’t a luxury for later; it’s part of the work.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="You Can’t Pour From Empty" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="You Can’t Pour From Empty" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Honestly, how are YOU doing with this move — underneath the logistics and the parenting? When did anyone last ask you that?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="You Can’t Pour From Empty" data-label="How you’re really doing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What have you been carrying alone that you haven’t said out loud — to a partner, a friend, or even yourself?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="You Can’t Pour From Empty" data-label="What you carry alone" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small thing that would refill you, even a little, this week — and will you protect it? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q3" data-module="You Can’t Pour From Empty" data-label="One thing to refill you" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Guilt You Carry</h3>
+<p class="where">Many expat parents carry a quiet guilt: Did I uproot them for my own reasons? Did I take away their friends, their grandparents, their sense of home? The guilt is a sign of how much you love them — but marinating in it doesn’t help them, and it isn’t the whole truth.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You made a big decision for your family with the information and love you had. Guilt doesn’t make you a bad parent — but you don’t have to let it run the house.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="The Guilt You Carry" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="The Guilt You Carry" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you feel guilty about when it comes to how this move has affected your children? Name it specifically.</div>
+<textarea class="j-field grow" id="m2_q1" data-module="The Guilt You Carry" data-label="Name the guilt" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Reading back what you wrote — is that guilt pointing at something you could actually change or repair, or is it grief for something outside your control?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Something I could change</button><button class="bbtn" data-branch="b1" data-val="no">Grief I can’t fix</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then guilt is data, not a verdict — let’s turn it into one small action.</div>
+<div class="prompt"><div class="plabel">What’s the specific thing — a conversation, a change to the routine, more of something, less of something? Name it.</div>
+<textarea class="j-field grow" id="m2_y1" data-module="The Guilt You Carry" data-label="The repair" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s the smallest version of that you could actually do this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_y2" data-module="The Guilt You Carry" data-label="One step this week" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then this isn’t guilt to fix — it’s grief to feel. Naming it is how you stop carrying it as blame.</div>
+<div class="prompt"><div class="plabel">What is it you’re actually grieving on your children’s behalf — and can you let it be sad without it being your fault?</div>
+<textarea class="j-field grow" id="m2_n1" data-module="The Guilt You Carry" data-label="What you’re grieving" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Now the other side: what did this move also GIVE them — experiences, growth, closeness, a wider world? Let yourself write it. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m2_n2" data-module="The Guilt You Carry" data-label="The other side of the ledger" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Your Children’s World</h2><div class="ph-sub">Understanding what the move asks of them</div></div>
+<section class="module">
+<h3>What the Move Asks of Your Kids</h3>
+<p class="where">Children grieve moves too, just in their own language — through behavior, regression, clinginess, anger, or a too-quiet ‘I’m fine.’ Their sense of home, friendships, and routine were rearranged without their say. Understanding what they lost helps you meet what they show.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Your child’s hard behavior after a move usually isn’t defiance — it’s grief and overwhelm without the words to say so. They’re not giving you a hard time; they’re having one.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="What the Move Asks of Your Kids" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="What the Move Asks of Your Kids" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">For each of your children, what has this move asked them to leave behind — and how have you seen it show up in them?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="What the Move Asks of Your Kids" data-label="What each child left behind" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is there one child you’re most worried about right now?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Yes — one in particular</button><button class="bbtn" data-branch="b2" data-val="no">It’s more spread out</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Let’s slow down and really look at that one.</div>
+<div class="prompt"><div class="plabel">Which child, and what specifically are you noticing — in their behavior, mood, sleep, or the too-quiet ‘I’m fine’?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="What the Move Asks of Your Kids" data-label="What you’re seeing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If their hard behavior is grief and overwhelm without the words, what might they be trying to tell you underneath it?</div>
+<textarea class="j-field grow" id="m3_y2" data-module="What the Move Asks of Your Kids" data-label="Grief, not defiance" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small way you could give this child a little more connection or predictability this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_y3" data-module="What the Move Asks of Your Kids" data-label="More connection this week" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then let’s scan gently across all of them.</div>
+<div class="prompt"><div class="plabel">For each child, write one line: how are they really doing — and what’s the one sign you’re going on?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="What the Move Asks of Your Kids" data-label="Each child, one line" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where have you seen any of them show resilience, or find something good here, even small?</div>
+<textarea class="j-field grow" id="m3_n2" data-module="What the Move Asks of Your Kids" data-label="Where they’ve shown resilience" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>The Third-Culture Identity</h3>
+<p class="where">Kids raised across cultures grow up rich and rootless at once — fluent in more than one world, but sometimes unsure where ‘home’ or ‘from’ really is. This isn’t a problem to fix so much as an identity to support: they can belong to more than one place, and to your family most of all.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Your child doesn’t have to choose one country to be ‘from.’ You can help them hold all of it — and know that home is also the people in it, not only a place on a map.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>One of the things I find myself reassuring expat parents about most is the ‘where are you from?’ question — the fear that their child will grow up rootless. What I’ve seen is often the opposite: children raised across cultures can grow up remarkably adaptable, empathetic, and at ease with difference. The rootedness they need isn’t a single country — it’s the steady sense of belonging to their family, wherever that family happens to be.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="The Third-Culture Identity" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="The Third-Culture Identity" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">How does your child seem to answer ‘where are you from?’ — and what feelings come up around it for them (or for you)?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="The Third-Culture Identity" data-label="‘Where are you from?’" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What parts of your home culture do you want to keep alive for them? What parts of this new culture do you hope they carry too?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="The Third-Culture Identity" data-label="What to keep, what to carry" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How can you help them feel that being ‘from everywhere’ is a richness, not a rootlessness?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="The Third-Culture Identity" data-label="Richness, not rootlessness" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small ritual or object that could travel with your family as a constant ‘home,’ wherever you are? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="The Third-Culture Identity" data-label="A ‘home’ that travels" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Talking With Them About It</h3>
+<p class="where">Children often can’t spontaneously explain how a move feels — but they can respond when we make it safe and ordinary to talk about. The goal isn’t a big serious conversation; it’s small, open doors, and a lot of listening without rushing to fix.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t need the perfect words. You need to be a safe place to bring the hard feelings — and to resist the urge to fix them away too quickly.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Talking With Them About It" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="Talking With Them About It" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+
+<div class="branch"><div class="bq">Have you tried to talk with them about the move — and did it open up, or shut down?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">We’ve talked</button><button class="bbtn" data-branch="b3" data-val="no">Not really yet</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Good — let’s build on what’s already open.</div>
+<div class="prompt"><div class="plabel">What did they tell you — and what surprised you about how they’re really feeling?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="Talking With Them About It" data-label="What you learned" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When they share something hard, what’s your instinct — to fix, reassure, or minimize? What would just listening look like instead?</div>
+<textarea class="j-field grow" id="m5_y2" data-module="Talking With Them About It" data-label="Just listening" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could say that keeps that door open — that lets them know it’s safe to bring the hard stuff again? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y3" data-module="Talking With Them About It" data-label="The door to keep open" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">That’s okay — the goal isn’t one big serious talk, just small, low-pressure openings.</div>
+<div class="prompt"><div class="plabel">When is each child most likely to open up — in the car, at bedtime, side by side doing something? Pick the moment.</div>
+<textarea class="j-field grow" id="m5_n1" data-module="Talking With Them About It" data-label="Their talkable moment" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Draft one low-pressure question you could ask that invites honesty without pressure (‘What’s the weirdest thing about here?’ ‘What do you miss?’). <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_n2" data-module="Talking With Them About It" data-label="A gentle opener" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one gentle conversation you’d like to open with a child this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_n3" data-module="Talking With Them About It" data-label="One conversation to open" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Three</div><h2>Your Family, Steadier</h2><div class="ph-sub">Building home wherever you land</div></div>
+<section class="module">
+<h3>Anchors, Rituals & Home</h3>
+<p class="where">Home, for a mobile family, becomes less about an address and more about the constants you carry — the Friday pancakes, the bedtime song, the way you mark birthdays. Rituals tell a child’s nervous system: whatever changes outside, this family holds.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You can’t give your children an unchanging place. You can give them an unchanging sense of ‘us’ — and that travels anywhere.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Anchors, Rituals & Home" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="Anchors, Rituals & Home" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What rituals or traditions did your family have before the move that you want to protect? Which have slipped that you’d like back?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Anchors, Rituals & Home" data-label="Rituals to protect" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What new traditions could you build here that are unique to this chapter of your family’s life?</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Anchors, Rituals & Home" data-label="New traditions here" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Make a short list of your family’s ‘anchors’ — the constants you’ll keep no matter where you live. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q3" data-module="Anchors, Rituals & Home" data-label="Your family’s anchors" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one anchor you’ll re-commit to this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_q4" data-module="Anchors, Rituals & Home" data-label="One to re-commit to" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your Family Plan</h3>
+<p class="where">You’ve tended your own ground, tried to understand your children’s, and named the anchors that make a home. This last page turns it into something you can hold onto on the hard days.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are giving your children a rare gift — a wider world and a family that stays home no matter where it lives. You’re doing better than the guilt tells you.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Your Family Plan" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m7_arrive" data-module="Your Family Plan" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What’s the most important thing you want to remember, as a parent, from working through this?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Your Family Plan" data-label="The one thing to remember" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Your family plan, in three lines — the way I’ll tend my own footing is… / the child I’ll give extra connection to is… / the anchor we’ll keep no matter what is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m7_q2" data-module="Your Family Plan" data-label="Your family plan, in three lines" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you most hope your children will carry from this chapter of their lives, years from now?</div>
+<textarea class="j-field grow" id="m7_q3" data-module="Your Family Plan" data-label="What you hope they carry" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">A family that stays home to each other can feel at home anywhere — and you are building exactly that.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-tcfamily-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE THIRD-CULTURE FAMILY WORKBOOK\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Third-Culture Family Workbook.txt';a.click();
+}
+</script></body></html>

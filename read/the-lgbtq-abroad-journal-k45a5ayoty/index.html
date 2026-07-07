@@ -1,0 +1,277 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The LGBTQ+ Abroad Journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The LGBTQ+ Abroad Journal</h1>
+<div class="sub">For the queer, trans, and questioning — the inner side of moving abroad as your whole self.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Moving abroad is its own upheaval. Doing it as an LGBTQ+ person adds layers most guides never mention: reading a new country for safety, deciding all over again who you can be open with, finding your people from scratch, and carrying an identity the place around you may celebrate, overlook, or forbid. Wherever you’ve landed on that spectrum, this journal is for the part of the move that’s specifically yours.</p><p>There’s no right way to be queer abroad, and no obligation to be out anywhere. This is a private space to think it through honestly — the safety, the exhaustion, the community, and the joy. Work through it in order or open the page you need. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><p><strong>A note on privacy:</strong> your entries are stored only in this browser, on this device — never sent anywhere. If your situation makes privacy a matter of safety, you can clear them at any time, and it’s worth considering who else can access this device.</p><div class="disclaimer">This journal is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. If you are somewhere that being LGBTQ+ is criminalized or unsafe, your physical safety comes first — nothing on this page is worth taking a risk for. If you’re struggling in a way that feels beyond what a journal can hold, please reach out to someone you trust, an affirming professional, or a local or international LGBTQ+ support line. You deserve real support, exactly as you are.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Landing as Your Whole Self</h2><div class="ph-sub">What this move asks of you</div></div>
+<section class="module">
+<h3>What This Move Means for You</h3>
+<p class="where">Every LGBTQ+ move has a direction to it. Some people move somewhere freer and feel their shoulders drop; some move somewhere more restrictive and go quieter than they were; many land somewhere sideways — freer in one way, harder in another. Before anything else, let’s name what this particular move has meant for the part of you that’s queer, trans, or questioning.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>However this move has landed for your identity — relief, loss, complication, or all three — your read on it is valid. You’re allowed to feel the freedom and the cost at the very same time.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="What This Move Means for You" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="What This Move Means for You" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+
+<div class="branch"><div class="bq">Compared to where you came from, is this new place more accepting of who you are — or less?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">More accepting here</button><button class="bbtn" data-branch="b1" data-val="no">Less accepting here</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then there may be a specific relief here — and sometimes an unexpected grief or disorientation that comes with new freedom. Let’s hold both.</div>
+<div class="prompt"><div class="plabel">What has loosened or become possible here that wasn’t, or didn’t feel safe, before? Let yourself notice it fully.</div>
+<textarea class="j-field grow" id="m1_y1" data-module="What This Move Means for You" data-label="What loosened" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">New freedom can feel strange after years of guarding. What’s surprised you — is there anything you’re still bracing for, or grieving from before?</div>
+<textarea class="j-field grow" id="m1_y2" data-module="What This Move Means for You" data-label="The surprising part" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small way you could let yourself actually receive this freedom this week — something you couldn’t do before? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_y3" data-module="What This Move Means for You" data-label="Letting yourself have it" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then this is a harder landing — and your caution isn’t paranoia, it’s wisdom. Let’s be honest about it, safely.</div>
+<div class="prompt"><div class="plabel">What parts of yourself have you had to put away, dial down, or hide since arriving? Name them here, where it’s yours.</div>
+<textarea class="j-field grow" id="m1_n1" data-module="What This Move Means for You" data-label="What you’ve had to put away" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What does that cost you day to day — the energy, the loneliness, the not-being-fully-known?</div>
+<textarea class="j-field grow" id="m1_n2" data-module="What This Move Means for You" data-label="What it costs you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where, or with whom, can you still be fully yourself here — even in small, private ways? If nowhere yet, what might a first pocket of that look like? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_n3" data-module="What This Move Means for You" data-label="Where you can still be yourself" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Reading the Room</h3>
+<p class="where">Safety abroad isn’t paranoia — it’s information. Laws, everyday social attitudes, and specific places can differ wildly, and they’re not always what the guidebook says. This entry is about getting an honest, practical read on your actual environment, so your choices are informed rather than anxious guesses.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Assessing your safety clearly isn’t living in fear. It’s what lets you relax where you can, and protect yourself where you must. Knowing is steadier than not-knowing.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="Reading the Room" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="Reading the Room" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What’s the real legal and social situation for LGBTQ+ people where you are — not the assumption, the actual picture? What do you still need to find out?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="Reading the Room" data-label="The legal &amp; social reality" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which spaces, situations, or people here feel safe, which feel unsafe, and which are still a question mark?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="Reading the Room" data-label="Safe / unsafe / unsure" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where might you be over- or under-estimating the risk — reacting to old fears, or to reassurance that isn’t quite true? What would help you actually know?</div>
+<textarea class="j-field grow" id="m2_q3" data-module="Reading the Room" data-label="Your read vs. the noise" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one practical thing you could find out or set up this week — an affirming clinic, a legal fact, a trusted contact, a safer app setting? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_q4" data-module="Reading the Room" data-label="One thing to find out or set up" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Out, Safe, and Whole</h2><div class="ph-sub">Identity &amp; disclosure</div></div>
+<section class="module">
+<h3>Out, Not Out, or In Between</h3>
+<p class="where">In a new country you often have to decide, all over again and person by person, who gets to know this about you. There’s no universally right answer — being out is not a virtue, and being private is not a failure. This is about making those choices consciously, on your own terms.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t owe anyone your disclosure — not here, not to prove anything. Being out, being selectively open, or being private are all legitimate. The only question that matters is what’s right and safe for you.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="Out, Not Out, or In Between" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="Out, Not Out, or In Between" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+
+<div class="branch"><div class="bq">Right now, are you mostly able to be open about who you are here — or mostly navigating who’s safe to tell?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Mostly open</button><button class="bbtn" data-branch="b2" data-val="no">Mostly navigating it</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then this is about deepening — being known, not just tolerated, and choosing where you invest.</div>
+<div class="prompt"><div class="plabel">Where do you feel genuinely known here, versus merely tolerated or unremarked-on? What’s the difference for you?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="Out, Not Out, or In Between" data-label="Known vs. tolerated" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is there a relationship or space where you could let yourself be a little more fully, joyfully out? What would that look like? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_y2" data-module="Out, Not Out, or In Between" data-label="One place to be more fully you" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then you’re doing constant, invisible calculation — and that’s exhausting, even when it’s the right call. Let’s make it conscious instead of automatic.</div>
+<div class="prompt"><div class="plabel">Who here knows, who doesn’t, and who are you unsure about? Getting it on paper can make the fog less anxious.</div>
+<textarea class="j-field grow" id="m3_n1" data-module="Out, Not Out, or In Between" data-label="Your disclosure map" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What does the constant reading-of-rooms and code-switching cost you? Where do you feel it most?</div>
+<textarea class="j-field grow" id="m3_n2" data-module="Out, Not Out, or In Between" data-label="The cost of calculating" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where is there even one safe pocket — a person, an online space, a trip home — where you don’t have to calculate? How could you protect or grow it? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_n3" data-module="Out, Not Out, or In Between" data-label="One safe pocket" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>The Weight You Carry</h3>
+<p class="where">Living as a minority — reading rooms, bracing for reactions, hiding or half-hiding — is a real, measurable load on the nervous system. It isn’t weakness or oversensitivity; it’s the cumulative cost of vigilance. Naming it is how you stop mistaking it for a flaw in you.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The tiredness, the guardedness, the flashes of anger or numbness — these aren’t character defects. They’re the honest cost of navigating a world that isn’t always safe for who you are. You’re carrying something heavy, and it makes sense that it’s heavy.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>In my work, the piece that surprises people most is learning that this exhaustion has a name and a mechanism — minority stress. The constant, low-level vigilance of moving through a world that isn’t reliably safe for who you are is a genuine, measurable load on the nervous system, not a personal weakness. When someone finally hears that their tiredness makes sense, something loosens. You are not too sensitive; you’ve been carrying something real.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="The Weight You Carry" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="The Weight You Carry" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">How does this particular load show up for you — hypervigilance, exhaustion, irritability, numbness, dread, or something else? Describe your version.</div>
+<textarea class="j-field grow" id="m4_q1" data-module="The Weight You Carry" data-label="How it shows up in you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When is it heaviest — certain places, certain interactions, certain times? What tends to set it off?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="The Weight You Carry" data-label="When it’s heaviest" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What genuinely helps your system settle when it’s been on guard — affirming people, queer spaces, rest, distance from the source? List your real ones. <span class="chip grounding">body · grounding</span></div>
+<textarea class="j-field grow" id="m4_q3" data-module="The Weight You Carry" data-label="What actually helps you settle" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could do this week to be as kind to yourself as you’d be to a friend carrying this? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="The Weight You Carry" data-label="One act of self-compassion" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Three</div><h2>Your People &amp; Your Becoming</h2><div class="ph-sub">Community, love, and who you are</div></div>
+<section class="module">
+<h3>Finding Your People</h3>
+<p class="where">Queer community can be one of the hardest things to rebuild abroad — sometimes hidden, sometimes small, sometimes online before it’s ever in person. And chosen family, that particular lifeline, has to be found again from scratch. This is about the brave, patient work of finding your people here.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Needing queer community isn’t neediness — it’s oxygen. Being understood without having to explain yourself is something you deserve, and it’s worth the slow, brave work of building it here.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Finding Your People" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="Finding Your People" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What kind of connection or community do you most miss — and what did it give you that you haven’t found here yet?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="Finding Your People" data-label="What you’re missing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where might your people be here — queer orgs, apps, events, online groups, affirming spaces, a friend of a friend? List every possibility, even faint ones. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_q2" data-module="Finding Your People" data-label="Where your people might be" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is your chosen family — near or far — and how will you keep those lifelines strong across the distance?</div>
+<textarea class="j-field grow" id="m5_q3" data-module="Finding Your People" data-label="Chosen family, near and far" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small, brave step toward queer connection you could take this month? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_q4" data-module="Finding Your People" data-label="One brave step toward connection" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Love &amp; Relationships Abroad</h3>
+<p class="where">Love as an LGBTQ+ person abroad carries its own particular questions — where it’s safe to hold hands, whether your relationship is legally recognized, how to date in a new and maybe less-open place. This entry meets you wherever you are with it.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Your love, your relationship, your desire for one — they’re real and they matter, whatever the law or the street says here. You get to want connection, and to protect it.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Love &amp; Relationships Abroad" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="Love &amp; Relationships Abroad" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+
+<div class="branch"><div class="bq">Are you navigating this partnered, or single (or dating)?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">I’m partnered</button><button class="bbtn" data-branch="b3" data-val="no">Single / dating</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then let’s tend the relationship in a context that may not make it easy.</div>
+<div class="prompt"><div class="plabel">What has this move asked of your relationship specifically — around safety, visibility, legal recognition, or the stress landing on you both?</div>
+<textarea class="j-field grow" id="m6_y1" data-module="Love &amp; Relationships Abroad" data-label="What the move asks of you two" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where can you be openly a couple here, and where can’t you? How does that shape your daily life together?</div>
+<textarea class="j-field grow" id="m6_y2" data-module="Love &amp; Relationships Abroad" data-label="Where you can be ‘us’" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could do to protect or nourish the relationship in this context this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_y3" data-module="Love &amp; Relationships Abroad" data-label="One way to protect the bond" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then let’s be honest about dating and desire here — the possibilities and the particular hurdles.</div>
+<div class="prompt"><div class="plabel">What do you actually want right now — connection, dating, community, just to feel less alone? Name it without judging it.</div>
+<textarea class="j-field grow" id="m6_n1" data-module="Love &amp; Relationships Abroad" data-label="What you want" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What makes dating or meeting people harder here specifically — a smaller scene, safety, the apps, the culture? What’s the honest picture?</div>
+<textarea class="j-field grow" id="m6_n2" data-module="Love &amp; Relationships Abroad" data-label="The real hurdles here" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one low-pressure step toward the kind of connection you want — an app, an event, an online space — that feels safe enough to try? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_n3" data-module="Love &amp; Relationships Abroad" data-label="One low-pressure step" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Who You’re Becoming</h3>
+<p class="where">For all its weight, being queer abroad also grows something in you — resilience, clarity about who your real people are, and often an unexpected freedom to redefine yourself far from the eyes that knew you. This last entry is for the becoming, and for the joy that’s yours to claim.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are not just surviving this — you’re becoming someone through it. The courage it takes to be yourself on unfamiliar ground is not small, and neither is the joy you’re allowed to claim along the way.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>Something I’ve witnessed again and again: the very people who’ve had to fight hardest to be themselves often develop a rare, hard-won steadiness — a clarity about who their real people are, and a refusal to abandon themselves that most people never have to build. The road here is unfair, and it is heavy. And still, the resilience and self-knowledge it can grow are genuinely yours to keep.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Who You’re Becoming" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m7_arrive" data-module="Who You’re Becoming" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Who are you becoming through this experience — as a queer person, and as a whole person? What is it drawing out of you?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Who You’re Becoming" data-label="Who you’re becoming" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Has being far from home given you any unexpected freedom to be, explore, or redefine yourself? What have you discovered?</div>
+<textarea class="j-field grow" id="m7_q2" data-module="Who You’re Becoming" data-label="An unexpected freedom" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where is the joy — the queer joy, the pride, the moments of being fully yourself — in this chapter? Let yourself name it, not only the hard parts.</div>
+<textarea class="j-field grow" id="m7_q3" data-module="Who You’re Becoming" data-label="Where the joy is" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing about who you are, or who you’ve become here, that you want to carry forward no matter where you go next? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_q4" data-module="Who You’re Becoming" data-label="One thing to carry forward" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You get to be exactly who you are — here, and anywhere you go next. That’s yours to keep.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-lgbtq-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE LGBTQ+ ABROAD JOURNAL\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My LGBTQ+ Abroad Journal.txt';a.click();
+}
+</script></body></html>

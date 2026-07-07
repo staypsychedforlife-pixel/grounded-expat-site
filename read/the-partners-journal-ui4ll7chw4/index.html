@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Partner’s Journal · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Partner’s Journal</h1>
+<div class="sub">For the partner who moved for someone else — and is building a life of their own.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>This journal is entirely yours. The move may have been for someone else’s job or dream — but your grief, your invisible work, and your becoming are your own, and they deserve a place to be named. It walks with you across the whole arc: the landing, the hard middle, the slow becoming, and carrying it home.</p><p>There’s no right way to use it. Write a lot or a little. Skip around. Come back to an entry months later and answer it again — you’ll be surprised what changes.</p><p><strong>Your writing saves automatically</strong> on this device and stays completely private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export everything you’ve written as a text file.</p><div class="disclaimer">This journal is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. If you’re struggling in a way that feels beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or your local emergency services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase One</div><h2>Landing</h2><div class="ph-sub">Grief &amp; the first weeks</div></div>
+<section class="module">
+<h3>Grief Without a Funeral</h3>
+<p class="where">You left a whole life — a home, maybe a career, friendships, a version of yourself — and the world keeps treating it like an exciting adventure. There was no funeral for what you lost. But the grief is real, and it deserves a place to be named.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>What you’re feeling isn’t ingratitude, and it isn’t an overreaction. You’ve lost real things. Grief is simply the proof that they mattered.</p></div>
+<div class="exp long"><div class="lab"><span class="dot">S</span>From my experience</div><p>Everyone celebrated the move.</p><p>They asked about the new country, the new job, and the adventure ahead. Almost no one asked what we had left behind.</p><p>There was no ceremony for the friendships, routines, or version of life that quietly ended when we boarded the plane.</p><p>For months, I thought feeling sad meant I wasn’t grateful. Eventually I realized I wasn’t ungrateful. I was grieving.</p><p>Some losses don’t come with funerals, but they deserve to be acknowledged just the same.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="Grief Without a Funeral" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="Grief Without a Funeral" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What did you leave behind that you’re grieving most? Not what you think you should miss — what actually aches.</div>
+<textarea class="j-field grow" id="m1_q1" data-module="Grief Without a Funeral" data-label="What you’re grieving most" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who back home are you missing right now? What did they give you that you haven’t found here yet?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="Grief Without a Funeral" data-label="Who you’re missing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Has anyone acknowledged what this move cost you — or has it all been framed as exciting? How has that felt?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="Grief Without a Funeral" data-label="Has anyone acknowledged the cost?" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where does the grief live in your body? Name it. Grief that goes unnamed tends to come out sideways — as fatigue, irritability, numbness. <span class="chip grounding">body · grounding</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="Grief Without a Funeral" data-label="Where the grief lives in your body" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small way you could honor what you left — a ritual, a photo, a call, a meal from home — this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q5" data-module="Grief Without a Funeral" data-label="One small way to honor what you left" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your First Weeks</h3>
+<p class="where">These first weeks are disorienting partly because your days suddenly belong to everyone else’s transition. This entry is about reclaiming a little ground that’s yours — your inventory, your goals, your support.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Your needs didn’t get smaller because the move was for someone else’s job. You’re allowed to take up space in your own life.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="Your First Weeks" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="Your First Weeks" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What are you most anxious about in the weeks ahead — the thing you haven’t said out loud yet?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="Your First Weeks" data-label="What you’re most anxious about" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you most need from your partner right now — that you’re not sure they know?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="Your First Weeks" data-label="What you most need from your partner" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Picture your ideal day in this city six months from now — yours, not your partner’s, not the family’s. What are you doing? Who are you with? What does it feel like?</div>
+<textarea class="j-field grow" id="m2_q3" data-module="Your First Weeks" data-label="Your ideal day, six months from now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name one professional, creative, or personal goal — just one — that’s yours for this chapter abroad.</div>
+<textarea class="j-field grow" id="m2_q4" data-module="Your First Weeks" data-label="One goal that’s yours for this chapter" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one concrete step you’ll take this week to begin meeting people here? Not a plan — an action. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_q5" data-module="Your First Weeks" data-label="One concrete step to meet people" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Phase Two</div><h2>The Hard Middle</h2><div class="ph-sub">Invisible work &amp; identity</div></div>
+<section class="module">
+<h3>The Invisible Work</h3>
+<p class="where">You’re the one who made the move work — the housing, the schools, the bureaucracy in a language you’re still learning, the emotional weather of the whole family. It’s enormous. And most of it is invisible, even to the people you’re doing it for.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The work you’re doing is real work, even though no one’s paying you for it and no one can see it. Being the reason everyone else landed safely is not nothing — it’s everything.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="The Invisible Work" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="The Invisible Work" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Make the invisible visible: list what you’ve actually managed since the move — the logistics, the languages, the emotional labor. Don’t minimize. Write it all down.</div>
+<textarea class="j-field grow" id="m3_q1" data-module="The Invisible Work" data-label="Make the invisible visible — list it all" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which part of this unseen work weighs on you most? What would it mean to have it acknowledged?</div>
+<textarea class="j-field grow" id="m3_q2" data-module="The Invisible Work" data-label="Which unseen work weighs on you most" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where do you feel taken for granted — and could you say that out loud, to your partner or your family?</div>
+<textarea class="j-field grow" id="m3_q3" data-module="The Invisible Work" data-label="Where you feel taken for granted" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When you read your list back, what happens in your body? Notice it — that response is information about how much you’ve been carrying. <span class="chip grounding">body · grounding</span></div>
+<textarea class="j-field grow" id="m3_q4" data-module="The Invisible Work" data-label="What happens in your body reading it back" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could hand off, share, or let be imperfect this week — to give yourself back a little capacity? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_q5" data-module="The Invisible Work" data-label="One thing to hand off or let be imperfect" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Identity on Hold</h3>
+<p class="where">If you left a career or a role that told you who you were, there’s a specific grief in that — and a specific question: who am I here, without it? This entry sits with that honestly, and begins to build forward.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are not ‘just’ anyone’s partner. The role you paused is still in you — and the person underneath the role was always more than the title.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Identity on Hold" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="Identity on Hold" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What does it feel like to not be fully known by anyone in your daily environment here? Try to name it precisely.</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Identity on Hold" data-label="Not being fully known here" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you left, did you leave behind a career or role that told you who you were — or was your sense of self built more around other things?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">I left a career/role</button><button class="bbtn" data-branch="b1" data-val="no">It wasn’t about a job</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then there’s a specific grief here — losing the role that reflected you back. Let’s honor it, and find what travels.</div>
+<div class="prompt"><div class="plabel">What did your professional identity mean to you — beyond the paycheck or the title? What did it give you that you haven’t been able to replace here?</div>
+<textarea class="j-field grow" id="m4_y1" data-module="Identity on Hold" data-label="What that identity meant" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What parts of the professional person you were are still available to you, even without the role?</div>
+<textarea class="j-field grow" id="m4_y2" data-module="Identity on Hold" data-label="What’s still available" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could do this week that would be purely for you — not for your partner, not for your children, not for the move? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_y3" data-module="Identity on Hold" data-label="One thing purely for you" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then the question is quieter, but just as real: who were you underneath the roles — and who are you here?</div>
+<div class="prompt"><div class="plabel">If it wasn’t a job, what gave you your sense of self back home — and how much of that is available to you here?</div>
+<textarea class="j-field grow" id="m4_n1" data-module="Identity on Hold" data-label="What did define you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could do this week that would be purely for you — that reconnects you to that? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_n2" data-module="Identity on Hold" data-label="One thing purely for you" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Phase Three</div><h2>Becoming</h2><div class="ph-sub">Ambition &amp; identity abroad</div></div>
+<section class="module">
+<h3>Reclaiming Ambition</h3>
+<p class="where">At some point, surviving the move turns into a quieter, riskier question: what do I actually want now? Ambition can feel complicated to admit when your life is built around someone else’s. This is the place to admit it anyway.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Wanting something for yourself isn’t a betrayal of your family or this move. Your ambition didn’t disappear — it’s been waiting for permission.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Reclaiming Ambition" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="Reclaiming Ambition" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What are you afraid to want? What have you been holding back from admitting, even to yourself, because it feels complicated?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="Reclaiming Ambition" data-label="What you’re afraid to want" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Do you already have a sense of what you want next — or is that still foggy?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">I know what I want</button><button class="bbtn" data-branch="b2" data-val="no">Still foggy</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Good — then this is about permission and a first step, not more figuring out.</div>
+<div class="prompt"><div class="plabel">What have you developed, built, navigated, or learned during this chapter that you’d put on a résumé if you knew how to frame it?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="Reclaiming Ambition" data-label="The résumé version of these years" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s the smallest real first step toward what you want? Not a plan — a single action you could take this week. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y2" data-module="Reclaiming Ambition" data-label="Smallest real first step" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">That’s okay — you don’t have to know yet. Let’s give the wanting some room to show itself.</div>
+<div class="prompt"><div class="plabel">If you had full permission and no practical constraints — what would you pursue during the rest of this chapter abroad? Don’t filter for realistic.</div>
+<textarea class="j-field grow" id="m5_n1" data-module="Reclaiming Ambition" data-label="With full permission" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where do you feel even a flicker of pull, curiosity, or envy lately? That’s often the first clue to what you want. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_n2" data-module="Reclaiming Ambition" data-label="Where you feel a pull" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Your Identity Abroad</h3>
+<p class="where">You’ve changed since you arrived — not just adapted, but changed. This entry is about noticing who you’re becoming, and choosing, on purpose, who you want to be in the second half.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Who you’re becoming here is not a lesser version of who you were. You’ve done something hard, on unfamiliar ground, and you’re still standing. That’s worth claiming.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Your Identity Abroad" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="Your Identity Abroad" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Describe yourself as you were six months ago — your life, your sense of self, what you were building, who you were in your own eyes.</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Your Identity Abroad" data-label="You, six months ago" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What surprised you about yourself in the first months here — the things you didn’t expect?</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Your Identity Abroad" data-label="What surprised you about yourself" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What unexpected capacities have you discovered in yourself — things you didn’t know you had, or hadn’t needed to use before?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="Your Identity Abroad" data-label="Unexpected capacities you’ve discovered" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What qualities or ways of being do you want to actively develop in the second half of this chapter — for yourself, not for anyone else?</div>
+<textarea class="j-field grow" id="m6_q4" data-module="Your Identity Abroad" data-label="What you want to develop in yourself" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you’re going to do differently — starting now — that reflects who you’re choosing to become? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_q5" data-module="Your Identity Abroad" data-label="One thing you’ll do differently, starting now" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Phase Four</div><h2>Carrying It Home</h2><div class="ph-sub">Re-entry &amp; legacy</div></div>
+<section class="module">
+<h3>Coming Home</h3>
+<p class="where">Going home sounds simple. It rarely is — especially for the partner who reshaped a whole life around this move and is now expected to slot back in. This entry helps you prepare for the real re-entry, not the postcard version.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You’re not the same person who left, and home isn’t the same place. If re-entry feels destabilising, that’s not failure — it’s the cost of having grown.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Coming Home" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m7_arrive" data-module="Coming Home" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Are you grieving anything about leaving this place — the community you built, the version of yourself you were becoming here?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Coming Home" data-label="What you’re grieving about leaving" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is returning home actually on your horizon soon — or is that still far off, unplanned, or not the plan?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">Return is coming</button><button class="bbtn" data-branch="b3" data-val="no">Not soon / unsure</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then let’s prepare for the real re-entry — the one that expects you to slot back in, when you’ve changed.</div>
+<div class="prompt"><div class="plabel">What are you actually anxious or ambivalent about regarding going home? Not the polished version — the real one.</div>
+<textarea class="j-field grow" id="m7_y1" data-module="Coming Home" data-label="The real anxiety" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What are you most afraid will be lost — about who you became here — when you step back into the old context?</div>
+<textarea class="j-field grow" id="m7_y2" data-module="Coming Home" data-label="What you’re afraid will be lost" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who do you want to be at home now, given who you’ve become here? Name one thing you’ll do differently. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_y3" data-module="Coming Home" data-label="Who you want to be at home" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then ‘home’ is an open question — and for the partner who reshaped a life around this move, that’s worth sitting with honestly.</div>
+<div class="prompt"><div class="plabel">If you’re not going back soon, what do you want this next stretch to be for — now that the hardest part of the move is behind you?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="Coming Home" data-label="What this next stretch is for" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What direction do you want to move in, professionally or creatively, from here? Even a rough sense counts. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_n2" data-module="Coming Home" data-label="The direction you want" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Year One — Your Legacy</h3>
+<p class="where">This is the capstone — a place to gather the whole year, honestly, into something you can keep. The cost and the gift, side by side. Take your time.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You did something most people never attempt: you built a life on unfamiliar ground, largely for someone else, and found yourself in it anyway. Let yourself say what it cost — and what it gave.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m8_date" data-module="Year One — Your Legacy" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m8_arrive" data-module="Year One — Your Legacy" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What you gave up — and what it actually cost you, honestly. (Not ‘it was worth it’ yet. Just: what did it cost?)</div>
+<textarea class="j-field grow" id="m8_q1" data-module="Year One — Your Legacy" data-label="What you gave up — and what it cost" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What you built that you didn’t expect to — the things that surprised you.</div>
+<textarea class="j-field grow" id="m8_q2" data-module="Year One — Your Legacy" data-label="What you built that surprised you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What you know about yourself now that you didn’t know when you landed.</div>
+<textarea class="j-field grow" id="m8_q3" data-module="Year One — Your Legacy" data-label="What you know about yourself now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What you’d tell the person who said yes to this move — the one who was terrified and generous and didn’t know what was coming.</div>
+<textarea class="j-field grow" id="m8_q4" data-module="Year One — Your Legacy" data-label="A letter to the one who said yes" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you want to carry forward from all of this, no matter where life takes you next? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m8_q5" data-module="Year One — Your Legacy" data-label="One thing to carry forward, anywhere" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">Whatever this move asked of you — you are not invisible, and you are not alone.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-partnerjournal-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE PARTNER’S JOURNAL\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Partner Journal.txt';a.click();
+}
+</script></body></html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Expat Burnout Workbook · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Expat Burnout Workbook</h1>
+<div class="sub">For when you’re exhausted abroad and can’t name why.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>There’s a particular exhaustion that comes from living abroad — not the dramatic kind, but a deep, cumulative depletion from adapting all day, every day, to a world that doesn’t run on autopilot for you. Add the overfunctioning many of us do to prove we can handle it, and you get burnout that hides in plain sight: you’re tired, flat, and ‘shouldn’t be,’ because on paper your life is enviable.</p><p>This workbook helps you name the burnout honestly, see where your energy is actually going, and rebuild a pace you can sustain. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This workbook is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. Burnout and depression can look alike; if your low mood or exhaustion is persistent, severe, or comes with hopelessness, please reach out to a licensed professional or your local services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Name It</h2><div class="ph-sub">Making the invisible depletion visible</div></div>
+<section class="module">
+<h3>The Exhaustion No One Sees</h3>
+<p class="where">Expat burnout rarely announces itself. It builds from the invisible tax of constant adaptation — the language, the admin, the unspoken rules, the being ‘on’ — until you’re running on empty and can’t point to a single big reason why. Naming it is the first relief.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You’re not weak, ungrateful, or ‘not cut out for this.’ You’re depleted from doing something genuinely effortful every single day — and naming it is not complaining, it’s care.</p></div>
+<div class="exp long"><div class="lab"><span class="dot">S</span>From my experience</div><p>I remember sitting in a café in Thailand, staring at a cup of coffee I had been excited to try all week. I had finally made it to this beautiful little spot everyone recommended. The weather was perfect. I had the freedom I had dreamed about.</p><p>And yet all I wanted to do was go home.</p><p>The problem was… I didn’t know where ‘home’ was anymore.</p><p>Nothing had gone wrong. I wasn’t in crisis. I was just profoundly tired in a way sleep couldn’t fix. Every simple task still required mental effort. Every conversation happened in a language or culture I had to consciously think through. Every day demanded that I adapt.</p><p>But I felt guilty admitting it. I’d chosen this life. I was living what many people considered a dream. What right did I have to feel exhausted?</p><p>Looking back, I realize I wasn’t weak. I was carrying the invisible cognitive and emotional load of building a life from scratch — the kind of exhaustion relocation creates, the kind no one sees because, from the outside, everything looks exciting.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="The Exhaustion No One Sees" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="The Exhaustion No One Sees" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">How does your burnout actually show up — the flatness, the short fuse, the dread, the exhaustion that sleep doesn’t fix? Describe your version.</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Exhaustion No One Sees" data-label="Your version of burnout" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When did you first notice you weren’t okay? What have you been telling yourself about it since?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Exhaustion No One Sees" data-label="When you first noticed" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What makes it hard to admit you’re burnt out — the guilt of a ‘privileged’ life, the fear of seeming like you can’t cope?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Exhaustion No One Sees" data-label="Why it’s hard to admit" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Say the true sentence on paper: ‘I am exhausted, and it makes sense.’ What comes up when you do? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="The Exhaustion No One Sees" data-label="The true sentence" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Where Your Energy Actually Goes</h3>
+<p class="where">You can’t refill a tank you can’t see draining. Burnout eases when we make the invisible costs visible — the tasks, roles, and worries quietly eating your energy — and notice how little goes back in. This is an honest audit, not a judgment.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Seeing where your energy goes isn’t self-indulgent — it’s the only way to spend it on purpose instead of watching it disappear.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="Where Your Energy Actually Goes" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="Where Your Energy Actually Goes" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">The energy audit: list everything that drains you right now — the daily adaptation, work, admin, relationships, worries. Don’t filter. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m2_q1" data-module="Where Your Energy Actually Goes" data-label="The energy audit — what drains" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Now the other column: what genuinely refills you? Be honest about how often you actually get any of it.</div>
+<textarea class="j-field grow" id="m2_q2" data-module="Where Your Energy Actually Goes" data-label="What refills you — honestly" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is the gap between the two columns telling you?</div>
+<textarea class="j-field grow" id="m2_q3" data-module="Where Your Energy Actually Goes" data-label="What the gap tells you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which drain is biggest — and is any of it something you’ve taken on that isn’t truly yours to carry?</div>
+<textarea class="j-field grow" id="m2_q4" data-module="Where Your Energy Actually Goes" data-label="A drain that isn’t yours" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Overfunctioner</h3>
+<p class="where">Many expats burn out not just from adapting, but from overfunctioning — doing more, proving more, holding it all together so no one worries, so the move looks ‘worth it.’ It’s often an old pattern the move amplified. Seeing it is how you start to put some of it down.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to earn your place here by being tireless. You’re allowed to do less, ask for help, and let some things be ‘good enough’ without the sky falling.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="The Overfunctioner" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="The Overfunctioner" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Where do you overfunction — taking on too much, holding it together for everyone, refusing help, proving you can cope?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="The Overfunctioner" data-label="Where you overfunction" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is this overfunctioning a new thing the move brought on, or an old pattern that just got louder?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">New — it’s the move</button><button class="bbtn" data-branch="b1" data-val="no">Old — it predates this</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then it’s situational — the move raised the stakes. Let’s ease the pressure.</div>
+<div class="prompt"><div class="plabel">What is it about being abroad that makes you feel you have to hold it all together — proving the move was worth it, not worrying people back home, no one here to share the load?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="The Overfunctioner" data-label="What raised the stakes" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one thing you could let be ‘good enough,’ or hand off, this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_y2" data-module="The Overfunctioner" data-label="One thing to hand off" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then the move didn’t create it — it amplified something older. Seeing that is how you start to put it down.</div>
+<div class="prompt"><div class="plabel">Where did you first learn that rest had to be earned, or that holding it all together was your job?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="The Overfunctioner" data-label="Where you learned it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who are you still trying to prove something to — and what are you afraid they’d think if you did less?</div>
+<textarea class="j-field grow" id="m3_n2" data-module="The Overfunctioner" data-label="Who you’re proving it to" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small permission you could give yourself this week that the old pattern wouldn’t allow? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_n3" data-module="The Overfunctioner" data-label="A small permission" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Refill It</h2><div class="ph-sub">Rebuilding a pace you can keep</div></div>
+<section class="module">
+<h3>Rest That Actually Restores</h3>
+<p class="where">Not all rest restores — scrolling and numbing pass the time without refilling you. Real recovery is specific and, abroad, often deliberate: the things that genuinely bring you back to yourself. This is about knowing yours and protecting them.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Rest isn’t a reward you get after you’ve earned it. It’s the thing that makes everything else possible — and you’re allowed to have it now, not later.</p></div>
+<div class="exp long"><div class="lab"><span class="dot">S</span>From my experience</div><p>When I first moved abroad, I thought rest meant escaping.</p><p>I’d spend hours scrolling social media, binge-watch Netflix, or disappear into YouTube, hoping I’d wake up feeling more like myself.</p><p>I never did.</p><p>The turning point came when I stopped trying to numb the discomfort and started creating small moments that felt familiar. A morning walk on the same route. Finding one café where the barista recognized me. Reading a book instead of consuming endless information about my new country. Calling a friend without talking about logistics or visas.</p><p>None of those things were dramatic. But they reminded my nervous system that it was safe.</p><p>I’ve learned there’s a difference between distraction and restoration. One helps you forget how tired you are for a little while. The other slowly helps you become yourself again — and for people living abroad, that distinction can make all the difference.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Rest That Actually Restores" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="Rest That Actually Restores" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">When was the last time you felt genuinely restored — not just distracted? What were you doing?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Rest That Actually Restores" data-label="Last time you felt restored" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What passes as ‘rest’ for you but actually leaves you emptier — doomscrolling, numbing, ‘productive’ downtime?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="Rest That Actually Restores" data-label="Rest that leaves you emptier" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">List the things that truly refill YOU — sensory, social, solitary, creative, physical. Keep it where you’ll see it. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m4_q3" data-module="Rest That Actually Restores" data-label="What truly refills you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one genuinely restorative thing you’ll give yourself this week — and when? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="Rest That Actually Restores" data-label="One restorative thing" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Boundaries & Saying No Abroad</h3>
+<p class="where">Abroad, boundaries get slippery — you say yes to every invitation so you’re not lonely, take on more at work to prove yourself, stay endlessly available across time zones. Burnout recovery needs a few honest no’s to protect the yes’s that matter.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Every yes you give out of guilt or fear is a no to your own recovery. Protecting your energy isn’t rude — it’s how you stay someone who has anything left to give.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Boundaries & Saying No Abroad" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="Boundaries & Saying No Abroad" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Where are you saying yes when you mean no — socially, at work, with family back home?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="Boundaries & Saying No Abroad" data-label="Yes when you mean no" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">What makes the boundaries hardest right now — the fear of missing out, or the fear of disappointing people?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Fear of missing out</button><button class="bbtn" data-branch="b2" data-val="no">Disappointing people</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then this is about scarcity — the sense that if you say no, you’ll be left out or left behind.</div>
+<div class="prompt"><div class="plabel">When you say yes out of not-wanting-to-miss-out, what does it actually cost you — energy, rest, time that was meant to be yours?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="Boundaries & Saying No Abroad" data-label="The real cost of each yes" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small ‘no,’ or one limit, you’ll practice this week to protect the yes’s that matter? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y2" data-module="Boundaries & Saying No Abroad" data-label="One protective no" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then this is about other people’s feelings — and your sense that protecting your energy will let them down.</div>
+<div class="prompt"><div class="plabel">Whose disappointment are you most afraid of — and is that fear as true, or as catastrophic, as it feels?</div>
+<textarea class="j-field grow" id="m5_n1" data-module="Boundaries & Saying No Abroad" data-label="Whose disappointment" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Draft one kind, clear way to say no that protects your energy without over-explaining or apologizing. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_n2" data-module="Boundaries & Saying No Abroad" data-label="A kind, clear no" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Your Sustainable Pace</h3>
+<p class="where">Burnout doesn’t lift with one good weekend — it lifts when your daily life stops asking more than it gives back. This last page turns everything you’ve noticed into a pace you can actually keep, and a few early-warning signs so you catch it sooner next time.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to overhaul your whole life. You have to tilt it, gently and repeatedly, back toward sustainable — and trust that small, kept changes add up.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Your Sustainable Pace" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="Your Sustainable Pace" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What has to change — even a little — for your life here to stop draining you faster than it fills you?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Your Sustainable Pace" data-label="What has to change" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What are your earliest warning signs that you’re heading toward empty again? How will you catch it sooner?</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Your Sustainable Pace" data-label="Your early-warning signs" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Your sustainable-pace plan, in three lines — the drain I’ll reduce is… / the thing that refills me I’ll protect is… / the boundary I’ll hold is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q3" data-module="Your Sustainable Pace" data-label="Your sustainable-pace plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you’ll let in on how you’re really doing, so you’re not carrying it alone?</div>
+<textarea class="j-field grow" id="m6_q4" data-module="Your Sustainable Pace" data-label="Who you’ll let in" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You were never meant to run on empty to deserve this life — and a steadier pace is something you can begin today.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-burnout-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE EXPAT BURNOUT WORKBOOK\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Expat Burnout Workbook.txt';a.click();
+}
+</script></body></html>
