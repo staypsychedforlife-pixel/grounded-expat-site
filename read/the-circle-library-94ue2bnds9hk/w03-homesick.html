@@ -1,0 +1,166 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 03 — Homesick: Loving Home Without Living There</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:32ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 03</div>
+  <h1>Homesick: Loving Home Without Living There</h1>
+  <div class="sub">Missing home isn&rsquo;t weakness. It&rsquo;s grief &mdash; and grief is love with nowhere to go.</div>
+</header>
+
+<div class="intro">
+  <p>Homesickness gets brushed off as something only children feel. It isn&rsquo;t. If you ache for home &mdash; the people, the places, the ease of belonging &mdash; that ache is real, and it deserves better than &ldquo;but you wanted this.&rdquo; This month we&rsquo;ll treat it as what it actually is: grief. And we&rsquo;ll find ways to stay close to home that leave you fuller, not emptier.</p>
+  <p><strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>You didn&rsquo;t just change addresses. You lost a whole world.</h2>
+  <p>When you moved, you left more than a place. You left the people who knew your history without explanation. The streets that held your memories. The ease of belonging without trying. The version of you that made sense there &mdash; whose jokes landed, whose competence was obvious. That&rsquo;s a genuine loss, and the mind grieves losses, even chosen ones.</p>
+  <div class="key"><p>Grief isn&rsquo;t weakness, and it isn&rsquo;t ingratitude. You can be truly glad you came <em>and</em> ache for what you left. Both are allowed to be true.</p></div>
+  <p>Here&rsquo;s where it gets sneaky. We try to soothe the missing by staying glued to home online &mdash; the group chats, the stories, the feeds. But watching your old life carry on without you usually deepens the wound rather than closing it. And everyone posts their highlight reel, so you end up comparing your <em>hard middle</em> to everyone else&rsquo;s <em>best moments.</em></p>
+  <div class="key"><p>There&rsquo;s a difference between connection that fills you and contact that drains you. A real call with someone who asks how you actually <em>are</em> fills you. Scrolling your old friends&rsquo; weekend leaves you emptier.</p></div>
+  <p>The goal this month isn&rsquo;t to cut off home &mdash; it&rsquo;s to connect with it in the ways that leave you warmer, and to gently limit the ways that leave you hollow.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Let&rsquo;s name the missing.</h2>
+  <div class="prompt"><div class="plabel">Who and what do you miss most? Don&rsquo;t tidy it &mdash; let it be specific.</div>
+    <textarea class="j-field grow" id="w3_miss" data-module="Notice where you are" data-label="Who and what I miss most" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">When does homesickness hit hardest? (A time of day, a song, Sundays, certain weather, after a call…)</div>
+    <textarea class="j-field grow" id="w3_triggers" data-module="Notice where you are" data-label="When it hits hardest" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Be honest: what does scrolling your old life online actually do to you?</div>
+    <textarea class="j-field grow" id="w3_scroll" data-module="Notice where you are" data-label="What scrolling does to me" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>Connection that fills vs. contact that drains.</h2>
+  <p class="teach" style="margin-bottom:8px;">Not all &ldquo;staying in touch&rdquo; is equal. Let&rsquo;s sort yours honestly &mdash; then design one act of connection you <em>know</em> leaves you fuller.</p>
+  <div class="prompt"><div class="plabel">Which ways of connecting to home leave you feeling <em>fuller</em> &mdash; warmer, closer, more yourself?</div>
+    <textarea class="j-field grow" id="w3_fuller" data-module="Connection vs. contact" data-label="What leaves me fuller" placeholder="e.g. a long call with my sister; voice notes; cooking a recipe from home…"></textarea></div>
+  <div class="prompt"><div class="plabel">Which leave you feeling <em>emptier</em> &mdash; sadder, more behind, more left out?</div>
+    <textarea class="j-field grow" id="w3_emptier" data-module="Connection vs. contact" data-label="What leaves me emptier" placeholder="e.g. doom-scrolling stories; the group chat I only lurk in…"></textarea></div>
+  <div class="prompt"><div class="plabel">Design <strong>one</strong> act of connection this week that you know fills you &mdash; and make it specific (who, when, how).</div>
+    <textarea class="j-field grow" id="w3_design" data-module="Connection vs. contact" data-label="One nourishing connection this week" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>Home in My Body</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">We won&rsquo;t push the missing away. We&rsquo;ll let home be with you for a moment &mdash; and remember you carry it inside, not only behind you.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Settle</b> &mdash; Eyes closed if that&rsquo;s okay. One slow breath out.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>Picture home</b> &mdash; A room, a street, a face that has meant <em>home</em>. Let the details come: the light, a smell, a sound.</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>Let it ache</b> &mdash; If it aches, let it. That ache is just love with nowhere to go right now. It&rsquo;s allowed.</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Bring it in</b> &mdash; Hand on your heart. Let the warmth of that place settle there. Home isn&rsquo;t only what you left &mdash; it&rsquo;s something you carry.</div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Hold both</b> &mdash; Open your eyes to the room you&rsquo;re in now. You can hold both: where you came from, and where you are. Both are yours.</div></div>
+  <p class="audio">🎧 The audio version of <em>Home in My Body</em> is in The Circle library &mdash; for the evenings the missing gets loud.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>One fuller connection. One gentle limit.</h2>
+  <p class="teach" style="margin-bottom:8px;">This week, do the one nourishing connection you designed &mdash; and set one small limit on a draining one (mute a feed, time-box the scrolling, leave the group chat you only lurk in).</p>
+  <div class="prompt"><div class="plabel">One way I&rsquo;ll connect with home this week that leaves me fuller:</div>
+    <input class="j-field line" id="w3_commit_fill" data-module="This week" data-label="Fuller connection I'll do" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">One gentle limit I&rsquo;ll set on a draining one:</div>
+    <input class="j-field line" id="w3_commit_limit" data-module="This week" data-label="Gentle limit I'll set" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">Share in the community: what home means to you, in a sentence.</div>
+    <textarea class="j-field grow" id="w3_bring" data-module="This week" data-label="To bring to the gathering" placeholder="Write here…"></textarea></div>
+</section>
+
+<p class="closing">Missing home is not a sign you should go back. It&rsquo;s a sign you loved something &mdash; and that love comes with you. You&rsquo;re allowed to carry both.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w03-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 03: HOMESICK — LOVING HOME WITHOUT LIVING THERE\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 03 - my notes.txt';a.click();
+}
+</script></body></html>

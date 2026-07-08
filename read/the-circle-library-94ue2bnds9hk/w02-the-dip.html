@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 02 — The Dip: Culture Shock for Real</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.curve{list-style:none;padding:0;margin:6px 0 18px;counter-reset:c}
+.curve li{position:relative;padding:0 0 16px 52px;margin:0}
+.curve li::before{counter-increment:c;content:counter(c);position:absolute;left:0;top:-2px;width:34px;height:34px;border-radius:50%;background:rgba(194,103,74,.14);color:var(--clay);font-family:var(--serif);font-weight:600;font-size:17px;display:flex;align-items:center;justify-content:center}
+.curve li b{font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.curve li span{display:block;color:var(--muted);font-size:15px;line-height:1.55;margin-top:2px}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:32ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 02</div>
+  <h1>The Dip: Culture Shock for Real</h1>
+  <div class="sub">It gets harder before it gets easier. That&rsquo;s the map &mdash; not a wrong turn.</div>
+</header>
+
+<div class="intro">
+  <p>Welcome back. If the shine has worn off &mdash; if things feel <em>harder</em> now than when you first arrived &mdash; you are not failing, and you did not choose wrong. You&rsquo;ve hit the most predictable stage of moving abroad, the one almost no one warns you about.</p>
+  <p>This month we&rsquo;ll map it, so you can tell the difference between <em>&ldquo;this place is wrong&rdquo;</em> and <em>&ldquo;I&rsquo;m in the hard part.&rdquo;</em> <strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>Culture shock isn&rsquo;t a bad day. It&rsquo;s a curve.</h2>
+  <p>Almost everyone who moves abroad moves through the same predictable stages. Knowing the shape of it changes everything &mdash; because when you can see you&rsquo;re <em>in</em> a stage, you stop mistaking it for the truth about your whole life.</p>
+  <ol class="curve">
+    <li><b>The honeymoon</b><span>Everything&rsquo;s new and exciting. The differences feel like an adventure. (Often the first weeks to a couple of months.)</span></li>
+    <li><b>The dip</b><span>The novelty wears off and daily friction piles up &mdash; the admin, the language, the loneliness, the missing home. It can feel <em>worse</em> than week one. This is usually months 3&ndash;9.</span></li>
+    <li><b>The climb</b><span>Slowly, competence and connection build. You start to find your footing. It begins to feel workable.</span></li>
+    <li><b>At home enough</b><span>It becomes a life, not a trial. Not perfect &mdash; but yours.</span></li>
+  </ol>
+  <div class="key"><p>The dip isn&rsquo;t a verdict on the place, or on you. It&rsquo;s a stage &mdash; and stages, by definition, pass.</p></div>
+  <p>Here&rsquo;s the cruel timing: the honeymoon&rsquo;s adrenaline fades right as the accumulated fatigue peaks, and the &ldquo;I&rsquo;m new here&rdquo; grace period runs out. So the hardest stretch tends to land exactly when you expected to feel <em>settled</em>. That mismatch is normal &mdash; not a sign something&rsquo;s gone wrong.</p>
+  <p>And here&rsquo;s the trap to watch: in the dip, your mind tells very convincing stories &mdash; <em>&ldquo;this place is wrong,&rdquo; &ldquo;everyone&rsquo;s happier back home,&rdquo; &ldquo;I made a mistake.&rdquo;</em> The dip <strong>distorts</strong>. Simply knowing that is your superpower this month.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Let&rsquo;s locate you on the curve.</h2>
+  <div class="prompt"><div class="plabel">Right now, where are you &mdash; honeymoon, sliding into the dip, deep in it, or climbing out? What tells you that?</div>
+    <textarea class="j-field grow" id="w2_curve" data-module="Notice where you are" data-label="Where I am on the curve" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">What&rsquo;s been the hardest part lately &mdash; the daily friction that&rsquo;s wearing on you?</div>
+    <textarea class="j-field grow" id="w2_hard" data-module="Notice where you are" data-label="The hardest part lately" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>The dip vs. what&rsquo;s also true.</h2>
+  <p class="teach" style="margin-bottom:8px;">The dip talks loudly and sounds like fact. Let&rsquo;s put its claims next to the fuller picture you can see on a steadier day. This isn&rsquo;t forced positivity &mdash; it&rsquo;s just refusing to let the dip have the only say.</p>
+  <div class="prompt"><div class="plabel">When you&rsquo;re deep in it, what does the dip tell you?<span class="hint">Write the actual thoughts &mdash; e.g. &ldquo;I made a mistake,&rdquo; &ldquo;it&rsquo;ll never feel like home,&rdquo; &ldquo;everyone else has it figured out.&rdquo;</span></div>
+    <textarea class="j-field grow" id="w2_dipsays" data-module="The dip vs. what's true" data-label="What the dip tells me" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Now, from a steadier place &mdash; what&rsquo;s also true that the dip conveniently forgets?</div>
+    <textarea class="j-field grow" id="w2_alsotrue" data-module="The dip vs. what's true" data-label="What's also true" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Name one sign &mdash; however small &mdash; that you <em>are</em> adjusting. Something you handled this week that would&rsquo;ve floored you in week one.</div>
+    <textarea class="j-field grow" id="w2_evidence" data-module="The dip vs. what's true" data-label="Evidence I'm adjusting" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>Name It to Tame It</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">When the dip floods you, naming the feeling literally lowers its charge in the brain. You don&rsquo;t have to fix it &mdash; just name it.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Settle</b> &mdash; One slow breath, longer on the way out.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>Turn inward</b> &mdash; Gently, the way you&rsquo;d check on a friend: what&rsquo;s here right now?</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>One word</b> &mdash; Not the whole story. Just a word: tired, flat, anxious, homesick, numb.</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Locate it</b> &mdash; Notice where it lives in your body. Chest, throat, stomach. Just find it.</div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Allow it</b> &mdash; Say: <em>&ldquo;This is [the feeling], and it makes sense that it&rsquo;s here.&rdquo;</em></div></div>
+  <div class="step"><div class="sn">6</div><div class="st"><b>Remember</b> &mdash; Feelings are weather, not climate. This one is moving through. It isn&rsquo;t who you are, and it isn&rsquo;t forever.</div></div>
+  <p class="audio">🎧 The audio version of <em>Name It to Tame It</em> is in The Circle library &mdash; for the days reading is too much.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>Catch the dip in the act.</h2>
+  <p class="teach" style="margin-bottom:8px;">This week, when the dip-talk shows up, catch it and label it: <em>&ldquo;That&rsquo;s the dip talking &mdash; not the truth.&rdquo;</em> You don&rsquo;t have to argue with it. Just name it as the stage it is.</p>
+  <div class="prompt"><div class="plabel">What&rsquo;s the dip-thought you most need to label this week?</div>
+    <input class="j-field line" id="w2_label" data-module="This week" data-label="The dip-thought I'll label" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">Share in the community: where you are on the curve, in one sentence.</div>
+    <textarea class="j-field grow" id="w2_bring" data-module="This week" data-label="To bring to the gathering" placeholder="Write here…"></textarea></div>
+</section>
+
+<p class="closing">The dip is the most honest part of the whole journey &mdash; it means you&rsquo;ve stopped performing the adventure and started actually living here. It passes. Keep going.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w02-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 02: THE DIP — CULTURE SHOCK FOR REAL\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 02 - my notes.txt';a.click();
+}
+</script></body></html>

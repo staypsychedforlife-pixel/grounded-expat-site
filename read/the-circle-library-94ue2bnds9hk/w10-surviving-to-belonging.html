@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 10 — From Surviving to Belonging</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.thread-cue{background:var(--oat-alt);border:1px dashed var(--sage);border-radius:12px;padding:14px 16px;margin:2px 0 20px;font-size:14px;color:var(--muted)}
+.thread-cue b{color:var(--pine)}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:34ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 10</div>
+  <h1>From Surviving to Belonging</h1>
+  <div class="sub">Functioning isn&rsquo;t the same as living. You&rsquo;re allowed to want a real life here.</div>
+</header>
+
+<div class="intro">
+  <p>There&rsquo;s a quiet turning point in living abroad that no one announces: the day surviving stops being enough. You&rsquo;ve got the basics handled &mdash; you can shop, commute, function &mdash; but functioning isn&rsquo;t living, and you start to want an actual <em>life</em> here, not just an existence. This month is about that shift, and how to build it on purpose.</p>
+  <p><strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>Surviving gets you through. Belonging weaves you in.</h2>
+  <p>For a long while, the whole job is survival &mdash; figure out the systems, get through the days, keep your head above water. That&rsquo;s necessary, and it&rsquo;s enough, until one day it isn&rsquo;t. Wanting more than survival isn&rsquo;t greedy, and it isn&rsquo;t disloyal to the home you left. It&rsquo;s the next, healthy stage.</p>
+  <p>Here&rsquo;s the thing most people get wrong: they wait to <em>feel</em> like they belong, as if the place will eventually hand it over. It won&rsquo;t. Belonging is built &mdash; out of three things: <strong>rituals</strong> (the small recurring moments that become &ldquo;yours&rdquo; &mdash; the Saturday market, the café that knows your order), <strong>roots</strong> (commitments that tie you in &mdash; a class, a project, a community, a longer lease, a plant you have to keep alive), and <strong>meaning</strong> (mattering to someone, contributing, having a purpose here).</p>
+  <div class="key"><p>Belonging isn&rsquo;t something a place hands you. It&rsquo;s something you build &mdash; one ritual, one root, one bit of meaning at a time.</p></div>
+  <p>And your brain won&rsquo;t help by default &mdash; its negativity bias keeps scanning for what&rsquo;s foreign and wrong. So belonging also takes a deliberate turn of attention: noticing and <em>claiming</em> what&rsquo;s already good, already yours.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Find the turn.</h2>
+  <div class="prompt"><div class="plabel">Where are you right now on the line from <em>surviving</em> to <em>belonging</em>?</div>
+    <textarea class="j-field grow" id="w10_line" data-module="Notice where you are" data-label="Surviving-to-belonging, where I am" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">What&rsquo;s started to feel like home here, even a little? Don&rsquo;t skip past it &mdash; let yourself notice.</div>
+    <textarea class="j-field grow" id="w10_home" data-module="Notice where you are" data-label="What's started to feel like home" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>Build belonging: a ritual, a root, some meaning.</h2>
+  <p class="teach" style="margin-bottom:8px;">You don&rsquo;t have to do all three at once. Name one of each you could grow &mdash; then this week, start with whichever feels lightest.</p>
+  <div class="prompt"><div class="plabel"><b>A ritual</b> &mdash; one small recurring thing that&rsquo;s becoming yours here (or could):</div>
+    <input class="j-field line" id="w10_ritual" data-module="Build belonging" data-label="A ritual" placeholder="e.g. Saturday market, sunset walk, the corner café"></div>
+  <div class="prompt"><div class="plabel"><b>A root</b> &mdash; one commitment that ties you in:</div>
+    <input class="j-field line" id="w10_root" data-module="Build belonging" data-label="A root" placeholder="e.g. a class, a team, a project, a longer lease, a plant"></div>
+  <div class="prompt"><div class="plabel"><b>Meaning</b> &mdash; where could you contribute, or matter, here? (To a person, a group, a cause.)</div>
+    <textarea class="j-field grow" id="w10_meaning" data-module="Build belonging" data-label="Where I could contribute / matter" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>Savoring Here</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">Your brain scans for what&rsquo;s wrong &mdash; useful for survival, brutal for joy. This practices the opposite: deliberately letting something good in.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Breathe</b> &mdash; One easy breath, settling in.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>Find one good thing</b> &mdash; Something about your life <em>here</em> you&rsquo;d genuinely miss if it vanished. A view, a food, a sound, a small kindness, the light.</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>Hold it for ten seconds</b> &mdash; Don&rsquo;t rush past it. Letting it linger is how the brain turns a moment into a memory.</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Notice the shift</b> &mdash; Somewhere along the way, <em>here</em> started giving you things, not only taking them.</div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Let it be true</b> &mdash; <em>&ldquo;I&rsquo;m not only surviving this place anymore. I&rsquo;m beginning to belong to it.&rdquo;</em></div></div>
+  <p class="audio">🎧 The audio version of <em>Savoring Here</em> is in The Circle library.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>Plant one root. Celebrate the turn.</h2>
+  <p class="teach" style="margin-bottom:8px;">This week, start one ritual or plant one root &mdash; the lightest one. Belonging is built in small, repeatable acts.</p>
+  <div class="prompt"><div class="plabel">The ritual or root I&rsquo;ll start this week:</div>
+    <input class="j-field line" id="w10_commit" data-module="Take it to the circle" data-label="The ritual/root I'll start" placeholder="Write it here…"></div>
+  <div class="thread-cue"><b>In the community:</b> share what&rsquo;s started to feel like home in the <em>Surviving to belonging</em> thread. These are the posts that lift the whole Circle &mdash; proof, in real people&rsquo;s words, that it does turn.</div>
+</section>
+
+<p class="closing">Survival was the first job. This is the next one &mdash; and it&rsquo;s the good one: not just getting through here, but belonging to it. You build that. One root at a time.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w10-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 10: FROM SURVIVING TO BELONGING\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 10 - my notes.txt';a.click();
+}
+</script></body></html>

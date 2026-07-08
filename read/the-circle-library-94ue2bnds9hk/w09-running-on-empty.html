@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 09 — Running on Empty</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.thread-cue{background:var(--oat-alt);border:1px dashed var(--sage);border-radius:12px;padding:14px 16px;margin:2px 0 20px;font-size:14px;color:var(--muted)}
+.thread-cue b{color:var(--pine)}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:34ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 09</div>
+  <h1>Running on Empty</h1>
+  <div class="sub">You&rsquo;re not lazy. You&rsquo;re running a hidden engine, all day, every day.</div>
+</header>
+
+<div class="intro">
+  <p>Some months abroad, the tiredness doesn&rsquo;t make sense. You haven&rsquo;t done anything &ldquo;big,&rdquo; yet you&rsquo;re wiped, irritable, dreading small tasks. This isn&rsquo;t you being weak or ungrateful &mdash; it&rsquo;s a specific, well-documented thing, and this month we&rsquo;ll name it and learn to refuel before you hit empty.</p>
+  <p><strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>Adaptation fatigue: the tank you can&rsquo;t see.</h2>
+  <p>Living abroad runs a hidden engine all the time. Every unfamiliar moment &mdash; a language you&rsquo;re translating in your head, a system you&rsquo;re decoding, an unwritten rule you&rsquo;re guessing at, the simple fact that <em>nothing is automatic</em> &mdash; quietly draws from a tank you can&rsquo;t see. It&rsquo;s called adaptation fatigue, and you can run it to empty without ever noticing the gauge.</p>
+  <p>It&rsquo;s invisible for two reasons. Each thing feels too small to count (&ldquo;it&rsquo;s just buying stamps&rdquo;), so you never tally them &mdash; but they add up all day. And you tell yourself you <em>should</em> be coping by now, so you push through the warning lights.</p>
+  <div class="key"><p>Adaptation fatigue isn&rsquo;t weakness or laziness. It&rsquo;s the predictable result of asking your brain to work overtime, every single day, with no autopilot.</p></div>
+  <p>The signs the tank is near empty: exhaustion that sleep doesn&rsquo;t fix, a short fuse, dread of small errands, numbness, getting sick more, sudden cynicism about the place, wanting to hide. And here&rsquo;s the reframe that changes everything: <strong>rest and boundaries aren&rsquo;t rewards you earn by emptying the tank &mdash; they&rsquo;re the maintenance that keeps the engine running.</strong> Saying no, taking a low-demand day, a day in your own language &mdash; that&rsquo;s refuelling, not failing.</p>
+  <div class="key"><p>You can&rsquo;t adapt your way out of adaptation fatigue. The only fix is to put some back in the tank &mdash; on purpose, before it&rsquo;s empty.</p></div>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Check the gauge.</h2>
+  <div class="prompt"><div class="plabel">Energy check: how full is your tank right now, 1&ndash;10? Be honest.</div>
+    <input class="j-field line" id="w9_tank" data-module="Notice where you are" data-label="Tank level (1-10)" placeholder="A number, 1–10"></div>
+  <div class="prompt"><div class="plabel">What&rsquo;s been quietly draining it most? List the <em>small, constant</em> things, not just the big ones.</div>
+    <textarea class="j-field grow" id="w9_drains" data-module="Notice where you are" data-label="What's draining the tank" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">What are <em>your</em> early-warning signs that you&rsquo;re running low?</div>
+    <textarea class="j-field grow" id="w9_signs" data-module="Notice where you are" data-label="My early-warning signs" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>Put some back in the tank.</h2>
+  <p class="teach" style="margin-bottom:8px;">Refuelling is specific. Let&rsquo;s find what actually fills you &mdash; and make room for it by setting something down.</p>
+  <div class="prompt"><div class="plabel">What gives you <em>genuine</em> refuel &mdash; leaves you with more energy, not less? (Real rest, not just collapse-scrolling.)</div>
+    <textarea class="j-field grow" id="w9_refuel" data-module="Refill the tank" data-label="What genuinely refuels me" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">What&rsquo;s one thing you can take <em>off</em> your plate this week &mdash; a task, an expectation, a &ldquo;should&rdquo;?</div>
+    <input class="j-field line" id="w9_offplate" data-module="Refill the tank" data-label="One thing off my plate" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">One low-demand refuel you&rsquo;ll actually schedule this week (and when):</div>
+    <input class="j-field line" id="w9_schedule" data-module="Refill the tank" data-label="A refuel I'll schedule" placeholder="e.g. Sunday morning, no plans, no translating"></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>The Downshift</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">When the tank&rsquo;s empty and everything&rsquo;s too much, a long exhale is the body&rsquo;s own off-switch. This signals safety to slow down.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Be held</b> &mdash; Sit or lie down. Let whatever&rsquo;s under you take your weight.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>In for four</b> &mdash; Breathe in gently for a count of four.</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>Out for six</b> &mdash; Breathe out slowly for a count of six. The long out-breath is the part that downshifts you.</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Repeat</b> &mdash; A few more rounds, at your own pace, making the exhale the longest, softest part.</div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Let it be heavy</b> &mdash; <em>&ldquo;Resting isn&rsquo;t quitting. It&rsquo;s how I keep going.&rdquo;</em> The list will wait. You matter more than it does.</div></div>
+  <p class="audio">🎧 The audio version of <em>The Downshift</em> is in The Circle library &mdash; for the empty-tank days.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>Set one thing down. Refuel on purpose.</h2>
+  <p class="teach" style="margin-bottom:8px;">This week, take the one thing off your plate and protect the refuel like it&rsquo;s an appointment &mdash; because it is.</p>
+  <div class="prompt"><div class="plabel">What I&rsquo;m setting down, and the refuel I&rsquo;m protecting this week:</div>
+    <input class="j-field line" id="w9_commit" data-module="Take it to the circle" data-label="What I'm setting down + protecting" placeholder="Write it here…"></div>
+  <div class="thread-cue"><b>In the community:</b> post your tank number (1&ndash;10) and what&rsquo;s draining it in the <em>Running on empty</em> thread. Seeing everyone else&rsquo;s honest number is weirdly relieving &mdash; and we can swap what actually refuels.</div>
+</section>
+
+<p class="closing">You&rsquo;re not lazy, and you&rsquo;re not failing. You&rsquo;re running a hidden engine every single day. Refuel before empty &mdash; that isn&rsquo;t quitting, it&rsquo;s how you keep going.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w09-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 09: RUNNING ON EMPTY\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 09 - my notes.txt';a.click();
+}
+</script></body></html>

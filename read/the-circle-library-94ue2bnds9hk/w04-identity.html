@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 04 — Who Am I Here? Identity in Transition</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.thread-cue{background:var(--oat-alt);border:1px dashed var(--sage);border-radius:12px;padding:14px 16px;margin:2px 0 20px;font-size:14px;color:var(--muted)}
+.thread-cue b{color:var(--pine)}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:34ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 04</div>
+  <h1>Who Am I Here? Identity in Transition</h1>
+  <div class="sub">You didn&rsquo;t lose yourself in the move. You lost the scaffolding.</div>
+</header>
+
+<div class="intro">
+  <p>If you feel a little invisible here &mdash; like a flatter, smaller version of yourself, like no one quite knows who you <em>are</em> &mdash; this month is for you. The roles that used to tell you (and everyone else) who you were got left behind in the move, and rebuilding a self from scratch is disorienting work. Let&rsquo;s name what happened, and find the part of you that came with you.</p>
+  <p><strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>Your identity had scaffolding. The move took it down.</h2>
+  <p>Who you are was never only inside you &mdash; it was held up by scaffolding. Your job, and the competence everyone could see. Your friendships, and the history behind them. Your community, your routines, the context that reflected you back to yourself a hundred times a day. Move countries, and that scaffolding comes down all at once.</p>
+  <div class="key"><p>Feeling unsure who you even are here &mdash; invisible, or like a watered-down version of yourself &mdash; isn&rsquo;t a breakdown. It&rsquo;s what happens when the mirrors that used to show you yourself are suddenly gone.</p></div>
+  <p>There&rsquo;s a useful distinction underneath this. <strong>Roles</strong> are the labels &mdash; your title, &ldquo;the funny one,&rdquo; &ldquo;the capable one,&rdquo; someone&rsquo;s partner, the person who always knew the best place to eat. They&rsquo;re real, but they&rsquo;re tied to a context, and some of them got left at the airport. <strong>Values</strong> are deeper &mdash; what you care about, how you want to move through the world, what you&rsquo;d stand for anywhere. Roles don&rsquo;t travel well. Values come with you.</p>
+  <div class="key"><p>You didn&rsquo;t lose yourself. You lost the scaffolding. What&rsquo;s underneath is still here &mdash; and you get to rebuild, on purpose, into who you actually want to be.</p></div>
+  <p>That&rsquo;s the quiet gift buried in the disorientation: when the old labels fall away, you get a rare, clean chance to ask who you are <em>underneath</em> them &mdash; and who you&rsquo;d like to become in this new place.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Name what got left behind.</h2>
+  <div class="prompt"><div class="plabel">Which roles or labels got left behind in the move &mdash; the ones that used to tell you (and everyone else) who you were?</div>
+    <textarea class="j-field grow" id="w4_roles" data-module="Notice where you are" data-label="Roles left behind" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Where do you feel most invisible, or least like yourself, here?</div>
+    <textarea class="j-field grow" id="w4_invisible" data-module="Notice where you are" data-label="Where I feel least like myself" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>Underneath the labels.</h2>
+  <p class="teach" style="margin-bottom:8px;">Let&rsquo;s separate the roles you held from the self that holds them &mdash; and find the part of you that no border can touch.</p>
+  <div class="prompt"><div class="plabel">Finish this a few times: &ldquo;Back home, I was the one who ___.&rdquo;</div>
+    <textarea class="j-field grow" id="w4_backhome" data-module="Underneath the labels" data-label="Back home I was the one who…" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Now the truer question: who are you <em>underneath</em> those roles? What&rsquo;s true about you in any country, with or without the labels?</div>
+    <textarea class="j-field grow" id="w4_underneath" data-module="Underneath the labels" data-label="Who I am underneath the roles" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Name one value you want this chapter &mdash; this version of you &mdash; to be built around.</div>
+    <input class="j-field line" id="w4_value" data-module="Underneath the labels" data-label="A value to build this chapter around" placeholder="e.g. courage, warmth, curiosity, honesty"></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>The Values Touchstone</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">When you don&rsquo;t know who you are here yet, it helps to remember what you&rsquo;re <em>for</em>. This finds you solid ground in about two minutes.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Settle</b> &mdash; One slow breath out.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>Find the moment</b> &mdash; Recall a time you felt most like yourself. Not your most impressive moment &mdash; your most <em>you</em> moment.</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>Look closer</b> &mdash; What were you doing? Who were you being?</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Name the value</b> &mdash; Underneath that moment is something you care about at the core. Courage. Care. Curiosity. Honesty. See what word rises.</div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Claim it</b> &mdash; That value came with you. Your title may not have. Your community may not have. But <em>that</em> did. Hand somewhere steady: <em>&ldquo;I am still someone who values ___.&rdquo;</em></div></div>
+  <p class="audio">🎧 The audio version of <em>The Values Touchstone</em> is in The Circle library &mdash; for the days the ground feels uncertain.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>Live the value &mdash; and share the becoming.</h2>
+  <p class="teach" style="margin-bottom:8px;">You rebuild a self by <em>acting</em> from your values, not just naming them. This week, do one small thing &mdash; however tiny &mdash; that expresses that value, here.</p>
+  <div class="prompt"><div class="plabel">One small thing I&rsquo;ll do this week that expresses my value, here:</div>
+    <input class="j-field line" id="w4_commit" data-module="Take it to the circle" data-label="One value-led action this week" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">Draft your post for the <em>Identity</em> thread &mdash; what did this stir up?</div>
+    <textarea class="j-field grow" id="w4_thread" data-module="Take it to the circle" data-label="My post for the Identity thread" placeholder="Try: “Back home I was the one who ___. Here, I’m becoming ___.”"></textarea></div>
+  <div class="thread-cue"><b>In the community:</b> share your line in the <em>Who am I here?</em> thread &mdash; reading other people&rsquo;s &ldquo;back home I was / here I&rsquo;m becoming&rdquo; is quietly one of the most connecting things in The Circle.</div>
+</section>
+
+<p class="closing">You didn&rsquo;t lose yourself &mdash; you set down the scaffolding. Now you get to build, deliberately, into who this new chapter is shaping you to be. That&rsquo;s not loss. That&rsquo;s a rare kind of freedom.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w04-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 04: WHO AM I HERE? — IDENTITY IN TRANSITION\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 04 - my notes.txt';a.click();
+}
+</script></body></html>

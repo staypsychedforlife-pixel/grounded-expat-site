@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Circle · Workshop 11 — Far From Home for the Holidays</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;
+ --sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);
+ --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.66;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:6px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.toolbar .brand .mark{width:22px;height:22px;flex:none}
+.toolbar .brand .c{color:var(--sage);font-weight:500}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 26px}
+header.hero .mark{width:46px;height:46px;margin:0 auto}
+header.hero .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:12px;color:var(--clay);font-weight:700;margin-top:18px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,5.2vw,52px);line-height:1.04;letter-spacing:-.01em;margin:10px 0 6px}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted)}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:6px 0}
+.intro p{margin:0 0 12px}.intro p:last-child{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:28px 28px 12px;margin:20px 0}
+.block .kick{font-family:var(--sans);text-transform:uppercase;letter-spacing:.16em;font-size:11.5px;color:var(--clay);font-weight:700}
+.block h2{font-family:var(--serif);font-weight:500;font-size:clamp(25px,3vw,33px);line-height:1.1;margin:7px 0 14px}
+.teach p{margin:0 0 15px;line-height:1.7}
+.key{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 12px 12px 0;padding:16px 20px;margin:18px 0}
+.key p{font-family:var(--serif);font-style:italic;font-size:19px;line-height:1.5;margin:0;color:var(--pine)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.hint{display:block;font-weight:400;color:var(--muted);font-size:14px;margin-top:3px}
+textarea.grow,input.line{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px}
+textarea.grow{min-height:58px;resize:none;overflow:hidden}
+input.line{font-size:17px}
+textarea.grow:focus,input.line:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.thread-cue{background:var(--oat-alt);border:1px dashed var(--sage);border-radius:12px;padding:14px 16px;margin:2px 0 20px;font-size:14px;color:var(--muted)}
+.thread-cue b{color:var(--pine)}
+.practice{background:var(--pine);color:var(--cream);border-radius:16px;padding:28px 28px;margin:20px 0}
+.practice .kick{color:var(--clay)}
+.practice h2{color:var(--cream)}
+.practice .step{display:flex;gap:14px;margin:0 0 16px}
+.practice .step:last-child{margin-bottom:0}
+.practice .sn{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--clay);color:var(--clay);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.practice .st b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px;color:#fff}
+.practice .st{font-size:15px;line-height:1.55;color:#E7E3D8}
+.practice .audio{font-size:13px;color:#CFC9BC;margin:18px 0 0;border-top:1px solid rgba(251,248,241,.18);padding-top:14px}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--pine);margin:42px auto 0;max-width:34ch}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--clay);color:#fff;font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.block,.intro,.practice{border:1px solid #ccc;break-inside:avoid}.practice{background:#fff;color:#000}.practice .st,.practice .st b{color:#000}textarea.grow,input.line{background:#fff;border:1px solid #ccc}header.hero{padding:8px 0 14px}}
+@media(max-width:560px){header.hero h1{font-size:31px}}
+</style></head><body>
+<div class="toolbar">
+  <div class="brand"><svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>The Grounded Expat <span class="c">&middot; The Circle</span></div>
+  <div class="btns"><button class="tb" id="btn-download">Save my writing</button><button class="tb primary" id="btn-print">Print / PDF</button></div>
+</div>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Circle &middot; Workshop 11</div>
+  <h1>Far From Home for the Holidays</h1>
+  <div class="sub">You don&rsquo;t have to choose between missing home and being here.</div>
+</header>
+
+<div class="intro">
+  <p>Holidays abroad have a way of cracking you open. Most of the year you cope fine &mdash; and then a holiday arrives, with its smells and songs and the empty chair where your people should be, and the missing floods in all at once. This month is about meeting that ache honestly, and making the season something that fits the life you have now.</p>
+  <p><strong>Your writing saves automatically</strong> on this device and stays private &mdash; <em>Print / PDF</em> to keep it, or <em>Save my writing</em> to download.</p>
+  <div class="disclaimer">The Circle is educational self-reflection and community support &mdash; not therapy, treatment, diagnosis, or a crisis service. If you&rsquo;re in crisis or thinking of harming yourself, please contact your local emergency number or a crisis line right away.</div>
+</div>
+
+<section class="block teach">
+  <div class="kick">What&rsquo;s actually happening</div>
+  <h2>Holidays hit the exact spot relocation disrupts.</h2>
+  <p>Holidays are built out of tradition, ritual, togetherness, and memory &mdash; which is precisely what moving abroad scatters. So they land hard: the gap between how it&rsquo;s &ldquo;supposed&rdquo; to be and how it actually is has never been wider, and every feed is full of other people&rsquo;s gatherings. Of course it aches.</p>
+  <p>There are two traps. One is trying to <em>recreate home exactly</em> &mdash; which it can&rsquo;t match, so you end up disappointed. The other is <em>white-knuckling through</em>, pretending you&rsquo;re fine while something in you quietly breaks.</p>
+  <div class="key"><p>The goal isn&rsquo;t to recreate home, and it isn&rsquo;t to pretend you don&rsquo;t miss it. It&rsquo;s to honor what was &mdash; and build something that fits the life you have now.</p></div>
+  <p>The way through is <strong>both/and</strong>: you can grieve the holiday you&rsquo;re missing <em>and</em> make new meaning here. Holding both is far healthier than forcing yourself to pick one. New traditions don&rsquo;t betray the old ones &mdash; they can borrow from them, shrink them to fit, or be something entirely your own, shared with whoever your people are this year.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Notice where you are</div>
+  <h2>Name the ache before the day arrives.</h2>
+  <div class="prompt"><div class="plabel">What about the holidays away are you dreading or grieving most this year?</div>
+    <textarea class="j-field grow" id="w11_grieve" data-module="Notice where you are" data-label="What I'm dreading/grieving about the holidays" placeholder="Write here…"></textarea></div>
+  <div class="prompt"><div class="plabel">Which traditions from home do you most want to keep &mdash; and which could you let go of this year?</div>
+    <textarea class="j-field grow" id="w11_keep" data-module="Notice where you are" data-label="Traditions to keep / let go" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block">
+  <div class="kick">The exercise</div>
+  <h2>Honor what was. Build what fits.</h2>
+  <p class="teach" style="margin-bottom:8px;">A holiday away doesn&rsquo;t have to be a lesser copy of home. Let&rsquo;s design one that holds both the old and the new.</p>
+  <div class="prompt"><div class="plabel">One tradition from home you&rsquo;ll keep or adapt this year &mdash; even in miniature:</div>
+    <input class="j-field line" id="w11_old" data-module="Honor + build" data-label="An old tradition I'll keep/adapt" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">One <em>new</em> tradition you could try that fits your life here:</div>
+    <input class="j-field line" id="w11_new" data-module="Honor + build" data-label="A new tradition to try" placeholder="Write it here…"></div>
+  <div class="prompt"><div class="plabel">Who could you spend it with here &mdash; even loosely? (Other expats, neighbors, friends, The Circle, a video call home.)</div>
+    <textarea class="j-field grow" id="w11_who" data-module="Honor + build" data-label="Who I could spend it with" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="block practice">
+  <div class="kick">The grounding practice</div>
+  <h2>Both / And</h2>
+  <p style="color:#E7E3D8;font-size:15.5px;margin:0 0 18px;">For the season that holds two true things at once. We don&rsquo;t have to choose between them.</p>
+  <div class="step"><div class="sn">1</div><div class="st"><b>Settle</b> &mdash; A slow breath out.</div></div>
+  <div class="step"><div class="sn">2</div><div class="st"><b>Let the missing in</b> &mdash; Bring to mind what you&rsquo;re missing this season &mdash; the people, the traditions, the place that knew you. Let it be tender. Don&rsquo;t rush it.</div></div>
+  <div class="step"><div class="sn">3</div><div class="st"><b>Let what&rsquo;s here in too</b> &mdash; Without pushing the missing away, bring in what <em>is</em> here: the people, however few; a new tradition; the simple fact that you&rsquo;re still here, still going.</div></div>
+  <div class="step"><div class="sn">4</div><div class="st"><b>Both hands</b> &mdash; One hand open for the grief. The other open for the gratitude. <em>&ldquo;I miss home, AND I can make meaning here.&rdquo;</em></div></div>
+  <div class="step"><div class="sn">5</div><div class="st"><b>Rest</b> &mdash; You don&rsquo;t have to pick one. The fullest hearts hold both. Let both hands rest.</div></div>
+  <p class="audio">🎧 The audio version of <em>Both / And</em> is in The Circle library &mdash; keep it close for the hard days of the season.</p>
+</section>
+
+<section class="block">
+  <div class="kick">Take it to the circle</div>
+  <h2>Make a plan &mdash; and don&rsquo;t do the season alone.</h2>
+  <p class="teach" style="margin-bottom:8px;">This week, line up your one old + one new tradition, and sort out who you&rsquo;ll be with &mdash; even loosely. A plan softens the dread.</p>
+  <div class="prompt"><div class="plabel">My small plan for the holiday this year (old tradition + new + who):</div>
+    <textarea class="j-field grow" id="w11_commit" data-module="Take it to the circle" data-label="My holiday plan" placeholder="Write here…"></textarea></div>
+  <div class="thread-cue"><b>In the community:</b> the <em>Holidays away</em> thread is where no one has to pretend they&rsquo;re fine. Share how you&rsquo;re feeling about the season &mdash; and we&rsquo;ll trade new-tradition ideas and keep each other company through the hard days.</div>
+</section>
+
+<p class="closing">You don&rsquo;t have to choose between missing home and being here. Honor what was &mdash; and make something that&rsquo;s yours, now. The fullest hearts hold both.</p>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-circle-w11-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+  document.querySelectorAll('.j-field').forEach(el=>{
+    try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+    if(el.classList.contains('grow'))grow(el);
+    el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+  });
+  document.getElementById('btn-print').addEventListener('click',()=>window.print());
+  document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+  let out='THE CIRCLE — WORKSHOP 11: FAR FROM HOME FOR THE HOLIDAYS\nThe Grounded Expat\n\n';
+  let cur='';
+  document.querySelectorAll('.j-field').forEach(el=>{
+    const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+    if(m&&m!==cur){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';cur=m;}
+    if(v){out+='\n• '+l+'\n'+v+'\n';}
+  });
+  const blob=new Blob([out],{type:'text/plain'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='The Circle - Workshop 11 - my notes.txt';a.click();
+}
+</script></body></html>
