@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Repatriation Workbook · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>The Repatriation Workbook</h1>
+<div class="sub">For coming home a different person than the one who left.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Everyone prepares you for going. Almost no one prepares you for coming back. You expected relief, the ease of the familiar, the simple comfort of home; instead you may feel restless, foreign, and quietly grieving in the one place that was supposed to feel effortless. This is reverse culture shock, and it is real, common, and often harder than the move abroad ever was.</p><p>This workbook helps you name the strange grief of coming home, make sense of feeling like a stranger in a familiar place, and slowly build a life here as the person you have become. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This workbook is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. Reverse culture shock can look a lot like depression; if your low mood, numbness, or disorientation is persistent, severe, or comes with hopelessness, please reach out to a licensed professional or your local services. Coming home is a real transition, and you deserve real support through it.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>The Re-Entry</h2><div class="ph-sub">The homecoming no one prepares you for</div></div>
+<section class="module">
+<h3>The Homecoming That Wasn’t</h3>
+<p class="where">You pictured coming home as an exhale. Instead it can feel like landing in a place that no longer quite fits, missing a life you chose to leave, unsure why you are not simply happy to be back. That disorientation has a name, reverse culture shock, and naming it is the first relief.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are not ungrateful, and you have not made a mistake. Feeling unmoored at home is not a sign that you failed at coming back; it is a sign that you changed while you were away.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>In my work I see reverse culture shock catch people completely off guard, again and again. We brace ourselves for the foreign; we expect home to be easy. So when the familiar feels strangely hollow, there is no story ready to explain it, and people quietly conclude that something is wrong with them. There is not. The gap between the homecoming you imagined and the one you got is exactly where the grief lives, and grief that has a name is far easier to carry than grief that does not.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="The Homecoming That Wasn’t" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="The Homecoming That Wasn’t" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What did you expect coming home to feel like, and what has it actually felt like?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Homecoming That Wasn’t" data-label="Expected vs. actual" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where and when do you feel the disorientation most? Describe your own version of it.</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Homecoming That Wasn’t" data-label="Your version of the disorientation" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What have you been telling yourself about why you are not simply glad to be back?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Homecoming That Wasn’t" data-label="What you’ve been telling yourself" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Say the honest sentence on paper: ‘Coming home has been harder than I expected, and that makes sense.’ What comes up when you do? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="The Homecoming That Wasn’t" data-label="The honest sentence" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>A Stranger in a Familiar Place</h3>
+<p class="where">Sometimes home changed while you were gone. Sometimes it is almost exactly the same, and you are the one who is different. Either way, streets you have known your whole life can feel oddly foreign, and that mismatch is one of the loneliest parts of coming back.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Feeling like a foreigner at home does not mean you do not belong. It means you are carrying more than one world inside you now, and it takes time for the familiar to feel familiar again.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="A Stranger in a Familiar Place" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="A Stranger in a Familiar Place" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Where do you feel most like a stranger right now, and where, if anywhere, do you still feel at home?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="A Stranger in a Familiar Place" data-label="Where you feel a stranger / at home" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you feel foreign at home, which is it more: that home changed, or that you changed?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Home changed</button><button class="bbtn" data-branch="b1" data-val="no">I changed</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then part of the grief is that the home you carried in your memory is not the home you returned to.</div>
+<div class="prompt"><div class="plabel">What has changed here that you did not expect, and how does each change land in you?</div>
+<textarea class="j-field grow" id="m2_y1" data-module="A Stranger in a Familiar Place" data-label="What changed here" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did you hold onto about home while you were away that turned out to be gone, or different than you remembered?</div>
+<textarea class="j-field grow" id="m2_y2" data-module="A Stranger in a Familiar Place" data-label="What you held onto that’s gone" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then home is much the same, and the distance you feel is the distance you traveled on the inside.</div>
+<div class="prompt"><div class="plabel">How are you different now in ways the people and places here do not reflect back to you?</div>
+<textarea class="j-field grow" id="m2_n1" data-module="A Stranger in a Familiar Place" data-label="How you’re different now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which parts of who you became abroad feel invisible, or out of place, here?</div>
+<textarea class="j-field grow" id="m2_n2" data-module="A Stranger in a Familiar Place" data-label="Parts of you that feel invisible" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>The Change No One Sees</h3>
+<p class="where">One of the hardest parts of coming home is that no one throws you a welcome-to-your-grief party. People expect the person who left; they do not see the one who came back. You get asked ‘how was your trip’ about years that quietly rearranged you.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are allowed to grieve a change that no one else can see. Your growth being invisible to others does not make it less real, and it does not mean you have to shrink back into who you used to be.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="The Change No One Sees" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="The Change No One Sees" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Who in your life expects the old you, and what is it like to meet that expectation?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="The Change No One Sees" data-label="Who expects the old you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What has changed in you that the people here have not noticed, or cannot quite understand?</div>
+<textarea class="j-field grow" id="m3_q2" data-module="The Change No One Sees" data-label="What they don’t see" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where have you found yourself performing the old version of you to keep others comfortable?</div>
+<textarea class="j-field grow" id="m3_q3" data-module="The Change No One Sees" data-label="Where you perform the old you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing you wish someone here truly understood about who you have become? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_q4" data-module="The Change No One Sees" data-label="What you wish they understood" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Becoming Whole Here</h2><div class="ph-sub">Building a life as the person you’ve become</div></div>
+<section class="module">
+<h3>Homesick for There</h3>
+<p class="where">There is a particular ache in being homesick for the place you left, especially the one you chose to leave. You may miss the streets, the friends, the food, the version of yourself who lived there. Longing for abroad does not cancel out being glad you came back; both can be true at once.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Missing the life you left is not disloyalty to the life you are building. Two places can hold your heart at the same time, and grief is simply love with nowhere to go for the moment.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>People often expect their homesickness to point backward at a place, and they are surprised to find it pointing at a self. What we miss after coming home is rarely just a city; it is who we got to be there, the aliveness, the version of us that particular life made possible. In my experience this ache does not soften when we force ourselves to stop missing it. It softens when we let ourselves honor what that chapter gave us, and begin, slowly, to build some of that aliveness into the life we are in now.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Homesick for There" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="Homesick for There" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you miss most about the life and the place you left? Be specific, and let it be tender.</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Homesick for There" data-label="What you miss most" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did that place, and the person you were there, give you that you do not want to lose?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="Homesick for There" data-label="What it gave you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How do you talk to yourself about missing it? Is there room to grieve without guilt?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="Homesick for There" data-label="Grieving without guilt" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one small way you could honor that chapter this week, rather than push it away? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="Homesick for There" data-label="One way to honor it" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Friends Who Stayed</h3>
+<p class="where">Coming home means walking back into relationships that kept going without you. Some friends slot right back in; others feel oddly distant, the shared context gone, the small talk somehow too small after everything you have lived. Reconnecting is its own quiet grief, and its own quiet hope.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are not cold or ungrateful for feeling out of step with people you love. Time and distance change relationships; they do not erase them. Some will find their rhythm again, and some will become something gentler and more occasional. Both are okay.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="The Friends Who Stayed" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m7_arrive" data-module="The Friends Who Stayed" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Who have you reconnected with since coming back, and how has it actually felt, easy, awkward, bittersweet?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="The Friends Who Stayed" data-label="How reconnecting has felt" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When reconnecting feels hard, is it more that some friendships no longer fit, or that you feel out of step even in the good ones?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">Some don’t fit anymore</button><button class="bbtn" data-branch="b3" data-val="no">Out of step in myself</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then part of coming home is grieving relationships that have quietly changed shape.</div>
+<div class="prompt"><div class="plabel">Which friendships feel different now, and what changed between you?</div>
+<textarea class="j-field grow" id="m7_y1" data-module="The Friends Who Stayed" data-label="Friendships that feel different" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it mean to let some become lighter, once-in-a-while connections, without guilt? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_y2" data-module="The Friends Who Stayed" data-label="Letting some become lighter" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then the friendships may be intact, and the distance is inside you, in everything you have lived that they cannot quite see.</div>
+<div class="prompt"><div class="plabel">What have you lived that feels almost impossible to explain to people who weren’t there?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="The Friends Who Stayed" data-label="What’s hard to explain" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where could you find even one person who does get it, so you are not carrying it alone? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_n2" data-module="The Friends Who Stayed" data-label="One person who gets it" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>What You’re Keeping</h3>
+<p class="where">You did not come home empty. Living abroad changes how you see, what you value, and who you are willing to be. Repatriation is not about erasing all of that to fit back in; it is about deciding, on purpose, what you carry forward into the life you are building here.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to choose between who you were and who you became. The most grounded version of you gets to keep both, and to let your years away actually change your life here.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="What You’re Keeping" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="What You’re Keeping" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What did living abroad teach you about yourself that you want to keep?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="What You’re Keeping" data-label="What abroad taught you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What values, habits, or perspectives shifted while you were away, and which of them do you want to protect now?</div>
+<textarea class="j-field grow" id="m5_q2" data-module="What You’re Keeping" data-label="What shifted, what to protect" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where do you feel pressure to abandon who you became just to fit back in, and from whom?</div>
+<textarea class="j-field grow" id="m5_q3" data-module="What You’re Keeping" data-label="Pressure to shrink back" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name one thing from your life abroad you will deliberately carry into your life here. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_q4" data-module="What You’re Keeping" data-label="One thing you’ll carry forward" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>A Life Here, On New Terms</h3>
+<p class="where">Coming home is not the end of the story; it is the start of a chapter you get to author. This last page turns everything you have named into a life here that fits the person you are now, not the one you were when you left.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to slot back into your old life. You get to build a new one, here, on terms that honor everything you have lived. Home can be something you make, not only somewhere you return to.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="A Life Here, On New Terms" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="A Life Here, On New Terms" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you want home to mean for you now, as the person you have become?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="A Life Here, On New Terms" data-label="What home means now" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">As you think about home now, where are you?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Home for good</button><button class="bbtn" data-branch="b2" data-val="no">Not sure / might go again</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then this is about making here a real, chosen home, not a holding pattern.</div>
+<div class="prompt"><div class="plabel">What would make this place feel like a home you are choosing, rather than one you defaulted back into?</div>
+<textarea class="j-field grow" id="m6_y1" data-module="A Life Here, On New Terms" data-label="Making it a chosen home" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing you could build or seek out here that would help you belong again? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_y2" data-module="A Life Here, On New Terms" data-label="One step toward belonging" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then you are between chapters, and that uncertainty is allowed. You can be present here without deciding forever.</div>
+<div class="prompt"><div class="plabel">What would you need to feel settled enough to be present here, even if you are not staying for good?</div>
+<textarea class="j-field grow" id="m6_n1" data-module="A Life Here, On New Terms" data-label="Enough to be present" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is the question about staying or going that you are sitting with, and who could you talk it through with? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_n2" data-module="A Life Here, On New Terms" data-label="The stay-or-go question" placeholder="Write here…"></textarea></div></div>
+</div>
+<div class="prompt"><div class="plabel">Your coming-home plan, in three lines: the grief I will let myself feel is… / the thing from abroad I will keep is… / the one step toward belonging here I will take is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q2" data-module="A Life Here, On New Terms" data-label="Your coming-home plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you will let see the real, changed you, so you are not doing this alone?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="A Life Here, On New Terms" data-label="Who you’ll let see the real you" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You did not come home to become who you were. You came home to bring everything you have become, and to build a life worthy of it.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-repatriation-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE REPATRIATION WORKBOOK\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Repatriation Workbook.txt';a.click();
+}
+</script></body></html>

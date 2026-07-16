@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rootless: Finding Home Within · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>Rootless</h1>
+<div class="sub">Finding home within, when there’s no fixed place to return to.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Of all the parts of a mobile life, this might be the quietest and the heaviest: having no fixed place that holds your history and expects you back. No single home. Some days it feels like pure freedom. Other days it is a floating, unmoored loneliness, a sense of belonging everywhere and nowhere at once. This journal is for that specific ache, and for the steadier kind of home you can build inside yourself.</p><p>Across two parts it moves from naming the rootlessness honestly to building a sense of home that travels with you, wherever you are. There is no right way to use it; take the entry that meets you today, and come back as you change. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This journal is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. Rootlessness can sit close to real loneliness or depression; if your low mood or disconnection is persistent, severe, or comes with hopelessness, please reach out to a licensed professional or your local services. You deserve real support, wherever in the world you are.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>The Ache of No Ground</h2><div class="ph-sub">Naming what rootlessness really is</div></div>
+<section class="module">
+<h3>The Floating</h3>
+<p class="where">There is a particular feeling to having no home base, a lightness that can tip, without warning, into a kind of drifting loneliness. You can be surrounded by beauty and still feel strangely untethered, like a balloon with a cut string. Naming that feeling is where steadier ground begins.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The floating is not a character flaw, and it is not proof you chose wrong. It is the honest cost of a life without fixed walls, and feeling it fully is the first step toward building something that holds.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="The Floating" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m1_where" data-module="The Floating" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When does the lack of a home base feel like freedom, and when does it tip into floating?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Floating" data-label="Freedom vs. floating" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Describe the floating in your own words. Where do you feel it in your body, and what sets it off?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Floating" data-label="Describing the floating" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you tell yourself about it, and is that story kind or harsh?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Floating" data-label="The story you tell" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When was the last time you felt genuinely anchored, and what was present then? <span class="chip grounding">grounding</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="The Floating" data-label="Last time you felt anchored" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>What You’re Really Missing</h3>
+<p class="where">When the rootlessness aches, it is easy to think you are missing a place. Look closer and it is usually something else underneath: being known, continuity, the ease of a life where you do not have to explain yourself. Knowing what you actually miss is how you learn to give it to yourself.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>What you long for is not a weakness or a sign this life is wrong for you. It is a deeply human need for belonging, and needs are not problems to solve; they are signals to honor.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>When people tell me they are homesick for a place, we almost always find, underneath, that they are missing a felt sense rather than a location: being known without having to explain themselves, a place that holds their story, a continuity of self across time. The location was just where those things happened to live. Once someone names the real need underneath the missing, something shifts. They can start meeting it in small, portable ways, instead of waiting for the right place to hand it to them.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="What You’re Really Missing" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m2_where" data-module="What You’re Really Missing" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When you miss ‘home,’ what exactly are you missing, underneath the place itself?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="What You’re Really Missing" data-label="What you’re missing underneath" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did having a home base give you that you have not found a way to replace yet?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="What You’re Really Missing" data-label="What a home base gave you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where in your current life do you already get a little of that, even briefly?</div>
+<textarea class="j-field grow" id="m2_q3" data-module="What You’re Really Missing" data-label="Where you get a little of it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one need underneath the missing that you could start meeting on purpose? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_q4" data-module="What You’re Really Missing" data-label="A need you could start meeting" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Myth of Somewhere Better</h3>
+<p class="where">There is a quiet hope many rootless people carry: that the next place will be the one that finally feels like home. Sometimes that search is real and worth honoring. Sometimes it is a way of staying in motion so the emptiness never quite catches up. It is worth knowing which it is for you.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Wanting to find a place that fits is not naive, and staying in motion is not automatically avoidance. The point is not to judge the search, only to make sure you are the one choosing it.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="The Myth of Somewhere Better" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m3_where" data-module="The Myth of Somewhere Better" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Do you find yourself hoping the next place will finally feel like home? What would ‘home’ look like if you found it?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="The Myth of Somewhere Better" data-label="Hoping the next place is home" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you are honest, is the search for the right place mostly hopeful, or mostly restless?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Mostly hopeful</button><button class="bbtn" data-branch="b1" data-val="no">Mostly restless</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then the search is alive and worth honoring. Let’s keep it grounded.</div>
+<div class="prompt"><div class="plabel">What are you genuinely looking for in a place, and how will you know it when you feel it?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="The Myth of Somewhere Better" data-label="What you’re looking for" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What could you do to feel at home wherever you are, even while you keep looking?</div>
+<textarea class="j-field grow" id="m3_y2" data-module="The Myth of Somewhere Better" data-label="Feeling at home while looking" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then part of the motion may be about outrunning the emptiness, and that is worth meeting gently, not judging.</div>
+<div class="prompt"><div class="plabel">What might the constant searching be helping you avoid feeling, or facing?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="The Myth of Somewhere Better" data-label="What the searching avoids" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it mean to build home from the inside, instead of hoping a place will hand it to you?</div>
+<textarea class="j-field grow" id="m3_n2" data-module="The Myth of Somewhere Better" data-label="Building home from the inside" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Home You Carry</h2><div class="ph-sub">Building a home that travels with you</div></div>
+<section class="module">
+<h3>Home as a Feeling, Not a Place</h3>
+<p class="where">Here is the quiet reframe this whole journal turns on: home does not have to be a location. It can be a state you return to, a felt sense of being settled in yourself that no move can take away. It is learnable, and it is portable.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are not homeless in the deep sense. You are learning to carry home rather than stand on it, and that is a rarer, sturdier kind of belonging than most people ever build.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Home as a Feeling, Not a Place" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m4_where" data-module="Home as a Feeling, Not a Place" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When have you felt ‘at home’ in a moment, regardless of where you physically were? What made it so?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Home as a Feeling, Not a Place" data-label="At home in a moment" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What does being settled in yourself actually feel like in your body? How would you know it is there?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="Home as a Feeling, Not a Place" data-label="Settled in yourself" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If home is a feeling you can return to, what reliably brings you back to it?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="Home as a Feeling, Not a Place" data-label="What brings you back" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Write one sentence that defines home for you now, on your own terms. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="Home as a Feeling, Not a Place" data-label="Your definition of home" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your Portable Anchors</h3>
+<p class="where">A sense of home that travels is built from small, repeatable things: rituals, objects, people, and practices that stay constant while everything around you changes. These are your anchors. The more deliberate you are about them, the more any place can start to feel like yours.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not need a house to have anchors. A morning ritual, a familiar object, a voice on a call, a practice you always return to, these can hold you as steadily as any address, because you carry them everywhere.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="Your Portable Anchors" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m5_where" data-module="Your Portable Anchors" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What small rituals or routines already make anywhere feel a little more like yours?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="Your Portable Anchors" data-label="Rituals that make it yours" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What objects, sounds, or smells reliably say ‘home’ to you, that you could keep close wherever you go? <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_q2" data-module="Your Portable Anchors" data-label="Objects that say home" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who are the people who feel like home regardless of geography, and how do you stay tethered to them?</div>
+<textarea class="j-field grow" id="m5_q3" data-module="Your Portable Anchors" data-label="People who feel like home" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name three portable anchors you will commit to keeping, wherever you land next. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_q4" data-module="Your Portable Anchors" data-label="Three anchors to keep" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Thread of You</h3>
+<p class="where">There is one thing that has been present in every place you have ever lived: you. The same awareness, the same core, carried from address to address. That continuous thread of self is the closest thing to a home base you will ever have, and it goes everywhere you go.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You have never actually been without a home base. You have been the home base. The you who noticed the light in every apartment is the ground that does not move.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="The Thread of You" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m7_where" data-module="The Thread of You" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What has stayed constant in you across every place you have lived?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="The Thread of You" data-label="What’s stayed constant" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you look for the thread of you across all the moves, can you feel it, or has it gone blurry?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">I can feel it</button><button class="bbtn" data-branch="b3" data-val="no">It’s gone blurry</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then you already have your ground. Let’s make it something you can lean on.</div>
+<div class="prompt"><div class="plabel">What is the thread made of, the values, the ways of being, that are unmistakably you?</div>
+<textarea class="j-field grow" id="m7_y1" data-module="The Thread of You" data-label="What the thread is made of" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How could you come back to that thread on the days you feel unmoored? <span class="chip grounding">grounding</span></div>
+<textarea class="j-field grow" id="m7_y2" data-module="The Thread of You" data-label="Coming back to the thread" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then some of the self got scattered across the moving, and it can be gathered back, gently.</div>
+<div class="prompt"><div class="plabel">Where did you lose the thread, and what pulled you away from yourself?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="The Thread of You" data-label="Where you lost the thread" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing that reliably reminds you who you are, that you could return to this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_n2" data-module="The Thread of You" data-label="What reminds you who you are" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Rooted and Free</h3>
+<p class="where">This last page brings it together: a way of living where you get to be both rooted and free, at home in yourself and open to the world. Not choosing between belonging and freedom, but carrying your belonging with you, into the freedom.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to give up this life to feel grounded, and you do not have to feel unmoored to stay free. The steadiest version of you holds both, an inner home you carry, and a life that stays open. That is yours to build.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Rooted and Free" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m6_where" data-module="Rooted and Free" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you want more of right now, roots or freedom, and why?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Rooted and Free" data-label="Roots or freedom" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">As you picture the life you want, what does your deeper self actually want more of right now?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">More roots</button><button class="bbtn" data-branch="b2" data-val="no">More freedom</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then something in you wants more steadiness, and that is worth honoring, even within a mobile life.</div>
+<div class="prompt"><div class="plabel">What would ‘more rooted’ look like for you, even without giving up your freedom entirely?</div>
+<textarea class="j-field grow" id="m6_y1" data-module="Rooted and Free" data-label="What more rooted looks like" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one step toward more steadiness you could take this month? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_y2" data-module="Rooted and Free" data-label="One step toward steadiness" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then you want to stay open, and the work is carrying home with you, so the freedom does not cost you your ground.</div>
+<div class="prompt"><div class="plabel">What would let you keep moving without the floating loneliness catching up?</div>
+<textarea class="j-field grow" id="m6_n1" data-module="Rooted and Free" data-label="Moving without the floating" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What inner anchor would you most want to strengthen, so freedom feels steady rather than unmoored? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_n2" data-module="Rooted and Free" data-label="An inner anchor to strengthen" placeholder="Write here…"></textarea></div></div>
+</div>
+<div class="prompt"><div class="plabel">Your home-within plan, in three lines: the anchor I’ll keep wherever I go is… / the need underneath my rootlessness I’ll start meeting is… / the way I’ll define home for myself is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q2" data-module="Rooted and Free" data-label="Your home-within plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you will let be a home base for you, not a place, but someone you can always return to?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="Rooted and Free" data-label="A person as home base" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You were never meant to be held by a place. You were meant to carry home inside you, and take it everywhere you go.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-rootless-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='ROOTLESS: FINDING HOME WITHIN\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Rootless Journal.txt';a.click();
+}
+</script></body></html>

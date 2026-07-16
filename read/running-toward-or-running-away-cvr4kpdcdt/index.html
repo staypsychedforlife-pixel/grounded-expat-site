@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Running Toward, or Running Away? · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:50px;line-height:1.03;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:34ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:32pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:36px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>Running Toward, or Running Away?</h1>
+<div class="sub">An honest, gentle look at what’s really driving your life on the move.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>Every mobile life is driven by two engines at once: moving toward something you want, and moving away from something you would rather not face. Most of us are doing both, in a mix we have never quite looked at directly. This journal is that look. Not to judge the motion, and not to talk you out of a life you love, but to make sure you are the one choosing it, with your eyes open.</p><p>Across two parts it separates the freedom from the flight, gently, and helps you turn constant motion into a conscious choice rather than a quiet compulsion. There is no wrong answer here, only a more honest one. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This journal is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. If the thing you may be moving away from is grief, trauma, or a fear that feels too big to face alone, that is exactly what a good therapist is for; please reach out to a licensed professional or your local services. Looking honestly at your own life is brave, and you do not have to do the heaviest parts by yourself.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>The Two Engines</h2><div class="ph-sub">What’s actually driving the motion</div></div>
+<section class="module">
+<h3>Toward and Away</h3>
+<p class="where">Underneath a life in motion are two forces that usually travel together: the pull toward a life you want, and the push away from one you did not. Naming both, without deciding one is good and one is bad, is where honesty begins.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>There is no shame in either engine. Wanting more and avoiding pain are both deeply human. The goal is not to have only pure motives; it is to see clearly what is moving you, so you stay in the driver’s seat.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>Most people arrive believing their motion is all ‘toward,’ all adventure and growth, or, in a harder moment, they fear it is all ‘away,’ all escape. It is almost always both, in a ratio that shifts over time. The people I have seen stay genuinely free are not the ones with the purest motives. They are the ones honest enough to notice when the ‘away’ has quietly taken the wheel, and brave enough to say so.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="Toward and Away" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m1_where" data-module="Toward and Away" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When you think about why you keep moving, what are you moving toward?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="Toward and Away" data-label="What you’re moving toward" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">And, honestly, what might you be moving away from?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="Toward and Away" data-label="What you’re moving away from" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which engine feels stronger right now, the toward or the away? Has that shifted over time?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="Toward and Away" data-label="Which engine is stronger" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What have you never quite let yourself admit about why you live this way? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="Toward and Away" data-label="What you haven’t admitted" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>What Stillness Brings Up</h3>
+<p class="where">The clearest test of what is driving you is not motion; it is stillness. Notice what rises the moment you imagine staying somewhere for a long time, with no next place booked. Relief and dread both tell you something true.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Whatever comes up when you imagine standing still is information, not a verdict. Dread does not mean you have to stop; relief does not mean you have to settle. It just shows you what the motion has been holding at bay.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="What Stillness Brings Up" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m2_where" data-module="What Stillness Brings Up" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Picture staying in one place for two years, nothing booked, no exit planned. What is the very first feeling that rises?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="What Stillness Brings Up" data-label="First feeling about staying" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you imagine staying still for a long time, is it more relief, or more dread?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">More relief</button><button class="bbtn" data-branch="b1" data-val="no">More dread</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then some part of you is tired of moving, and stillness sounds like rest. That is worth listening to.</div>
+<div class="prompt"><div class="plabel">What are you tired of that stillness would relieve?</div>
+<textarea class="j-field grow" id="m2_y1" data-module="What Stillness Brings Up" data-label="What stillness would relieve" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What has the constant motion been costing you that you are ready to stop paying?</div>
+<textarea class="j-field grow" id="m2_y2" data-module="What Stillness Brings Up" data-label="What motion has cost you" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then stillness brings something up, and the motion may be keeping it at bay. Let’s meet it gently.</div>
+<div class="prompt"><div class="plabel">What do you imagine you would have to feel, or face, if you stopped moving?</div>
+<textarea class="j-field grow" id="m2_n1" data-module="What Stillness Brings Up" data-label="What you’d have to face" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is that thing actually dangerous, or just deeply uncomfortable to sit with?</div>
+<textarea class="j-field grow" id="m2_n2" data-module="What Stillness Brings Up" data-label="Dangerous or uncomfortable" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>What You Might Be Outrunning</h3>
+<p class="where">If part of the motion is flight, it helps to know from what. Not to shame it, but because a thing you can name loses some of its grip. It might be a feeling, a grief, a relationship, a version of yourself, or simply the fear of standing still long enough to be truly known.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Whatever you have been outrunning, you are allowed to turn and look at it from a safe distance, on paper, in your own time. Naming it is not the same as being caught by it. It is how you stop being chased.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="What You Might Be Outrunning" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m3_where" data-module="What You Might Be Outrunning" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">If some of your motion is running from something, what is the something? Let yourself guess, even if you are not sure.</div>
+<textarea class="j-field grow" id="m3_q1" data-module="What You Might Be Outrunning" data-label="What you’re running from" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When did the running start? What was happening in your life then?</div>
+<textarea class="j-field grow" id="m3_q2" data-module="What You Might Be Outrunning" data-label="When the running started" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What are you afraid would happen if you stopped and let it catch up?</div>
+<textarea class="j-field grow" id="m3_q3" data-module="What You Might Be Outrunning" data-label="Afraid it would catch up" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it feel like to face even a small piece of it, from where you are now, safe? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m3_q4" data-module="What You Might Be Outrunning" data-label="Facing a small piece" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Leaving Before You’re Left</h3>
+<p class="where">For some, the motion is not only about escaping a place; it is about controlling a goodbye. If you leave first, you cannot be left. It can feel like freedom, but underneath it is often an old fear of being the one who stays and gets hurt. This is a tender one, so go gently.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>If you learned to leave before you can be left, you learned it for a reason, probably a good one, once. It kept you safe. Naming it does not mean you are broken; it means you get to choose differently now, from safety instead of fear.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Leaving Before You’re Left" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m7_where" data-module="Leaving Before You’re Left" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Do you tend to leave relationships or places before they can leave you? Where do you notice that pattern?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Leaving Before You’re Left" data-label="The leaving-first pattern" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you sit with it, does ‘leaving before I’m left’ feel true for you?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">Yes, that’s me</button><button class="bbtn" data-branch="b3" data-val="no">Not really my pattern</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then this is an old form of self-protection, and it deserves compassion, not shame.</div>
+<div class="prompt"><div class="plabel">When did you first learn that leaving first felt safer than being left?</div>
+<textarea class="j-field grow" id="m7_y1" data-module="Leaving Before You’re Left" data-label="Where you learned it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What might become possible if you let yourself stay a little longer than the fear wants you to? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m7_y2" data-module="Leaving Before You’re Left" data-label="If you stayed longer" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then that particular pattern may not be yours, and that is good to know too.</div>
+<div class="prompt"><div class="plabel">What does drive your timing, then, when you decide it is time to move on?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="Leaving Before You’re Left" data-label="What drives your timing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is that timing coming from you, or from something you would rather not sit with?</div>
+<textarea class="j-field grow" id="m7_n2" data-module="Leaving Before You’re Left" data-label="Where the timing comes from" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Choosing on Purpose</h2><div class="ph-sub">Motion as a choice, not a compulsion</div></div>
+<section class="module">
+<h3>The Freedom vs. The Flight</h3>
+<p class="where">Freedom and flight can look identical from the outside: the same flights, the same new cities. The difference is on the inside. Freedom moves toward; flight moves away. Freedom expands; flight escapes. Learning to feel that difference in your own life is the heart of this work.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to give up your freedom to give up your flight. The same life can be lived from either place. The invitation is simply to move from wanting, more often than from fear.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="The Freedom vs. The Flight" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m4_where" data-module="The Freedom vs. The Flight" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">In your life, when does moving feel like freedom, expansive, chosen, alive?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="The Freedom vs. The Flight" data-label="When it feels like freedom" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">And when does it feel more like flight, driven, restless, a way to not-feel?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="The Freedom vs. The Flight" data-label="When it feels like flight" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How can you tell the difference in your own body, in the days before you decide to move on?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="The Freedom vs. The Flight" data-label="How your body tells you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would help you catch it in the moment, when flight is dressing up as freedom? <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m4_q4" data-module="The Freedom vs. The Flight" data-label="Catching flight-as-freedom" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>If You Weren’t Running</h3>
+<p class="where">Here is a useful thought experiment: imagine the running were simply not an option for a while. Not forever, just paused. What would you have to build, face, or feel? What would you actually want, if leaving were not on the table?</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The point of this is not to trap you anywhere. It is to reveal what you would choose if choice, not escape, were the only thing driving you. That is the life worth building, whether you stay in motion or not.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="If You Weren’t Running" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m5_where" data-module="If You Weren’t Running" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">If you could not move on for the next year, what would you have to face or build where you are?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="If You Weren’t Running" data-label="What you’d have to face or build" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What might you actually want, underneath the wanting-to-leave? A relationship, a rest, a self you have not let yourself be?</div>
+<textarea class="j-field grow" id="m5_q2" data-module="If You Weren’t Running" data-label="What you actually want" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing you have been outsourcing to ‘the next place’ that you could give yourself right where you are? <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_q3" data-module="If You Weren’t Running" data-label="Outsourced to the next place" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If leaving were not the answer, what would you do instead this month? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_q4" data-module="If You Weren’t Running" data-label="What you’d do instead" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Moving on Purpose</h3>
+<p class="where">This last page is not about a verdict, stay or go. It is about how you move: from choice, or from compulsion. You get to keep this life, or change it, but either way, let it be something you are choosing with open eyes, not something happening to you.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are allowed to keep going, and you are allowed to slow down. Neither is failure. The only thing that matters is that the choice is yours, made from what you want, not only from what you are avoiding.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Moving on Purpose" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m6_where" data-module="Moving on Purpose" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Knowing what you know now, do you want to keep moving, slow down, or something in between? There is no wrong answer.</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Moving on Purpose" data-label="Keep moving or slow down" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">As you look honestly at your motion, what does the most grounded part of you want to do with it?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Keep moving, from choice</button><button class="bbtn" data-branch="b2" data-val="no">Slow down or change</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then keep going, from choice. Let’s make sure it stays toward, not away.</div>
+<div class="prompt"><div class="plabel">How will you keep the ‘toward’ in the driver’s seat as you keep moving?</div>
+<textarea class="j-field grow" id="m6_y1" data-module="Moving on Purpose" data-label="Keeping toward in the driver’s seat" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What early sign would tell you flight has taken over again, and what will you do when it does? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_y2" data-module="Moving on Purpose" data-label="Early sign of flight" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then something in you is ready to move differently. That is not the end of the freedom; it is a truer version of it.</div>
+<div class="prompt"><div class="plabel">What do you want to face or build that the motion has been postponing?</div>
+<textarea class="j-field grow" id="m6_n1" data-module="Moving on Purpose" data-label="What motion has postponed" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one honest step toward that you could take, even a small one? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_n2" data-module="Moving on Purpose" data-label="One honest step" placeholder="Write here…"></textarea></div></div>
+</div>
+<div class="prompt"><div class="plabel">Your on-purpose plan, in three lines: the ‘toward’ I want to move from is… / the ‘away’ I’ll stop letting drive me is… / the honest next step I’ll take is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m6_q2" data-module="Moving on Purpose" data-label="Your on-purpose plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you will be honest with about what is really driving you, so you are not doing this reckoning alone?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="Moving on Purpose" data-label="Who you’ll be honest with" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You do not have to stop moving to be free. You only have to know why you move, and choose it, every time.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-running-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='RUNNING TOWARD, OR RUNNING AWAY?\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Running Toward or Away Journal.txt';a.click();
+}
+</script></body></html>
