@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free, But For What? · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:52px;line-height:1.03;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero h1 em{font-style:italic;color:var(--clay)}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:34ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:38px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>Free, But For <em>What?</em></h1>
+<div class="sub">For when you can go anywhere and do anything, but you&rsquo;ve lost the thread of what it&rsquo;s all for.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>This is the quiet one, the part of freedom nobody warns you about. You built a life where you can go anywhere, do anything, answer to no one. And then, somewhere in all that openness, a strange question surfaces: what is it all for? The days blur, the destinations stop landing the way they used to, and the freedom you fought for starts to feel oddly weightless. This journal is for that drift, and for finding a thread to live by.</p><p>Across two parts it moves from naming the emptiness honestly to building a life with direction and meaning, wherever you are. There is no right way to use it; take the entry that meets you today. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This journal is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. Existential drift can overlap with depression; if the emptiness is persistent, severe, or comes with hopelessness, please reach out to a licensed professional or your local services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>The Drift</h2><div class="ph-sub">The part of freedom nobody warns you about</div></div>
+<section class="module">
+<h3>Free, But Adrift</h3>
+<p class="where">On paper you have everything you wanted: freedom, options, no one telling you what to do. And yet there is a flatness, a sense of floating without direction, that you did not expect and are not sure you are allowed to feel. Naming it is the start.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Feeling adrift in a life you built is not ingratitude, and it does not mean you should give it all up. It means freedom alone was never going to be enough, which is true for almost everyone. You are allowed to want more than options.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="Free, But Adrift" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m1_where" data-module="Free, But Adrift" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Describe the drift in your own words. When did you first notice the freedom starting to feel empty?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="Free, But Adrift" data-label="Describing the drift" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What did you think all this freedom would give you, that it has not quite delivered?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="Free, But Adrift" data-label="What freedom didn’t deliver" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you tell yourself about feeling this way, and is that voice kind?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="Free, But Adrift" data-label="The voice about feeling this" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>When Nothing Requires You</h3>
+<p class="where">Part of what unmoors you is that nothing requires you to be anywhere, or to be anyone in particular. No structure, no schedule, no one needing you at nine in the morning. It sounds like a dream, and it can quietly become a kind of weightlessness, where nothing feels like it matters because nothing has to.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>We are not built to float. Meaning tends to come from friction, from things that ask something of us, and needing some of that structure back is not a failure of your freedom. It is a very human need to matter to something.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>Total freedom is not the same as fulfillment, and I have watched many people discover that the hard way. When nothing requires us, the mind starts asking why any of it matters, and without an answer, even beautiful days can feel thin. The people who find their footing again usually do it not by adding more freedom, but by choosing something to be accountable to, a project, a person, a practice, that gives the freedom a shape to fill.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="When Nothing Requires You" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m2_where" data-module="When Nothing Requires You" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What in your life currently requires something of you, and what asks nothing at all?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="When Nothing Requires You" data-label="What requires you, what doesn’t" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where does the lack of structure feel freeing, and where does it tip into aimlessness?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="When Nothing Requires You" data-label="Freeing vs. aimless" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it be like to have something, or someone, genuinely count on you again?</div>
+<textarea class="j-field grow" id="m2_q3" data-module="When Nothing Requires You" data-label="Being counted on again" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>What the Freedom Was Supposed to Fix</h3>
+<p class="where">Underneath a lot of freedom is a quiet hope: that if you could just be free enough, the restlessness or emptiness would resolve. When it does not, the disappointment can be disorienting, because you did the thing, and it still is not enough.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Freedom is a wonderful tool and a poor destination. If it did not fix the deeper thing, that is not because you did it wrong. It is because the deeper thing was never geographical, and now you get to look at what it actually is.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="What the Freedom Was Supposed to Fix" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m3_where" data-module="What the Freedom Was Supposed to Fix" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What were you hoping the freedom, or the next place, would finally resolve in you?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="What the Freedom Was Supposed to Fix" data-label="What you hoped it would fix" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you are honest, did the freedom deliver what you wanted and you are still restless, or has the freedom itself started to feel empty?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Delivered, still restless</button><button class="bbtn" data-branch="b1" data-val="no">The freedom feels empty</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then the freedom worked, and the restlessness is pointing at something deeper than location. Let&rsquo;s follow it.</div>
+<div class="prompt"><div class="plabel">If more freedom is not the answer, what might the restlessness actually be asking for?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="What the Freedom Was Supposed to Fix" data-label="What the restlessness asks for" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is the thing you keep hoping the next move will fix, that a move cannot touch?</div>
+<textarea class="j-field grow" id="m3_y2" data-module="What the Freedom Was Supposed to Fix" data-label="What a move can’t fix" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then the freedom itself has stopped satisfying, which usually means it is time for meaning, not more options.</div>
+<div class="prompt"><div class="plabel">What used to make you feel alive that freedom alone does not give you?</div>
+<textarea class="j-field grow" id="m3_n1" data-module="What the Freedom Was Supposed to Fix" data-label="What freedom alone doesn’t give" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would ‘enough’ feel like, if it were not about being able to go anywhere?</div>
+<textarea class="j-field grow" id="m3_n2" data-module="What the Freedom Was Supposed to Fix" data-label="What enough would feel like" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>A Life With a Thread</h2><div class="ph-sub">Finding something to live by</div></div>
+<section class="module">
+<h3>What Actually Matters to You</h3>
+<p class="where">Direction comes from values, the things you care about that would still matter no matter where you were standing. When the external structure is gone, these become your compass. Let&rsquo;s excavate yours.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to find one grand purpose. You have to find what you genuinely care about, and let it point you. A handful of true values is more than enough to build a meaningful life on.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="What Actually Matters to You" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m4_where" data-module="What Actually Matters to You" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Think of a time your life felt like it had real meaning, not just pleasure or freedom, but meaning. What were you doing? Who were you being?</div>
+<textarea class="j-field grow" id="m4_q1" data-module="What Actually Matters to You" data-label="A time it had meaning" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Underneath that, what do you most deeply value, connection, creativity, growth, service, beauty, learning? Name a few that are truly yours.</div>
+<textarea class="j-field grow" id="m4_q2" data-module="What Actually Matters to You" data-label="What you deeply value" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How much of your current life actually expresses those values, and where is the gap?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="What Actually Matters to You" data-label="Where the gap is" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>To Matter to Something</h3>
+<p class="where">Meaning is rarely found in pure self-focus. It tends to arrive through contribution, mattering to someone or something beyond your own experience. A life of endless self-directed freedom can quietly starve that need. This looks at what you might be here to give, not just get.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Wanting to matter to others, to contribute, to be needed, is not a loss of freedom. It is what turns freedom into a life. You are allowed to build something bigger than your own comfort.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>One of the most reliable ways out of existential drift I have seen is contribution. Not grand or performative, just genuinely mattering to something outside yourself, a person, a community, a craft, a cause. The self-focus that a fully free life can encourage tends to feed the emptiness; giving tends to fill it. Meaning is often less about finding yourself and more about giving yourself to something worth it.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="To Matter to Something" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m5_where" data-module="To Matter to Something" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Who or what do you currently matter to, beyond yourself? Where have you gone quiet on contributing?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="To Matter to Something" data-label="Who you matter to" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you imagine giving yourself to something beyond your own life, does it feel more like relief, or more like a threat to your freedom?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Mostly relief</button><button class="bbtn" data-branch="b2" data-val="no">A threat to my freedom</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then some part of you is hungry to contribute, and that hunger is worth feeding.</div>
+<div class="prompt"><div class="plabel">What would you love to contribute to, if you let yourself commit, a person, a craft, a community, a cause?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="To Matter to Something" data-label="What you’d contribute to" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one small way you could start giving yourself to it this month? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y2" data-module="To Matter to Something" data-label="One small way to start" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then commitment feels like a cage right now, and that is worth understanding gently before you decide.</div>
+<div class="prompt"><div class="plabel">What are you afraid you would have to give up if you committed to something, or someone?</div>
+<textarea class="j-field grow" id="m5_n1" data-module="To Matter to Something" data-label="What commitment would cost" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is total freedom actually giving you the fullness you hoped, or is the fear of commitment quietly costing you meaning?</div>
+<textarea class="j-field grow" id="m5_n2" data-module="To Matter to Something" data-label="What the fear is costing" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Direction Without a Destination</h3>
+<p class="where">You do not need a five-year plan or a single life purpose to stop drifting. You need a direction, a thread, something you are moving toward, even if the destination stays open. Purpose is less a place you arrive and more a direction you keep choosing.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You are allowed to not have it all figured out. A direction is enough. One thing worth moving toward turns aimless freedom into a life going somewhere, even when you do not know exactly where.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="Direction Without a Destination" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m6_where" data-module="Direction Without a Destination" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">If you did not need to know the final destination, what direction feels alive to you right now, something you would like your life to move toward?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="Direction Without a Destination" data-label="A direction that feels alive" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing you could commit to for the next season, not forever, just long enough to give your freedom a shape?</div>
+<textarea class="j-field grow" id="m6_q2" data-module="Direction Without a Destination" data-label="Commit to for a season" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What have you been avoiding committing to, out of a fear of losing your options?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="Direction Without a Destination" data-label="What you’ve avoided committing to" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Free, and For Something</h3>
+<p class="where">This last page brings it together: a life that keeps the freedom you love and gives it a thread to follow. Not freedom instead of meaning, but freedom in service of something you actually care about.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to choose between a free life and a meaningful one. The richest version is both, the openness you fought for, pointed at something that matters to you. That is a life worth waking up for, wherever you are.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Free, and For Something" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m7_where" data-module="Free, and For Something" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What do you want your freedom to be for, now?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Free, and For Something" data-label="What your freedom is for" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">As you look ahead, what does the most honest part of you most want to build your freedom around?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">A contribution</button><button class="bbtn" data-branch="b3" data-val="no">A direction to follow</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then you want to matter to something, and your freedom becomes the way you serve it. Let&rsquo;s aim it.</div>
+<div class="prompt"><div class="plabel">What would you love your free life to be in service of, and what is one honest step toward making that real?</div>
+<textarea class="j-field grow" id="m7_y1" data-module="Free, and For Something" data-label="In service of, and a step" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then you want a thread to follow more than a fixed goal, and that is a wise, workable answer.</div>
+<div class="prompt"><div class="plabel">What direction do you want to keep choosing, season after season, and what one commitment would give the next season a shape?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="Free, and For Something" data-label="Direction and a commitment" placeholder="Write here…"></textarea></div></div>
+</div>
+<div class="prompt"><div class="plabel">Your free-and-for-something plan, in three lines: the value I&rsquo;ll let lead is… / the thing I&rsquo;ll commit to for this season is… / the freedom I&rsquo;ll protect while I do is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m7_q2" data-module="Free, and For Something" data-label="Your free-and-for-something plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you&rsquo;ll share this with, so your direction has a witness?</div>
+<textarea class="j-field grow" id="m7_q3" data-module="Free, and For Something" data-label="Who witnesses your direction" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">The freedom was never the answer. It was the space to find one. What you choose to fill it with is the whole of your life.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-forwhat-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='FREE, BUT FOR WHAT?\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Free But For What Journal.txt';a.click();
+}
+</script></body></html>

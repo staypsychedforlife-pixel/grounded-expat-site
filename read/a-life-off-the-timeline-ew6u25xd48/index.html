@@ -1,0 +1,259 @@
+<!DOCTYPE html><html lang="en"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Life Off the Timeline · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:52px;line-height:1.03;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero h1 em{font-style:italic;color:var(--clay)}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:34ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:38px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>A Life Off the <em>Timeline</em></h1>
+<div class="sub">For when everyone else seems to be hitting milestones you&rsquo;re not.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>There is a particular ache that shows up in a life that does not follow the usual shape: the wedding invitations, the house photos, the baby announcements, the steady careers, all arriving while you are on the other side of the world building something no one has a word for. It can leave you wondering, quietly, if you are behind. This journal is for that ache, and for learning to measure your life by something truer than a timeline.</p><p>Across two parts it moves from naming the comparison honestly to building a life you do not have to defend. There is no right way to use it; take the entry that meets you today. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This journal is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. If comparison tips into a persistent low mood, worthlessness, or hopelessness, please reach out to a licensed professional or your local services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Off the Map</h2><div class="ph-sub">The comparison, and where it comes from</div></div>
+<section class="module">
+<h3>The Milestones You&rsquo;re Not Hitting</h3>
+<p class="where">Marriage, a house, kids, a climbing career, a settled address. The markers everyone seems to be collecting, right as you have chosen a life that does not run on them. Naming which ones actually sting is where this starts.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Feeling the pang when the milestones roll by does not mean you regret your life. It means you are human, and you absorbed the same script everyone else did. You are allowed to feel it and still love your path.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="The Milestones You&rsquo;re Not Hitting" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m1_where" data-module="The Milestones You&rsquo;re Not Hitting" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Which milestones do you feel the absence of most, the ones that give you a little pang when they show up in your feed?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Milestones You&rsquo;re Not Hitting" data-label="The milestones that sting" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When did you last feel that ‘everyone is moving on without me’ feeling? What set it off?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Milestones You&rsquo;re Not Hitting" data-label="Last time it hit" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you tell yourself in those moments, and is that voice kind or harsh?</div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Milestones You&rsquo;re Not Hitting" data-label="The voice in those moments" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Am I Behind, or Just Different?</h3>
+<p class="where">There is a fork here. ‘Behind’ assumes there is one track and you are losing the race. ‘Different’ means you got off the track on purpose. The same life can feel like either, depending on the story you tell about it.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>A life can only be ‘behind’ if there is one correct route through it. There is not. You are not late for a life that was never on a schedule.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="Am I Behind, or Just Different?" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m2_where" data-module="Am I Behind, or Just Different?" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When the comparison hits, which does it feel like more, that you are behind, or that you are simply on a different path?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="Am I Behind, or Just Different?" data-label="Behind or different" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you sit with it, is the feeling more ‘I&rsquo;m falling behind,’ or ‘I&rsquo;m free, but a little defensive about it’?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Falling behind</button><button class="bbtn" data-branch="b1" data-val="no">Free, but defensive</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Then part of you still believes there is a track you should be on. Let&rsquo;s look at that gently.</div>
+<div class="prompt"><div class="plabel">What would ‘catching up’ even mean, and do you actually want the thing, or just the sense of being on schedule?</div>
+<textarea class="j-field grow" id="m2_y1" data-module="Am I Behind, or Just Different?" data-label="What catching up would mean" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is underneath the fear of being behind, being judged, being alone, missing out?</div>
+<textarea class="j-field grow" id="m2_y2" data-module="Am I Behind, or Just Different?" data-label="Underneath the fear" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Then you have chosen your path, and the sting is more about defending it than doubting it. That is worth softening.</div>
+<div class="prompt"><div class="plabel">Who or what are you defending your life against, and does it actually require defending?</div>
+<textarea class="j-field grow" id="m2_n1" data-module="Am I Behind, or Just Different?" data-label="What you’re defending against" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it feel like to hold your choices without needing anyone to approve of them?</div>
+<textarea class="j-field grow" id="m2_n2" data-module="Am I Behind, or Just Different?" data-label="Holding it without approval" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Whose Timeline Is This?</h3>
+<p class="where">The timeline you are measuring yourself against did not come from nowhere. It came from family, culture, a generation&rsquo;s script about what a life is supposed to look like by now. Seeing where it came from loosens its grip.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The timeline is not a law of nature. It is a story, one you inherited, not one you have to keep. You get to question it, and keep only the parts that are actually yours.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>Much of the ‘am I behind’ pain, in my experience, is not about what the person actually wants. It is about a script absorbed so early it feels like truth. When someone traces the timeline back to whose voice it really is, a parent, a culture, a quiet comparison to a sibling, it stops feeling like a verdict and starts feeling like a rule they are allowed to decline. That is the moment the pressure loosens.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="Whose Timeline Is This?" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m3_where" data-module="Whose Timeline Is This?" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Whose voice is in the timeline, family, culture, a specific person? Where did you first learn what a life ‘should’ look like by a certain age?</div>
+<textarea class="j-field grow" id="m3_q1" data-module="Whose Timeline Is This?" data-label="Whose voice it is" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How much of the pressure is about what you want, and how much is about not disappointing someone, or not being judged?</div>
+<textarea class="j-field grow" id="m3_q2" data-module="Whose Timeline Is This?" data-label="Want vs. not disappointing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which parts of the traditional timeline do you actually want, and which have you just never questioned?</div>
+<textarea class="j-field grow" id="m3_q3" data-module="Whose Timeline Is This?" data-label="Want vs. never questioned" placeholder="Write here…"></textarea></div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Your Own Measure</h2><div class="ph-sub">Building a life you don&rsquo;t have to defend</div></div>
+<section class="module">
+<h3>The Things a Timeline Can&rsquo;t See</h3>
+<p class="where">A timeline only counts a few visible things. It has no column for courage, for the number of times you started over, for how well you know yourself now, for the life you have actually lived instead of the one you were told to. Let&rsquo;s count what does not show up.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You have been building things no milestone can measure. A life fully lived on your own terms is an achievement, even when it comes with no announcement and no one throws you a party for it.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>The people I have seen make peace with a nonlinear life are not the ones who stopped caring what others think. They are the ones who built their own scoreboard, who decided, on purpose, what counts as a life well lived, and then measured by that instead. The relief is enormous, because you can finally win a game you actually chose to play.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="The Things a Timeline Can&rsquo;t See" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m4_where" data-module="The Things a Timeline Can&rsquo;t See" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What have you built or become that a timeline has no column for? Let yourself list it, generously.</div>
+<textarea class="j-field grow" id="m4_q1" data-module="The Things a Timeline Can&rsquo;t See" data-label="What a timeline can’t see" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What has this off-the-map life given you that the ‘on-schedule’ version could not have?</div>
+<textarea class="j-field grow" id="m4_q2" data-module="The Things a Timeline Can&rsquo;t See" data-label="What this life gave you" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If you had to name the achievements you are actually proudest of, the real ones, what makes the list?</div>
+<textarea class="j-field grow" id="m4_q3" data-module="The Things a Timeline Can&rsquo;t See" data-label="What you’re proudest of" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>When the Comparison Hits</h3>
+<p class="where">Knowing your path is yours does not stop the wedding photo from landing at 11pm when you are already tired and far from home. This is for the in-the-moment sting: what to do when comparison ambushes you.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>A wave of comparison is not a sign you chose wrong. It is just a wave. You can feel it fully, let it pass, and still wake up glad for the life you are in.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="When the Comparison Hits" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m5_where" data-module="When the Comparison Hits" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What situations reliably trigger the comparison, socials, family visits, milestone birthdays, certain people?</div>
+<textarea class="j-field grow" id="m5_q1" data-module="When the Comparison Hits" data-label="What triggers it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">In the moment, what actually helps you come back to yourself, and what makes it worse?</div>
+<textarea class="j-field grow" id="m5_q2" data-module="When the Comparison Hits" data-label="What helps, what makes it worse" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one true, kind thing you could say to yourself the next time it hits? Write it now, so it is ready. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_q3" data-module="When the Comparison Hits" data-label="A kind thing, ready in advance" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>What You Actually Want</h3>
+<p class="where">Here is the honest part. Some of what looks like comparison is real longing, you might actually want some of those things, in your own way and time. Separating true desire from inherited pressure is how you build a life you will not resent.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Wanting some of the ‘milestones’ does not make you a hypocrite, and wanting none of them does not make you cold. The only question that matters is what you want, underneath all the noise.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="What You Actually Want" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m6_where" data-module="What You Actually Want" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When you strip away the pressure and the comparison, what do you actually want for your life in the next few years?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="What You Actually Want" data-label="What you actually want" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">When you look honestly, do you want a version of some traditional milestones, or is this off-map life genuinely the one you want?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">I want some of them</button><button class="bbtn" data-branch="b2" data-val="no">This life is the one</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Then there is real desire here, not just pressure. That is worth honoring, on your own terms.</div>
+<div class="prompt"><div class="plabel">Which ones do you genuinely want, and what would they look like your way, not the default way?</div>
+<textarea class="j-field grow" id="m6_y1" data-module="What You Actually Want" data-label="Which ones, your way" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one small step toward one of them you could take, without giving up the life you love? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_y2" data-module="What You Actually Want" data-label="One small step" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then this life is genuinely yours, and the work is releasing the guilt about not wanting what you are ‘supposed’ to.</div>
+<div class="prompt"><div class="plabel">What would it mean to fully claim this life as a choice, not a delay or a rebellion?</div>
+<textarea class="j-field grow" id="m6_n1" data-module="What You Actually Want" data-label="Claiming it as a choice" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Where do you still apologize for it, and what would it be like to stop?</div>
+<textarea class="j-field grow" id="m6_n2" data-module="What You Actually Want" data-label="Where you apologize for it" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>Success, on Your Own Terms</h3>
+<p class="where">This last page builds your own measure, a definition of a life well lived that fits the person you actually are, so the next time the timeline comes up, you have something truer to stand on.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You get to define what a good life is. Not your family, not your feed, not the age you thought you would have it all figured out. You. And a life measured by your own values is the only kind that ever feels like enough.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Success, on Your Own Terms" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="m7_where" data-module="Success, on Your Own Terms" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Write your own definition of a life well lived, on your terms. What actually counts?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Success, on Your Own Terms" data-label="Your definition of a good life" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">As you think about the years ahead, what does the most honest part of you want to do with this off-map life?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">Keep building it</button><button class="bbtn" data-branch="b3" data-val="no">Blend in some milestones</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Then keep going, on your own measure. Let&rsquo;s make it something you can stand on.</div>
+<div class="prompt"><div class="plabel">What would help you hold your own definition of a good life when the comparison comes knocking?</div>
+<textarea class="j-field grow" id="m7_y1" data-module="Success, on Your Own Terms" data-label="Holding your definition" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">Then you want some of both, your freedom and a few chosen markers. That is a real, whole answer.</div>
+<div class="prompt"><div class="plabel">What blend of the off-map life and the traditional milestones would actually fit you, and what is one honest step toward it?</div>
+<textarea class="j-field grow" id="m7_n1" data-module="Success, on Your Own Terms" data-label="Your blend, and a step" placeholder="Write here…"></textarea></div></div>
+</div>
+<div class="prompt"><div class="plabel">Your off-the-timeline plan, in three lines: the milestone I&rsquo;ll stop measuring myself against is… / the thing I&rsquo;ve built that I&rsquo;ll start counting is… / the way I&rsquo;ll define a good life for myself is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m7_q2" data-module="Success, on Your Own Terms" data-label="Your off-the-timeline plan" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person you&rsquo;ll let see, and celebrate, the life you&rsquo;re actually living, so you&rsquo;re not measuring alone?</div>
+<textarea class="j-field grow" id="m7_q3" data-module="Success, on Your Own Terms" data-label="Who celebrates your real life" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">You were never behind. You were walking a road that does not come with mile markers, and building a life that was always going to be measured differently.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-timeline-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='A LIFE OFF THE TIMELINE\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Off-the-Timeline Journal.txt';a.click();
+}
+</script></body></html>
