@@ -25,6 +25,20 @@ header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color
 .foot-note{text-align:center;background:var(--pine);color:var(--cream);border-radius:14px;padding:22px 24px;margin:28px 0 0;font-size:15px}
 .foot-note b{color:#fff}
 footer{text-align:center;margin-top:26px;color:var(--muted);font-size:13.5px}
+.section-head{text-align:center;margin:46px 0 6px}
+.section-head .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--clay);font-weight:700}
+.section-head h2{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1.08;margin:8px 0 8px;color:var(--pine);letter-spacing:-.01em}
+.section-head h2 em{font-style:italic;color:var(--clay)}
+.section-head p{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--muted);max-width:44ch;margin:0 auto}
+.divider{height:1px;background:var(--line);margin:40px 0 0}
+.audio-card{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 22px;margin:13px 0}
+.audio-card .a-head{display:flex;gap:14px;align-items:baseline}
+.audio-card .num{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--clay);line-height:1;flex:none;width:30px}
+.audio-card h3{font-family:var(--serif);font-weight:600;font-size:20px;margin:0;color:var(--pine)}
+.audio-card .pair{font-family:var(--sans);font-weight:600;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);margin:3px 0 0}
+.audio-card p{margin:8px 0 12px 44px;color:var(--muted);font-size:15px}
+.audio-card audio{width:calc(100% - 44px);margin-left:44px;height:38px}
+@media(max-width:560px){.audio-card p,.audio-card audio{margin-left:0}.audio-card audio{width:100%}}
 </style></head><body>
 <div class="wrap">
   <header class="hero">
@@ -32,7 +46,81 @@ footer{text-align:center;margin-top:26px;color:var(--muted);font-size:13.5px}
     <h1>Your Circle <em>Library</em></h1>
     <p class="sub">Twelve workshops for the inner side of moving abroad &mdash; yours to return to, anytime.</p>
   </header>
-  <div class="note">🌿 This is your private members’ library. <b>Bookmark this page</b> &mdash; it’s your one link to all twelve workshops. Each opens its own guided session, and your writing saves automatically in your browser as you go. New here? Start with <b>01 &middot; Landing</b> &mdash; the rest are yours to take in any order.</div>
+  <div class="note">🌿 This is your private members’ library. <b>Bookmark this page</b> &mdash; it’s your one link to everything. Below are twelve short <b>grounding practices</b> to listen to, and twelve <b>workshops</b> to write through. Your writing saves automatically in your browser as you go. New here? Press play on <b>01 &middot; The Arrival Reset</b>, then start the <b>Landing</b> workshop &mdash; the rest are yours to take in any order.</div>
+
+    <div class="section-head">
+      <div class="kicker">Listen &middot; Grounding Practices</div>
+      <h2>Twelve <em>guided</em> practices</h2>
+      <p>Short audio sessions, in my own voice, for when you need to come back to yourself. Put in your headphones, press play, and let the pauses do their work.</p>
+    </div>
+
+    <div class="audio-card">
+      <div class="a-head"><span class="num">01</span><div><h3>The Arrival Reset</h3><div class="pair">Pairs with · Landing</div></div></div>
+      <p>For the overwhelm of being brand new somewhere. A few minutes to land in your body and catch your breath.</p>
+      <audio controls preload="none" src="./audio/p01-arrival-reset.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">02</span><div><h3>Name It to Tame It</h3><div class="pair">Pairs with · The Dip</div></div></div>
+      <p>When the shine wears off and everything feels harder. Naming the feeling gently loosens its grip.</p>
+      <audio controls preload="none" src="./audio/p02-name-it-to-tame-it.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">03</span><div><h3>Home in My Body</h3><div class="pair">Pairs with · Homesick</div></div></div>
+      <p>For the days you miss home. A grounding practice to feel at home in the one place that travels with you.</p>
+      <audio controls preload="none" src="./audio/p03-home-in-my-body.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">04</span><div><h3>The Values Touchstone</h3><div class="pair">Pairs with · Who Am I Here?</div></div></div>
+      <p>When you&rsquo;re not quite sure who you are in this new place yet. A return to what stays true, wherever you go.</p>
+      <audio controls preload="none" src="./audio/p04-values-touchstone.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">05</span><div><h3>For the Lonely Nights</h3><div class="pair">Pairs with · Finding Your People</div></div></div>
+      <p>For the quiet, lonely evenings. A little company and warmth until your people arrive.</p>
+      <audio controls preload="none" src="./audio/p05-for-the-lonely-nights.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">06</span><div><h3>The Self-Compassion Break</h3><div class="pair">Pairs with · Beginner Again</div></div></div>
+      <p>For when being a beginner at everything wears you down. Three breaths of kindness toward yourself.</p>
+      <audio controls preload="none" src="./audio/p06-self-compassion-break.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">07</span><div><h3>Soften Before You Speak</h3><div class="pair">Pairs with · The Relationship Strain</div></div></div>
+      <p>Before a hard conversation. A moment to settle your nervous system so you can come back to each other softer.</p>
+      <audio controls preload="none" src="./audio/p07-soften-before-you-speak.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">08</span><div><h3>One Thing That&rsquo;s Mine</h3><div class="pair">Pairs with · The Trailing Partner</div></div></div>
+      <p>When so much of this life feels shaped around someone else. A practice to reclaim a corner of it as your own.</p>
+      <audio controls preload="none" src="./audio/p08-one-thing-thats-mine.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">09</span><div><h3>The Downshift</h3><div class="pair">Pairs with · Running on Empty</div></div></div>
+      <p>For when the tank is empty and everything is too much. Let your body remember how to rest.</p>
+      <audio controls preload="none" src="./audio/p09-the-downshift.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">10</span><div><h3>Savoring Here</h3><div class="pair">Pairs with · From Surviving to Belonging</div></div></div>
+      <p>A practice in letting the good in &mdash; noticing what this place is quietly giving you, not just taking.</p>
+      <audio controls preload="none" src="./audio/p10-savoring-here.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">11</span><div><h3>Both / And</h3><div class="pair">Pairs with · Far From Home for the Holidays</div></div></div>
+      <p>For the seasons that hold missing and meaning at once. Room for both, in the same open hands.</p>
+      <audio controls preload="none" src="./audio/p11-both-and.m4a"></audio>
+    </div>
+    <div class="audio-card">
+      <div class="a-head"><span class="num">12</span><div><h3>Who I&rsquo;ve Become</h3><div class="pair">Pairs with · What&rsquo;s Next</div></div></div>
+      <p>A look back at how far you&rsquo;ve come, and what you&rsquo;ll carry with you wherever you go next.</p>
+      <audio controls preload="none" src="./audio/p12-who-ive-become.m4a"></audio>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-head">
+      <div class="kicker">Write &middot; The Workshops</div>
+      <h2>Twelve <em>guided</em> workshops</h2>
+      <p>Deeper, reflective sessions to write through at your own pace. Your words save automatically as you go.</p>
+    </div>
     <a class="card" href="./w01-landing.html">
       <span class="num">01</span>
       <div class="c-body">
