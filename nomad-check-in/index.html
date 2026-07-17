@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>The Nomad Check-In — a free monthly pulse-check · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px 110px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar a.brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine);text-decoration:none}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:48px 0 24px}
+header.hero .mark{width:38px;height:38px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:50px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:8px 0 6px}
+.intro p{margin:0 0 10px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:11px 15px;border-radius:0 8px 8px 0;margin-top:12px;line-height:1.5}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px 8px;margin:18px 0}
+.module .day{font-family:var(--sans);text-transform:uppercase;letter-spacing:2.5px;font-size:11.5px;color:var(--clay);font-weight:600}
+.module h3{font-family:var(--serif);font-weight:600;font-size:27px;margin:3px 0 8px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:18px;color:#494033;line-height:1.5;margin:0 0 16px}
+.prompt{margin:0 0 18px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+textarea.grow{width:100%;min-height:58px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:12px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;opacity:1;font-style:italic}
+textarea.grow{cursor:text;-webkit-user-select:text;user-select:text}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.endcard{background:var(--pine);color:var(--cream);border-radius:14px;padding:30px 28px;margin:30px 0 0;text-align:center}
+.endcard h2{font-family:var(--serif);font-weight:500;font-size:30px;margin:0 0 10px}
+.endcard p{font-size:15px;color:#D8D3C6;margin:0 auto;max-width:48ch;line-height:1.6}
+.endcard a{color:#E7B7A3;font-weight:600}
+.foot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}textarea.grow{background:#fff;border:1px solid #ccc}.endcard{background:#fff;color:#000;border:1px solid #ccc}.endcard p{color:#333}}
+@media(max-width:560px){header.hero h1{font-size:38px}}
+#gate{position:fixed;inset:0;z-index:100;background:var(--oat);display:flex;align-items:center;justify-content:center;padding:22px}.gate-card{max-width:460px;width:100%;background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:40px 32px;text-align:center;box-shadow:0 12px 44px rgba(42,38,34,.12)}.gmark{width:40px;height:40px}.gate-k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:12px}.gate-h{font-family:var(--serif);font-weight:500;font-size:32px;line-height:1.06;color:var(--pine);margin:6px 0 0}.gate-p{font-size:15px;color:var(--muted);line-height:1.55;margin:14px 0 0}#gate-form{display:flex;flex-direction:column;gap:10px;margin-top:22px}#gate-email{font-family:var(--sans);font-size:16px;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--oat);color:var(--ink);text-align:center}#gate-email:focus{outline:none;border-color:var(--clay);background:#fff}#gate-btn{font-family:var(--sans);font-weight:600;font-size:16px;padding:14px 18px;border-radius:999px;border:none;background:var(--clay);color:var(--cream);cursor:pointer}#gate-btn:hover{background:var(--pine)}.gate-note{font-size:13px;margin-top:12px;min-height:1em;color:var(--muted)}.gate-note.err{color:#9a3a2a;font-weight:600}body.gated{overflow:hidden}
+</style></head><body class="gated">
+<div id="gate"><div class="gate-card"><svg class="gmark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg><div class="gate-k">A free journal</div><h2 class="gate-h">The Nomad Check-In</h2><p class="gate-p">It&rsquo;s yours &mdash; free, private, and saved as you write. Add your email to open it, and I&rsquo;ll send new journals and the occasional gentle note. Unsubscribe anytime.</p><form id="gate-form" novalidate><input type="email" id="gate-email" placeholder="you@email.com" autocomplete="email" aria-label="Your email"><button type="submit" id="gate-btn">Open the check-in &rarr;</button></form><div class="gate-note" id="gate-note"></div></div></div>
+<script>(function(){var K='tge-gate-unlocked';var g=document.getElementById('gate');if(!g)return;function op(){g.style.display='none';document.body.classList.remove('gated');}try{if(localStorage.getItem(K)==='1'){op();return;}}catch(e){}var f=document.getElementById('gate-form'),n=document.getElementById('gate-note'),b=document.getElementById('gate-btn');f.addEventListener('submit',function(e){e.preventDefault();var em=(document.getElementById('gate-email').value||'').trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){n.textContent='Please enter a valid email address.';n.className='gate-note err';return;}b.disabled=true;b.textContent='Opening…';try{var d=new FormData();d.append('email_address',em);fetch('https://app.kit.com/forms/9638627/subscriptions',{method:'POST',headers:{'Accept':'application/json'},body:d});}catch(e){}try{localStorage.setItem(K,'1');}catch(e){}setTimeout(op,300);});})();</script>
+<div class="toolbar"><a class="brand" href="/"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></a><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">A free monthly check-in</div>
+<h1>The Nomad Check-In</h1>
+<div class="sub">A quick pulse-check on how you&rsquo;re really doing out there.</div>
+<div class="by">Created by Stephanie Johnson, LICSW · The Grounded Expat</div>
+</header>
+<div class="intro"><p>The nomad life moves fast, and it is easy to go months without actually checking in with yourself. This is a short, gentle pulse-check on how you are <em>really</em> doing underneath the movement: your rootedness, your people, your energy, and the quiet question of where you are headed.</p><p>It takes about ten minutes. There are no wrong answers, only honest ones. Do it once a month, or any time the ground feels a little unsteady. <strong>Your writing saves automatically</strong> on this device and stays completely private to you.</p><div class="disclaimer">This is an educational, self-reflection resource, not therapy, diagnosis, or a crisis service. If you are struggling beyond what journaling can hold, please reach out to someone you trust, a licensed professional, or local emergency services. You deserve real support, wherever in the world you are.</div></div>
+
+<section class="module"><div class="day">Check-in One</div><h3>How Are You, Really?</h3>
+<p class="where">Not the version you would post. The real one. Start by telling the truth to yourself.</p>
+<div class="prompt"><div class="plabel">In one honest word, how are you this month? Then a sentence on why.</div>
+<textarea class="j-field grow" id="q1a" data-module="1 — How Are You, Really?" data-label="One honest word, and why" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is the thing you have not said out loud to anyone lately?</div>
+<textarea class="j-field grow" id="q1b" data-module="1 — How Are You, Really?" data-label="What I haven’t said out loud" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Check-in Two</div><h3>Rooted or Floating?</h3>
+<p class="where">Some months you feel grounded and free; others, unmoored and adrift. Just notice where you are right now.</p>
+<div class="prompt"><div class="plabel">Does home feel like something you carry right now, or something you are missing? What is that like?</div>
+<textarea class="j-field grow" id="q2a" data-module="2 — Rooted or Floating?" data-label="Home: carried or missing" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one small thing that has been making anywhere feel a little more like yours?</div>
+<textarea class="j-field grow" id="q2b" data-module="2 — Rooted or Floating?" data-label="What makes anywhere feel like mine" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Check-in Three</div><h3>Your People</h3>
+<p class="where">Connection is the first thing to quietly slip on the road. Let&rsquo;s check the thread.</p>
+<div class="prompt"><div class="plabel">When did you last feel genuinely known, not just met? What was that like?</div>
+<textarea class="j-field grow" id="q3a" data-module="3 — Your People" data-label="Last time I felt known" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who could you reach toward this month, even in a small way?</div>
+<textarea class="j-field grow" id="q3b" data-module="3 — Your People" data-label="Who I could reach toward" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Check-in Four</div><h3>Your Energy</h3>
+<p class="where">The road runs on constant adapting and deciding. It is worth noticing what your tank is actually at.</p>
+<div class="prompt"><div class="plabel">From running-on-empty to genuinely-restored, where is your energy right now? What is draining it most?</div>
+<textarea class="j-field grow" id="q4a" data-module="4 — Your Energy" data-label="Where my energy is, what’s draining it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What is one thing you could let be easier, or say no to, this month?</div>
+<textarea class="j-field grow" id="q4b" data-module="4 — Your Energy" data-label="One thing to let be easier" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Check-in Five</div><h3>Toward or Away?</h3>
+<p class="where">A quick, honest gut-check on what is driving you right now.</p>
+<div class="prompt"><div class="plabel">Right now, is the moving feeling more like moving toward something you want, or away from something you would rather not face?</div>
+<textarea class="j-field grow" id="q5a" data-module="5 — Toward or Away?" data-label="Toward or away, right now" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What does that answer tell you, if you let it?</div>
+<textarea class="j-field grow" id="q5b" data-module="5 — Toward or Away?" data-label="What that tells me" placeholder="Write here…"></textarea></div>
+</section>
+
+<section class="module"><div class="day">Check-in Six</div><h3>One Kind Next Step</h3>
+<p class="where">Not a big plan. Just one small, doable thing for the version of you reading this.</p>
+<div class="prompt"><div class="plabel">Based on everything above, what does the next month need to have a little more of?</div>
+<textarea class="j-field grow" id="q6a" data-module="6 — One Kind Next Step" data-label="What next month needs more of" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">One small step toward it, this week:</div>
+<textarea class="j-field grow" id="q6b" data-module="6 — One Kind Next Step" data-label="One small step this week" placeholder="Write here…"></textarea></div>
+</section>
+
+<div class="endcard">
+<h2>Checking in with yourself is the whole practice.</h2>
+<p>Come back to this any month the ground feels unsteady. And if one of these areas is asking for more than a check-in, there is a whole collection of guided journals for the inner side of nomad life, the rootlessness, the drift, and finding home within. <a href="/nomad/">Explore the nomad line &rarr;</a> 🌿</p>
+</div>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-nomadcheck-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='THE NOMAD CHECK-IN\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n──────────────\n'+m+'\n──────────────\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Nomad Check-In.txt';a.click();
+}
+</script></body></html>
