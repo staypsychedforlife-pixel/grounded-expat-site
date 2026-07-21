@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Finding Your People Abroad · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:54px;line-height:1.02;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:32ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.grounding{background:rgba(140,155,130,.22);color:var(--sage)}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder,input.line::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp.long p{font-style:normal;font-size:16px;line-height:1.62;margin:0 0 10px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:34pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:40px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+/* ===== Reflect with me (AI pilot prototype) ===== */
+.reflect-wrap{margin:10px 0 4px}
+.reflect-btn{display:inline-flex;align-items:center;gap:6px;font-family:inherit;font-size:13.5px;font-weight:600;letter-spacing:.02em;color:#C2674A;background:#FBF8F1;border:1.5px solid #C2674A;border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s}
+.reflect-btn:hover{background:#C2674A;color:#fff}
+.reflect-note{font-size:12px;color:#6E6557;margin:7px 0 0;font-style:italic;max-width:62ch}
+.reflect-block{margin:14px 0 4px;padding:16px 18px;border-left:3px solid #8C9B82;background:#F1F4EE;border-radius:0 12px 12px 0;animation:reflectin .35s ease}
+@keyframes reflectin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.reflect-block .rlabel{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#8C9B82;margin-bottom:8px}
+.reflect-block .rlabel .rdot{color:#C2674A;font-size:15px;line-height:1}
+.reflect-block .rq{font-family:Georgia,serif;font-size:17.5px;line-height:1.5;color:#2F4539;margin:0 0 10px}
+.reflect-block .rdisc{font-size:11.5px;color:#6E6557;font-style:italic;margin-top:9px}
+.reflect-load{font-size:13.5px;color:#6E6557;font-style:italic;margin-top:11px}
+.rmodal{position:fixed;inset:0;background:rgba(42,38,34,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:22px}
+.rmodal.show{display:flex}
+.rmodal .card{background:#FBF8F1;max-width:450px;border-radius:16px;padding:26px 26px;box-shadow:0 20px 60px rgba(0,0,0,.28)}
+.rmodal h4{font-family:Georgia,serif;font-weight:600;font-size:21px;color:#2F4539;margin:0 0 12px}
+.rmodal p{font-size:14.5px;line-height:1.55;color:#2A2622;margin:0 0 14px}
+.rmodal .row{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;margin-top:4px}
+.rmodal button{font-family:inherit;font-size:13.5px;font-weight:600;border-radius:999px;padding:9px 18px;cursor:pointer;border:1.5px solid #2F4539}
+.rmodal .go{background:#C2674A;border-color:#C2674A;color:#fff}
+.rmodal .no{background:transparent;color:#2F4539}
+.crisis-card{margin:14px 0 4px;padding:18px 20px;border:1.5px solid #C2674A;background:#FBF1EC;border-radius:12px}
+.crisis-card b{color:#2F4539}
+.crisis-card p{margin:0 0 8px;font-size:14px;line-height:1.55;color:#2A2622}
+.crisis-card p:last-child{margin-bottom:0}
+.ragain{display:inline-block;margin-top:2px;font-family:inherit;font-size:12.5px;font-weight:600;color:#C2674A;background:none;border:none;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ragain:hover{color:#B15A3E}
+.rrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.ragain.alt{color:#6E6557}
+.ragain.alt:hover{color:#C2674A}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>Finding Your People Abroad</h1>
+<div class="sub">The brave, ordinary work of building a life full of people.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>One of the hardest and least-talked-about parts of moving abroad is starting your whole social world over from zero. The friendships that knew you — the ones where you didn’t have to explain yourself — are far away, and building new ones as an adult, in a new culture, can feel slow and exposing. If you’re lonely, you are not doing this wrong. You’re doing something genuinely hard.</p><p>This workbook helps you name the loneliness honestly, loosen the stories that keep you stuck, and take small, brave steps toward real connection. Work through it in order or dip in where you need it. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This workbook is an educational, self-reflection resource — not therapy, diagnosis, treatment, or a crisis service. If loneliness has tipped into something heavier — hopelessness, or feeling you can’t go on — please reach out to someone you trust, a licensed professional, or your local emergency services. You deserve real support.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Part One</div><h2>Name It</h2><div class="ph-sub">Telling the truth about the loneliness</div></div>
+<section class="module">
+<h3>The Truth About Loneliness Abroad</h3>
+<p class="where">Loneliness abroad isn’t proof that something’s wrong with you — it’s the natural result of leaving a whole web of relationships behind and not having rebuilt one yet. It’s situational, not a character flaw. Let’s start by telling the truth about it.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Feeling lonely doesn’t mean you’re unlikable or bad at friendship. It means you’re between communities — and that’s a place, not a verdict.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my experience</div><p>About two and a half months after landing in Thailand, the excitement had faded. The vibrant colors, bustling streets, and sense of adventure that once felt exhilarating had become the backdrop to a quieter realization: nothing felt familiar anymore. I didn’t have a kitchen where I could make the meals that once grounded me, and even the small comforts of daily routine had disappeared. My partner was the only familiar person in my world, yet I found myself feeling distant from him too. It was in that moment I realized that homesickness isn’t always about missing a place — sometimes it’s about missing the version of yourself that knew where you belonged.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m1_date" data-module="The Truth About Loneliness Abroad" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m1_arrive" data-module="The Truth About Loneliness Abroad" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">When is the loneliness loudest for you — a certain time of day, a certain kind of moment, the silence after something good you had no one to tell?</div>
+<textarea class="j-field grow" id="m1_q1" data-module="The Truth About Loneliness Abroad" data-label="When loneliness is loudest" placeholder="Write here…"></textarea>
+<div class="reflect-wrap" data-src="m1_q1" data-slot="m1r"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">Optional. Sends what you wrote to a reflective AI companion, which offers one gentle follow-up question to take you a layer deeper. Not therapy, advice, or a diagnosis, and nothing you write is stored.</p></div></div>
+<div class="prompt"><div class="plabel">What does ‘having your people’ look like to you — not necessarily a big social life, but the specific thing you’re missing?</div>
+<textarea class="j-field grow" id="m1_q2" data-module="The Truth About Loneliness Abroad" data-label="What ‘having your people’ means" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What have you been telling yourself about why you’re lonely here? Write it down exactly as the voice says it.</div>
+<textarea class="j-field grow" id="m1_q3" data-module="The Truth About Loneliness Abroad" data-label="The story you tell about it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Name one true, kinder sentence you could say back to that voice. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m1_q4" data-module="The Truth About Loneliness Abroad" data-label="A kinder sentence back" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>What You Left Behind</h3>
+<p class="where">Before you can build new friendships, it helps to honor the ones you moved away from. The people who knew your history, your jokes, your context — losing daily access to them is a real grief, even when the move was your choice. Naming it makes room for the new.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Missing your old friends isn’t disloyalty to your new life. Grief and hope can share the same heart.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m2_date" data-module="What You Left Behind" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m2_arrive" data-module="What You Left Behind" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Who are the friendships you miss most — and what specifically did they give you that you haven’t found here yet?</div>
+<textarea class="j-field grow" id="m2_q1" data-module="What You Left Behind" data-label="Friendships you miss most" placeholder="Write here…"></textarea>
+<div class="reflect-wrap" data-src="m2_q1" data-slot="m2r"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">Optional. One gentle follow-up question to take you a layer deeper. Not therapy or advice, and nothing is stored.</p></div></div>
+<div class="prompt"><div class="plabel">What’s the hardest part of staying close to them from far away — time zones, drift, feeling like you’re living separate lives now?</div>
+<textarea class="j-field grow" id="m2_q2" data-module="What You Left Behind" data-label="Hardest part of the distance" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Who is one person from home you want to keep, on purpose? What’s one small way to tend that thread this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m2_q3" data-module="What You Left Behind" data-label="One thread to tend" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>The Stories in the Way</h3>
+<p class="where">Loneliness comes with a script, and the script keeps us stuck: ‘Everyone already has their people.’ ‘I’m too old / too awkward / too busy.’ ‘If they wanted to be my friend, they’d reach out.’ These feel like facts. They’re usually fear. Let’s get them into the light.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The belief that it’s too late, or that you’re the only one struggling, is the loneliness talking — not the truth. Most people around you are quietly hoping someone will make the first move.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m3_date" data-module="The Stories in the Way" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m3_arrive" data-module="The Stories in the Way" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+
+<div class="branch"><div class="bq">Is there one story that plays louder than the rest — like ‘everyone already has their people’ or ‘it’s too late for me’?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">Yes — one stands out</button><button class="bbtn" data-branch="b1" data-val="no">It’s more of a fog</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">Let’s bring that one into the light.</div>
+<div class="prompt"><div class="plabel">Write that story exactly as the voice tells it. Then: whose voice does it sound like — and when did you first believe it?</div>
+<textarea class="j-field grow" id="m3_y1" data-module="The Stories in the Way" data-label="The loudest story, word for word" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one piece of evidence from your own life that this story isn’t the whole truth?</div>
+<textarea class="j-field grow" id="m3_y2" data-module="The Stories in the Way" data-label="Evidence against it" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Rewrite it into something truer and more open — one sentence you could actually believe on a good day. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m3_y3" data-module="The Stories in the Way" data-label="A truer sentence" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">That’s common — the beliefs are usually quiet until we name them. Let’s coax them out.</div>
+<div class="prompt"><div class="plabel">Finish each one fast, without overthinking: ‘Making friends here is hard because…’ / ‘People here probably see me as…’ / ‘If I reach out and it doesn’t work, it means…’</div>
+<textarea class="j-field grow" id="m3_n1" data-module="The Stories in the Way" data-label="Finish the sentences" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which of those was the most uncomfortable to write down? That’s usually the one with the most grip on you.</div>
+<textarea class="j-field grow" id="m3_n2" data-module="The Stories in the Way" data-label="Which stung to write" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If a good friend said that exact sentence about themselves, what would you gently tell them?</div>
+<textarea class="j-field grow" id="m3_n3" data-module="The Stories in the Way" data-label="What you’d tell a friend" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div><div class="phase"><div class="phase-head"><div class="k">Part Two</div><h2>Build It</h2><div class="ph-sub">The brave, repeated work of connection</div></div>
+<section class="module">
+<h3>Where Your People Actually Are</h3>
+<p class="where">Adult friendships rarely appear out of nowhere — they grow from proximity plus repetition. The same faces, the same rooms, again and again, until strangers become familiar and familiar becomes friend. This is about finding those repeated rooms on purpose.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to be charming or lucky. You have to be somewhere, more than once. Friendship is mostly repetition — and that you can plan.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m4_date" data-module="Where Your People Actually Are" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m4_arrive" data-module="Where Your People Actually Are" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">What are you genuinely interested in — hobbies, causes, sport, faith, creative things — that gather other people regularly? Don’t filter for ‘realistic’ yet.</div>
+<textarea class="j-field grow" id="m4_q1" data-module="Where Your People Actually Are" data-label="What genuinely interests you" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is there already a place you show up to regularly — a class, a café, a group, a gym, the school gate?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Yes, there is</button><button class="bbtn" data-branch="b2" data-val="no">Not really, yet</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Good — that’s fertile ground. Let’s actually use it.</div>
+<div class="prompt"><div class="plabel">Where is it, and whose faces are starting to feel familiar there — even ones you haven’t spoken to?</div>
+<textarea class="j-field grow" id="m4_y1" data-module="Where Your People Actually Are" data-label="The place + the faces" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small, low-stakes thing you could say to a familiar face next time — a comment, a question, a hello by name? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_y2" data-module="Where Your People Actually Are" data-label="A tiny opener" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Then the first move is finding one — proximity plus repetition is how adult friendship actually forms.</div>
+<div class="prompt"><div class="plabel">List every repeated context you could plausibly show up to more than once: a class, a run club, a co-working space, a place of worship, a language exchange, the same café. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m4_n1" data-module="Where Your People Actually Are" data-label="Your candidate rooms" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which one feels least scary to try first? What’s the very next step to get yourself there this week? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m4_n2" data-module="Where Your People Actually Are" data-label="The least-scary one" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>The Brave First Move</h3>
+<p class="where">At some point, connection asks something of us: to say hello, to suggest a coffee, to be the one who reaches out first. It feels exposing because it is — but it’s also the single most powerful thing you can do. Most people are relieved when someone else goes first.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Being the one who initiates isn’t desperate or ‘too much.’ It’s generous. You’re giving someone the very thing they were also hoping for.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m5_date" data-module="The Brave First Move" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m5_arrive" data-module="The Brave First Move" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">When it comes to making the first move — inviting someone, following up — what actually stops you? Name the real fear underneath.</div>
+<textarea class="j-field grow" id="m5_q1" data-module="The Brave First Move" data-label="What really stops you" placeholder="Write here…"></textarea>
+<div class="reflect-wrap" data-src="m5_q1" data-slot="m5r"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">Optional. One gentle follow-up question to take you a layer deeper. Not therapy or advice, and nothing is stored.</p></div></div>
+<div class="branch"><div class="bq">Is there already someone here you have in mind — someone you’d like to know better?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b3" data-val="yes">Yes, there is</button><button class="bbtn" data-branch="b3" data-val="no">Not yet</button></div>
+<div class="bpath" data-branch="b3" data-val="yes"><div class="lead-in">Good — let’s make the first move feel doable.</div>
+<div class="prompt"><div class="plabel">Who is it, and what draws you to them? What’s a small, low-pressure way you could reach out?</div>
+<textarea class="j-field grow" id="m5_y1" data-module="The Brave First Move" data-label="Who + a low-pressure way" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Draft the actual message or invitation. Keep it simple and warm — ‘Want to grab a coffee sometime this week?’ counts. <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m5_y2" data-module="The Brave First Move" data-label="Draft the message" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When will you send it? Give yourself a day. <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_y3" data-module="The Brave First Move" data-label="When you’ll send it" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b3" data-val="no"><div class="lead-in">That’s okay — you can’t reach out to someone you haven’t met yet. Let’s start one step back.</div>
+<div class="prompt"><div class="plabel">Where could you actually cross paths with the same people more than once? List a few, even imperfect ones.</div>
+<textarea class="j-field grow" id="m5_n1" data-module="The Brave First Move" data-label="Where to cross paths" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Which feels least scary to try first? What would ‘showing up once’ look like this week?</div>
+<textarea class="j-field grow" id="m5_n2" data-module="The Brave First Move" data-label="Showing up once" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">When you imagine talking to someone new there, what’s the fear that shows up — and is it as true as it feels? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m5_n3" data-module="The Brave First Move" data-label="The fear, examined" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+<section class="module">
+<h3>From Acquaintance to Friend</h3>
+<p class="where">The move from friendly-acquaintance to real friend happens through consistency and a little vulnerability — showing up again, remembering details, letting yourself be slightly more known each time. It’s slower than we’d like, and it’s mostly repetition, not chemistry.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to force closeness or rush it. Real friendship is built in small, repeated moments of showing up — and you’re allowed to let it take the time it takes.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my experience</div><p>I thought making friends abroad would happen naturally, but it took much longer than I expected. For months, I kept showing up — to the same places, the same events — even when I felt awkward or like I didn’t quite fit in. Most interactions were brief, and I often wondered if I was doing something wrong. Then, little by little, things started to change. Conversations lasted longer, familiar faces became people who genuinely smiled when they saw me, and I realized I no longer felt like a complete outsider. It wasn’t one big moment that created a sense of belonging — it was the accumulation of many small moments and the willingness to keep showing up, even before I felt connected.</p><p class="sig">— Stephanie</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m6_date" data-module="From Acquaintance to Friend" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m6_arrive" data-module="From Acquaintance to Friend" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Which budding connections here feel worth investing in? What draws you to them?</div>
+<textarea class="j-field grow" id="m6_q1" data-module="From Acquaintance to Friend" data-label="Connections worth investing in" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What tends to get in the way of you deepening a friendship — busyness, self-protection, waiting for them to reach out first?</div>
+<textarea class="j-field grow" id="m6_q2" data-module="From Acquaintance to Friend" data-label="What gets in the way" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What would it look like to let one person here know you a little more honestly — to move past pleasant small talk?</div>
+<textarea class="j-field grow" id="m6_q3" data-module="From Acquaintance to Friend" data-label="Being a little more known" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What’s one small gesture of consistency you could offer someone this week — a text, an invite, remembering something they told you? <span class="chip action">one small thing</span></div>
+<textarea class="j-field grow" id="m6_q4" data-module="From Acquaintance to Friend" data-label="A gesture of consistency" placeholder="Write here…"></textarea></div>
+</section>
+<section class="module">
+<h3>Your Connection Plan</h3>
+<p class="where">Loneliness eases not with one grand solution but with a handful of small, repeated commitments. This last page gathers what you’ve learned into a gentle, doable plan — one you can actually keep.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You don’t have to build a whole community this month. You have to take one brave, ordinary step toward people — and then another. That’s how everyone’s people are found.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="m7_date" data-module="Your Connection Plan" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>How are you arriving to this page today?<input type="text" class="j-field" id="m7_arrive" data-module="Your Connection Plan" data-label="Arriving as…" placeholder="a word or two"></label>
+</div>
+<div class="prompt"><div class="plabel">Looking back over these pages, what’s the single most important thing you want to remember about building your people here?</div>
+<textarea class="j-field grow" id="m7_q1" data-module="Your Connection Plan" data-label="The one thing to remember" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Your connection plan, in three lines — the repeated room I’ll show up to is… / the person I’ll reach out to is… / the story I’ll stop believing is… <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="m7_q2" data-module="Your Connection Plan" data-label="Your connection plan, in three lines" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How will you be kind to yourself on the days it feels slow or discouraging?</div>
+<textarea class="j-field grow" id="m7_q3" data-module="Your Connection Plan" data-label="Kindness on slow days" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+<p class="closing">Your people are out there — and finding them is a brave, ordinary thing you already know how to begin.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don’t redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<div class="rmodal" id="reflect-consent"><div class="card"><h4>Reflect with me</h4><p>Tapping this sends what you just wrote to an AI reflective companion, which offers you one gentle follow-up question to help you go a little deeper. It is not therapy, advice, or a diagnosis, and your writing is never stored anywhere.</p><p>Use it only when you would like a nudge. You can keep journaling without it anytime.</p><div class="row"><button class="no" type="button" id="reflect-decline">Not now</button><button class="go" type="button" id="reflect-accept">Continue</button></div></div></div>
+<script>
+const KEY='tge-yourpeople-demo::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='FINDING YOUR PEOPLE ABROAD\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Finding Your People Workbook.txt';a.click();
+}
+/* ===== Reflect with me (PROTOTYPE uses a local mock. Live version POSTs to /api/reflect) ===== */
+(function(){
+  var CONSENT_KEY = KEY+'reflect_consent';
+  var CRISIS=/\b(kill(ing)? myself|suicid|end my life|want to die|don'?t want to (live|be here|be alive)|better off dead|hurt(ing)? myself|harm(ing)? myself|self[ -]?harm|cutting myself|hitting me|hits me|being abused|abusing me|not safe at home|i'?m not safe|can'?t go on)\b/i;
+  var CAP=60, count=0, ansN=0;
+  function clear(w){w.querySelectorAll('.reflect-block,.crisis-card,.reflect-load').forEach(function(n){n.remove();});}
+  function capReached(w){
+    clear(w);
+    var b=document.createElement('div');b.className='reflect-block';
+    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> A gentle pause</div><p class="rq">You have done a lot of reflecting today, and that is enough for now. Take what you found here and go live it. Come back whenever you need to.</p>';
+    w.appendChild(b);
+  }
+  function reflection(w,q,isFollow){
+    if(!isFollow) clear(w);
+    var b=document.createElement('div');b.className='reflect-block';
+    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> '+(isFollow?'Going deeper':'A reflection for you')+'</div><p class="rq">'+q+'</p>';
+    var ta=document.createElement('textarea');ta.className='j-field grow';ta.id=w.dataset.slot+'_a'+(++ansN);
+    ta.setAttribute('data-module','Reflect with me');ta.setAttribute('data-label','Reflection: '+q);
+    ta.placeholder='If it lands, write with it…';
+    b.appendChild(ta);
+    if(!isFollow){
+      var row=document.createElement('div');row.className='rrow';
+      var deeper=document.createElement('button');deeper.type='button';deeper.className='ragain';deeper.textContent='Take that deeper →';
+      deeper.addEventListener('click',function(){followup(w,ta,row);});
+      var again=document.createElement('button');again.type='button';again.className='ragain alt';again.textContent='Give me another';
+      again.addEventListener('click',function(){doReflect(w,true);});
+      row.appendChild(deeper);row.appendChild(again);b.appendChild(row);
+    }
+    var d=document.createElement('p');d.className='rdisc';d.textContent='A reflection prompt, not advice or therapy. Nothing you write here is stored anywhere.';
+    b.appendChild(d);w.appendChild(b);
+    try{var v=localStorage.getItem(KEY+ta.id);if(v!==null)ta.value=v;}catch(e){}
+    grow(ta);ta.addEventListener('input',function(){grow(ta);save(ta);});
+  }
+  function followup(w,ansEl,row){
+    var text=((ansEl&&ansEl.value)||'').trim();
+    var srcBlock=ansEl.closest('.reflect-block');
+    var old=srcBlock&&srcBlock.querySelector('.rhint');if(old)old.remove();
+    if(text.length<4){
+      var h=document.createElement('p');h.className='rhint reflect-load';h.textContent='Write a little in response first, then take it deeper.';
+      if(row&&row.parentNode)row.parentNode.insertBefore(h,row.nextSibling);else if(srcBlock)srcBlock.appendChild(h);
+      return;
+    }
+    if(CRISIS.test(text)){crisis(w);return;}
+    if(count>=CAP){capReached(w);return;}
+    count++;
+    if(row&&row.parentNode)row.remove();
+    var l=document.createElement('p');l.className='reflect-load';l.textContent='Reading your reflection…';w.appendChild(l);
+    function fail(){if(l&&l.parentNode)l.remove();var e=document.createElement('p');e.className='reflect-load';e.textContent='Could not reach the reflection service. Please try again in a moment.';w.appendChild(e);}
+    fetch('/api/reflect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entryText:text})})
+      .then(function(r){return r.json();})
+      .then(function(d){if(l&&l.parentNode)l.remove();
+        if(d&&d.crisis){crisis(w);}
+        else if(d&&d.question){reflection(w,d.question,true);}
+        else{fail();}})
+      .catch(fail);
+  }
+  function crisis(w){
+    clear(w);
+    var c=document.createElement('div');c.className='crisis-card';
+    c.innerHTML='<p><b>Before anything else, your safety matters most.</b></p>'
+      +'<p>It sounds like you might be carrying something really heavy right now. This journal is not a crisis service, and I would rather you have real support than an AI prompt.</p>'
+      +'<p>Please reach out to your local emergency number or a crisis line right away. In the US you can call or text <b>988</b> (the Suicide &amp; Crisis Lifeline). Wherever you are, local emergency services or a crisis line can help.</p>'
+      +'<p>You deserve care from a real person. Please reach out.</p>';
+    w.appendChild(c);
+  }
+  function doReflect(w,again){
+    var el=document.getElementById(w.dataset.src);
+    var text=((el&&el.value)||'').trim();
+    if(text.length<8){clear(w);var m=document.createElement('p');m.className='reflect-load';m.textContent='Write a little in the box above first, then tap Reflect with me.';w.appendChild(m);return;}
+    if(CRISIS.test(text)){crisis(w);return;}
+    if(count>=CAP){capReached(w);return;}
+    count++;
+    clear(w);var l=document.createElement('p');l.className='reflect-load';l.textContent=again?'Finding another…':'Reading what you wrote…';w.appendChild(l);
+    function fail(){if(l&&l.parentNode)l.remove();var e=document.createElement('p');e.className='reflect-load';e.textContent='Could not reach the reflection service. Please try again in a moment.';w.appendChild(e);}
+    fetch('/api/reflect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entryText:text})})
+      .then(function(r){return r.json();})
+      .then(function(d){if(l&&l.parentNode)l.remove();
+        if(d&&d.crisis){crisis(w);}
+        else if(d&&d.question){reflection(w,d.question,false);}
+        else{fail();}})
+      .catch(fail);
+  }
+  var pending=null;
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.reflect-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var w=btn.closest('.reflect-wrap');
+        var ok=false;try{ok=localStorage.getItem(CONSENT_KEY)==='1';}catch(e){}
+        if(!ok){pending=w;document.getElementById('reflect-consent').classList.add('show');return;}
+        doReflect(w);
+      });
+    });
+    var modal=document.getElementById('reflect-consent');
+    var acc=document.getElementById('reflect-accept'),dec=document.getElementById('reflect-decline');
+    if(acc)acc.addEventListener('click',function(){try{localStorage.setItem(CONSENT_KEY,'1');}catch(e){}modal.classList.remove('show');if(pending){doReflect(pending);pending=null;}});
+    if(dec)dec.addEventListener('click',function(){modal.classList.remove('show');pending=null;});
+  });
+})();
+</script></body></html>
