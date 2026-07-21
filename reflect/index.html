@@ -82,6 +82,9 @@ footer .name{font-family:var(--serif);font-style:italic;color:var(--pine)}
 .crisis-card{margin:14px 0 4px;padding:18px 20px;border:1.5px solid var(--clay);background:#FBF1EC;border-radius:12px}
 .crisis-card b{color:var(--pine)}.crisis-card p{margin:0 0 8px;font-size:14px;line-height:1.55}.crisis-card p:last-child{margin:0}
 .ragain{display:inline-block;margin-top:2px;font-family:inherit;font-size:12.5px;font-weight:600;color:var(--clay);background:none;border:none;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.rrow{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-top:4px}
+.ragain.alt{color:var(--muted)}
+.ragain.alt:hover{color:var(--clay)}
 .ragain:hover{color:#B15A3E}
 .share{margin-top:8px;font-size:14px;color:var(--muted)}
 .share button{font-family:inherit;font-size:13px;font-weight:600;color:var(--clay);background:none;border:1.5px solid var(--clay);border-radius:999px;padding:6px 14px;margin-left:6px;cursor:pointer}
@@ -151,7 +154,7 @@ function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';
 (function(){
   var CONSENT_KEY=KEY+'reflect_consent';
   var CRISIS=/\b(kill(ing)? myself|suicid|end my life|want to die|don'?t want to (live|be here|be alive)|better off dead|hurt(ing)? myself|harm(ing)? myself|self[ -]?harm|cutting myself|hitting me|hits me|being abused|abusing me|not safe at home|i'?m not safe|can'?t go on)\b/i;
-  var CAP=50, count=0; /* per-session reflection cap: gentle backstop against abuse/runaway use */
+  var CAP=50, count=0, ansN=0; /* per-session reflection cap: gentle backstop against abuse/runaway use */
 
   var SETS={
     tired:[
@@ -210,17 +213,45 @@ function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';
     b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> A gentle pause</div><p class="rq">You have done a lot of reflecting today, and that is enough for now. Take what you found here and go live it. Come back whenever you need to.</p>';
     w.appendChild(b);
   }
-  function reflection(w,q){
-    clear(w);
+  function reflection(w,q,isFollow){
+    if(!isFollow) clear(w);
     var b=document.createElement('div');b.className='reflect-block';
-    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> A reflection for you</div><p class="rq">'+q+'</p>';
-    var ta=document.createElement('textarea');ta.className='grow';ta.id=w.dataset.slot+'_ans';ta.placeholder='If it lands, write with it…';
+    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> '+(isFollow?'Going deeper':'A reflection for you')+'</div><p class="rq">'+q+'</p>';
+    var ta=document.createElement('textarea');ta.className='grow';ta.id=w.dataset.slot+'_a'+(++ansN);ta.placeholder='If it lands, write with it…';
     b.appendChild(ta);
-    var again=document.createElement('button');again.type='button';again.className='ragain';again.textContent='Give me another';
-    again.addEventListener('click',function(){doReflect(w,true);});
-    b.appendChild(again);
+    if(!isFollow){
+      var row=document.createElement('div');row.className='rrow';
+      var deeper=document.createElement('button');deeper.type='button';deeper.className='ragain';deeper.textContent='Take that deeper →';
+      deeper.addEventListener('click',function(){followup(w,ta,row);});
+      var again=document.createElement('button');again.type='button';again.className='ragain alt';again.textContent='Give me another';
+      again.addEventListener('click',function(){doReflect(w,true);});
+      row.appendChild(deeper);row.appendChild(again);b.appendChild(row);
+    }
     var d=document.createElement('p');d.className='rdisc';d.textContent='A reflection prompt, not advice or therapy. Nothing you write here is stored anywhere.';
     b.appendChild(d);w.appendChild(b);grow(ta);ta.addEventListener('input',function(){grow(ta);});
+  }
+  function followup(w,ansEl,row){
+    var text=((ansEl&&ansEl.value)||'').trim();
+    var srcBlock=ansEl.closest('.reflect-block');
+    var old=srcBlock&&srcBlock.querySelector('.rhint');if(old)old.remove();
+    if(text.length<4){
+      var h=document.createElement('p');h.className='rhint reflect-load';h.textContent='Write a little in response first, then take it deeper.';
+      if(row&&row.parentNode)row.parentNode.insertBefore(h,row.nextSibling);else if(srcBlock)srcBlock.appendChild(h);
+      return;
+    }
+    if(CRISIS.test(text)){crisis(w);return;}
+    if(count>=CAP){capReached(w);return;}
+    count++;
+    if(row&&row.parentNode)row.remove();
+    var l=document.createElement('p');l.className='reflect-load';l.textContent='Reading your reflection…';w.appendChild(l);
+    function fail(){if(l&&l.parentNode)l.remove();var e=document.createElement('p');e.className='reflect-load';e.textContent='Could not reach the reflection service. Please try again in a moment.';w.appendChild(e);}
+    fetch('/api/reflect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entryText:text})})
+      .then(function(r){return r.json();})
+      .then(function(d){if(l&&l.parentNode)l.remove();
+        if(d&&d.crisis){crisis(w);}
+        else if(d&&d.question){reflection(w,d.question,true);}
+        else{fail();}})
+      .catch(fail);
   }
   function crisis(w){
     clear(w);
