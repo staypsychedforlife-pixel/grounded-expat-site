@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reflect With Me · A quiet space for life abroad · The Grounded Expat</title>
+<meta name="description" content="A free, quiet space to check in with yourself. Write a little, and a gentle reflective companion offers you one open question to go a layer deeper. For the inner side of living abroad, from a therapist who lives it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='20' r='12.5' fill='%23C2674A'/%3E%3Cpath d='M7 36h34' stroke='%232F4539' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Reflect With Me · The Grounded Expat">
+<meta property="og:description" content="A free, quiet space to check in with yourself. One gentle question to take you a layer deeper, for the inner side of living abroad.">
+<meta property="og:url" content="https://thegroundedexpat.com/reflect/">
+<meta property="og:image" content="https://thegroundedexpat.com/reflect/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reflect With Me · The Grounded Expat">
+<meta name="twitter:description" content="A free, quiet space to check in with yourself, for the inner side of living abroad.">
+<meta name="twitter:image" content="https://thegroundedexpat.com/reflect/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--clay:#C2674A;--oat:#F6F1E7;--sage:#8C9B82;--cream:#FBF8F1;--ink:#2A2622;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:640px;margin:0 auto;padding:0 22px 90px}
+header.hero{text-align:center;padding:48px 0 8px}
+.mark{width:48px;height:48px;margin:0 auto 14px;display:block}
+.kick{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay);font-weight:700}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(34px,6vw,50px);line-height:1.05;letter-spacing:-.01em;margin:10px 0 8px}
+h1 em{font-style:italic;color:var(--clay)}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--muted);max-width:34ch;margin:0 auto}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin:24px 0}
+.intro p{margin:0 0 10px}.intro p:last-child{margin:0}
+.intro .fine{font-size:13.5px;color:var(--muted)}
+.block{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px 24px 18px;margin:18px 0}
+.block .plabel{font-family:var(--serif);font-size:20px;line-height:1.35;color:var(--pine);margin:0 0 12px}
+textarea.grow{width:100%;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:12px;padding:13px 15px;min-height:70px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;font-style:italic}
+/* reflect */
+.reflect-wrap{margin:11px 0 2px}
+.reflect-btn{display:inline-flex;align-items:center;gap:6px;font-family:inherit;font-size:14px;font-weight:600;letter-spacing:.02em;color:var(--clay);background:var(--cream);border:1.5px solid var(--clay);border-radius:999px;padding:9px 18px;cursor:pointer;transition:.15s}
+.reflect-btn:hover{background:var(--clay);color:#fff}
+.reflect-note{font-size:12px;color:var(--muted);margin:7px 0 0;font-style:italic;max-width:60ch}
+.reflect-block{margin:15px 0 4px;padding:17px 19px;border-left:3px solid var(--sage);background:#F1F4EE;border-radius:0 12px 12px 0;animation:rin .35s ease}
+@keyframes rin{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.reflect-block .rlabel{display:flex;align-items:center;gap:7px;font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--sage);margin-bottom:8px}
+.reflect-block .rlabel .rdot{color:var(--clay);font-size:15px}
+.reflect-block .rq{font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--pine);margin:0 0 10px}
+.reflect-block .rdisc{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:9px}
+.reflect-load{font-size:14px;color:var(--muted);font-style:italic;margin-top:11px}
+/* gate */
+.gate{background:var(--pine);color:var(--cream);border-radius:16px;padding:26px 26px;margin:20px 0;text-align:center}
+.gate h3{font-family:var(--serif);font-weight:500;font-size:26px;margin:0 0 8px;color:#fff}
+.gate p{font-size:15px;color:#E7E3D8;margin:0 0 16px;max-width:44ch;margin-left:auto;margin-right:auto}
+.gate .form{display:flex;gap:9px;max-width:420px;margin:0 auto;flex-wrap:wrap}
+.gate input{flex:1;min-width:180px;font-family:inherit;font-size:15px;padding:12px 15px;border-radius:999px;border:1.5px solid rgba(251,248,241,.4);background:rgba(251,248,241,.1);color:#fff}
+.gate input::placeholder{color:#CFC9BC}
+.gate input:focus{outline:none;border-color:var(--clay);background:rgba(251,248,241,.16)}
+.gate button{font-family:inherit;font-size:14.5px;font-weight:700;border:none;border-radius:999px;padding:12px 22px;background:var(--clay);color:#fff;cursor:pointer}
+.gate button:hover{background:#B15A3E}
+.gate .fine{font-size:12px;color:#CFC9BC;margin-top:12px}
+.gate .err{color:#F6D3C6;font-size:13px;margin-top:8px;min-height:1px}
+.locked{display:none}
+.thanks{background:#F1F4EE;border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin:16px 0;font-size:15px;color:var(--pine)}
+/* CTA */
+.cta{border-top:1px solid var(--line);margin-top:34px;padding-top:26px;text-align:center}
+.cta h3{font-family:var(--serif);font-weight:500;font-size:27px;color:var(--pine);margin:0 0 6px}
+.cta p{color:var(--muted);font-size:15.5px;max-width:42ch;margin:0 auto 18px}
+.cta a{display:block;text-decoration:none;background:var(--cream);border:1.5px solid var(--line);border-radius:14px;padding:15px 18px;margin:11px 0;color:var(--ink);transition:.15s;text-align:left}
+.cta a:hover{border-color:var(--clay);transform:translateY(-1px)}
+.cta a.primary{background:var(--clay);border-color:var(--clay)}
+.cta a .t{font-weight:700;color:var(--pine)}.cta a.primary .t{color:#fff}
+.cta a .s{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}.cta a.primary .s{color:#F3E4DC}
+footer{text-align:center;margin-top:26px;color:var(--muted);font-size:13px}
+footer .name{font-family:var(--serif);font-style:italic;color:var(--pine)}
+/* consent modal + crisis */
+.rmodal{position:fixed;inset:0;background:rgba(42,38,34,.55);display:none;align-items:center;justify-content:center;z-index:100;padding:22px}
+.rmodal.show{display:flex}
+.rmodal .card{background:var(--cream);max-width:450px;border-radius:16px;padding:26px}
+.rmodal h4{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--pine);margin:0 0 12px}
+.rmodal p{font-size:14.5px;line-height:1.55;margin:0 0 14px}
+.rmodal .row{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.rmodal button{font-family:inherit;font-size:13.5px;font-weight:600;border-radius:999px;padding:9px 18px;cursor:pointer;border:1.5px solid var(--pine)}
+.rmodal .go{background:var(--clay);border-color:var(--clay);color:#fff}.rmodal .no{background:transparent;color:var(--pine)}
+.crisis-card{margin:14px 0 4px;padding:18px 20px;border:1.5px solid var(--clay);background:#FBF1EC;border-radius:12px}
+.crisis-card b{color:var(--pine)}.crisis-card p{margin:0 0 8px;font-size:14px;line-height:1.55}.crisis-card p:last-child{margin:0}
+.ragain{display:inline-block;margin-top:2px;font-family:inherit;font-size:12.5px;font-weight:600;color:var(--clay);background:none;border:none;padding:2px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.ragain:hover{color:#B15A3E}
+.share{margin-top:8px;font-size:14px;color:var(--muted)}
+.share button{font-family:inherit;font-size:13px;font-weight:600;color:var(--clay);background:none;border:1.5px solid var(--clay);border-radius:999px;padding:6px 14px;margin-left:6px;cursor:pointer}
+.share button:hover{background:var(--clay);color:#fff}
+</style></head><body>
+<div class="wrap">
+<header class="hero">
+  <svg class="mark" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="20" r="12.5" fill="#C2674A"/><path d="M7 36h34" stroke="#2F4539" stroke-width="3.4" stroke-linecap="round"/></svg>
+  <div class="kick">The Grounded Expat</div>
+  <h1>Reflect <em>With Me</em></h1>
+  <p class="sub">A few quiet minutes with a reflective companion, for the inner side of living abroad.</p>
+</header>
+
+<div class="intro">
+  <p>This is a small, free space to check in with yourself. Write a little, then tap <b>Reflect with me</b>, and a gentle companion offers you one open question to take you a layer deeper.</p>
+  <p class="fine">It is not therapy, advice, or a diagnosis. Nothing you write is stored anywhere. It stays on this page, with you.</p>
+</div>
+
+<section class="block">
+  <div class="plabel">What is the truest thing about how you are really doing right now, out here?</div>
+  <textarea class="grow" id="q1" placeholder="However it actually is. No one is reading over your shoulder."></textarea>
+  <div class="reflect-wrap" data-src="q1" data-slot="r1"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">One gentle follow-up question. Not therapy or advice, and nothing is stored.</p></div>
+</section>
+
+<div class="gate" id="gate">
+  <h3>Keep going?</h3>
+  <p>Enter your email to unlock two more reflections, and I will send you a free guided journal to take with you.</p>
+  <div class="form">
+    <input type="email" id="gate-email" placeholder="you@email.com" autocomplete="email" aria-label="Your email address">
+    <button type="button" id="gate-go">Unlock</button>
+  </div>
+  <div class="err" id="gate-err" role="alert"></div>
+  <div class="fine">Free. Your email is only used to send your journal and the occasional note. Unsubscribe anytime.</div>
+</div>
+
+<div class="locked" id="locked">
+  <div class="thanks" id="thanks">Thank you. Two more reflections are open below, and your free journal is on its way to your inbox.</div>
+  <section class="block">
+    <div class="plabel">What is one thing about this life that is harder than you let people see?</div>
+    <textarea class="grow" id="q2" placeholder="The part that does not make the highlight reel."></textarea>
+    <div class="reflect-wrap" data-src="q2" data-slot="r2"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">One gentle follow-up question. Not therapy or advice, and nothing is stored.</p></div>
+  </section>
+  <section class="block">
+    <div class="plabel">And what is one thing, however small, that you are genuinely glad you chose?</div>
+    <textarea class="grow" id="q3" placeholder="Let yourself name it, even if it feels tender."></textarea>
+    <div class="reflect-wrap" data-src="q3" data-slot="r3"><button class="reflect-btn" type="button">Reflect with me &rarr;</button><p class="reflect-note">One gentle follow-up question. Not therapy or advice, and nothing is stored.</p></div>
+  </section>
+</div>
+
+<div class="cta">
+  <h3>This was a taste.</h3>
+  <p>If it met you somewhere true, there is more, all in your own honest voice for the inner side of living abroad.</p>
+  <a class="primary" href="https://thegroundedexpat.substack.com" target="_blank" rel="noopener"><span class="t">Read the essays &rarr;</span><span class="s">Free writing on the inner side of living abroad, on Substack</span></a>
+  <a href="https://thegroundedexpat.com/journals/" target="_blank" rel="noopener"><span class="t">The guided journals &rarr;</span><span class="s">Deeper journals for every season of life abroad</span></a>
+  <a href="https://thegroundedexpat.com/the-circle/" target="_blank" rel="noopener"><span class="t">The Circle &rarr;</span><span class="s">A small membership for the inner work, workshops + guided audio</span></a>
+  <p class="share">Know someone who would feel seen by this?<button type="button" id="share-btn">Copy the link</button></p>
+  <footer><p>With care,<br><span class="name">Stephanie &middot; The Grounded Expat</span></p></footer>
+</div>
+</div>
+
+<div class="rmodal" id="reflect-consent"><div class="card"><h4>Reflect with me</h4><p>Tapping this sends what you just wrote to an AI reflective companion, which offers you one gentle follow-up question to help you go a little deeper. It is not therapy, advice, or a diagnosis, and your writing is never stored anywhere.</p><p>Use it only when you would like a nudge.</p><div class="row"><button class="no" type="button" id="reflect-decline">Not now</button><button class="go" type="button" id="reflect-accept">Continue</button></div></div></div>
+
+<script>
+var KEY='tge-freehook-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+/* ===== Reflect with me (PROTOTYPE: local mock. Live version POSTs to /api/reflect) ===== */
+(function(){
+  var CONSENT_KEY=KEY+'reflect_consent';
+  var CRISIS=/\b(kill(ing)? myself|suicid|end my life|want to die|don'?t want to (live|be here|be alive)|better off dead|hurt(ing)? myself|harm(ing)? myself|self[ -]?harm|cutting myself|hitting me|hits me|being abused|abusing me|not safe at home|i'?m not safe|can'?t go on)\b/i;
+  var CAP=50, count=0; /* per-session reflection cap: gentle backstop against abuse/runaway use */
+
+  var SETS={
+    tired:[
+      "That tiredness is carrying a message. If it could say one thing about what you need less of, or more of, what would it be?",
+      "When did you last feel genuinely rested, not just less busy? What was different then?",
+      "What are you holding up right now that no one would fault you for setting down?"
+    ],
+    lonely:[
+      "When the loneliness is loudest, what is the thing you most wish someone would say to you in that moment?",
+      "What kind of company are you actually missing, the specific person or feeling, not just people in general?",
+      "What would it look like to be a little less alone this week, in a way small enough to actually happen?"
+    ],
+    homesick:[
+      "Underneath the place itself, what is the feeling of home you are missing, the thing you are trying to find your way back to?",
+      "If home is a feeling more than a place, where have you caught even a flicker of it here?",
+      "What did the old you know how to do back home that the you here is still learning?"
+    ],
+    scared:[
+      "What is that fear really trying to protect you from? And is it telling you the whole truth about what would happen?",
+      "If the thing you are dreading happened, what part of you do you trust would still know what to do?",
+      "What would you try this month if you knew that stumbling would not undo you?"
+    ],
+    glad:[
+      "Let that gladness land for a second. What does it quietly tell you about what actually matters to you in this life you chose?",
+      "You chose this. On a day like today, what makes the choice feel worth it?",
+      "What is one ordinary thing here that you would genuinely miss if it were gone?"
+    ],
+    lost:[
+      "The old roles are quieter here. When you strip those away, what is the part of you that is still unmistakably you?",
+      "Who were you before anyone here had an opinion about you, and what of her do you want to keep?",
+      "If no one here knew your history, how would you introduce who you are becoming?"
+    ],
+    general:[
+      "If you let yourself be completely honest, with no one watching, what is the thing sitting just underneath what you wrote?",
+      "What would it look like to be a little gentler with the version of you living through this right now?",
+      "You named where you are. What do you most need in this exact season that you have not been letting yourself ask for?",
+      "If a good friend had written those same words to you, what is the first thing you would want them to know?",
+      "What is the truest sentence you could write about today, even if it is only three words long?"
+    ]
+  };
+  function setFor(text){
+    var t=text.toLowerCase();
+    if(/\b(tired|exhaust|drained|burnt|burned out|no energy|overwhelm)\b/.test(t))return SETS.tired;
+    if(/\b(lonely|alone|no one|isolat|by myself)\b/.test(t))return SETS.lonely;
+    if(/\b(homesick|miss home|miss my|family|back home)\b/.test(t))return SETS.homesick;
+    if(/\b(scared|afraid|fear|anxious|nervous|worried)\b/.test(t))return SETS.scared;
+    if(/\b(proud|glad|grateful|happy|joy|love it|beautiful|amazing|good)\b/.test(t))return SETS.glad;
+    if(/\b(lost|who am i|myself|identity|flat|smaller|don'?t know who)\b/.test(t))return SETS.lost;
+    return SETS.general;
+  }
+
+  function clear(w){w.querySelectorAll('.reflect-block,.crisis-card,.reflect-load').forEach(function(n){n.remove();});}
+  function capReached(w){
+    clear(w);
+    var b=document.createElement('div');b.className='reflect-block';
+    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> A gentle pause</div><p class="rq">You have done a lot of reflecting today, and that is enough for now. Take what you found here and go live it. Come back whenever you need to.</p>';
+    w.appendChild(b);
+  }
+  function reflection(w,q){
+    clear(w);
+    var b=document.createElement('div');b.className='reflect-block';
+    b.innerHTML='<div class="rlabel"><span class="rdot">&bull;</span> A reflection for you</div><p class="rq">'+q+'</p>';
+    var ta=document.createElement('textarea');ta.className='grow';ta.id=w.dataset.slot+'_ans';ta.placeholder='If it lands, write with it…';
+    b.appendChild(ta);
+    var again=document.createElement('button');again.type='button';again.className='ragain';again.textContent='Give me another';
+    again.addEventListener('click',function(){doReflect(w,true);});
+    b.appendChild(again);
+    var d=document.createElement('p');d.className='rdisc';d.textContent='A reflection prompt, not advice or therapy. Nothing you write here is stored anywhere.';
+    b.appendChild(d);w.appendChild(b);grow(ta);ta.addEventListener('input',function(){grow(ta);});
+  }
+  function crisis(w){
+    clear(w);
+    var c=document.createElement('div');c.className='crisis-card';
+    c.innerHTML='<p><b>Before anything else, your safety matters most.</b></p>'
+      +'<p>It sounds like you might be carrying something really heavy right now. This is not a crisis service, and I would rather you have real support than an AI prompt.</p>'
+      +'<p>Please reach out to your local emergency number or a crisis line right away. In the US you can call or text <b>988</b> (the Suicide &amp; Crisis Lifeline). Wherever you are, local emergency services or a crisis line can help.</p>'
+      +'<p>You deserve care from a real person. Please reach out.</p>';
+    w.appendChild(c);
+  }
+  function doReflect(w,again){
+    var el=document.getElementById(w.dataset.src);var text=((el&&el.value)||'').trim();
+    if(text.length<8){clear(w);var m=document.createElement('p');m.className='reflect-load';m.textContent='Write a little in the box above first, then tap Reflect with me.';w.appendChild(m);return;}
+    if(CRISIS.test(text)){crisis(w);return;}
+    if(count>=CAP){capReached(w);return;}
+    count++;
+    clear(w);var l=document.createElement('p');l.className='reflect-load';l.textContent=again?'Finding another…':'Reading what you wrote…';w.appendChild(l);
+    function fail(){ if(l&&l.parentNode)l.remove(); var e=document.createElement('p');e.className='reflect-load';e.textContent='Could not reach the reflection service. Please try again in a moment.';w.appendChild(e); }
+    fetch('/api/reflect',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({entryText:text})})
+      .then(function(r){return r.json();})
+      .then(function(d){ if(l&&l.parentNode)l.remove();
+        if(d&&d.crisis){crisis(w);}
+        else if(d&&d.question){reflection(w,d.question);}
+        else{ fail(); } })
+      .catch(fail);
+  }
+  var pending=null;
+  document.addEventListener('DOMContentLoaded',function(){
+    document.querySelectorAll('.grow').forEach(function(el){grow(el);el.addEventListener('input',function(){grow(el);});});
+    document.querySelectorAll('.reflect-wrap').forEach(function(w){w.setAttribute('aria-live','polite');});
+    document.querySelectorAll('.reflect-btn').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var w=btn.closest('.reflect-wrap');var ok=false;try{ok=localStorage.getItem(CONSENT_KEY)==='1';}catch(e){}
+        if(!ok){pending=w;document.getElementById('reflect-consent').classList.add('show');return;}
+        doReflect(w,false);
+      });
+    });
+    var modal=document.getElementById('reflect-consent');
+    document.getElementById('reflect-accept').addEventListener('click',function(){try{localStorage.setItem(CONSENT_KEY,'1');}catch(e){}modal.classList.remove('show');if(pending){doReflect(pending,false);pending=null;}});
+    document.getElementById('reflect-decline').addEventListener('click',function(){modal.classList.remove('show');pending=null;});
+
+    /* ===== email gate (PROTOTYPE mock. Live: POST email to functions/api/submit.js -> Kit form 9638627) ===== */
+    function unlock(){document.getElementById('gate').style.display='none';document.getElementById('locked').style.display='block';}
+    try{if(localStorage.getItem(KEY+'unlocked')==='1')unlock();}catch(e){}
+    function submitGate(){
+      var em=document.getElementById('gate-email').value.trim();var err=document.getElementById('gate-err');
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)){err.textContent='Please enter a valid email.';return;}
+      err.textContent='';
+      try{var d=new FormData();d.append('email_address',em);fetch('https://app.kit.com/forms/9638627/subscriptions',{method:'POST',headers:{'Accept':'application/json'},body:d});}catch(e){}
+      try{localStorage.setItem(KEY+'unlocked','1');}catch(e){}
+      unlock();
+      var th=document.getElementById('thanks'); if(th) th.scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    document.getElementById('gate-go').addEventListener('click',submitGate);
+    document.getElementById('gate-email').addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();submitGate();}});
+
+    var sb=document.getElementById('share-btn');
+    if(sb)sb.addEventListener('click',function(){
+      function done(){sb.textContent='Link copied';setTimeout(function(){sb.textContent='Copy the link';},1800);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(location.href).then(done,done);}else{done();}
+    });
+  });
+})();
+</script></body></html>
