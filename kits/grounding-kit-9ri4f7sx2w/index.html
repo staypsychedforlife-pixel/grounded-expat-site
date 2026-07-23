@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>The Grounding Kit — The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.13);--serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--clay);display:inline-block}
+header.hero{background:var(--pine);color:var(--cream);padding:38px 0 54px}
+header.hero .brand{color:var(--cream)}
+.eyebrow{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--sage);margin:30px 0 8px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(38px,6vw,60px);line-height:1.03;letter-spacing:-.02em;margin:0}
+h1 em{font-style:italic;color:var(--clay);font-weight:600}
+.hero p.sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,23px);color:var(--oat);margin:16px 0 0;max-width:34ch}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3.2vw,33px);color:var(--pine);line-height:1.12;margin:0 0 4px}
+h2 .num{color:var(--clay);font-size:.72em;font-weight:600;margin-right:12px}
+.lede{color:var(--muted);margin:0 0 22px;font-size:17px}
+.welcome p{margin:0 0 16px}
+.welcome{font-size:19px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:14px 0;box-shadow:0 1px 0 rgba(42,38,34,.03)}
+.card h3{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--pine);margin:0 0 4px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.btn{display:inline-block;background:var(--clay);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px}
+.btn.ghost{background:transparent;color:var(--pine);border:1.5px solid var(--pine)}
+.audio-item{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0}
+.audio-item h3{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--pine);margin:0 0 2px}
+.audio-item .meta{color:var(--muted);font-size:15px;margin:0 0 12px}
+audio{width:100%;height:40px}
+.phase{border-left:3px solid var(--sage);padding:2px 0 2px 20px;margin:22px 0}
+.phase h3{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--pine);margin:0}
+.phase .wk{font-family:var(--sans);font-weight:600;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--clay)}
+.phase p{margin:8px 0 0;font-size:16.5px}
+.checklist{list-style:none;padding:0;margin:10px 0 0}
+.checklist li{position:relative;padding:8px 0 8px 34px;border-bottom:1px solid var(--line);font-size:16.5px}
+.checklist li:before{content:"";position:absolute;left:0;top:11px;width:18px;height:18px;border:1.5px solid var(--sage);border-radius:5px}
+.checklist .grp{font-family:var(--sans);font-weight:700;color:var(--pine);text-transform:uppercase;letter-spacing:.1em;font-size:12.5px;padding:22px 0 4px;border:0}
+.checklist .grp:before{display:none}
+.card2am{background:var(--pine);color:var(--cream);border-radius:18px;padding:30px 30px 26px}
+.card2am h2{color:var(--cream)}
+.card2am .step{border-top:1px solid rgba(251,248,241,.16);padding:14px 0}
+.card2am .step b{color:#fff}
+.card2am .say{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--oat);margin:16px 0;line-height:1.4}
+.card2am .sig{font-family:var(--serif);font-style:italic;color:var(--sage);margin-top:18px}
+footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:15px}
+.note{background:var(--oat-alt);border-radius:12px;padding:12px 16px;font-size:14.5px;color:var(--muted);margin:8px 0}
+@media print{.audio-item,.btn{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> THE GROUNDED EXPAT</div>
+    <div class="eyebrow">Your private kit</div>
+    <h1>The <em>Grounding</em> Kit</h1>
+    <p class="sub">Your first 90 days abroad, held.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="welcome">
+    <div class="welcome">
+      <p>Hi, and welcome. If you are opening this, you have either just landed somewhere new or you are about to, and either way, I am so glad you are here.</p>
+      <p>I made this kit because the first months abroad are so much more than logistics. Everyone hands you a checklist for the SIM card and the bank account. Almost no one prepares you for the homesickness that hits at 2am, the strange grief of a life you chose, or the dip around week three when you are certain you made a mistake. I am a therapist, and a nomad, and I have lived all of it. This is what I wish someone had handed me.</p>
+      <p>Nothing here is meant to be done all at once. Wander through it. Come back to the pieces you need on the days you need them. Let it be a companion, not another thing to keep up with.</p>
+      <p style="font-family:var(--serif);font-style:italic;color:var(--pine)">Take good care of yourself over there. — Stephanie, LICSW</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span>Start here</h2>
+    <p class="lede">If you only look at one thing today, make it the Rhythm Map below, so you know roughly where you are. Then keep the 2am Card somewhere you can find it in the dark. Everything else is here whenever you are ready.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Your two journals</h2>
+    <p class="lede">The reflective heart of the kit. Self-guided, saved as you write, yours to keep.</p>
+    <div class="card">
+      <h3>The Relocation Journal</h3>
+      <p>Guided reflection across the whole arc of arriving: landing, the hard middle, becoming, and carrying it home.</p>
+      <a class="btn" href="https://thegroundedexpat.com/read/relocation-journal-d48kxylojd/">Open the journal</a>
+    </div>
+    <div class="card">
+      <h3>The Culture Shock Workbook</h3>
+      <p>For the disorienting middle stretch, when the shine wears off and the real adjustment begins.</p>
+      <a class="btn" href="https://thegroundedexpat.com/read/the-culture-shock-workbook-ekddjdlcv0/">Open the workbook</a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Guided audios</h2>
+    <p class="lede">Four short recordings for specific hard moments. Put your headphones in, and let me sit with you for a few minutes.</p>
+    <div class="audio-item">
+      <h3>Your First Night</h3>
+      <p class="meta">For the disorientation of day one. About 2 minutes.</p>
+      <audio controls preload="none" src="audio/01-your-first-night.m4a"></audio>
+    </div>
+    <div class="audio-item">
+      <h3>When It's Too Much</h3>
+      <p class="meta">A guided grounding reset for overwhelm. About 3 minutes.</p>
+      <audio controls preload="none" src="audio/02-when-its-too-much.m4a"></audio>
+    </div>
+    <div class="audio-item">
+      <h3>The 2am Spiral</h3>
+      <p class="meta">For the homesick, can't-sleep nights. About 2.5 minutes.</p>
+      <audio controls preload="none" src="audio/03-the-2am-spiral.m4a"></audio>
+    </div>
+    <div class="audio-item">
+      <h3>Finding Your Footing</h3>
+      <p class="meta">For the week-three dip, when you wonder if you made a mistake. About 2.5 minutes.</p>
+      <audio controls preload="none" src="audio/04-finding-your-footing.m4a"></audio>
+    </div>
+    <div class="note">Audio files drop into an <b>audio/</b> folder next to this page (filenames shown above). Until then, the players sit ready and empty.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Reflect with me</h2>
+    <p class="lede">When you need to think out loud and there is no one around to hear it, this is a gentle companion that reflects with you, any hour, any day.</p>
+    <div class="card">
+      <h3>Reflect With Me</h3>
+      <p>A private, judgment-free space to process whatever the day abroad handed you.</p>
+      <a class="btn" href="https://thegroundedexpat.com/reflect">Open Reflect With Me</a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>The 90-day rhythm map</h2>
+    <p class="lede">Not a schedule to keep up with. A map, so that when the ground shifts, you know roughly where you are and that you are not lost.</p>
+    <div class="phase">
+      <span class="wk">Weeks 1–2</span>
+      <h3>Landing</h3>
+      <p>Adrenaline and disorientation, thrilled and exhausted at once. Lower the bar all the way. The goal is not a great day, it is a small one. This is not the season to judge whether you did the right thing. <b>Lean on:</b> the Landing Checklist and the "Landing" section of your Relocation Journal. Keep the 2am Card close.</p>
+    </div>
+    <div class="phase">
+      <span class="wk">Weeks 3–8</span>
+      <h3>The Hard Middle</h3>
+      <p>The shine wears off. Culture shock, small frictions, loneliness that can get loud. Around six weeks many people hit a dip and think, "I made a mistake." That feeling is real, but it is usually the dip talking. No big decisions right now. Keep saying yes, keep showing up. <b>Lean on:</b> the Culture Shock Workbook, the audios, and Reflect With Me. This is the phase the kit was really built for.</p>
+    </div>
+    <div class="phase">
+      <span class="wk">Weeks 9–12</span>
+      <h3>Becoming</h3>
+      <p>Quieter. One day the walk home just feels like yours. A regular, a routine, maybe a person or two. Notice it, because belonging rarely arrives in a big moment. <b>Lean on:</b> the "Becoming" section of your journal, and a look back at your early entries to see how far you have come.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>The Landing Checklist</h2>
+    <p class="lede">Not because logistics are the point, but because competence calms panic. When you know how to move, feed yourself, and get help, the whole place goes from overwhelming to manageable.</p>
+    <ul class="checklist">
+      <li class="grp">First 48 hours</li>
+      <li>Data in your pocket. A local SIM or eSIM, or a working roaming plan.</li>
+      <li>Cash and a card that works. Tell your home bank you have moved so nothing gets frozen.</li>
+      <li>Know your way home. Save your address in the local language and screenshot it.</li>
+      <li>Water and a first food run. You do not have to cook today. You just have to eat.</li>
+      <li>Emergency numbers saved. The local 911, plus the nearest hospital.</li>
+      <li class="grp">First week</li>
+      <li>One full grocery run. This one errand quietly makes the place feel like yours.</li>
+      <li>The pharmacy. Find the nearest one and restock anything you take regularly.</li>
+      <li>Transit sorted. The card, the app, the one line you will use most.</li>
+      <li>Wifi and a power setup, plus the right plug adapters.</li>
+      <li>A third place, chosen on purpose. One cafe, park, or gym you return to. This is how belonging begins.</li>
+      <li class="grp">First month</li>
+      <li>Registration and paperwork. Find the deadline and put it in your calendar.</li>
+      <li>A doctor or clinic you could call. Knowing where you would go is its own kind of calm.</li>
+      <li>A standing call home. Same day, same time, so the missing has a container.</li>
+      <li>One local thing you actually enjoy. Not a task. A reason to be glad you are here.</li>
+    </ul>
+  </section>
+
+  <section style="border-bottom:0">
+    <div class="card2am">
+      <h2>The 2am Card</h2>
+      <p style="color:var(--oat)">For the nights the missing gets loud. If you are reading this at 2am, homesick and wide awake, nothing has gone wrong. This is expected when we are far from what we know and love. It is a heart doing exactly what hearts do.</p>
+      <div class="step"><b>Put both feet flat on the floor.</b> Feel the ground actually holding you up. It is, even now, even here.</div>
+      <div class="step"><b>Breathe in for four, out for six.</b> Three times. The longer exhale tells your nervous system it is safe to settle.</div>
+      <div class="step"><b>Name five things you can see.</b> This pulls you out of the 3am story and back into the safe present.</div>
+      <div class="say">"I can miss home and still belong to this life. Both are true. I do not have to fix this tonight."</div>
+      <p style="color:var(--oat);margin:0">You do not have to solve anything at 2am. Morning always comes, and things look different in the light. You are doing something genuinely hard, and you are doing it. Rest now.</p>
+      <div class="sig">— Stephanie, LICSW</div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="justify-content:center;color:var(--pine)"><span class="dot"></span> THE GROUNDED EXPAT</div>
+    <p>The Grounding Kit &middot; yours to keep &middot; thegroundedexpat.com</p>
+  </div>
+</footer>
+
+</body>
+</html>

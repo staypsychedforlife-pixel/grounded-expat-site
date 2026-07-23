@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Leaving Well · The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.14);--serif:'Fraunces',Georgia,'Times New Roman',serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px 120px}
+.toolbar{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 22px;margin-bottom:8px}
+.toolbar .brand{display:flex;align-items:center;gap:9px;font-family:var(--serif);font-size:19px;font-weight:600}
+.toolbar .brand .the{color:var(--sage);font-weight:500}.toolbar .brand svg{width:22px;height:22px;flex:none}
+.btns{display:flex;gap:8px;flex-wrap:wrap}
+button.tb{font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.3px;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:8px 14px;border-radius:999px;cursor:pointer;transition:.15s}
+button.tb:hover{background:var(--pine);color:var(--cream)}
+button.tb.primary{background:var(--clay);border-color:var(--clay);color:var(--cream)}
+button.tb.primary:hover{background:var(--pine);border-color:var(--pine)}
+header.hero{text-align:center;padding:54px 0 28px}
+header.hero .mark{width:40px;height:40px}
+header.hero .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600;margin-top:14px}
+header.hero h1{font-family:var(--serif);font-weight:500;font-size:50px;line-height:1.03;margin:8px 0 10px;letter-spacing:-.01em}
+header.hero .sub{font-family:var(--serif);font-style:italic;font-size:21px;color:var(--muted);max-width:34ch;margin:0 auto}
+header.hero .by{font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.3px}
+.intro{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:10px 0 6px}
+.intro p{margin:0 0 12px}.intro p:last-of-type{margin-bottom:0}
+.disclaimer{font-size:13.5px;color:var(--muted);background:var(--oat-alt);border-left:3px solid var(--sage);padding:12px 16px;border-radius:0 8px 8px 0;margin-top:14px;line-height:1.5}
+.phase{margin:50px 0 0}
+.phase-head{border-top:2px solid var(--clay);padding-top:16px;margin-bottom:8px}
+.phase-head .k{font-family:var(--sans);text-transform:uppercase;letter-spacing:3px;font-size:12px;color:var(--clay);font-weight:600}
+.phase-head h2{font-family:var(--serif);font-weight:500;font-size:38px;margin:2px 0 0;color:var(--pine)}
+.phase-head .ph-sub{color:var(--sage);font-style:italic;font-family:var(--serif);font-size:21px}
+.module{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:26px 26px 8px;margin:22px 0}
+.module h3{font-family:var(--serif);font-weight:600;font-size:30px;margin:0 0 10px;color:var(--pine)}
+.where{font-family:var(--serif);font-style:italic;font-size:19px;color:#494033;line-height:1.5;margin:0 0 18px}
+.affirm{background:var(--oat-alt);border-left:4px solid var(--clay);border-radius:0 10px 10px 0;padding:16px 20px;margin:0 0 20px}
+.affirm .lab{font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--clay);font-weight:600;margin-bottom:5px}
+.affirm p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;margin:0;color:var(--pine)}
+.checkin{display:flex;gap:16px;flex-wrap:wrap;margin:0 0 20px;padding:14px 16px;background:var(--oat);border:1px dashed var(--line);border-radius:10px}
+.checkin label{font-size:12.5px;font-weight:600;letter-spacing:.3px;color:var(--sage);display:flex;flex-direction:column;gap:5px;flex:1;min-width:180px}
+.checkin input{font-family:var(--sans);font-size:15px;color:var(--ink);border:none;border-bottom:1.5px solid var(--line);background:transparent;padding:5px 2px}
+.checkin input:focus{outline:none;border-color:var(--clay)}
+.prompt{margin:0 0 20px}
+.plabel{font-size:16px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.45}
+.chip{display:inline-block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;padding:2px 8px;border-radius:999px;margin-left:7px;vertical-align:2px}
+.chip.action{background:rgba(194,103,74,.16);color:var(--clay)}
+.chip.exercise{background:rgba(47,69,57,.12);color:var(--pine)}
+textarea.grow{width:100%;min-height:60px;font-family:var(--serif);font-size:18px;line-height:1.55;color:var(--ink);background:var(--oat);border:1px solid var(--line);border-radius:10px;padding:13px 15px;resize:none;overflow:hidden}
+textarea.grow:focus{outline:none;border-color:var(--clay);background:#fff}
+textarea.grow::placeholder{color:#A89F90;opacity:1;font-style:italic}
+.saved{position:fixed;right:18px;bottom:18px;background:var(--pine);color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.5px;padding:8px 14px;border-radius:999px;opacity:0;transform:translateY(8px);transition:.25s;z-index:30}
+.saved.show{opacity:1;transform:translateY(0)}
+.closing{text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--sage);margin:46px 0 0}
+.foot{text-align:center;margin-top:40px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:16px}
+.exp{background:#EDF0E9;border:1px solid rgba(140,155,130,.55);border-radius:12px;padding:18px 20px;margin:0 0 20px}
+.exp .lab{display:flex;align-items:center;gap:9px;font-family:var(--sans);text-transform:uppercase;letter-spacing:2px;font-size:10.5px;color:var(--sage);font-weight:700;margin-bottom:9px}
+.exp .lab .dot{width:22px;height:22px;border-radius:50%;background:var(--pine);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;font-weight:600}
+.exp p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.55;color:#3b473d;margin:0 0 8px}
+.exp .sig{font-family:var(--serif);font-style:normal;font-size:15px;color:var(--sage);text-align:right;margin:6px 0 0}
+.exp .slot{font-family:var(--sans);font-style:normal;font-size:13.5px;color:var(--muted);background:rgba(194,103,74,.1);border:1px dashed rgba(194,103,74,.4);border-radius:8px;padding:10px 12px;line-height:1.5}
+.branch{background:var(--oat);border:1px dashed var(--line);border-radius:12px;padding:18px 18px 8px;margin:0 0 20px}
+.branch .bq{font-size:16.5px;font-weight:600;color:var(--ink);margin-bottom:13px;line-height:1.4}
+.bbtns{display:flex;gap:10px;margin-bottom:4px;flex-wrap:wrap}
+.bbtn{font-family:var(--sans);font-size:14px;font-weight:600;border:1.5px solid var(--pine);background:transparent;color:var(--pine);padding:9px 22px;border-radius:999px;cursor:pointer;transition:.15s}
+.bbtn:hover{background:var(--pine);color:#fff}
+.bbtn.active{background:var(--clay);border-color:var(--clay);color:#fff}
+.bpath{display:none;margin-top:8px}
+.bpath.show{display:block}
+.bpath .lead-in{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--sage);margin:12px 0 4px}
+@media print{.toolbar,.saved{display:none!important}body{background:#fff;font-size:12pt}.wrap{max-width:100%;padding:0}.module,.intro{border:1px solid #ddd;break-inside:avoid}.phase{break-before:page}.phase:first-of-type{break-before:avoid}textarea.grow{background:#fff;border:1px solid #ccc}header.hero{padding:10px 0 18px}header.hero h1{font-size:32pt}.bbtn{display:none}.bpath{display:block!important}}
+@media(max-width:560px){header.hero h1{font-size:36px}.module h3{font-size:25px}.bbtns{flex-direction:column;align-items:stretch}}
+</style></head><body>
+<div class="toolbar"><div class="brand"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg><span><span class="the">The</span> Grounded Expat</span></div><div class="btns"><button class="tb" id="btn-download">Download my writing</button><button class="tb primary" id="btn-print">Print / Save as PDF</button></div></div>
+<div class="wrap">
+<header class="hero">
+<svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.6" stroke-linecap="round"/></svg>
+<div class="k">The Grounded Expat</div>
+<h1>Leaving Well</h1>
+<div class="sub">A guided journal for the goodbye.</div>
+<div class="by">Created by Stephanie Johnson, LICSW</div>
+</header>
+<div class="intro"><p>You are in one of the strangest stretches of this whole thing. You have decided to go, and now you are living in the space between. Already halfway gone in your mind, still fully here in your body, saying goodbye to a life while you are somehow still inside it.</p><p>Nobody really prepares you for this part, so let's move through it together, gently, one page at a time. There are no right answers here. There is just the truth of what leaving actually feels like, and the permission to feel all of it. <strong>Your writing saves automatically</strong> on this device and stays private to you. Use <em>Print / Save as PDF</em> to keep a copy, or <em>Download my writing</em> to export it.</p><div class="disclaimer">This journal is an educational, self-reflection resource, not therapy, diagnosis, treatment, or a crisis service. If the grief of leaving stirs up something that feels too big to face alone, that is exactly what a good therapist is for; please reach out to a licensed professional or your local services. Feeling the whole of a goodbye is brave, and you do not have to carry the heaviest parts by yourself.</div></div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase One</div><h2>It's Real Now</h2><div class="ph-sub">The decision settling into your body</div></div>
+<section class="module">
+<h3>When It Became Real</h3>
+<p class="where">There is a moment when it stops being a beautiful maybe and becomes a thing that is actually happening. The ticket, the notice, the date on the calendar. And your body knows before your mind catches up. Suddenly it is real, and real feels different than the dream did.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>However you are feeling right now, thrilled or terrified or numb or all three at once, it is the right way to feel. There is no correct emotion for the edge of a leap. There is only yours.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my experience</div><p>The reality hit when I was sitting in an empty house with an extra large suitcase packed with everything left that I owned. Knowing that in one day I was never going to see that house again, and that the only belongings I had were in that suitcase. It was surreal, and honestly, sad.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="lw1_date" data-module="It's Real Now" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="lw1_where" data-module="It's Real Now" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">When did it stop being a maybe and start being real for you? What did your body do in that moment, the flutter, the drop, the tears, the thrill?</div>
+<textarea class="j-field grow" id="lw1_q1" data-module="It's Real Now" data-label="When it became real" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Let yourself write what you are most excited about, with no hedging and no 'but.' What is the life on the other side of this that made you say yes?</div>
+<textarea class="j-field grow" id="lw1_q2" data-module="It's Real Now" data-label="Most excited about" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Now the other side. What are you most afraid of? Write it plainly. Fear that gets named on a page is almost always smaller than fear that stays a shapeless weight in your chest.</div>
+<textarea class="j-field grow" id="lw1_q3" data-module="It's Real Now" data-label="Most afraid of" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Do you have moments of wanting to take it all back?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b1" data-val="yes">More often than I'd admit</button><button class="bbtn" data-branch="b1" data-val="no">No, I feel steady</button></div>
+<div class="bpath" data-branch="b1" data-val="yes"><div class="lead-in">That does not mean you are making a mistake. The urge to undo it is not your wisdom, it is your nervous system reaching for the familiar because the familiar feels safe. You can want to run back to what you know and still be walking toward exactly the right thing.</div>
+<div class="prompt"><div class="plabel">What is the fear underneath the wanting-to-take-it-back?</div>
+<textarea class="j-field grow" id="lw1_y1" data-module="It's Real Now" data-label="Fear under the take-it-back" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What do you know, on a steadier day, that the fear conveniently forgets? <span class="chip action">one true thing</span></div>
+<textarea class="j-field grow" id="lw1_y2" data-module="It's Real Now" data-label="What the steadier day knows" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b1" data-val="no"><div class="lead-in">Steady certainty is its own kind of gift, and worth noticing, so you can reach for it on a harder day.</div>
+<div class="prompt"><div class="plabel">What is it that you know, deep down, that keeps the doubt quiet? Name it here.</div>
+<textarea class="j-field grow" id="lw1_n1" data-module="It's Real Now" data-label="What keeps the doubt quiet" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase Two</div><h2>The Last Times</h2><div class="ph-sub">Grieving the ordinary</div></div>
+<section class="module">
+<h3>The Ordinary You'll Miss</h3>
+<p class="where">This is the part that surprises people. It is not the big landmarks you grieve. It is the ordinary. The walk you never thought twice about. The way the light comes into your kitchen. The barista who knows your order. The small, unremarkable textures of a life become almost unbearably precious once you know they are ending.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>It is not strange to grieve a lamp, a walk, a corner shop. The ordinary is where a life actually lives. Of course it is what you will miss.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my experience</div><p>I missed the smell of the Pacific Northwest ocean when the tide was out, Costco trips on Sundays for the samples, and seeing the mountains sink into the horizon as I drove down the highway. It was the missing of ordinary things I realized I had taken for granted, and also realizing how much I love home, and all of the beautiful memories I hold dear to my heart. Now when I do return home, I savor every second of it.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="lw2_date" data-module="The Last Times" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="lw2_where" data-module="The Last Times" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">What ordinary, unremarkable thing about this place will you miss the most? Not the famous view. The small one.</div>
+<textarea class="j-field grow" id="lw2_q1" data-module="The Last Times" data-label="The ordinary thing you'll miss" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is there a 'last time' you want to do on purpose, with your whole attention, before you go? A last walk, a last meal somewhere, a last ordinary morning done slowly? <span class="chip action">one to plan</span></div>
+<textarea class="j-field grow" id="lw2_q2" data-module="The Last Times" data-label="A last time to do on purpose" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">What made this place home? Try to name the actual ingredients, so you know what you are looking to build again on the other side.</div>
+<textarea class="j-field grow" id="lw2_q3" data-module="The Last Times" data-label="What made this place home" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase Three</div><h2>The People</h2><div class="ph-sub">The goodbyes, and the guilt of the ones who stay</div></div>
+<section class="module">
+<h3>Who You're Leaving</h3>
+<p class="where">Here is the hardest one. Leaving places is tender. Leaving people is grief. And it comes tangled up with guilt, the particular ache of being the one who gets to go while others stay, of choosing a life that puts distance between you and the people you love.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>Leaving people you love is not a betrayal of them. It is the cost of a life, and you are allowed to feel its full weight without letting it decide for you.</p></div>
+<div class="exp"><div class="lab"><span class="dot">S</span>From my work</div><p>As a therapist, here is what I want you to know about the guilt of going. Guilt is meant to signal that we have done something wrong. But wanting a fuller life is not wrong, and love is not a fixed amount that runs out with distance. The people who truly love you want you to have a life that is yours, even when your leaving costs them something. You can honor their loss and still get on the plane.</p><p class="sig">— Stephanie, LICSW</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="lw3_date" data-module="The People" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="lw3_where" data-module="The People" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Who is the hardest to leave, and why? Let yourself be specific and let yourself feel it.</div>
+<textarea class="j-field grow" id="lw3_q1" data-module="The People" data-label="Hardest to leave" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Notice the guilt, if it is there. What is it telling you? Now ask it, honestly: is that true? Is wanting your own life actually a betrayal of the people you love, or does it just feel that way right now?</div>
+<textarea class="j-field grow" id="lw3_q2" data-module="The People" data-label="What the guilt says, and is it true" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Is there something you want to say to someone before you go that you have not said yet? Write it here first. Sometimes the page is where we find the words.</div>
+<textarea class="j-field grow" id="lw3_q3" data-module="The People" data-label="What you want to say before you go" placeholder="Write here…"></textarea></div>
+<div class="branch"><div class="bq">Is there someone who is not taking your leaving well?</div>
+<div class="bbtns"><button class="bbtn" data-branch="b2" data-val="yes">Yes, someone is struggling</button><button class="bbtn" data-branch="b2" data-val="no">No, they're supportive</button></div>
+<div class="bpath" data-branch="b2" data-val="yes"><div class="lead-in">Their sadness is real, and it is also not a verdict on your choice. Someone can be genuinely hurt that you are going and you can still be right to go.</div>
+<div class="prompt"><div class="plabel">What do you need to remember when their reaction gets heavy?</div>
+<textarea class="j-field grow" id="lw3_y1" data-module="The People" data-label="When their reaction gets heavy" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">How can you hold their feelings with tenderness without letting them make this decision for you?</div>
+<textarea class="j-field grow" id="lw3_y2" data-module="The People" data-label="Tenderness without letting them decide" placeholder="Write here…"></textarea></div></div>
+<div class="bpath" data-branch="b2" data-val="no"><div class="lead-in">Being surrounded by people who are glad for you is a real gift, and worth letting in fully.</div>
+<div class="prompt"><div class="plabel">How can you let their support land, instead of bracing for a goodbye that is gentler than you feared?</div>
+<textarea class="j-field grow" id="lw3_n1" data-module="The People" data-label="Letting the support land" placeholder="Write here…"></textarea></div></div>
+</div>
+</section>
+</div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase Four</div><h2>The In-Between</h2><div class="ph-sub">The limbo, and the pre-flight wobble</div></div>
+<section class="module">
+<h3>Half Here, Half Gone</h3>
+<p class="where">The final weeks have a strange, unreal quality. You are packing up a life. You are half-present at dinners because part of you is already gone. Your sense of who you are gets a little wobbly, because so much of identity is built from place and routine and people, and all three are dissolving at once. And somewhere in here, usually, comes the wobble: the 'what am I doing' panic that arrives right before something brave.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>The wobble is not a warning. It is what standing at the edge of something brave feels like. Fear shows up around what matters, around what would change us. If this were small, you would not feel it at all.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="lw4_date" data-module="The In-Between" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="lw4_where" data-module="The In-Between" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">Where do you feel most caught between here and there right now? In what moments are you most 'already gone'?</div>
+<textarea class="j-field grow" id="lw4_q1" data-module="The In-Between" data-label="Caught between here and there" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">It is tempting to check out early, to leave in your heart before you leave in your body. What would it cost you to stay present, and actually here, until the day you go? What might you miss if you leave early?</div>
+<textarea class="j-field grow" id="lw4_q2" data-module="The In-Between" data-label="The cost of leaving early" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">If the pre-flight wobble has arrived, write down exactly what your doubt is saying. Then read it back and ask: is this the truth, or is this just fear doing what fear does right before a leap? <span class="chip exercise">exercise</span></div>
+<textarea class="j-field grow" id="lw4_q3" data-module="The In-Between" data-label="What the doubt says, examined" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+
+<div class="phase"><div class="phase-head"><div class="k">Phase Five</div><h2>Carrying Them With You</h2><div class="ph-sub">Holding grief and excitement in the same hand</div></div>
+<section class="module">
+<h3>What You Take With You</h3>
+<p class="where">Here is the thing I most want you to know before you go. You do not have to choose between the grief and the excitement. This is not a test where feeling sad means you are doing it wrong. And you do not actually leave the people and places behind. You carry them. They become part of who you are, wherever you land.</p>
+<div class="affirm"><div class="lab">A note for you</div><p>You do not have to choose between the grief and the excitement. The fullest version of leaving holds both, the ache and the anticipation, in the very same hand.</p></div>
+<div class="checkin">
+<label>Date<input type="text" class="j-field" id="lw5_date" data-module="Carrying Them With You" data-label="Date" placeholder="e.g. 12 March"></label>
+<label>Where are you writing from today?<input type="text" class="j-field" id="lw5_where" data-module="Carrying Them With You" data-label="Writing from…" placeholder="a city, a feeling"></label>
+</div>
+<div class="prompt"><div class="plabel">How do you want to carry this place, and these people, with you? A ritual, an object, a habit, a way of staying in touch that you will actually keep? <span class="chip action">one to keep</span></div>
+<textarea class="j-field grow" id="lw5_q1" data-module="Carrying Them With You" data-label="How you'll carry them" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">Write a few lines to your future self, for a hard night abroad when the missing gets loud. Remind that version of you why you went, and what you already knew was worth it.</div>
+<textarea class="j-field grow" id="lw5_q2" data-module="Carrying Them With You" data-label="A letter to your future self" placeholder="Write here…"></textarea></div>
+<div class="prompt"><div class="plabel">After all of this, name it: what are you ready for? Not what you are afraid of, not what you will miss. What is waiting for you that you are finally ready to go meet?</div>
+<textarea class="j-field grow" id="lw5_q3" data-module="Carrying Them With You" data-label="What you're ready for" placeholder="Write here…"></textarea></div>
+</section>
+</div>
+
+<p class="closing">You are not abandoning your life. You are widening it. Leaving well does not mean leaving without grief. It means feeling the whole of it, saying your goodbyes with your whole heart, and walking toward the next thing anyway.</p>
+<div class="foot"><div class="b">The Grounded Expat</div>Created by Stephanie Johnson, LICSW · thegroundedexpat.com<br>Your personal copy — for your own use. Please don't redistribute.<br>© 2026 The Grounded Expat</div>
+</div><div class="saved" id="saved">Saved ✓</div>
+<script>
+const KEY='tge-leaving-v1::';
+function grow(el){el.style.height='auto';el.style.height=(el.scrollHeight)+'px';}
+let t;
+function flash(){const s=document.getElementById('saved');s.classList.add('show');clearTimeout(t);t=setTimeout(()=>s.classList.remove('show'),1100);}
+function save(el){try{localStorage.setItem(KEY+el.id,el.value);flash();}catch(e){}}
+function pickBranch(g,v,doFlash){
+ document.querySelectorAll('.bbtn[data-branch="'+g+'"]').forEach(b=>b.classList.toggle('active',b.dataset.val===v));
+ document.querySelectorAll('.bpath[data-branch="'+g+'"]').forEach(p=>{const on=p.dataset.val===v;p.classList.toggle('show',on);if(on)p.querySelectorAll('textarea.grow').forEach(grow);});
+ if(doFlash){try{localStorage.setItem(KEY+'branch_'+g,v);flash();}catch(e){}}
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ document.querySelectorAll('.j-field').forEach(el=>{
+  try{const v=localStorage.getItem(KEY+el.id);if(v!==null)el.value=v;}catch(e){}
+  if(el.classList.contains('grow'))grow(el);
+  el.addEventListener('input',()=>{if(el.classList.contains('grow'))grow(el);save(el);});
+ });
+ document.querySelectorAll('.bbtn').forEach(b=>b.addEventListener('click',()=>pickBranch(b.dataset.branch,b.dataset.val,true)));
+ document.querySelectorAll('.branch').forEach(el=>{const g=el.querySelector('.bbtn').dataset.branch;try{const v=localStorage.getItem(KEY+'branch_'+g);if(v)pickBranch(g,v,false);}catch(e){}});
+ document.getElementById('btn-print').addEventListener('click',()=>window.print());
+ document.getElementById('btn-download').addEventListener('click',downloadTxt);
+});
+function downloadTxt(){
+ let out='LEAVING WELL\nThe Grounded Expat — by Stephanie Johnson, LICSW\n\n';
+ let curMod='';
+ document.querySelectorAll('.j-field').forEach(el=>{
+  const m=el.getAttribute('data-module')||'';const l=el.getAttribute('data-label')||'';const v=(el.value||'').trim();
+  if(m && m!==curMod){out+='\n══════════════════════════════\n'+m+'\n══════════════════════════════\n';curMod=m;}
+  if(v){out+='\n• '+l+'\n'+v+'\n';}
+ });
+ const blob=new Blob([out],{type:'text/plain'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='My Leaving Well Journal.txt';a.click();
+}
+</script></body></html>

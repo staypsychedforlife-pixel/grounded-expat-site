@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Charting the Course — The Grounded Expat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--pine:#2F4539;--clay:#C2674A;--oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;--muted:#6E6557;--line:rgba(42,38,34,.13);--serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.7;font-size:18px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-size:19px;font-weight:600;color:var(--pine)}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--clay);display:inline-block}
+header.hero{background:var(--pine);color:var(--cream);padding:38px 0 54px}
+header.hero .brand{color:var(--cream)}
+.eyebrow{font-family:var(--sans);font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;color:var(--sage);margin:30px 0 8px}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,5.6vw,56px);line-height:1.04;letter-spacing:-.02em;margin:0}
+h1 em{font-style:italic;color:var(--clay);font-weight:600}
+.hero p.sub{font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,23px);color:var(--oat);margin:16px 0 0;max-width:36ch}
+section{padding:40px 0;border-bottom:1px solid var(--line)}
+h2{font-family:var(--serif);font-weight:600;font-size:clamp(25px,3.2vw,33px);color:var(--pine);line-height:1.12;margin:0 0 4px}
+h2 .num{color:var(--clay);font-size:.72em;font-weight:600;margin-right:12px}
+.lede{color:var(--muted);margin:0 0 22px;font-size:17px}
+.welcome{font-size:19px}
+.welcome p{margin:0 0 16px}
+.pathstrip{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.pathstrip span{background:var(--cream);border:1px solid var(--line);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;color:var(--pine)}
+.pathstrip span b{color:var(--clay)}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:14px 0}
+.card h3{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--pine);margin:0 0 4px}
+.card p{margin:0 0 14px;color:var(--muted);font-size:16px}
+.btn{display:inline-block;background:var(--clay);color:#fff;text-decoration:none;font-weight:600;font-size:15px;padding:11px 20px;border-radius:999px}
+.step{display:flex;gap:18px;padding:20px 0;border-bottom:1px solid var(--line)}
+.step:last-child{border-bottom:0}
+.step .n{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--pine);color:var(--cream);font-family:var(--serif);font-weight:600;display:flex;align-items:center;justify-content:center;font-size:18px}
+.step .body h3{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--pine);margin:2px 0 6px}
+.step .body p{margin:0 0 10px;font-size:16.5px}
+.step .move{background:var(--oat-alt);border-radius:10px;padding:10px 14px;font-size:15.5px}
+.step .move b{color:var(--clay)}
+.closer{background:var(--pine);color:var(--oat);border-radius:16px;padding:24px 26px;margin-top:20px;font-size:17px}
+.closer b{color:#fff}
+.life{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:14px 0}
+.life h3{font-family:var(--serif);font-weight:600;font-size:22px;color:var(--pine);margin:0 0 2px}
+.life .feel{font-family:var(--serif);font-style:italic;color:var(--clay);font-size:16px;margin:0 0 12px}
+.life p{margin:0 0 8px;font-size:16px}
+.life .fits{color:var(--pine);font-weight:600}
+.audio-item{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:12px 0}
+.audio-item h3{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--pine);margin:0 0 2px}
+.audio-item .meta{color:var(--muted);font-size:15px;margin:0 0 12px}
+audio{width:100%;height:40px}
+.note{background:var(--oat-alt);border-radius:12px;padding:12px 16px;font-size:14.5px;color:var(--muted);margin:8px 0}
+footer{padding:40px 0 60px;text-align:center;color:var(--muted);font-size:15px}
+@media print{.audio-item,.btn{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span> THE GROUNDED EXPAT</div>
+    <div class="eyebrow">Your private kit &middot; where do I start?</div>
+    <h1><em>Charting the Course</em></h1>
+    <p class="sub">You keep imagining a life abroad. Here is where to actually begin.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="welcome">
+    <p>Hi, and welcome. If you are here, you have probably been quietly imagining this for a while. A different life, somewhere else, a version of you that got up and went. And every time you get close to it, the whole thing balloons into something too big to hold, so you set it back down and call it someday.</p>
+    <p>I made this kit to make it smaller and more real. I am a therapist, and a nomad, and I promise you the people already living the life you are picturing did not have it figured out either. They just took a first step while they were still unsure. This kit is here to help you take yours.</p>
+    <p>We are going to move through four gentle stages. You do not have to rush them.</p>
+    <div class="pathstrip">
+      <span><b>1</b> Clarity</span>
+      <span><b>2</b> Permission</span>
+      <span><b>3</b> The Map</span>
+      <span><b>4</b> The First Step</span>
+    </div>
+    <p style="font-family:var(--serif);font-style:italic;color:var(--pine);margin-top:20px">Let's begin. — Stephanie, LICSW</p>
+  </section>
+
+  <section>
+    <h2><span class="num">01</span>The First-Steps Roadmap</h2>
+    <p class="lede">The whole thing feels enormous because you are looking at all of it at once. A life abroad is not one giant decision, it is a stack of small ones, taken in order. Here is the order, and the single first move for each.</p>
+
+    <div class="step"><div class="n">1</div><div class="body"><h3>Clarity — what are you actually reaching for?</h3><p>Not the Instagram version. The real one. Do you want to slow down or speed up? Escape something, or move toward something? The clearer you are here, the easier every other decision becomes.</p><div class="move"><b>First move:</b> Spend twenty minutes with the Running Toward or Running Away journal below.</div></div></div>
+
+    <div class="step"><div class="n">2</div><div class="body"><h3>Which shape — a base, or a backpack?</h3><p>Settle in one place, keep moving, or slow-travel a few places a year. Very different lives. Pick a direction to start, not forever.</p><div class="move"><b>First move:</b> Read the Which Life Fits You guide below and notice which one your body leans toward.</div></div></div>
+
+    <div class="step"><div class="n">3</div><div class="body"><h3>Money — the number that unlocks the door</h3><p>You probably need less than you fear. Mostly you need to know your number: what a month actually costs where you are going.</p><div class="move"><b>First move:</b> Pick one place you are drawn to and look up the monthly cost of living for one person. One number, written down.</div></div></div>
+
+    <div class="step"><div class="n">4</div><div class="body"><h3>Where — narrow the whole world to a shortlist</h3><p>The world is too big to choose from at once. Let it come down to two or three places that fit your clarity and budget. Not forever. Just where to start.</p><div class="move"><b>First move:</b> Write down three places that keep pulling at you. First instinct.</div></div></div>
+
+    <div class="step"><div class="n">5</div><div class="body"><h3>The legal path — the part that feels scary and usually is not</h3><p>Every country has a route in: a tourist stay, a nomad visa, a work permit. You do not need to be an expert. You need to know which one door is yours.</p><div class="move"><b>First move:</b> Search "[your top country] digital nomad visa" and read one official-looking page. That is enough for today.</div></div></div>
+
+    <div class="step"><div class="n">6</div><div class="body"><h3>Income — how the life pays for itself</h3><p>A remote job, freelancing, a business, savings for a season, or a blend. This one often takes longest, which is why you start it early and gently, not perfectly.</p><div class="move"><b>First move:</b> Write one sentence: "While I am abroad, money will come from ______." A rough answer counts.</div></div></div>
+
+    <div class="step"><div class="n">7</div><div class="body"><h3>Timing — turn "someday" into a season</h3><p>"Someday" is where dreams go to wait forever. Attaching your move to an actual season, even a loose one, changes everything.</p><div class="move"><b>First move:</b> Finish this out loud: "If I did this, I would want to go around ______."</div></div></div>
+
+    <div class="closer">You do not have to do all seven. Pick the single one that feels the most alive, or the most stuck, and take just its first move. That is how every person now living the life you are imagining actually began. Not with the whole staircase. <b>With one stair.</b> You are closer than it feels.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Which Life Fits You</h2>
+    <p class="lede">"Living abroad" is at least three different lives, and they feel completely different from the inside. Notice which one your body relaxes into, not which one sounds most impressive.</p>
+
+    <div class="life">
+      <h3>The Expat — a life with a base</h3>
+      <p class="feel">How it feels: like planting. Slow, then suddenly, home.</p>
+      <p>You pick one place and actually live there. A regular cafe, a doctor, a rhythm. You unpack all the way.</p>
+      <p><span class="fits">Fits you if:</span> you crave roots more than variety, and want to belong somewhere rather than visit everywhere.</p>
+    </div>
+    <div class="life">
+      <h3>The Nomad — a life with a backpack</h3>
+      <p class="feel">How it feels: like flying. Exhilarating, a little untethered, endlessly new.</p>
+      <p>You keep moving, following weather or visas or curiosity, trading a fixed home for a wide-open map.</p>
+      <p><span class="fits">Fits you if:</span> novelty feeds you and routine drains you, and no lease sounds like freedom, not fear.</p>
+    </div>
+    <div class="life">
+      <h3>The Slow Traveler — a life in seasons</h3>
+      <p class="feel">How it feels: like sampling. Unhurried, curious, options open.</p>
+      <p>Two or three places a year, long enough to feel each one, not long enough to fully uproot. The gentlest way in.</p>
+      <p><span class="fits">Fits you if:</span> you want more than a vacation but are not ready to fully commit, and would like to test the water first.</p>
+    </div>
+    <div class="note">You are not signing a contract. Almost everyone changes shape over time. Choose the one to <b>start</b> with, the one your body already leans toward. You can always change your mind once you are living instead of imagining.</div>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Your two journals</h2>
+    <p class="lede">The reflective heart of the kit. Self-guided, saved as you write, yours to keep.</p>
+    <div class="card">
+      <h3>Running Toward or Running Away</h3>
+      <p>The clarity work. Honest reflection on what you actually want, and why, before any of the logistics.</p>
+      <a class="btn" href="https://thegroundedexpat.com/read/running-toward-or-running-away-cvr4kpdcdt/">Open the journal</a>
+    </div>
+    <div class="card">
+      <h3>The Moving Abroad Planner</h3>
+      <p>The gentle structure. A place to hold the pieces as they move from daydream to plan.</p>
+      <a class="btn" href="https://thegroundedexpat.com/read/the-moving-abroad-planner-1g02woy0jg/">Open the planner</a>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Guided audios</h2>
+    <p class="lede">For the fears that keep people standing at the edge of this. Put your headphones in, and let me talk you through them.</p>
+    <div class="audio-item">
+      <h3>The Fear of Wanting This</h3>
+      <p class="meta">It is okay to want a different life. About 2 minutes.</p>
+      <audio controls preload="none" src="audio/01-the-fear-of-wanting-this.m4a"></audio>
+    </div>
+    <div class="audio-item">
+      <h3>Permission</h3>
+      <p class="meta">You do not need anyone's blessing. About 2 minutes.</p>
+      <audio controls preload="none" src="audio/02-permission.m4a"></audio>
+    </div>
+    <div class="audio-item">
+      <h3>You Don't Have to Have It All Figured Out</h3>
+      <p class="meta">The myth that keeps you standing still. About 2 minutes.</p>
+      <audio controls preload="none" src="audio/03-you-dont-have-to-have-it-figured-out.m4a"></audio>
+    </div>
+    <div class="note">Audio files drop into an <b>audio/</b> folder next to this page (filenames shown above). Until then, the players sit ready and empty.</div>
+  </section>
+
+  <section style="border-bottom:0">
+    <h2><span class="num">05</span>Reflect with me</h2>
+    <p class="lede">When you need to think out loud about all of this and there is no one around who really gets it, here is a gentle companion to reflect with, any hour, any day.</p>
+    <div class="card">
+      <h3>Reflect With Me</h3>
+      <p>A private, judgment-free space to talk through the wanting, the fear, and the what-ifs.</p>
+      <a class="btn" href="https://thegroundedexpat.com/reflect">Open Reflect With Me</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="brand" style="justify-content:center;color:var(--pine)"><span class="dot"></span> THE GROUNDED EXPAT</div>
+    <p>Charting the Course &middot; yours to keep &middot; thegroundedexpat.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
