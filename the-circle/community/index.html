@@ -94,6 +94,9 @@ a{color:inherit;text-decoration:none}
 .foot .links{display:flex;gap:20px;flex-wrap:wrap}
 @media(max-width:820px){.spaces{grid-template-columns:1fr 1fr}.steps,.vibe{grid-template-columns:1fr}.board{flex-direction:column}.board-side{width:100%;display:flex;flex-wrap:wrap;gap:4px}.board-side .bt,.board-side .bsub{width:100%}}
 @media(max-width:560px){.spaces{grid-template-columns:1fr}}
+/* centered layout (header + footer + board mockup left untouched) */
+.steps .step{flex-direction:column;align-items:center;text-align:center}
+.vibe{text-align:left}
 </style>
 </head>
 <body>
@@ -186,7 +189,7 @@ a{color:inherit;text-decoration:none}
   <div class="wrap center">
     <div class="kicker"><span class="seed"></span>The spaces</div>
     <h2>Six calm corners &mdash; and room to start your own.</h2>
-    <div class="spaces" style="text-align:left;">
+    <div class="spaces" style="text-align:center;">
       <div class="sp"><div class="ic">👋</div><h3>Welcome &amp; intros</h3><p>Everyone says hello. The easiest first post, and instant belonging.</p></div>
       <div class="sp"><div class="ic">🌱</div><h3>This month</h3><p>The current theme&rsquo;s hub &mdash; the workshop, the prompt, the conversation.</p></div>
       <div class="sp"><div class="ic">📚</div><h3>The workshops</h3><p>A thread for each workshop, so you can reflect and compare notes as you go.</p></div>
@@ -198,7 +201,7 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <section class="section">
-  <div class="wrap">
+  <div class="wrap center">
     <div class="kicker"><span class="seed"></span>How it works</div>
     <h2>No scheduled calls. No pressure. Just a place that&rsquo;s always there.</h2>
     <div class="steps">
@@ -211,7 +214,7 @@ a{color:inherit;text-decoration:none}
 </section>
 
 <section class="section s-alt" style="background:var(--pine);">
-  <div class="wrap">
+  <div class="wrap center">
     <div class="kicker" style="color:var(--clay);"><span class="seed"></span>The vibe</div>
     <h2 style="color:var(--cream);">What keeps it safe and warm.</h2>
     <ul class="vibe">

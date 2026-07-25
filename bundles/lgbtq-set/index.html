@@ -71,7 +71,15 @@ a{color:inherit;text-decoration:none}
 .jcard h3{font-family:var(--serif);font-weight:600;font-size:23px;margin:0;color:var(--pine);line-height:1.14}
 .jcard p{font-size:15px;color:var(--muted);margin:9px 0 0;line-height:1.55}
 .jcard a.more{margin-top:auto;padding-top:18px;font-weight:600;color:var(--clay);font-size:14.5px}
-@media(max-width:640px){.two{grid-template-columns:1fr}}</style>
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+/* centered layout (header/nav + footer + breadcrumb left untouched) */
+.hero .wrap,.section .wrap{text-align:center}
+.hero-grid{display:flex;flex-direction:column;align-items:center}
+.hero h1,.hero .lead,.hero .sub2{margin-left:auto;margin-right:auto}
+.buybox{position:static;max-width:420px;margin-left:auto;margin-right:auto}
+.buybox li{justify-content:center}
+.two{margin-left:auto;margin-right:auto}
+.jcard{align-items:center;text-align:center}</style>
 </head>
 <body>
 <header class="site-head"><div class="wrap">
