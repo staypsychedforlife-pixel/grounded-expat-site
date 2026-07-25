@@ -34,8 +34,34 @@ function json(obj, status) {
   });
 }
 
+// Best-effort per-IP rate limit via the Cache API (no binding needed). Caps a
+// runaway script against this open, key-spending endpoint. It is per-Cloudflare-
+// colo and per-minute; for stronger global protection add a Cloudflare dashboard
+// rate-limiting rule on /api/reflect. Fails open so a cache hiccup never breaks
+// the tool for a real reader.
+const RATE_LIMIT_PER_MIN = 12;
+async function rateLimited(request) {
+  try {
+    const ip = request.headers.get("CF-Connecting-IP") || "anon";
+    const minute = Math.floor(Date.now() / 60000);
+    const key = new Request("https://rl.internal/reflect/" + encodeURIComponent(ip) + "/" + minute);
+    const cache = caches.default;
+    const hit = await cache.match(key);
+    const count = hit ? (parseInt(await hit.text(), 10) || 0) : 0;
+    if (count >= RATE_LIMIT_PER_MIN) return true;
+    await cache.put(key, new Response(String(count + 1), { headers: { "Cache-Control": "max-age=60" } }));
+    return false;
+  } catch (err) {
+    return false;
+  }
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
+
+  if (await rateLimited(request)) {
+    return json({ error: "Please wait a moment before reflecting again." }, 429);
+  }
 
   let body;
   try {
