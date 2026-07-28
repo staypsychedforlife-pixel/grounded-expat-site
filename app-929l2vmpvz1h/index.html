@@ -38,12 +38,11 @@ h3{font-family:var(--serif);font-weight:600;font-size:18px;color:var(--pine)}
 .btn:hover{background:var(--pine)}.btn:disabled{opacity:.4;cursor:not-allowed}
 .btn.ghost{background:transparent;color:var(--pine);border:1.5px solid var(--pine)}
 .btn.ghost:hover{background:var(--pine);color:var(--cream)}
-.btn.sm{font-size:13.5px;padding:10px 18px;width:auto;display:inline-block;margin:0}
+.btn.sm{font-size:13px;padding:9px 16px;width:auto;display:inline-block;margin:0;flex:none}
 textarea,input{width:100%;border:1.5px solid var(--line);border-radius:13px;background:var(--cream);padding:14px;font-family:var(--sans);font-size:16px;color:var(--ink);resize:none;line-height:1.5}
 textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 ::placeholder{color:#A89F90}
 .sec-label{margin:26px 0 2px;display:flex;align-items:baseline;justify-content:space-between}
-/* moods */
 .moods{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:12px}
 .mood{background:var(--cream);border:1.5px solid var(--line);border-radius:13px;padding:12px 6px;text-align:center;cursor:pointer;transition:.15s;font-size:13px;font-weight:500;color:var(--pine)}
 .mood .em{display:block;font-size:22px;margin-bottom:5px}
@@ -54,14 +53,16 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .practice{background:var(--oat-2);border-radius:16px;padding:18px;margin-top:14px;border-left:5px solid var(--clay)}
 .practice p{font-size:15.5px;line-height:1.5;margin-top:6px}
 .echo{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--muted);border-left:3px solid var(--line);padding-left:13px;margin-top:12px;line-height:1.5}
-/* library list */
-.litem{display:flex;gap:14px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:15px;padding:14px 16px;margin-top:11px;cursor:pointer;transition:.12s}
-.litem:hover{border-color:var(--clay);transform:translateY(-1px)}
+.litem{display:flex;gap:14px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:15px;padding:14px 16px;margin-top:11px}
 .litem .ic{width:44px;height:44px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--oat-2)}
-.litem .t{font-family:var(--serif);font-weight:600;font-size:16px;color:var(--pine);line-height:1.15}
+.litem .t{font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--pine);line-height:1.15}
 .litem .d{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.35}
+.litem.open{cursor:pointer;transition:.12s}.litem.open:hover{border-color:var(--clay);transform:translateY(-1px)}
 .pill{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);flex:none}
-/* circle feed */
+.rhs{flex:none;text-align:right}
+.mprice{font-family:var(--serif);font-size:16px;color:var(--pine);display:block}
+.mprice s{color:var(--muted);font-size:12px}
+.mbadge{font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--clay)}
 .post{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-top:12px}
 .post .who{display:flex;align-items:center;gap:9px}
 .post .av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:14px;flex:none}
@@ -74,16 +75,10 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .banner .em{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#D9A48C}
 .banner h2{color:var(--cream);margin-top:6px}
 .banner p{color:#E6E9DF;font-size:14.5px;line-height:1.5;margin-top:8px}
-/* store */
-.price{font-family:var(--serif);font-size:19px;color:var(--pine)}
-.price s{color:var(--muted);font-size:14px;font-weight:400}
-.badge{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--cream);background:var(--sage);border-radius:100px;padding:4px 10px}
-.disc{font-size:11px;color:var(--muted);line-height:1.45;margin-top:22px;text-align:center;padding:0 4px}
-/* nav */
+.disc{font-size:11px;color:var(--muted);line-height:1.45;margin-top:24px;text-align:center;padding:0 4px}
 .nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:rgba(251,248,241,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:9px 0 calc(env(safe-area-inset-bottom) + 10px);z-index:5}
 .nav button{flex:1;background:none;border:none;font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
 .nav button.on{color:var(--clay)}.nav .ic{font-size:19px}
-/* overlays */
 .overlay{position:fixed;inset:0;background:var(--pine);z-index:20;display:flex;flex-direction:column;justify-content:center;padding:36px 30px calc(env(safe-area-inset-bottom) + 30px);max-width:440px;margin:0 auto}
 .overlay .em{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#D9A48C}
 .overlay h1{color:var(--cream);font-size:38px;line-height:1.06;margin-top:14px}
@@ -96,21 +91,19 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 </head>
 <body>
 
-<!-- ============ WELCOME / MEMBER GATE ============ -->
 <div class="overlay" id="gate">
   <div class="em">The Grounded Expat</div>
   <h1>The inner side of moving abroad, in your pocket.</h1>
-  <p>Daily reflection in Stephanie's voice, your full library of journals and workshops, and a real community — all in one grounded place.</p>
+  <p>Daily reflection in Stephanie's voice, a real community with monthly workshops, and your journals — all in one grounded place.</p>
   <button class="btn" id="signin" style="margin-top:32px">I'm a member — enter</button>
   <button class="btn ghost" id="join" style="border-color:#7d8b74;color:var(--cream)">Become a member · $19/mo</button>
-  <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:18px">Membership includes everything. Not therapy or a crisis service.</p>
+  <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:18px">The Circle, monthly workshops, two journals free, and 40% off the library. Not therapy or a crisis service.</p>
 </div>
 
-<!-- join explainer sheet -->
 <div class="sheet hide" id="join-sheet"><div class="inner grow">
-  <div class="eyebrow">Founding membership</div>
-  <h1 style="font-size:26px;margin-top:6px">Everything, for $19/mo.</h1>
-  <p class="sub">The whole workbook library · The Circle community with Stephanie · a new workshop each month · the daily reflection companion · app-only prices in the store.</p>
+  <div class="eyebrow">Founding membership · $19/mo</div>
+  <h1 style="font-size:25px;margin-top:6px">Everything the Circle is.</h1>
+  <p class="sub">The community + a live workshop each month · The Moving Abroad Planner &amp; The Relocation Journal, free · 40% off every other journal · the daily reflection companion.</p>
   <a class="btn" href="https://thegroundedexpat.com/the-circle" target="_blank">Join on the website →</a>
   <button class="btn ghost" id="join-close">Maybe later</button>
   <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px">You subscribe on the website, then sign in here and everything unlocks.</p>
@@ -119,8 +112,8 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 <div class="app hide" id="app">
   <div class="top"><div class="lhs"><span class="dot"></span><span class="brand">The Grounded Expat</span></div><div class="prof" id="prof">S</div></div>
 
-  <!-- ===== TODAY ===== -->
-  <div class="screen" id="s-today" data-tab>
+  <!-- TODAY -->
+  <div class="screen" id="s-today">
     <h1 id="greeting">Hello.</h1>
     <div class="sub" id="today-date"></div>
     <div class="card">
@@ -130,12 +123,12 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
       <textarea id="entry" rows="3" style="margin-top:14px" placeholder="What's on your mind? A sentence is plenty."></textarea>
       <button class="btn" id="reflect-btn" disabled>Reflect with me</button>
     </div>
-    <div class="sec-label"><h3>Pick up where you left off</h3></div>
-    <div class="litem" data-open="w-landing"><div class="ic">🕊️</div><div style="flex:1"><div class="t">The Circle · this month</div><div class="d">Homesickness — loving home without living there.</div></div><span class="pill">Open</span></div>
+    <div class="sec-label"><h3>This month in the Circle</h3></div>
+    <div class="litem open" data-open="workshop"><div class="ic">🕊️</div><div style="flex:1"><div class="t">Homesick: loving home without living there</div><div class="d">This month's workshop — open it, then bring it to the circle.</div></div><span class="pill">Open</span></div>
     <p class="disc">A space for reflection by a licensed clinical social worker. Not therapy or a crisis service. In crisis, contact local emergency services or a crisis line.</p>
   </div>
 
-  <!-- ===== REFLECT (sub of today) ===== -->
+  <!-- REFLECT -->
   <div class="screen hide" id="s-reflect">
     <h1>A moment with it.</h1>
     <div class="echo" id="echo"></div>
@@ -146,38 +139,39 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
     <button class="btn ghost" id="skip-btn">Not now</button>
   </div>
 
-  <!-- ===== CRISIS ===== -->
+  <!-- CRISIS -->
   <div class="screen hide" id="s-crisis">
     <div class="qcard grow" style="background:#3A2A24">
       <h2 style="color:var(--cream)">I want to pause here with you.</h2>
-      <p style="color:#F0E6DD;font-size:15px;line-height:1.55;margin-top:12px">What you wrote sounds really heavy, and you deserve real support — more than an app can give. Please reach out now. You are not a burden, and you do not have to hold this alone.</p>
+      <p style="color:#F0E6DD;font-size:15px;line-height:1.55;margin-top:12px">What you wrote sounds really heavy, and you deserve real support — more than an app can give. Please reach out now. You are not a burden, and you don't have to hold this alone.</p>
     </div>
     <a class="btn" href="tel:988" style="margin-top:14px">Call or text 988 · Crisis Lifeline (US)</a>
     <a class="btn ghost" href="https://findahelpline.com" target="_blank">Find a helpline in your country</a>
     <button class="btn ghost" id="crisis-back">I'm okay for now, take me back</button>
   </div>
 
-  <!-- ===== LIBRARY ===== -->
-  <div class="screen hide" id="s-library" data-tab>
-    <h1>Your library.</h1>
-    <div class="sub">Everything's included in your membership. Tap any title to open it.</div>
-    <div class="sec-label"><h3>Journals &amp; workbooks</h3><span class="pill">Included</span></div>
-    <div id="lib-workbooks"></div>
-    <div class="sec-label"><h3>The Circle workshops</h3><span class="pill">12</span></div>
-    <div id="lib-workshops"></div>
-    <div class="sec-label"><h3>Free journals</h3></div>
+  <!-- LIBRARY -->
+  <div class="screen hide" id="s-library">
+    <h1>The library.</h1>
+    <div class="sub">Two journals free with your membership, four free for everyone, and 40% off the rest.</div>
+    <div class="sec-label"><h3>Free with your membership</h3><span class="pill">Yours</span></div>
+    <div id="lib-member"></div>
+    <div class="sec-label"><h3>Free journals</h3><span class="pill">For everyone</span></div>
     <div id="lib-free"></div>
+    <div class="sec-label"><h3>The full library</h3><span class="pill">40% member price</span></div>
+    <div id="lib-paid"></div>
+    <p class="disc">Purchases are handled securely on thegroundedexpat.com — your 40% member price is applied at checkout. Journals you buy are yours to keep.</p>
   </div>
 
-  <!-- ===== READER ===== -->
+  <!-- READER -->
   <div class="screen hide reader" id="s-reader">
     <button class="btn ghost sm" id="reader-back" style="margin-bottom:8px">← Back</button>
     <h1 id="reader-title"></h1>
     <div class="rx" id="reader-body"></div>
   </div>
 
-  <!-- ===== CIRCLE ===== -->
-  <div class="screen hide" id="s-circle" data-tab>
+  <!-- CIRCLE -->
+  <div class="screen hide" id="s-circle">
     <h1>The Circle.</h1>
     <div class="sub">You don't have to do this alone. A warm, private community, hosted by Stephanie.</div>
     <div class="banner"><div class="em">This month · workshop</div><h2>Homesick: loving home without living there</h2><p>Missing home isn't weakness. It's grief, and grief is love with nowhere to go. Open the workshop, then bring what it stirred up back here.</p><button class="btn sm" id="open-workshop" style="margin-top:14px;background:var(--clay)">Open the workshop</button></div>
@@ -188,114 +182,91 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
     <div id="feed"></div>
   </div>
 
-  <!-- ===== STORE ===== -->
-  <div class="screen hide" id="s-store" data-tab>
-    <h1>The store.</h1>
-    <div class="sub">You already have the full library. This is for owning a title forever or gifting one — at app-only prices.</div>
-    <div id="store-grid"></div>
-    <p class="disc">Purchases are handled securely on thegroundedexpat.com. App-only pricing is applied automatically at checkout.</p>
+  <!-- ME -->
+  <div class="screen hide" id="s-me">
+    <h1>You.</h1>
+    <div class="banner"><div class="em">Founding member 🌿</div><h2>$19/mo · everything active</h2><p>The Circle, monthly workshops, your two free journals, and 40% off the library.</p></div>
+    <div class="sec-label"><h3>Your reflection timeline</h3></div>
+    <div class="sub">Private to you, saved on this device.</div>
+    <div id="tl-list"></div>
+    <a class="btn ghost" href="https://thegroundedexpat.com/the-circle" target="_blank" style="margin-top:20px">Manage membership</a>
+    <button class="btn ghost" id="signout">Sign out</button>
   </div>
 
   <div class="nav">
     <button class="on" data-go="today"><span class="ic">🕊️</span>Today</button>
     <button data-go="library"><span class="ic">📖</span>Library</button>
     <button data-go="circle"><span class="ic">💬</span>Circle</button>
-    <button data-go="store"><span class="ic">🛍️</span>Store</button>
+    <button data-go="me"><span class="ic">👤</span>Me</button>
   </div>
 </div>
 
-<!-- profile sheet -->
-<div class="sheet hide" id="prof-sheet"><div class="inner grow">
-  <div class="eyebrow">Your membership</div>
-  <h1 style="font-size:24px;margin-top:6px">Founding member 🌿</h1>
-  <p class="sub">$19/mo · everything unlocked · manage on the website.</p>
-  <button class="btn ghost" id="view-timeline">My reflection timeline</button>
-  <button class="btn ghost" id="prof-close">Close</button>
-</div></div>
-
-<!-- timeline sheet -->
-<div class="sheet hide" id="tl-sheet"><div class="inner grow" style="max-height:80dvh;overflow-y:auto">
-  <div class="eyebrow">Private to you</div><h1 style="font-size:24px;margin-top:6px">Your timeline</h1>
-  <div id="tl-list"></div>
-  <button class="btn ghost" id="tl-close" style="margin-top:16px">Close</button>
-</div></div>
-
 <script>
-const LIVE=false; // flip true once /api/reflect is deployed
-const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+const LIVE=false;
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const store={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
 
-// ---------- data ----------
 const MOODS=[{id:"bright",label:"Bright",em:"☀️",c:"#C99A3A"},{id:"okay",label:"Okay",em:"🌤️",c:"#8C9B82"},{id:"tender",label:"Tender",em:"🌸",c:"#C2674A"},{id:"homesick",label:"Homesick",em:"🏠",c:"#7A8C9B"},{id:"heavy",label:"Overwhelmed",em:"🌊",c:"#5B6E7A"},{id:"numb",label:"Numb",em:"🌫️",c:"#9A968C"}];
 const PRACTICE={bright:"Let yourself have it. Pause for ten slow seconds and take it in. Joy counts too, and it's worth keeping.",okay:"Notice one ordinary thing that's quietly working today. Settling is built from small, unremarkable days like this.",tender:"A hand on your chest, and let this be a soft day. You don't have to feel okay to be doing okay.",homesick:"Name it plainly: I miss home. Grief is just love with nowhere to go. Then send one small message to someone who feels like home.",heavy:"Box breathing: in for four, hold four, out four, hold four. Three rounds. You're not behind, you're adjusting.",numb:"Feet flat on the floor. Name five things you can see. Sometimes the way back in is through the body, not the mind."};
 const QBANK={bright:["What made today feel good, and how might you carry a little of it forward?","Where did you feel most like yourself today?"],okay:["What's one small thing that helped today feel okay?","What did you get through today that you're not giving yourself credit for?"],tender:["What would being gentle with yourself look like right now?","If a dear friend felt this, what would you want them to hear?"],homesick:["What is it about home you're missing most right now?","When you picture home, what small thing comes first?"],heavy:["If you could set down just one thing today, what would you choose?","What is asking the most of you right now?"],numb:["When did you last feel like yourself, even a little?","What might you need that you haven't let yourself ask for?"]};
 const CRISIS=/\b(kill(ing)? myself|suicid|end my life|want to die|don'?t want to (live|be here|be alive)|better off dead|hurt(ing)? myself|harm(ing)? myself|self[ -]?harm|cutting myself|hitting me|hits me|being abused|abusing me|not safe at home|i'?m not safe|can'?t go on)\b/i;
 
-const WORKBOOKS=[["The Relocation Journal","📓","The whole arc of moving abroad."],["The Partner's Journal","🤍","For the one who moved for someone else."],["The Culture Shock Workbook","🌀","Understand it, settle your nervous system."],["The Moving Abroad Planner","🧭","The checklists and the inner prep."],["The Expat Marriage Workbook","💞","Holding a relationship together across a move."],["Finding Your People Abroad","🫂","On loneliness and building your people."],["The Third-Culture Family Workbook","👨‍👩‍👧","For expat parents and their kids."],["The Expat Burnout Workbook","🕯️","For when you're running on empty."],["The LGBTQ+ Abroad Journal","🌈","Your identity, your safety, your belonging."],["The LGBTQ+ Couples Workbook","💐","Two of you, building a life abroad."]];
-const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shock for real."],["Homesick","Loving home without living there."],["Who Am I Here?","Identity in transition."],["Finding Your People","The slow work of belonging."],["Beginner Again","Being new isn't being incapable."],["The Relationship Strain","When it's not about the dishes."],["The Trailing Partner","Reclaiming your own life."],["Running on Empty","The hidden engine you're running."],["From Surviving to Belonging","Wanting a real life here."],["Far From Home for the Holidays","Missing home and being here."],["What's Next","Wherever you go from here."]];
+// free WITH membership (the taster: less-favored titles)
+const MEMBER_FREE=[["The Moving Abroad Planner","🧭","The checklists and the inner prep."],["The Relocation Journal","📓","The whole arc of moving abroad."]];
+// free for EVERYONE (lead-magnet journals)
 const FREE=[["Your First 7 Days Abroad","🌱","A gentle first week."],["The Month-3 Dip","🌊","For the hardest stretch."],["Making Friends Abroad","🫂","Starting from zero."],["The Goodbye Journal","🍃","For the leaving."]];
-const STOREITEMS=[["The Relocation Journal",39,29],["The Culture Shock Workbook",39,29],["The Moving Abroad Planner",39,29],["The Expat Marriage Workbook",49,35],["The Complete Library (all 10)",129,79]];
+// paid — members get 40% off. [title, icon, desc, regular$]
+const PAID=[["The Culture Shock Workbook","🌀","Understand it, settle your nervous system.",39],["Finding Your People Abroad","🤝","On loneliness and building your people.",39],["The Partner's Journal","🤍","For the one who moved for someone else.",39],["The Expat Marriage Workbook","💞","Holding a relationship together across a move.",49],["The Third-Culture Family Workbook","👨‍👩‍👧","For expat parents and their kids.",49],["The Expat Burnout Workbook","🕯️","For when you're running on empty.",39],["The LGBTQ+ Abroad Journal","🌈","Your identity, your safety, your belonging.",39],["The LGBTQ+ Couples Workbook","💐","Two of you, building a life abroad.",49]];
+const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shock for real."],["Homesick","Loving home without living there."],["Who Am I Here?","Identity in transition."],["Finding Your People","The slow work of belonging."],["Beginner Again","Being new isn't being incapable."],["The Relationship Strain","When it's not about the dishes."],["The Trailing Partner","Reclaiming your own life."],["Running on Empty","The hidden engine you're running."],["From Surviving to Belonging","Wanting a real life here."],["Far From Home for the Holidays","Missing home and being here."],["What's Next","Wherever you go from here."]];
 const SPACES=["Welcome","This month","The workshops","What I'm navigating","Small wins","Ask Stephanie"];
 const SEED_FEED=[["Stephanie","#2F4539","Host · 2h","New here? Introduce yourself in Welcome — where are you, and what brought you abroad? I read every one. 🌿"],["Maya","#C2674A","5h","Month three hit me like a truck this week. Reading the Homesick workshop and finally crying about it helped more than I expected."],["Jonas","#8C9B82","1d","Small win: I ordered coffee in the local language and the barista actually understood me. It's the little things."]];
 
-// ---------- render ----------
+const mp=r=>Math.round(r*0.6);
 function greet(){const h=new Date().getHours();$("#greeting").textContent=h<12?"Good morning.":h<18?"Good afternoon.":"Good evening.";$("#today-date").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})}
 function renderMoods(){$("#moods").innerHTML=MOODS.map(m=>`<div class="mood" data-m="${m.id}"><span class="em">${m.em}</span>${m.label}</div>`).join("");$$(".mood").forEach(el=>el.onclick=()=>{sel=el.dataset.m;$$(".mood").forEach(x=>x.classList.toggle("sel",x===el));updBtn()})}
-function litem(t,ic,d,key,pill="Open"){return `<div class="litem" data-open="${key}"><div class="ic">${ic}</div><div style="flex:1"><div class="t">${t}</div><div class="d">${d}</div></div><span class="pill">${pill}</span></div>`}
+
+function openItem(ic,t,d,key){return `<div class="litem open" data-open="${key}"><div class="ic">${ic}</div><div style="flex:1"><div class="t">${t}</div><div class="d">${d}</div></div><span class="pill">Open</span></div>`}
+function buyItem(ic,t,d,reg){return `<div class="litem"><div class="ic">${ic}</div><div style="flex:1"><div class="t">${t}</div><div class="d">${d}</div></div><div class="rhs"><span class="mprice">$${mp(reg)} <s>$${reg}</s></span><span class="mbadge">Get it →</span></div></div>`}
 function renderLibrary(){
- $("#lib-workbooks").innerHTML=WORKBOOKS.map((w,i)=>litem(w[0],w[1],w[2],"wb-"+i)).join("");
- $("#lib-workshops").innerHTML=WORKSHOPS.map((w,i)=>litem(w[0],"🕊️",w[1],"w-"+i)).join("");
- $("#lib-free").innerHTML=FREE.map((w,i)=>litem(w[0],w[1],w[2],"fr-"+i)).join("");
- $$("[data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
+ $("#lib-member").innerHTML=MEMBER_FREE.map((w,i)=>openItem(w[1],w[0],w[2],"mf-"+i)).join("");
+ $("#lib-free").innerHTML=FREE.map((w,i)=>openItem(w[1],w[0],w[2],"fr-"+i)).join("");
+ $("#lib-paid").innerHTML=PAID.map(w=>buyItem(w[1],w[0],w[2],w[3])).join("");
+ $("#lib-member [data-open],#lib-free [data-open]").length;
+ $$("#s-library [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
+ $$("#lib-paid .litem").forEach(el=>el.onclick=()=>window.open("https://thegroundedexpat.com/journals","_blank"));
 }
-function renderCircle(){
- $("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");
- renderFeed();
-}
-function renderFeed(){
- const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(p=>({nm:p[0],c:p[1],mt:p[2],bd:p[3]})));
- $("#feed").innerHTML=posts.map(p=>`<div class="post"><div class="who"><span class="av" style="background:${p.c||'#8C9B82'}">${(p.nm||'You')[0]}</span><div><div class="nm">${p.nm||'You'}</div><div class="mt">${p.mt||'just now'}</div></div></div><div class="bd">${(p.bd||'').replace(/</g,'&lt;')}</div></div>`).join("");
-}
-function renderStore(){
- $("#store-grid").innerHTML=STOREITEMS.map(s=>`<div class="card" style="display:flex;justify-content:space-between;align-items:center;gap:14px"><div><h3>${s[0]}</h3><div style="margin-top:6px"><span class="price">$${s[2]} <s>$${s[1]}</s></span> <span class="badge">app price</span></div></div><a class="btn sm" href="https://thegroundedexpat.com/journals" target="_blank" style="background:var(--clay)">Get it</a></div>`).join("");
-}
+function renderCircle(){$("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");renderFeed()}
+function renderFeed(){const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(p=>({nm:p[0],c:p[1],mt:p[2],bd:p[3]})));$("#feed").innerHTML=posts.map(p=>`<div class="post"><div class="who"><span class="av" style="background:${p.c||'#8C9B82'}">${(p.nm||'You')[0]}</span><div><div class="nm">${p.nm||'You'}</div><div class="mt">${p.mt||'just now'}</div></div></div><div class="bd">${(p.bd||'').replace(/</g,'&lt;')}</div></div>`).join("")}
 function openReader(key){
  let title="",body="";
- if(key.startsWith("wb-")){const w=WORKBOOKS[+key.slice(3)];title=w[0];body=w[2]+" This is a guided, self-saving journal. In the full app it opens right here, page by page, with your writing saved privately to your device."}
- else if(key.startsWith("w-")&&key!=="w-landing"){const w=WORKSHOPS[+key.slice(2)]||WORKSHOPS[2];title="The Circle · "+w[0];body=w[1]+" A guided workshop in Stephanie's voice, with reflective prompts and a practice, ending in a discussion prompt for the circle."}
- else if(key==="w-landing"){title="The Circle · Homesick";body="This month's workshop: loving home without living there. Opens here in the full app."}
- else if(key.startsWith("fr-")){const w=FREE[+key.slice(3)];title=w[0];body=w[2]+" A short, free reflective journal — yours to keep."}
- $("#reader-title").textContent=title;$("#reader-body").textContent=body;showScreen("reader");
-}
-// timeline
-function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:14px">No check-ins yet. Your first one will land here.</p>`}
+ if(key.startsWith("mf-")){const w=MEMBER_FREE[+key.slice(3)];title=w[0];body=w[2]+" Free with your membership. This is a guided, self-saving journal — in the full app it opens right here, page by page, with your writing saved privately to your device while you're a member."}
+ else if(key.startsWith("fr-")){const w=FREE[+key.slice(3)];title=w[0];body=w[2]+" A short, free reflective journal, yours to keep."}
+ else if(key==="workshop"){title="The Circle · Homesick";body="This month's workshop: loving home without living there. A guided session in Stephanie's voice with reflective prompts and a practice, ending in a discussion prompt for the circle. Opens here in the full app."}
+ $("#reader-title").textContent=title;$("#reader-body").textContent=body;showScreen("reader")}
+function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`}
 
-// ---------- flow ----------
 let sel=null,draft="";
 function updBtn(){$("#reflect-btn").disabled=!(sel&&$("#entry").value.trim().length>1)}
-function showScreen(id){["today","reflect","crisis","library","reader","circle","store"].forEach(s=>$("#s-"+s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
-function showTab(go){document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===go));showScreen(go);if(go==="circle")renderFeed()}
+function showScreen(id){["today","reflect","crisis","library","reader","circle","me"].forEach(s=>$("#s-"+s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
+function showTab(go){document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===go));showScreen(go);if(go==="circle")renderFeed();if(go==="me")renderTimeline()}
 async function localQ(m){const q=QBANK[m]||QBANK.okay;return q[Math.floor(Math.random()*q.length)]}
 async function getQ(t,m){if(!LIVE)return localQ(m);try{const r=await fetch("/api/reflect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({entryText:t})});const d=await r.json();return d.crisis?"__CRISIS__":(d.question||localQ(m))}catch{return localQ(m)}}
 async function doReflect(){const t=$("#entry").value.trim();draft=t;if(CRISIS.test(t)){showScreen("crisis");return}$("#echo").textContent="“"+t+"”";$("#practice-text").textContent=PRACTICE[sel]||PRACTICE.okay;$("#question").textContent="…";showScreen("reflect");const q=await getQ(t,sel);if(q==="__CRISIS__"){showScreen("crisis");return}$("#question").textContent=q}
-function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:draft,response:$("#response").value.trim()});store.set("tge-entries",a);sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("today")}
+function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:draft,response:$("#response").value.trim()});store.set("tge-entries",a);sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
 
-// ---------- wire ----------
-function boot(){greet();renderMoods();renderLibrary();renderCircle();renderStore();
+function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#entry").addEventListener("input",updBtn);
  $("#reflect-btn").onclick=doReflect;$("#save-btn").onclick=saveRef;
  $("#skip-btn").onclick=()=>{sel=null;$("#entry").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("today")};
  $("#crisis-back").onclick=()=>showTab("today");
  $("#reader-back").onclick=()=>showTab(document.querySelector('.nav button.on').dataset.go);
- $("#open-workshop").onclick=()=>openReader("w-2");
+ $("#open-workshop").onclick=()=>openReader("workshop");
+ $$("#s-today [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
  $("#post-btn").onclick=()=>{const v=$("#post-box").value.trim();if(!v)return;const f=store.get("tge-feed",[]);f.unshift({nm:"You",c:"#C2674A",mt:"just now",bd:v});store.set("tge-feed",f);$("#post-box").value="";renderFeed()};
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
- $("#prof").onclick=()=>$("#prof-sheet").classList.remove("hide");
- $("#prof-close").onclick=()=>$("#prof-sheet").classList.add("hide");
- $("#view-timeline").onclick=()=>{$("#prof-sheet").classList.add("hide");renderTimeline();$("#tl-sheet").classList.remove("hide")};
- $("#tl-close").onclick=()=>$("#tl-sheet").classList.add("hide");
+ $("#prof").onclick=()=>showTab("me");
+ $("#signout").onclick=()=>{localStorage.removeItem("tge-member");location.reload()};
 }
-// gate
 $("#signin").onclick=()=>{store.set("tge-member","1");$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()};
 $("#join").onclick=()=>$("#join-sheet").classList.remove("hide");
 $("#join-close").onclick=()=>$("#join-sheet").classList.add("hide");
