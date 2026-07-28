@@ -97,10 +97,14 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <div class="em">The Grounded Expat</div>
   <h1>The inner side of moving abroad, in your pocket.</h1>
   <p>Daily reflection in Stephanie's voice, a real community with monthly workshops, and your journals — all in one grounded place.</p>
-  <div id="login-form" style="margin-top:30px">
+  <div id="login-choose" style="margin-top:30px">
+    <button class="btn" id="go-join">Become a member · $19/mo</button>
+    <button class="btn ghost" id="go-signin" style="border-color:#7d8b74;color:var(--cream)">Already a member? Sign in</button>
+  </div>
+  <div id="login-form" class="hide" style="margin-top:30px">
     <input id="login-email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--cream)">
     <button class="btn" id="send-link" style="margin-top:12px">Email me a sign-in link</button>
-    <button class="btn ghost" id="join" style="border-color:#7d8b74;color:var(--cream)">Become a member · $19/mo</button>
+    <button class="btn ghost" id="go-back" style="border-color:#7d8b74;color:var(--cream)">Not a member yet? Join</button>
     <p id="login-err" class="hide" style="color:#E7B7A6;font-size:13px;text-align:center;margin-top:12px"></p>
   </div>
   <div id="login-sent" class="hide" style="margin-top:30px">
@@ -292,13 +296,15 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#signout").onclick=()=>{localStorage.removeItem("tge-session");location.reload()};
 }
 function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()}
-function gateState(s){["form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
+function gateState(s){["choose","form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
 async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
+$("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
+$("#go-signin").onclick=()=>{$("#login-err").classList.add("hide");gateState("form")};
+$("#go-back").onclick=()=>gateState("choose");
 $("#send-link").onclick=async()=>{const email=($("#login-email").value||"").trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){$("#login-err").textContent="Please enter a valid email.";$("#login-err").classList.remove("hide");return}$("#login-err").classList.add("hide");gateState("loading");try{await fetch("/api/auth/request",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})})}catch{}$("#sent-to").textContent=email;gateState("sent")};
 $("#login-again").onclick=()=>gateState("form");
-$("#join").onclick=()=>$("#join-sheet").classList.remove("hide");
 $("#join-close").onclick=()=>$("#join-sheet").classList.add("hide");
-(async()=>{const url=new URL(location.href);const t=url.searchParams.get("token");if(t){gateState("loading");try{const r=await fetch("/api/auth/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:t})});const d=await r.json();if(d.ok&&d.session){localStorage.setItem("tge-session",d.session);history.replaceState({},"",url.pathname);enterApp();return}}catch{}history.replaceState({},"",url.pathname);gateState("form");$("#login-err").textContent="That link expired or was already used — enter your email for a fresh one.";$("#login-err").classList.remove("hide");return}if(await checkSession()){enterApp();return}gateState("form")})();
+(async()=>{const url=new URL(location.href);const t=url.searchParams.get("token");if(t){gateState("loading");try{const r=await fetch("/api/auth/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:t})});const d=await r.json();if(d.ok&&d.session){localStorage.setItem("tge-session",d.session);history.replaceState({},"",url.pathname);enterApp();return}}catch{}history.replaceState({},"",url.pathname);gateState("form");$("#login-err").textContent="That link expired or was already used — enter your email for a fresh one.";$("#login-err").classList.remove("hide");return}if(await checkSession()){enterApp();return}gateState("choose")})();
 </script>
 </body>
 </html>
