@@ -202,7 +202,7 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 </div>
 
 <script>
-const LIVE=false;
+const LIVE=true;
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const store={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
 
