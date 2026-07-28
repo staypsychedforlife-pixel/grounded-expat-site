@@ -89,6 +89,7 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .sheet .inner{background:var(--oat);width:100%;max-width:440px;border-radius:24px 24px 0 0;padding:26px 24px calc(env(safe-area-inset-bottom) + 24px)}
 .grow{animation:g .22s ease}@keyframes g{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .reader h1{font-size:26px}.reader .rx{font-size:15.5px;line-height:1.6;color:var(--ink);margin-top:16px}
+.reader iframe{width:100%;border:0;border-radius:14px;background:#fff;height:calc(100vh - env(safe-area-inset-top) - 150px);min-height:420px;margin-top:10px;box-shadow:0 1px 10px rgba(36,53,41,.08)}
 </style>
 </head>
 <body>
@@ -189,6 +190,7 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
     <button class="btn ghost sm" id="reader-back" style="margin-bottom:8px">← Back</button>
     <h1 id="reader-title"></h1>
     <div class="rx" id="reader-body"></div>
+    <iframe id="reader-frame" class="hide" title="Journal" referrerpolicy="no-referrer"></iframe>
   </div>
 
   <!-- CIRCLE -->
@@ -197,6 +199,8 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
     <div class="sub">You don't have to do this alone. A warm, private community, hosted by Stephanie.</div>
     <div class="banner"><div class="em">This month · workshop</div><h2>Homesick: loving home without living there</h2><p>Missing home isn't weakness. It's grief, and grief is love with nowhere to go. Open the workshop, then bring what it stirred up back here.</p><button class="btn sm" id="open-workshop" style="margin-top:14px;background:var(--clay)">Open the workshop</button></div>
     <div class="chip-row" id="spaces"></div>
+    <div class="sec-label"><h3>The workshops</h3><span class="pill">Members</span></div>
+    <div id="ws-list"></div>
     <div class="sec-label"><h3>The conversation</h3></div>
     <textarea id="post-box" rows="2" placeholder="Share what you're navigating…"></textarea>
     <button class="btn sm" id="post-btn" style="margin-top:8px">Post to the circle</button>
@@ -256,14 +260,31 @@ function renderLibrary(){
  $$("#s-library [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
  $$("#lib-paid .litem").forEach(el=>el.onclick=()=>window.open("https://thegroundedexpat.com/journals","_blank"));
 }
-function renderCircle(){$("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");renderFeed()}
+function renderCircle(){$("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");renderWorkshops();renderFeed()}
 function renderFeed(){const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(p=>({nm:p[0],c:p[1],mt:p[2],bd:p[3]})));$("#feed").innerHTML=posts.map(p=>`<div class="post"><div class="who"><span class="av" style="background:${p.c||'#8C9B82'}">${(p.nm||'You')[0]}</span><div><div class="nm">${p.nm||'You'}</div><div class="mt">${p.mt||'just now'}</div></div></div><div class="bd">${(p.bd||'').replace(/</g,'&lt;')}</div></div>`).join("")}
+// content wiring — free journals are existing public pages; member-free + workshops are gated.
+const MEMBER_SLUGS=["moving-abroad-planner","relocation-journal"];
+const FREE_URLS=["/first-7-days/","/month-3-dip/","/making-friends/","/goodbye-journal/"];
+function readerMsg(t,b){$("#reader-title").textContent=t;const f=$("#reader-frame");f.classList.add("hide");f.removeAttribute("srcdoc");f.removeAttribute("src");$("#reader-body").textContent=b;$("#reader-body").classList.remove("hide")}
+function readerSrc(t,src){$("#reader-title").textContent=t;$("#reader-body").classList.add("hide");const f=$("#reader-frame");f.removeAttribute("srcdoc");f.src=src;f.classList.remove("hide")}
+async function readerGated(t,slug){
+ $("#reader-title").textContent=t;$("#reader-body").textContent="Opening…";$("#reader-body").classList.remove("hide");$("#reader-frame").classList.add("hide");
+ const sess=localStorage.getItem("tge-session")||"";
+ try{
+  const r=await fetch("/api/content?slug="+encodeURIComponent(slug),{headers:{Authorization:"Bearer "+sess}});
+  if(r.status===403){readerMsg(t,"This is part of your membership. It looks like your membership isn't active right now — renew on the website and it opens right back up.");return}
+  if(r.status===401){readerMsg(t,"Please sign in again to open this.");return}
+  if(!r.ok){readerMsg(t,"I couldn't open this just now. Check your connection and try again in a moment.");return}
+  const html=await r.text();const f=$("#reader-frame");f.removeAttribute("src");f.srcdoc=html;$("#reader-body").classList.add("hide");f.classList.remove("hide");
+ }catch{readerMsg(t,"I couldn't open this just now. Check your connection and try again in a moment.")}
+}
 function openReader(key){
- let title="",body="";
- if(key.startsWith("mf-")){const w=MEMBER_FREE[+key.slice(3)];title=w[0];body=w[2]+" Free with your membership. This is a guided, self-saving journal — in the full app it opens right here, page by page, with your writing saved privately to your device while you're a member."}
- else if(key.startsWith("fr-")){const w=FREE[+key.slice(3)];title=w[0];body=w[2]+" A short, free reflective journal, yours to keep."}
- else if(key==="workshop"){title="The Circle · Homesick";body="This month's workshop: loving home without living there. A guided session in Stephanie's voice with reflective prompts and a practice, ending in a discussion prompt for the circle. Opens here in the full app."}
- $("#reader-title").textContent=title;$("#reader-body").textContent=body;showScreen("reader")}
+ showScreen("reader");window.scrollTo(0,0);
+ if(key.startsWith("mf-")){const i=+key.slice(3);readerGated(MEMBER_FREE[i][0],MEMBER_SLUGS[i])}
+ else if(key.startsWith("fr-")){const i=+key.slice(3);readerSrc(FREE[i][0],FREE_URLS[i])}
+ else if(key.startsWith("ws-")){const i=+key.slice(3);readerGated("The Circle · "+WORKSHOPS[i][0],"workshop-"+String(i+1).padStart(2,"0"))}
+}
+function renderWorkshops(){$("#ws-list").innerHTML=WORKSHOPS.map((w,i)=>openItem("🕯️",w[0],w[1],"ws-"+i)).join("");$$("#ws-list [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open))}
 function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`}
 
 let sel=null,entryText="",convo=[],aiTurns=0;const MAX_Q=3;
@@ -288,7 +309,7 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#skip-btn").onclick=()=>{sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("today")};
  $("#crisis-back").onclick=()=>showTab("today");
  $("#reader-back").onclick=()=>showTab(document.querySelector('.nav button.on').dataset.go);
- $("#open-workshop").onclick=()=>openReader("workshop");
+ $("#open-workshop").onclick=()=>openReader("ws-2");
  $$("#s-today [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
  $("#post-btn").onclick=()=>{const v=$("#post-box").value.trim();if(!v)return;const f=store.get("tge-feed",[]);f.unshift({nm:"You",c:"#C2674A",mt:"just now",bd:v});store.set("tge-feed",f);$("#post-box").value="";renderFeed()};
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
