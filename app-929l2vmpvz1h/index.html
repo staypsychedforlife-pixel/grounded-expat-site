@@ -97,9 +97,18 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <div class="em">The Grounded Expat</div>
   <h1>The inner side of moving abroad, in your pocket.</h1>
   <p>Daily reflection in Stephanie's voice, a real community with monthly workshops, and your journals — all in one grounded place.</p>
-  <button class="btn" id="signin" style="margin-top:32px">I'm a member — enter</button>
-  <button class="btn ghost" id="join" style="border-color:#7d8b74;color:var(--cream)">Become a member · $19/mo</button>
-  <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:18px">The Circle, monthly workshops, two journals free, and 40% off the library. Not therapy or a crisis service.</p>
+  <div id="login-form" style="margin-top:30px">
+    <input id="login-email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--cream)">
+    <button class="btn" id="send-link" style="margin-top:12px">Email me a sign-in link</button>
+    <button class="btn ghost" id="join" style="border-color:#7d8b74;color:var(--cream)">Become a member · $19/mo</button>
+    <p id="login-err" class="hide" style="color:#E7B7A6;font-size:13px;text-align:center;margin-top:12px"></p>
+  </div>
+  <div id="login-sent" class="hide" style="margin-top:30px">
+    <div class="qcard" style="background:rgba(255,255,255,.07)"><div class="q" style="font-size:19px">Check your email 🌿</div><p style="color:#E6E9DF;font-size:14.5px;line-height:1.5;margin-top:10px">I sent a one-tap sign-in link to <b id="sent-to"></b>. It works once and expires in 15 minutes.</p></div>
+    <button class="btn ghost" id="login-again" style="border-color:#7d8b74;color:var(--cream);margin-top:14px">Use a different email</button>
+  </div>
+  <div id="login-loading" class="hide" style="margin-top:34px;text-align:center;color:#E6E9DF;font-family:var(--serif);font-style:italic;font-size:18px">Signing you in…</div>
+  <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:22px">Members subscribe on the website, then sign in here. Not therapy or a crisis service.</p>
 </div>
 
 <div class="sheet hide" id="join-sheet"><div class="inner grow">
@@ -280,12 +289,16 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#post-btn").onclick=()=>{const v=$("#post-box").value.trim();if(!v)return;const f=store.get("tge-feed",[]);f.unshift({nm:"You",c:"#C2674A",mt:"just now",bd:v});store.set("tge-feed",f);$("#post-box").value="";renderFeed()};
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
  $("#prof").onclick=()=>showTab("me");
- $("#signout").onclick=()=>{localStorage.removeItem("tge-member");location.reload()};
+ $("#signout").onclick=()=>{localStorage.removeItem("tge-session");location.reload()};
 }
-$("#signin").onclick=()=>{store.set("tge-member","1");$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()};
+function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()}
+function gateState(s){["form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
+async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
+$("#send-link").onclick=async()=>{const email=($("#login-email").value||"").trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){$("#login-err").textContent="Please enter a valid email.";$("#login-err").classList.remove("hide");return}$("#login-err").classList.add("hide");gateState("loading");try{await fetch("/api/auth/request",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})})}catch{}$("#sent-to").textContent=email;gateState("sent")};
+$("#login-again").onclick=()=>gateState("form");
 $("#join").onclick=()=>$("#join-sheet").classList.remove("hide");
 $("#join-close").onclick=()=>$("#join-sheet").classList.add("hide");
-if(store.get("tge-member")){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()}
+(async()=>{const url=new URL(location.href);const t=url.searchParams.get("token");if(t){gateState("loading");try{const r=await fetch("/api/auth/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:t})});const d=await r.json();if(d.ok&&d.session){localStorage.setItem("tge-session",d.session);history.replaceState({},"",url.pathname);enterApp();return}}catch{}history.replaceState({},"",url.pathname);gateState("form");$("#login-err").textContent="That link expired or was already used — enter your email for a fresh one.";$("#login-err").classList.remove("hide");return}if(await checkSession()){enterApp();return}gateState("form")})();
 </script>
 </body>
 </html>
