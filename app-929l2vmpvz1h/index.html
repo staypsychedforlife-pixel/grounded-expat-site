@@ -69,7 +69,8 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .post .who{display:flex;align-items:center;gap:9px}
 .post .av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--serif);font-size:14px;flex:none}
 .post .nm{font-weight:600;font-size:14px;color:var(--pine)}.post .mt{font-size:11.5px;color:var(--muted)}
-.post .bd{font-size:15px;line-height:1.5;margin-top:9px}
+.post .bd{font-size:15px;line-height:1.5;margin-top:9px;white-space:pre-wrap;word-break:break-word}
+.pdel{background:none;border:none;color:var(--muted);font-size:20px;line-height:1;cursor:pointer;padding:0 2px;flex:none}.pdel:hover{color:var(--clay)}
 .chip-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .chip{font-size:12.5px;font-weight:500;color:var(--pine);background:var(--cream);border:1px solid var(--line);border-radius:100px;padding:7px 13px}
 .chip.on{background:var(--pine);color:var(--cream);border-color:var(--pine)}
@@ -205,6 +206,7 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
     <div class="sec-label"><h3>The workshops</h3><span class="pill">Members</span></div>
     <div id="ws-list"></div>
     <div class="sec-label"><h3>The conversation</h3></div>
+    <input id="post-name" class="hide" placeholder="Your first name (shown on your posts)" style="margin-bottom:8px">
     <textarea id="post-box" rows="2" placeholder="Share what you're navigating…"></textarea>
     <button class="btn sm" id="post-btn" style="margin-top:8px">Post to the circle</button>
     <div id="feed"></div>
@@ -250,8 +252,8 @@ const PAID=[["The Culture Shock Workbook","🌀","Understand it, settle your ner
 const MEMBER_CODE="circle40";
 function gumroadUrl(slug){return "https://groundedexpat.gumroad.com/l/"+slug+(MEMBER_CODE?"/"+MEMBER_CODE:"")+"?wanted=true"}
 const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shock for real."],["Homesick","Loving home without living there."],["Who Am I Here?","Identity in transition."],["Finding Your People","The slow work of belonging."],["Beginner Again","Being new isn't being incapable."],["The Relationship Strain","When it's not about the dishes."],["The Trailing Partner","Reclaiming your own life."],["Running on Empty","The hidden engine you're running."],["From Surviving to Belonging","Wanting a real life here."],["Far From Home for the Holidays","Missing home and being here."],["What's Next","Wherever you go from here."]];
-const SPACES=["Welcome","This month","The workshops","What I'm navigating","Small wins","Ask Stephanie"];
-const SEED_FEED=[["Stephanie","#2F4539","Host · 2h","New here? Introduce yourself in Welcome — where are you, and what brought you abroad? I read every one. 🌿"],["Maya","#C2674A","5h","Month three hit me like a truck this week. Reading the Homesick workshop and finally crying about it helped more than I expected."],["Jonas","#8C9B82","1d","Small win: I ordered coffee in the local language and the barista actually understood me. It's the little things."]];
+const SPACES=["Welcome","This month","What I'm navigating","Small wins","Ask Stephanie"];
+let activeSpace="This month",circleMod=false,feedPosts=[];
 
 // exact 40%-off member price: whole dollars show clean ($15), otherwise cents ($11.40)
 const mp=r=>{const c=Math.round(r*60);return c%100===0?String(c/100):(c/100).toFixed(2)};
@@ -268,8 +270,12 @@ function renderLibrary(){
  $$("#s-library [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
  $$("#lib-paid .litem").forEach((el,i)=>el.onclick=()=>window.open(gumroadUrl(PAID[i][4]),"_blank"));
 }
-function renderCircle(){$("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");renderWorkshops();renderFeed()}
-function renderFeed(){const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(p=>({nm:p[0],c:p[1],mt:p[2],bd:p[3]})));$("#feed").innerHTML=posts.map(p=>`<div class="post"><div class="who"><span class="av" style="background:${p.c||'#8C9B82'}">${(p.nm||'You')[0]}</span><div><div class="nm">${p.nm||'You'}</div><div class="mt">${p.mt||'just now'}</div></div></div><div class="bd">${(p.bd||'').replace(/</g,'&lt;')}</div></div>`).join("")}
+function renderCircle(){$("#spaces").innerHTML=SPACES.map(s=>`<span class="chip ${s===activeSpace?'on':''}" data-space="${esc(s)}">${esc(s)}</span>`).join("");$$("#spaces .chip").forEach(el=>el.onclick=()=>{activeSpace=el.dataset.space;renderCircle();loadFeed()});renderWorkshops();if($("#post-name")&&!store.get("tge-name","")){$("#post-name").classList.remove("hide")}loadFeed()}
+function esc(s){return String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
+function timeAgo(ts){const s=(Date.now()-ts)/1000;if(s<60)return"just now";if(s<3600)return Math.floor(s/60)+"m";if(s<86400)return Math.floor(s/3600)+"h";if(s<604800)return Math.floor(s/86400)+"d";return new Date(ts).toLocaleDateString(undefined,{month:"short",day:"numeric"})}
+async function loadFeed(){$("#feed").innerHTML='<p class="sub" style="margin-top:14px">Loading…</p>';const sess=localStorage.getItem("tge-session")||"";try{const r=await fetch("/api/circle/posts?space="+encodeURIComponent(activeSpace),{headers:{Authorization:"Bearer "+sess}});if(!r.ok){$("#feed").innerHTML='<p class="sub" style="margin-top:14px">'+(r.status===503?"The community is coming online shortly.":"Couldn't load the circle just now.")+'</p>';return}const d=await r.json();circleMod=!!d.mod;feedPosts=d.posts||[];renderFeed()}catch{$("#feed").innerHTML='<p class="sub" style="margin-top:14px">Couldn\'t load the circle just now.</p>'}}
+function renderFeed(){if(!feedPosts.length){$("#feed").innerHTML='<p class="sub" style="margin-top:14px">Nothing in '+esc(activeSpace)+' yet. You could be the first to share.</p>';return}$("#feed").innerHTML=feedPosts.map(p=>{const initial=esc((p.name||"M").trim()[0]||"M").toUpperCase();const canDel=p.mine||circleMod;return `<div class="post"><div class="who"><span class="av" style="background:${p.host?'#2F4539':(p.mine?'#C2674A':'#8C9B82')}">${initial}</span><div style="flex:1"><div class="nm">${esc(p.name)}${p.host?' · Host':''}</div><div class="mt">${esc(p.space)} · ${timeAgo(p.ts)}</div></div>${canDel?`<button class="pdel" data-del="${p.id}" title="Remove">×</button>`:''}</div><div class="bd">${esc(p.body)}</div></div>`}).join("");$$("#feed [data-del]").forEach(el=>el.onclick=()=>delPost(el.dataset.del))}
+async function delPost(id){if(!confirm("Remove this post?"))return;const sess=localStorage.getItem("tge-session")||"";try{await fetch("/api/circle/delete",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+sess},body:JSON.stringify({id:+id})})}catch{}loadFeed()}
 // content wiring — free journals are existing public pages; member-free + workshops are gated.
 const MEMBER_SLUGS=["moving-abroad-planner","relocation-journal"];
 const FREE_URLS=["/first-7-days/","/month-3-dip/","/making-friends/","/goodbye-journal/"];
@@ -319,7 +325,7 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#reader-back").onclick=()=>showTab(document.querySelector('.nav button.on').dataset.go);
  $("#open-workshop").onclick=()=>openReader("ws-2");
  $$("#s-today [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
- $("#post-btn").onclick=()=>{const v=$("#post-box").value.trim();if(!v)return;const f=store.get("tge-feed",[]);f.unshift({nm:"You",c:"#C2674A",mt:"just now",bd:v});store.set("tge-feed",f);$("#post-box").value="";renderFeed()};
+ $("#post-btn").onclick=async()=>{const v=$("#post-box").value.trim();if(!v)return;if(CRISIS.test(v)){showScreen("crisis");return}let name=store.get("tge-name","");if(!name){name=($("#post-name").value||"").trim();if(!name){$("#post-name").classList.remove("hide");$("#post-name").focus();return}store.set("tge-name",name);$("#post-name").classList.add("hide")}const sess=localStorage.getItem("tge-session")||"";const btn=$("#post-btn");btn.disabled=true;btn.textContent="Posting…";try{const r=await fetch("/api/circle/posts",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+sess},body:JSON.stringify({body:v,name,space:activeSpace})});if(r.ok){$("#post-box").value="";await loadFeed()}else{const d=await r.json().catch(()=>({}));alert(d.error||"Couldn't post just now. Try again in a moment.")}}catch{alert("Couldn't post just now. Check your connection and try again.")}btn.disabled=false;btn.textContent="Post to the circle"};
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
  $("#prof").onclick=()=>showTab("me");
  $("#signout").onclick=()=>{localStorage.removeItem("tge-session");location.reload()};

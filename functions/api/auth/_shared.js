@@ -43,6 +43,25 @@ export function json(o, status) {
   return new Response(JSON.stringify(o), { status: status || 200, headers: { "Content-Type": "application/json" } });
 }
 
+// Resolve the caller's active membership from their Bearer session (same rule as
+// /api/auth/me). Returns {ok:true,email,host} for an active member, else
+// {ok:false,status,reason}. `host` = the email is an allow-listed / CIRCLE_HOST
+// address (you), which grants moderation power in the community.
+export async function authedMember(request, env) {
+  if (!env.AUTH_SECRET) return { ok: false, status: 500, reason: "Not configured yet." };
+  const token = (request.headers.get("Authorization") || "").replace(/^Bearer\s+/i, "").trim();
+  const p = await verify(token, env.AUTH_SECRET);
+  if (!p || p.purpose !== "session") return { ok: false, status: 401, reason: "Please sign in." };
+  const allow = (env.GATE_ALLOWLIST || "").toLowerCase().split(",").map(s => s.trim()).filter(Boolean);
+  let active = allow.includes(p.email);
+  if (!active && env.STRIPE_SECRET_KEY) active = await hasActiveSubscription(p.email, env.STRIPE_SECRET_KEY, env.CIRCLE_PRICE_ID);
+  else if (!active && !env.STRIPE_SECRET_KEY) active = true;
+  if (!active) return { ok: false, status: 403, reason: "Your membership isn't active." };
+  const hosts = (env.CIRCLE_HOST || "").toLowerCase().split(",").map(s => s.trim()).filter(Boolean);
+  const host = allow.includes(p.email) || hosts.includes(p.email);
+  return { ok: true, email: p.email, host };
+}
+
 // --- Stateless 6-digit sign-in code (TOTP-style, no database) ---
 // The code = first 4 bytes of HMAC(secret, "code:<email>:<window>") mod 1e6.
 // Both request.js (emit) and code.js (check) derive it the same way for the same
