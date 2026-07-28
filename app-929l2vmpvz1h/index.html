@@ -253,7 +253,8 @@ const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shoc
 const SPACES=["Welcome","This month","The workshops","What I'm navigating","Small wins","Ask Stephanie"];
 const SEED_FEED=[["Stephanie","#2F4539","Host · 2h","New here? Introduce yourself in Welcome — where are you, and what brought you abroad? I read every one. 🌿"],["Maya","#C2674A","5h","Month three hit me like a truck this week. Reading the Homesick workshop and finally crying about it helped more than I expected."],["Jonas","#8C9B82","1d","Small win: I ordered coffee in the local language and the barista actually understood me. It's the little things."]];
 
-const mp=r=>Math.round(r*0.6);
+// exact 40%-off member price: whole dollars show clean ($15), otherwise cents ($11.40)
+const mp=r=>{const c=Math.round(r*60);return c%100===0?String(c/100):(c/100).toFixed(2)};
 function greet(){const h=new Date().getHours();$("#greeting").textContent=h<12?"Good morning.":h<18?"Good afternoon.":"Good evening.";$("#today-date").textContent=new Date().toLocaleDateString(undefined,{weekday:"long",month:"long",day:"numeric"})}
 function renderMoods(){$("#moods").innerHTML=MOODS.map(m=>`<div class="mood" data-m="${m.id}"><span class="em">${m.em}</span>${m.label}</div>`).join("");$$(".mood").forEach(el=>el.onclick=()=>{sel=el.dataset.m;$$(".mood").forEach(x=>x.classList.toggle("sel",x===el));updBtn()})}
 
