@@ -79,6 +79,17 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .banner h2{color:var(--cream);margin-top:6px}
 .banner p{color:#E6E9DF;font-size:14.5px;line-height:1.5;margin-top:8px}
 .disc{font-size:11px;color:var(--muted);line-height:1.45;margin-top:24px;text-align:center;padding:0 4px}
+.disc a{color:var(--sage)}
+.wtour{margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.wtour>div{display:flex;gap:13px;align-items:flex-start;color:#E6E9DF;font-size:14.5px;line-height:1.45}
+.wtour>div>span{font-size:22px;flex:none;line-height:1.2}
+.wtour b{color:var(--cream)}
+.a2hs{display:flex;gap:12px;align-items:center;justify-content:space-between;background:var(--pine);color:var(--cream);border-radius:14px;padding:13px 15px;margin-top:14px}
+.a2hs .t{font-size:12.5px;line-height:1.4;color:#CBD5C4}
+.a2hs .t b{display:block;font-family:var(--serif);font-weight:600;font-size:14.5px;color:var(--cream);margin-bottom:2px}
+.a2hs .acts{display:flex;align-items:center;gap:8px;flex:none}
+.a2hs .btn.sm{background:var(--clay);margin:0}
+.a2hs .x{background:none;border:none;color:#AEBBA4;font-size:20px;line-height:1;cursor:pointer;padding:0 2px}
 .nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:rgba(251,248,241,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:9px 0 calc(env(safe-area-inset-bottom) + 10px);z-index:5}
 .nav button{flex:1;background:none;border:none;font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
 .nav button.on{color:var(--clay)}.nav .ic{font-size:19px}
@@ -129,6 +140,20 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <p style="font-size:12px;color:var(--muted);text-align:center;margin-top:12px">You subscribe on the website, then sign in here and everything unlocks.</p>
 </div></div>
 
+<div class="overlay hide" id="welcome-overlay">
+  <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:#D9A48C;text-align:center">Welcome in 🌿</div>
+  <h1 style="color:var(--cream);text-align:center;margin-top:10px;font-size:32px">You're part of The Circle now.</h1>
+  <p style="color:#E6E9DF;text-align:center;margin-top:14px;line-height:1.5;font-size:15px">A calm, private place for the inner side of living abroad. Here's what's waiting for you:</p>
+  <div class="wtour">
+    <div><span>🕊️</span><div><b>Today</b> — a daily check-in and a gentle reflection in Stephanie's voice.</div></div>
+    <div><span>📖</span><div><b>Library</b> — your journals and workbooks, and 40% off the rest.</div></div>
+    <div><span>💬</span><div><b>Circle</b> — the community and this month's workshop.</div></div>
+    <div><span>👤</span><div><b>You</b> — your private reflections and membership.</div></div>
+  </div>
+  <button class="btn" id="welcome-begin" style="margin-top:26px">Take me in →</button>
+  <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:18px">Private to you. Not therapy or a crisis service.</p>
+</div>
+
 <div class="app hide" id="app">
   <div class="top"><div class="lhs"><span class="dot"></span><span class="brand">The Grounded Expat</span></div><div class="prof" id="prof">S</div></div>
 
@@ -136,6 +161,10 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <div class="screen" id="s-today">
     <h1 id="greeting">Hello.</h1>
     <div class="sub" id="today-date"></div>
+    <div class="a2hs hide" id="a2hs">
+      <div class="t"><b>Keep The Circle one tap away</b><span id="a2hs-hint"></span></div>
+      <div class="acts"><button class="btn sm" id="a2hs-add" style="display:none">Add</button><button class="x" id="a2hs-dismiss" aria-label="Dismiss">×</button></div>
+    </div>
     <div class="card">
       <div class="eyebrow">Today's check-in</div>
       <h2 style="margin-top:4px">How are you feeling today?</h2>
@@ -236,6 +265,11 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 const LIVE=true;
 const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
 const store={get:(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch{return d}},set:(k,v)=>localStorage.setItem(k,JSON.stringify(v))};
+// Add-to-home-screen support
+let deferredPrompt=null;
+function isStandalone(){return (window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||window.navigator.standalone===true}
+window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;const b=document.getElementById("a2hs-add");const bar=document.getElementById("a2hs");if(b&&bar&&!bar.classList.contains("hide")){b.style.display="inline-block";const h=document.getElementById("a2hs-hint");if(h)h.textContent=" — add it to your phone for one-tap access.";}});
+window.addEventListener("appinstalled",()=>{const bar=document.getElementById("a2hs");if(bar)bar.classList.add("hide");store.set("tge-a2hs",true);});
 
 const MOODS=[{id:"bright",label:"Bright",em:"☀️",c:"#C99A3A"},{id:"okay",label:"Okay",em:"🌤️",c:"#8C9B82"},{id:"tender",label:"Tender",em:"🌸",c:"#C2674A"},{id:"homesick",label:"Homesick",em:"🏠",c:"#7A8C9B"},{id:"heavy",label:"Overwhelmed",em:"🌊",c:"#5B6E7A"},{id:"numb",label:"Numb",em:"🌫️",c:"#9A968C"}];
 const PRACTICE={bright:"Let yourself have it. Pause for ten slow seconds and take it in. Joy counts too, and it's worth keeping.",okay:"Notice one ordinary thing that's quietly working today. Settling is built from small, unremarkable days like this.",tender:"A hand on your chest, and let this be a soft day. You don't have to feel okay to be doing okay.",homesick:"Name it plainly: I miss home. Grief is just love with nowhere to go. Then send one small message to someone who feels like home.",heavy:"Box breathing: in for four, hold four, out four, hold four. Three rounds. You're not behind, you're adjusting.",numb:"Feet flat on the floor. Name five things you can see. Sometimes the way back in is through the body, not the mind."};
@@ -305,7 +339,7 @@ function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").inne
 let sel=null,entryText="",convo=[],aiTurns=0;const MAX_Q=3;
 function updBtn(){$("#reflect-btn").disabled=!(sel&&$("#entry").value.trim().length>1)}
 function showScreen(id){["today","reflect","crisis","library","reader","circle","me"].forEach(s=>$("#s-"+s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
-function showTab(go){document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===go));showScreen(go);if(go==="circle")renderFeed();if(go==="me")renderTimeline()}
+function showTab(go){document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===go));showScreen(go);if(go==="circle")loadFeed();if(go==="me")renderTimeline()}
 async function localQ(m){const q=QBANK[m]||QBANK.okay;return q[Math.floor(Math.random()*q.length)]}
 async function getQ(t,m){if(!LIVE)return localQ(m);try{const r=await fetch("/api/reflect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({entryText:t})});const d=await r.json();return d.crisis?"__CRISIS__":(d.question||localQ(m))}catch{return localQ(m)}}
 function renderThread(){$("#thread").innerHTML=convo.map((m,i)=>m.role==="ai"?`<div>${i===0?'<div class="tlabel">Reflect with me · in Stephanie\'s voice</div>':''}<div class="qcard" style="margin-top:8px"><div class="q">${(m.text||'').replace(/</g,'&lt;')}</div></div></div>`:`<div class="mybubble">${(m.text||'').replace(/</g,'&lt;')}</div>`).join("")}
@@ -330,8 +364,21 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
  $("#prof").onclick=()=>showTab("me");
  $("#signout").onclick=()=>{localStorage.removeItem("tge-session");location.reload()};
+ $("#welcome-begin").onclick=()=>{$("#welcome-overlay").classList.add("hide");store.set("tge-welcomed",true)};
+ $("#a2hs-dismiss").onclick=()=>{$("#a2hs").classList.add("hide");store.set("tge-a2hs",true)};
+ $("#a2hs-add").onclick=async()=>{if(!deferredPrompt)return;deferredPrompt.prompt();try{await deferredPrompt.userChoice}catch{}deferredPrompt=null;$("#a2hs").classList.add("hide");store.set("tge-a2hs",true)};
+ maybeShowA2HS();
 }
-function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot()}
+function maybeShowWelcome(){if(store.get("tge-welcomed",false))return;$("#welcome-overlay").classList.remove("hide")}
+function maybeShowA2HS(){
+ if(isStandalone()||store.get("tge-a2hs",false))return;
+ const iOS=/iphone|ipad|ipod/i.test(navigator.userAgent);const hint=$("#a2hs-hint");
+ if(deferredPrompt){$("#a2hs-add").style.display="inline-block";hint.textContent=" — add it to your phone for one-tap access.";}
+ else if(iOS){hint.textContent=" — tap the Share icon, then “Add to Home Screen.”";}
+ else{hint.textContent=" — add it to your home screen for one-tap access.";}
+ $("#a2hs").classList.remove("hide");
+}
+function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot();maybeShowWelcome()}
 function gateState(s){["choose","form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
 async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
 $("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
