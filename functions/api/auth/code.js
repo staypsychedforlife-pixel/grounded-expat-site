@@ -22,10 +22,12 @@ export async function onRequestPost({ request, env }) {
     return json({ error: "Too many tries. Wait a minute, then request a fresh code." }, 429);
   }
 
-  // Accept the current or previous window (covers ~10–20 minutes).
+  // Accept the current or previous two windows (covers ~20–30 minutes), so a code
+  // still works if the app reloaded and they came back to enter it a bit later.
   const win = currentWindow();
   const ok = code === await makeCode(email, env.AUTH_SECRET, win)
-          || code === await makeCode(email, env.AUTH_SECRET, win - 1);
+          || code === await makeCode(email, env.AUTH_SECRET, win - 1)
+          || code === await makeCode(email, env.AUTH_SECRET, win - 2);
   if (!ok) return json({ error: "That code didn't match. Request a fresh one and try again." }, 401);
 
   // Only active members (or the allow-list) get a session.
