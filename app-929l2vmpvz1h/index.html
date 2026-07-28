@@ -53,6 +53,8 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .practice{background:var(--oat-2);border-radius:16px;padding:18px;margin-top:14px;border-left:5px solid var(--clay)}
 .practice p{font-size:15.5px;line-height:1.5;margin-top:6px}
 .echo{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--muted);border-left:3px solid var(--line);padding-left:13px;margin-top:12px;line-height:1.5}
+.tlabel{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);font-weight:600;margin:16px 0 0 2px}
+.mybubble{background:var(--oat-2);border-radius:16px 16px 4px 16px;padding:13px 16px;font-size:15px;line-height:1.5;color:var(--ink);margin:12px 0 0 44px}
 .litem{display:flex;gap:14px;align-items:center;background:var(--cream);border:1px solid var(--line);border-radius:15px;padding:14px 16px;margin-top:11px}
 .litem .ic{width:44px;height:44px;border-radius:11px;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--oat-2)}
 .litem .t{font-family:var(--serif);font-weight:600;font-size:15.5px;color:var(--pine);line-height:1.15}
@@ -132,11 +134,17 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <div class="screen hide" id="s-reflect">
     <h1>A moment with it.</h1>
     <div class="echo" id="echo"></div>
-    <div class="qcard grow"><div class="q" id="question">…</div><div class="who">Reflect with me · in Stephanie's voice</div></div>
-    <textarea id="response" rows="3" style="margin-top:14px" placeholder="Sit with the question, if you like. No pressure to answer."></textarea>
-    <div class="practice grow"><div class="eyebrow">A grounding practice</div><p id="practice-text"></p></div>
-    <button class="btn" id="save-btn">Save to my timeline</button>
-    <button class="btn ghost" id="skip-btn">Not now</button>
+    <div id="thread"></div>
+    <div id="reflect-input">
+      <textarea id="response" rows="2" style="margin-top:16px" placeholder="Share what comes up… no pressure to have an answer."></textarea>
+      <button class="btn" id="send-btn" disabled>Share</button>
+      <button class="btn ghost" id="toPractice" style="font-size:14px;padding:12px">Bring me to a grounding practice →</button>
+    </div>
+    <div id="reflect-end" class="hide">
+      <div class="practice grow"><div class="eyebrow">A grounding practice</div><p id="practice-text"></p></div>
+      <button class="btn" id="save-btn">Save to my timeline</button>
+      <button class="btn ghost" id="skip-btn">Not now</button>
+    </div>
   </div>
 
   <!-- CRISIS -->
@@ -245,19 +253,26 @@ function openReader(key){
  $("#reader-title").textContent=title;$("#reader-body").textContent=body;showScreen("reader")}
 function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`}
 
-let sel=null,draft="";
+let sel=null,entryText="",convo=[],aiTurns=0;const MAX_Q=3;
 function updBtn(){$("#reflect-btn").disabled=!(sel&&$("#entry").value.trim().length>1)}
 function showScreen(id){["today","reflect","crisis","library","reader","circle","me"].forEach(s=>$("#s-"+s).classList.toggle("hide",s!==id));window.scrollTo(0,0)}
 function showTab(go){document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===go));showScreen(go);if(go==="circle")renderFeed();if(go==="me")renderTimeline()}
 async function localQ(m){const q=QBANK[m]||QBANK.okay;return q[Math.floor(Math.random()*q.length)]}
 async function getQ(t,m){if(!LIVE)return localQ(m);try{const r=await fetch("/api/reflect",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({entryText:t})});const d=await r.json();return d.crisis?"__CRISIS__":(d.question||localQ(m))}catch{return localQ(m)}}
-async function doReflect(){const t=$("#entry").value.trim();draft=t;if(CRISIS.test(t)){showScreen("crisis");return}$("#echo").textContent="“"+t+"”";$("#practice-text").textContent=PRACTICE[sel]||PRACTICE.okay;$("#question").textContent="…";showScreen("reflect");const q=await getQ(t,sel);if(q==="__CRISIS__"){showScreen("crisis");return}$("#question").textContent=q}
-function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:draft,response:$("#response").value.trim()});store.set("tge-entries",a);sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
+function renderThread(){$("#thread").innerHTML=convo.map((m,i)=>m.role==="ai"?`<div>${i===0?'<div class="tlabel">Reflect with me · in Stephanie\'s voice</div>':''}<div class="qcard" style="margin-top:8px"><div class="q">${(m.text||'').replace(/</g,'&lt;')}</div></div></div>`:`<div class="mybubble">${(m.text||'').replace(/</g,'&lt;')}</div>`).join("")}
+function buildContext(){let s="Journal entry: "+entryText;convo.forEach(m=>{if(m.role==="me")s+="\n\nThey then reflected: "+m.text});return s}
+async function askAI(){convo.push({role:"ai",text:"…"});aiTurns++;renderThread();setTimeout(()=>window.scrollTo(0,document.body.scrollHeight),30);const q=await getQ(buildContext(),sel);if(q==="__CRISIS__"){showScreen("crisis");return}convo[convo.length-1].text=q;renderThread();setTimeout(()=>window.scrollTo(0,document.body.scrollHeight),30)}
+async function doReflect(){entryText=$("#entry").value.trim();if(CRISIS.test(entryText)){showScreen("crisis");return}convo=[];aiTurns=0;$("#echo").textContent="“"+entryText+"”";$("#reflect-end").classList.add("hide");$("#reflect-input").classList.remove("hide");$("#response").value="";$("#send-btn").disabled=true;renderThread();showScreen("reflect");await askAI()}
+async function sendResponse(){const t=$("#response").value.trim();if(!t)return;if(CRISIS.test(t)){showScreen("crisis");return}convo.push({role:"me",text:t});$("#response").value="";$("#send-btn").disabled=true;renderThread();if(aiTurns>=MAX_Q){wrapUp();return}await askAI()}
+function wrapUp(){$("#reflect-input").classList.add("hide");$("#practice-text").textContent=PRACTICE[sel]||PRACTICE.okay;$("#reflect-end").classList.remove("hide");setTimeout(()=>window.scrollTo(0,document.body.scrollHeight),40)}
+function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:entryText,convo:convo.slice()});store.set("tge-entries",a);sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
 
 function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#entry").addEventListener("input",updBtn);
  $("#reflect-btn").onclick=doReflect;$("#save-btn").onclick=saveRef;
- $("#skip-btn").onclick=()=>{sel=null;$("#entry").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("today")};
+ $("#response").addEventListener("input",()=>{$("#send-btn").disabled=!$("#response").value.trim()});
+ $("#send-btn").onclick=sendResponse;$("#toPractice").onclick=wrapUp;
+ $("#skip-btn").onclick=()=>{sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("today")};
  $("#crisis-back").onclick=()=>showTab("today");
  $("#reader-back").onclick=()=>showTab(document.querySelector('.nav button.on').dataset.go);
  $("#open-workshop").onclick=()=>openReader("workshop");
