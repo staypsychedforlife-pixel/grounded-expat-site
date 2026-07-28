@@ -244,7 +244,11 @@ const MEMBER_FREE=[["The Moving Abroad Planner","🧭","The checklists and the i
 // free for EVERYONE (lead-magnet journals)
 const FREE=[["Your First 7 Days Abroad","🌱","A gentle first week."],["The Month-3 Dip","🌊","For the hardest stretch."],["Making Friends Abroad","🫂","Starting from zero."],["The Goodbye Journal","🍃","For the leaving."]];
 // paid — members get 40% off. [title, icon, desc, regular$]
-const PAID=[["The Culture Shock Workbook","🌀","Understand it, settle your nervous system.",39],["Finding Your People Abroad","🤝","On loneliness and building your people.",39],["The Partner's Journal","🤍","For the one who moved for someone else.",39],["The Expat Marriage Workbook","💞","Holding a relationship together across a move.",49],["The Third-Culture Family Workbook","👨‍👩‍👧","For expat parents and their kids.",49],["The Expat Burnout Workbook","🕯️","For when you're running on empty.",39],["The LGBTQ+ Abroad Journal","🌈","Your identity, your safety, your belonging.",39],["The LGBTQ+ Couples Workbook","💐","Two of you, building a life abroad.",49]];
+// [title, icon, desc, regular$, gumroad-slug] — member price = 40% off (round(reg*0.6))
+const PAID=[["The Culture Shock Workbook","🌀","Understand it, settle your nervous system.",19,"qxkes"],["Finding Your People Abroad","🤝","On loneliness and building your people.",19,"aahfg"],["The Partner's Journal","🤍","For the one who moved for someone else.",19,"bpekdc"],["The Expat Marriage Workbook","💞","Holding a relationship together across a move.",25,"tbrvll"],["The Third-Culture Family Workbook","👨‍👩‍👧","For expat parents and their kids.",19,"uyexm"],["The Expat Burnout Workbook","🕯️","For when you're running on empty.",19,"ddnue"],["The LGBTQ+ Abroad Journal","🌈","Your identity, your safety, your belonging.",19,"tljyh"],["The LGBTQ+ Couples Workbook","💐","Two of you, building a life abroad.",25,"fjhfj"]];
+// Gumroad offer code (create in Gumroad: 40% off, applies to the 8 paid journals) — auto-applied via URL.
+const MEMBER_CODE="circle40";
+function gumroadUrl(slug){return "https://groundedexpat.gumroad.com/l/"+slug+(MEMBER_CODE?"/"+MEMBER_CODE:"")+"?wanted=true"}
 const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shock for real."],["Homesick","Loving home without living there."],["Who Am I Here?","Identity in transition."],["Finding Your People","The slow work of belonging."],["Beginner Again","Being new isn't being incapable."],["The Relationship Strain","When it's not about the dishes."],["The Trailing Partner","Reclaiming your own life."],["Running on Empty","The hidden engine you're running."],["From Surviving to Belonging","Wanting a real life here."],["Far From Home for the Holidays","Missing home and being here."],["What's Next","Wherever you go from here."]];
 const SPACES=["Welcome","This month","The workshops","What I'm navigating","Small wins","Ask Stephanie"];
 const SEED_FEED=[["Stephanie","#2F4539","Host · 2h","New here? Introduce yourself in Welcome — where are you, and what brought you abroad? I read every one. 🌿"],["Maya","#C2674A","5h","Month three hit me like a truck this week. Reading the Homesick workshop and finally crying about it helped more than I expected."],["Jonas","#8C9B82","1d","Small win: I ordered coffee in the local language and the barista actually understood me. It's the little things."]];
@@ -261,7 +265,7 @@ function renderLibrary(){
  $("#lib-paid").innerHTML=PAID.map(w=>buyItem(w[1],w[0],w[2],w[3])).join("");
  $("#lib-member [data-open],#lib-free [data-open]").length;
  $$("#s-library [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
- $$("#lib-paid .litem").forEach(el=>el.onclick=()=>window.open("https://thegroundedexpat.com/journals","_blank"));
+ $$("#lib-paid .litem").forEach((el,i)=>el.onclick=()=>window.open(gumroadUrl(PAID[i][4]),"_blank"));
 }
 function renderCircle(){$("#spaces").innerHTML=SPACES.map((s,i)=>`<span class="chip ${i===1?'on':''}">${s}</span>`).join("");renderWorkshops();renderFeed()}
 function renderFeed(){const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(p=>({nm:p[0],c:p[1],mt:p[2],bd:p[3]})));$("#feed").innerHTML=posts.map(p=>`<div class="post"><div class="who"><span class="av" style="background:${p.c||'#8C9B82'}">${(p.nm||'You')[0]}</span><div><div class="nm">${p.nm||'You'}</div><div class="mt">${p.mt||'just now'}</div></div></div><div class="bd">${(p.bd||'').replace(/</g,'&lt;')}</div></div>`).join("")}
@@ -269,7 +273,7 @@ function renderFeed(){const posts=store.get("tge-feed",[]).concat(SEED_FEED.map(
 const MEMBER_SLUGS=["moving-abroad-planner","relocation-journal"];
 const FREE_URLS=["/first-7-days/","/month-3-dip/","/making-friends/","/goodbye-journal/"];
 function readerMsg(t,b){$("#reader-title").textContent=t;const f=$("#reader-frame");f.classList.add("hide");f.removeAttribute("srcdoc");f.removeAttribute("src");$("#reader-body").textContent=b;$("#reader-body").classList.remove("hide")}
-function readerSrc(t,src){$("#reader-title").textContent=t;$("#reader-body").classList.add("hide");const f=$("#reader-frame");f.removeAttribute("srcdoc");f.src=src;f.classList.remove("hide")}
+function readerSrc(t,src){$("#reader-title").textContent=t;$("#reader-body").classList.add("hide");try{localStorage.setItem("tge-gate-unlocked","1")}catch{}const f=$("#reader-frame");f.removeAttribute("srcdoc");f.src=src;f.classList.remove("hide")}
 async function readerGated(t,slug){
  $("#reader-title").textContent=t;$("#reader-body").textContent="Opening…";$("#reader-body").classList.remove("hide");$("#reader-frame").classList.add("hide");
  const sess=localStorage.getItem("tge-session")||"";
@@ -324,7 +328,7 @@ function gateState(s){["choose","form","sent","loading"].forEach(x=>$("#login-"+
 async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
 $("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
 $("#go-signin").onclick=()=>{$("#login-err").classList.add("hide");gateState("form")};
-$("#go-back").onclick=()=>gateState("choose");
+$("#go-back").onclick=()=>$("#join-sheet").classList.remove("hide");
 let pendingEmail="";
 $("#send-link").onclick=async()=>{const email=($("#login-email").value||"").trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){$("#login-err").textContent="Please enter a valid email.";$("#login-err").classList.remove("hide");return}$("#login-err").classList.add("hide");pendingEmail=email;store.set("tge-pending",{email,ts:Date.now()});gateState("loading");try{await fetch("/api/auth/request",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})})}catch{}$("#sent-to").textContent=email;$("#code-input").value="";$("#code-err").classList.add("hide");gateState("sent");setTimeout(()=>$("#code-input").focus(),80)};
 $("#verify-code").onclick=async()=>{const code=($("#code-input").value||"").replace(/\D/g,"");if(code.length!==6){$("#code-err").textContent="Enter the 6-digit code from your email.";$("#code-err").classList.remove("hide");return}$("#code-err").classList.add("hide");gateState("loading");try{const r=await fetch("/api/auth/code",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:pendingEmail,code})});const d=await r.json();if(r.ok&&d.session){localStorage.setItem("tge-session",d.session);localStorage.removeItem("tge-pending");enterApp();return}gateState("sent");$("#code-err").textContent=d.error||"That code didn't match. Request a fresh one.";$("#code-err").classList.remove("hide")}catch{gateState("sent");$("#code-err").textContent="Something went wrong. Try again in a moment.";$("#code-err").classList.remove("hide")}};
