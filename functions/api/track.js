@@ -4,7 +4,7 @@
 // Storage = the same Cloudflare D1 (env.DB); see analytics-schema.sql.
 import { verify, authedMember, allowAttempt, json } from "./auth/_shared.js";
 
-const EVENTS = ["open", "reflect", "post", "library", "workshop"];
+const EVENTS = ["open", "reflect", "post", "library", "workshop", "practice"];
 
 // Record an event. We only store the event name and the calendar day — never who
 // did it. We do require a validly-signed session so bots can't inflate the numbers,

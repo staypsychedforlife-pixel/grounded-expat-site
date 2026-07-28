@@ -95,6 +95,9 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .stat .num{font-family:var(--serif);font-weight:600;font-size:28px;color:var(--pine);line-height:1}
 .stat .lbl{font-size:13px;color:var(--ink);margin-top:4px;font-weight:500}
 .stat .wk{font-size:11.5px;color:var(--muted);margin-top:2px}
+.pp{background:var(--pine);border-radius:16px;padding:16px 18px;margin-top:12px}
+.pp-t{font-family:var(--serif);font-size:16px;color:var(--cream)}
+.pp audio{filter:saturate(.9)}
 .nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:rgba(251,248,241,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:9px 0 calc(env(safe-area-inset-bottom) + 10px);z-index:5}
 .nav button{flex:1;background:none;border:none;font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
 .nav button.on{color:var(--clay)}.nav .ic{font-size:19px}
@@ -177,8 +180,12 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
       <textarea id="entry" rows="3" style="margin-top:14px" placeholder="What's on your mind? A sentence is plenty."></textarea>
       <button class="btn" id="reflect-btn" disabled>Reflect with me</button>
     </div>
+    <div class="sec-label"><h3>Grounding practices</h3><span class="pill">Member audio</span></div>
+    <div class="sub">Short audio practices in Stephanie's voice, to steady you between the big moments.</div>
+    <div id="prac-player" class="hide"></div>
+    <div id="practices"></div>
     <div class="sec-label"><h3>This month in the Circle</h3></div>
-    <div class="litem open" data-open="workshop"><div class="ic">🕊️</div><div style="flex:1"><div class="t">Homesick: loving home without living there</div><div class="d">This month's workshop — open it, then bring it to the circle.</div></div><span class="pill">Open</span></div>
+    <div class="litem open" data-open="ws-2"><div class="ic">🕊️</div><div style="flex:1"><div class="t">Homesick: loving home without living there</div><div class="d">This month's workshop — open it, then bring it to the circle.</div></div><span class="pill">Open</span></div>
     <p class="disc">A space for reflection by a licensed clinical social worker. Not therapy or a crisis service. In crisis, contact local emergency services or a crisis line.</p>
   </div>
 
@@ -295,6 +302,8 @@ const PAID=[["The Culture Shock Workbook","🌀","Understand it, settle your ner
 const MEMBER_CODE="circle40";
 function gumroadUrl(slug){return "https://groundedexpat.gumroad.com/l/"+slug+(MEMBER_CODE?"/"+MEMBER_CODE:"")+"?wanted=true"}
 const WORKSHOPS=[["Landing","Steadying the overwhelm."],["The Dip","Culture shock for real."],["Homesick","Loving home without living there."],["Who Am I Here?","Identity in transition."],["Finding Your People","The slow work of belonging."],["Beginner Again","Being new isn't being incapable."],["The Relationship Strain","When it's not about the dishes."],["The Trailing Partner","Reclaiming your own life."],["Running on Empty","The hidden engine you're running."],["From Surviving to Belonging","Wanting a real life here."],["Far From Home for the Holidays","Missing home and being here."],["What's Next","Wherever you go from here."]];
+// [slug, title, subtitle] — audio streamed member-gated from R2 via /api/audio
+const PRACTICES=[["p01-arrival-reset","Arrival Reset","For your first days somewhere new."],["p02-name-it-to-tame-it","Name It to Tame It","When the feelings get loud."],["p03-home-in-my-body","Home in My Body","Come back to yourself."],["p04-values-touchstone","Values Touchstone","Remember what matters."],["p05-for-the-lonely-nights","For the Lonely Nights","When the missing is heavy."],["p06-self-compassion-break","Self-Compassion Break","Be gentle with yourself."],["p07-soften-before-you-speak","Soften Before You Speak","Before a hard conversation."],["p08-one-thing-thats-mine","One Thing That's Mine","Claim a little ground."],["p09-the-downshift","The Downshift","Let your system slow down."],["p10-savoring-here","Savoring Here","Take in the good."],["p11-both-and","Both / And","Hold the joy and the ache."],["p12-who-ive-become","Who I've Become","Meet who you're becoming."]];
 const SPACES=["Welcome","This month","What I'm navigating","Small wins","Ask Stephanie"];
 let activeSpace="This month",circleMod=false,feedPosts=[];
 
@@ -343,9 +352,11 @@ function openReader(key){
  else if(key.startsWith("ws-")){const i=+key.slice(3);readerGated("The Circle · "+WORKSHOPS[i][0],"workshop-"+String(i+1).padStart(2,"0"))}
 }
 function renderWorkshops(){$("#ws-list").innerHTML=WORKSHOPS.map((w,i)=>openItem("🕯️",w[0],w[1],"ws-"+i)).join("");$$("#ws-list [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open))}
+function renderPractices(){$("#practices").innerHTML=PRACTICES.map(p=>`<div class="litem open" data-track="${p[0]}"><div class="ic">🎧</div><div style="flex:1"><div class="t">${esc(p[1])}</div><div class="d">${esc(p[2])}</div></div><span class="pill">Play</span></div>`).join("");$$("#practices [data-track]").forEach(el=>el.onclick=()=>playPractice(el.dataset.track))}
+async function playPractice(slug){const p=PRACTICES.find(x=>x[0]===slug)||["","",""];const title=p[1];const box=$("#prac-player");box.classList.remove("hide");box.innerHTML=`<div class="pp"><div class="pp-t">Loading “${esc(title)}”…</div></div>`;box.scrollIntoView({behavior:"smooth",block:"nearest"});const s=localStorage.getItem("tge-session")||"";try{const r=await fetch("/api/audio?track="+encodeURIComponent(slug),{headers:{Authorization:"Bearer "+s}});if(r.status===403){box.innerHTML=`<div class="pp"><div class="pp-t">This is part of your membership — renew on the website to listen.</div></div>`;return}if(!r.ok){box.innerHTML=`<div class="pp"><div class="pp-t">Couldn't load this just now. Try again in a moment.</div></div>`;return}const url=URL.createObjectURL(await r.blob());box.innerHTML=`<div class="pp"><div class="pp-t">🎧 ${esc(title)}</div><audio controls autoplay src="${url}" style="width:100%;margin-top:10px"></audio></div>`;track("practice")}catch{box.innerHTML=`<div class="pp"><div class="pp-t">Couldn't load this just now. Check your connection.</div></div>`}}
 function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`;loadStats()}
 function statCell(label,total,wk){return `<div class="stat"><div class="num">${total||0}</div><div class="lbl">${label}</div><div class="wk">${wk||0} this week</div></div>`}
-async function loadStats(){const el=$("#stats");const s=localStorage.getItem("tge-session")||"";try{const r=await fetch("/api/track?stats=1",{headers:{Authorization:"Bearer "+s}});if(!r.ok){el.classList.add("hide");return}const d=await r.json();const t=d.totals||{},w=d.last7||{};el.innerHTML=`<div class="sec-label"><h3>Your numbers</h3><span class="pill">Host only</span></div><div class="statgrid">${statCell("App opens",t.open,w.open)}${statCell("Reflections",t.reflect,w.reflect)}${statCell("Circle posts",t.post,w.post)}${statCell("Journals opened",(t.library||0)+(t.workshop||0),(w.library||0)+(w.workshop||0))}</div><p class="disc" style="text-align:left;margin-top:10px">Anonymous counts only — no personal data. Just you can see these.</p>`;el.classList.remove("hide")}catch{el.classList.add("hide")}}
+async function loadStats(){const el=$("#stats");const s=localStorage.getItem("tge-session")||"";try{const r=await fetch("/api/track?stats=1",{headers:{Authorization:"Bearer "+s}});if(!r.ok){el.classList.add("hide");return}const d=await r.json();const t=d.totals||{},w=d.last7||{};el.innerHTML=`<div class="sec-label"><h3>Your numbers</h3><span class="pill">Host only</span></div><div class="statgrid">${statCell("App opens",t.open,w.open)}${statCell("Reflections",t.reflect,w.reflect)}${statCell("Circle posts",t.post,w.post)}${statCell("Practices",t.practice,w.practice)}${statCell("Journals",t.library,w.library)}${statCell("Workshops",t.workshop,w.workshop)}</div><p class="disc" style="text-align:left;margin-top:10px">Anonymous counts only — no personal data. Just you can see these.</p>`;el.classList.remove("hide")}catch{el.classList.add("hide")}}
 
 let sel=null,entryText="",convo=[],aiTurns=0;const MAX_Q=3;
 function updBtn(){$("#reflect-btn").disabled=!(sel&&$("#entry").value.trim().length>1)}
@@ -361,7 +372,7 @@ async function sendResponse(){const t=$("#response").value.trim();if(!t)return;i
 function wrapUp(){$("#reflect-input").classList.add("hide");$("#practice-text").textContent=PRACTICE[sel]||PRACTICE.okay;$("#reflect-end").classList.remove("hide");setTimeout(()=>window.scrollTo(0,document.body.scrollHeight),40)}
 function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:entryText,convo:convo.slice()});store.set("tge-entries",a);track("reflect");sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
 
-function boot(){greet();renderMoods();renderLibrary();renderCircle();
+function boot(){greet();renderMoods();renderLibrary();renderCircle();renderPractices();
  $("#entry").addEventListener("input",updBtn);
  $("#reflect-btn").onclick=doReflect;$("#save-btn").onclick=saveRef;
  $("#response").addEventListener("input",()=>{$("#send-btn").disabled=!$("#response").value.trim()});

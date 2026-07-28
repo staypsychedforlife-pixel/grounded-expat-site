@@ -35,7 +35,7 @@ export async function onRequestGet({ request, env }) {
   return json({ ok: true, mod: m.host, posts });
 }
 
-export async function onRequestPost({ request, env }) {
+export async function onRequestPost({ request, env, waitUntil }) {
   const m = await authedMember(request, env);
   if (!m.ok) return json({ error: m.reason }, m.status);
   if (!env.DB) return json({ error: "The community is coming online shortly." }, 503);
@@ -59,6 +59,40 @@ export async function onRequestPost({ request, env }) {
       .bind(m.email, name, space, body, ts).run();
   } catch { return json({ error: "Couldn't post just now. Try again in a moment." }, 500); }
 
+  // Nudge the host by email when a member (not the host) posts — throttled, best-effort.
+  if (!m.host) {
+    const job = notifyHost(env, { name, space, body });
+    if (waitUntil) waitUntil(job); else await job.catch(() => {});
+  }
+
   const id = res.meta && res.meta.last_row_id;
   return json({ ok: true, post: { id, name, body, space, ts, mine: true, host: m.host } });
+}
+
+// Email the host that there's new activity in The Circle. Throttled to at most one
+// nudge every 10 minutes so a busy day can't flood the inbox — it's a gentle "come
+// look," not a notification per post.
+async function notifyHost(env, post) {
+  if (!env.RESEND_API_KEY) return;
+  if (!(await allowAttempt("hostnotify", 1, 600))) return;
+  const to = env.HOST_EMAIL || "hello@thegroundedexpat.com";
+  const preview = post.body.length > 260 ? post.body.slice(0, 260) + "…" : post.body;
+  const esc = s => String(s || "").replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+  const link = "https://thegroundedexpat.com/app-929l2vmpvz1h/";
+  const html = `<div style="font-family:Helvetica,Arial,sans-serif;color:#2A2622;font-size:16px;line-height:1.6;max-width:460px">
+    <p>There's new activity in <b>The Circle</b>.</p>
+    <p style="background:#F6F1E7;border-radius:12px;padding:14px 16px;margin:18px 0">
+      <b>${esc(post.name)}</b> posted in <b>${esc(post.space)}</b>:<br>
+      <span style="color:#4a453d">${esc(preview)}</span>
+    </p>
+    <p style="margin:24px 0"><a href="${link}" style="background:#C2674A;color:#fff;text-decoration:none;padding:13px 26px;border-radius:100px;font-weight:600;display:inline-block">Open The Circle</a></p>
+    <p style="color:#6E6557;font-size:13px">You're getting this because you host The Circle. (You'll get at most one nudge every 10 minutes.)</p>
+  </div>`;
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: "Bearer " + env.RESEND_API_KEY, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: "The Grounded Expat <hello@thegroundedexpat.com>", to: [to], subject: "New post in The Circle 🌿", html }),
+    });
+  } catch { /* best effort */ }
 }
