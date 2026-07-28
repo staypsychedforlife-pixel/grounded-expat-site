@@ -90,6 +90,11 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
 .a2hs .acts{display:flex;align-items:center;gap:8px;flex:none}
 .a2hs .btn.sm{background:var(--clay);margin:0}
 .a2hs .x{background:none;border:none;color:#AEBBA4;font-size:20px;line-height:1;cursor:pointer;padding:0 2px}
+.statgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.stat{background:var(--cream);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat .num{font-family:var(--serif);font-weight:600;font-size:28px;color:var(--pine);line-height:1}
+.stat .lbl{font-size:13px;color:var(--ink);margin-top:4px;font-weight:500}
+.stat .wk{font-size:11.5px;color:var(--muted);margin-top:2px}
 .nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:440px;background:rgba(251,248,241,.96);backdrop-filter:blur(10px);border-top:1px solid var(--line);display:flex;padding:9px 0 calc(env(safe-area-inset-bottom) + 10px);z-index:5}
 .nav button{flex:1;background:none;border:none;font-family:var(--sans);font-size:10.5px;font-weight:600;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px}
 .nav button.on{color:var(--clay)}.nav .ic{font-size:19px}
@@ -245,6 +250,7 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   <div class="screen hide" id="s-me">
     <h1>You.</h1>
     <div class="banner"><div class="em">Founding member 🌿</div><h2>$19/mo · everything active</h2><p>The Circle, monthly workshops, your two free journals, and 40% off the library.</p></div>
+    <div id="stats" class="hide"></div>
     <div class="sec-label"><h3>Your reflection timeline</h3></div>
     <div class="sub">Private to you, saved on this device.</div>
     <div id="tl-list"></div>
@@ -270,6 +276,8 @@ let deferredPrompt=null;
 function isStandalone(){return (window.matchMedia&&window.matchMedia("(display-mode: standalone)").matches)||window.navigator.standalone===true}
 window.addEventListener("beforeinstallprompt",e=>{e.preventDefault();deferredPrompt=e;const b=document.getElementById("a2hs-add");const bar=document.getElementById("a2hs");if(b&&bar&&!bar.classList.contains("hide")){b.style.display="inline-block";const h=document.getElementById("a2hs-hint");if(h)h.textContent=" — add it to your phone for one-tap access.";}});
 window.addEventListener("appinstalled",()=>{const bar=document.getElementById("a2hs");if(bar)bar.classList.add("hide");store.set("tge-a2hs",true);});
+// Privacy-first analytics: fire-and-forget anonymous event count (no personal data).
+function track(ev){const s=localStorage.getItem("tge-session");if(!s)return;try{fetch("/api/track",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+s},body:JSON.stringify({event:ev}),keepalive:true}).catch(()=>{})}catch{}}
 
 const MOODS=[{id:"bright",label:"Bright",em:"☀️",c:"#C99A3A"},{id:"okay",label:"Okay",em:"🌤️",c:"#8C9B82"},{id:"tender",label:"Tender",em:"🌸",c:"#C2674A"},{id:"homesick",label:"Homesick",em:"🏠",c:"#7A8C9B"},{id:"heavy",label:"Overwhelmed",em:"🌊",c:"#5B6E7A"},{id:"numb",label:"Numb",em:"🌫️",c:"#9A968C"}];
 const PRACTICE={bright:"Let yourself have it. Pause for ten slow seconds and take it in. Joy counts too, and it's worth keeping.",okay:"Notice one ordinary thing that's quietly working today. Settling is built from small, unremarkable days like this.",tender:"A hand on your chest, and let this be a soft day. You don't have to feel okay to be doing okay.",homesick:"Name it plainly: I miss home. Grief is just love with nowhere to go. Then send one small message to someone who feels like home.",heavy:"Box breathing: in for four, hold four, out four, hold four. Three rounds. You're not behind, you're adjusting.",numb:"Feet flat on the floor. Name five things you can see. Sometimes the way back in is through the body, not the mind."};
@@ -329,12 +337,15 @@ async function readerGated(t,slug){
 }
 function openReader(key){
  showScreen("reader");window.scrollTo(0,0);
+ track(key.startsWith("ws-")?"workshop":"library");
  if(key.startsWith("mf-")){const i=+key.slice(3);readerGated(MEMBER_FREE[i][0],MEMBER_SLUGS[i])}
  else if(key.startsWith("fr-")){const i=+key.slice(3);readerSrc(FREE[i][0],FREE_URLS[i])}
  else if(key.startsWith("ws-")){const i=+key.slice(3);readerGated("The Circle · "+WORKSHOPS[i][0],"workshop-"+String(i+1).padStart(2,"0"))}
 }
 function renderWorkshops(){$("#ws-list").innerHTML=WORKSHOPS.map((w,i)=>openItem("🕯️",w[0],w[1],"ws-"+i)).join("");$$("#ws-list [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open))}
-function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`}
+function renderTimeline(){const a=store.get("tge-entries",[]);$("#tl-list").innerHTML=a.length?a.map(e=>{const m=MOODS.find(x=>x.id===e.mood)||{c:"#8C9B82",em:"·"};const d=new Date(e.ts).toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});return `<div class="post"><div class="who"><span class="av" style="background:${m.c}">${m.em}</span><div><div class="nm">${e.moodLabel}</div><div class="mt">${d}</div></div></div><div class="bd">${(e.entry||'').replace(/</g,'&lt;')}</div></div>`}).join(""):`<p class="sub" style="margin-top:12px">No check-ins yet. Your first one will land here.</p>`;loadStats()}
+function statCell(label,total,wk){return `<div class="stat"><div class="num">${total||0}</div><div class="lbl">${label}</div><div class="wk">${wk||0} this week</div></div>`}
+async function loadStats(){const el=$("#stats");const s=localStorage.getItem("tge-session")||"";try{const r=await fetch("/api/track?stats=1",{headers:{Authorization:"Bearer "+s}});if(!r.ok){el.classList.add("hide");return}const d=await r.json();const t=d.totals||{},w=d.last7||{};el.innerHTML=`<div class="sec-label"><h3>Your numbers</h3><span class="pill">Host only</span></div><div class="statgrid">${statCell("App opens",t.open,w.open)}${statCell("Reflections",t.reflect,w.reflect)}${statCell("Circle posts",t.post,w.post)}${statCell("Journals opened",(t.library||0)+(t.workshop||0),(w.library||0)+(w.workshop||0))}</div><p class="disc" style="text-align:left;margin-top:10px">Anonymous counts only — no personal data. Just you can see these.</p>`;el.classList.remove("hide")}catch{el.classList.add("hide")}}
 
 let sel=null,entryText="",convo=[],aiTurns=0;const MAX_Q=3;
 function updBtn(){$("#reflect-btn").disabled=!(sel&&$("#entry").value.trim().length>1)}
@@ -348,7 +359,7 @@ async function askAI(){convo.push({role:"ai",text:"…"});aiTurns++;renderThread
 async function doReflect(){entryText=$("#entry").value.trim();if(CRISIS.test(entryText)){showScreen("crisis");return}convo=[];aiTurns=0;$("#echo").textContent="“"+entryText+"”";$("#reflect-end").classList.add("hide");$("#reflect-input").classList.remove("hide");$("#response").value="";$("#send-btn").disabled=true;renderThread();showScreen("reflect");await askAI()}
 async function sendResponse(){const t=$("#response").value.trim();if(!t)return;if(CRISIS.test(t)){showScreen("crisis");return}convo.push({role:"me",text:t});$("#response").value="";$("#send-btn").disabled=true;renderThread();if(aiTurns>=MAX_Q){wrapUp();return}await askAI()}
 function wrapUp(){$("#reflect-input").classList.add("hide");$("#practice-text").textContent=PRACTICE[sel]||PRACTICE.okay;$("#reflect-end").classList.remove("hide");setTimeout(()=>window.scrollTo(0,document.body.scrollHeight),40)}
-function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:entryText,convo:convo.slice()});store.set("tge-entries",a);sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
+function saveRef(){const a=store.get("tge-entries",[]);a.unshift({ts:Date.now(),mood:sel,moodLabel:(MOODS.find(m=>m.id===sel)||{}).label||"",entry:entryText,convo:convo.slice()});store.set("tge-entries",a);track("reflect");sel=null;$("#entry").value="";$("#response").value="";$$(".mood").forEach(x=>x.classList.remove("sel"));updBtn();showTab("me")}
 
 function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#entry").addEventListener("input",updBtn);
@@ -360,7 +371,7 @@ function boot(){greet();renderMoods();renderLibrary();renderCircle();
  $("#reader-back").onclick=()=>showTab(document.querySelector('.nav button.on').dataset.go);
  $("#open-workshop").onclick=()=>openReader("ws-2");
  $$("#s-today [data-open]").forEach(el=>el.onclick=()=>openReader(el.dataset.open));
- $("#post-btn").onclick=async()=>{const v=$("#post-box").value.trim();if(!v)return;if(CRISIS.test(v)){showScreen("crisis");return}let name=store.get("tge-name","");if(!name){name=($("#post-name").value||"").trim();if(!name){$("#post-name").classList.remove("hide");$("#post-name").focus();return}store.set("tge-name",name);$("#post-name").classList.add("hide")}const sess=localStorage.getItem("tge-session")||"";const btn=$("#post-btn");btn.disabled=true;btn.textContent="Posting…";try{const r=await fetch("/api/circle/posts",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+sess},body:JSON.stringify({body:v,name,space:activeSpace})});if(r.ok){$("#post-box").value="";await loadFeed()}else{const d=await r.json().catch(()=>({}));alert(d.error||"Couldn't post just now. Try again in a moment.")}}catch{alert("Couldn't post just now. Check your connection and try again.")}btn.disabled=false;btn.textContent="Post to the circle"};
+ $("#post-btn").onclick=async()=>{const v=$("#post-box").value.trim();if(!v)return;if(CRISIS.test(v)){showScreen("crisis");return}let name=store.get("tge-name","");if(!name){name=($("#post-name").value||"").trim();if(!name){$("#post-name").classList.remove("hide");$("#post-name").focus();return}store.set("tge-name",name);$("#post-name").classList.add("hide")}const sess=localStorage.getItem("tge-session")||"";const btn=$("#post-btn");btn.disabled=true;btn.textContent="Posting…";try{const r=await fetch("/api/circle/posts",{method:"POST",headers:{"Content-Type":"application/json",Authorization:"Bearer "+sess},body:JSON.stringify({body:v,name,space:activeSpace})});if(r.ok){$("#post-box").value="";track("post");await loadFeed()}else{const d=await r.json().catch(()=>({}));alert(d.error||"Couldn't post just now. Try again in a moment.")}}catch{alert("Couldn't post just now. Check your connection and try again.")}btn.disabled=false;btn.textContent="Post to the circle"};
  $$(".nav button").forEach(b=>b.onclick=()=>showTab(b.dataset.go));
  $("#prof").onclick=()=>showTab("me");
  $("#signout").onclick=()=>{localStorage.removeItem("tge-session");location.reload()};
@@ -378,7 +389,7 @@ function maybeShowA2HS(){
  else{hint.textContent=" — add it to your home screen for one-tap access.";}
  $("#a2hs").classList.remove("hide");
 }
-function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot();maybeShowWelcome()}
+function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot();maybeShowWelcome();track("open")}
 function gateState(s){["choose","form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
 async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
 $("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
