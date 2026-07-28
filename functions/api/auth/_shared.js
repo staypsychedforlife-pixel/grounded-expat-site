@@ -43,6 +43,34 @@ export function json(o, status) {
   return new Response(JSON.stringify(o), { status: status || 200, headers: { "Content-Type": "application/json" } });
 }
 
+// --- Stateless 6-digit sign-in code (TOTP-style, no database) ---
+// The code = first 4 bytes of HMAC(secret, "code:<email>:<window>") mod 1e6.
+// Both request.js (emit) and code.js (check) derive it the same way for the same
+// 10-minute window, so nothing needs to be stored between the two calls.
+export const CODE_WINDOW_MS = 10 * 60 * 1000;
+export function currentWindow(ms) { return Math.floor(Date.now() / (ms || CODE_WINDOW_MS)); }
+export async function makeCode(email, secret, win) {
+  const msg = "code:" + String(email).toLowerCase() + ":" + win;
+  const sig = await crypto.subtle.sign("HMAC", await hmacKey(secret), enc.encode(msg));
+  const b = new Uint8Array(sig);
+  const n = (((b[0] << 24) | (b[1] << 16) | (b[2] << 8) | b[3]) >>> 0) % 1000000;
+  return String(n).padStart(6, "0");
+}
+// Best-effort per-key throttle using the Workers Cache API (same idea as reflect.js).
+// Returns true if the attempt is allowed, false if over the limit in the window.
+export async function allowAttempt(bucket, max, ttlSec) {
+  try {
+    const key = new Request("https://ratelimit.internal/" + encodeURIComponent(bucket));
+    const cache = caches.default;
+    let count = 0;
+    const hit = await cache.match(key);
+    if (hit) count = parseInt(await hit.text(), 10) || 0;
+    if (count >= max) return false;
+    await cache.put(key, new Response(String(count + 1), { headers: { "Cache-Control": "max-age=" + (ttlSec || 600) } }));
+    return true;
+  } catch { return true; } // never lock people out on a cache error
+}
+
 // LIVE gate: does this email have an active Circle subscription in Stripe?
 // If priceId is given, only that price counts (so other Stripe purchases don't
 // grant membership). Returns false safely on any error. An email may map to

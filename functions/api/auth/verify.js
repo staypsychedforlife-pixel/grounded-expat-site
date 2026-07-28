@@ -2,7 +2,7 @@
 // Exchanges a valid, unexpired magic-link token for a 30-day session token.
 import { sign, verify, json } from "./_shared.js";
 
-const SESSION_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+const SESSION_TTL_MS = 90 * 24 * 60 * 60 * 1000; // 90 days (me.js still re-checks Stripe every open)
 
 export async function onRequestPost({ request, env }) {
   let body;

@@ -104,13 +104,16 @@ textarea:focus,input:focus{outline:none;border-color:var(--sage)}
   </div>
   <div id="login-form" class="hide" style="margin-top:30px">
     <input id="login-email" type="email" inputmode="email" autocomplete="email" placeholder="Your email" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--cream)">
-    <button class="btn" id="send-link" style="margin-top:12px">Email me a sign-in link</button>
+    <button class="btn" id="send-link" style="margin-top:12px">Email me a sign-in code</button>
     <button class="btn ghost" id="go-back" style="border-color:#7d8b74;color:var(--cream)">Not a member yet? Join</button>
     <p id="login-err" class="hide" style="color:#E7B7A6;font-size:13px;text-align:center;margin-top:12px"></p>
   </div>
   <div id="login-sent" class="hide" style="margin-top:30px">
-    <div class="qcard" style="background:rgba(255,255,255,.07)"><div class="q" style="font-size:19px">Check your email 🌿</div><p style="color:#E6E9DF;font-size:14.5px;line-height:1.5;margin-top:10px">I sent a one-tap sign-in link to <b id="sent-to"></b>. It works once and expires in 15 minutes.</p></div>
-    <button class="btn ghost" id="login-again" style="border-color:#7d8b74;color:var(--cream);margin-top:14px">Use a different email</button>
+    <div class="qcard" style="background:rgba(255,255,255,.07)"><div class="q" style="font-size:19px">Check your email 🌿</div><p style="color:#E6E9DF;font-size:14.5px;line-height:1.5;margin-top:10px">I sent a 6-digit code to <b id="sent-to"></b>. Enter it below to sign in. It works for about 15 minutes.</p></div>
+    <input id="code-input" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6-digit code" style="background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.22);color:var(--cream);text-align:center;letter-spacing:.35em;font-size:22px;margin-top:14px">
+    <button class="btn" id="verify-code" style="margin-top:12px">Sign in</button>
+    <p id="code-err" class="hide" style="color:#E7B7A6;font-size:13px;text-align:center;margin-top:12px"></p>
+    <button class="btn ghost" id="login-again" style="border-color:#7d8b74;color:var(--cream);margin-top:8px">Use a different email</button>
   </div>
   <div id="login-loading" class="hide" style="margin-top:34px;text-align:center;color:#E6E9DF;font-family:var(--serif);font-style:italic;font-size:18px">Signing you in…</div>
   <p style="font-size:12.5px;color:#AEBBA4;text-align:center;margin-top:22px">Members subscribe on the website, then sign in here. Not therapy or a crisis service.</p>
@@ -322,8 +325,11 @@ async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)
 $("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
 $("#go-signin").onclick=()=>{$("#login-err").classList.add("hide");gateState("form")};
 $("#go-back").onclick=()=>gateState("choose");
-$("#send-link").onclick=async()=>{const email=($("#login-email").value||"").trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){$("#login-err").textContent="Please enter a valid email.";$("#login-err").classList.remove("hide");return}$("#login-err").classList.add("hide");gateState("loading");try{await fetch("/api/auth/request",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})})}catch{}$("#sent-to").textContent=email;gateState("sent")};
-$("#login-again").onclick=()=>gateState("form");
+let pendingEmail="";
+$("#send-link").onclick=async()=>{const email=($("#login-email").value||"").trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){$("#login-err").textContent="Please enter a valid email.";$("#login-err").classList.remove("hide");return}$("#login-err").classList.add("hide");pendingEmail=email;gateState("loading");try{await fetch("/api/auth/request",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email})})}catch{}$("#sent-to").textContent=email;$("#code-input").value="";$("#code-err").classList.add("hide");gateState("sent");setTimeout(()=>$("#code-input").focus(),80)};
+$("#verify-code").onclick=async()=>{const code=($("#code-input").value||"").replace(/\D/g,"");if(code.length!==6){$("#code-err").textContent="Enter the 6-digit code from your email.";$("#code-err").classList.remove("hide");return}$("#code-err").classList.add("hide");gateState("loading");try{const r=await fetch("/api/auth/code",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email:pendingEmail,code})});const d=await r.json();if(r.ok&&d.session){localStorage.setItem("tge-session",d.session);enterApp();return}gateState("sent");$("#code-err").textContent=d.error||"That code didn't match. Request a fresh one.";$("#code-err").classList.remove("hide")}catch{gateState("sent");$("#code-err").textContent="Something went wrong. Try again in a moment.";$("#code-err").classList.remove("hide")}};
+$("#code-input").addEventListener("keydown",e=>{if(e.key==="Enter")$("#verify-code").click()});
+$("#login-again").onclick=()=>{$("#code-input").value="";$("#code-err").classList.add("hide");gateState("form")};
 $("#join-close").onclick=()=>$("#join-sheet").classList.add("hide");
 (async()=>{const url=new URL(location.href);const t=url.searchParams.get("token");if(t){gateState("loading");try{const r=await fetch("/api/auth/verify",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({token:t})});const d=await r.json();if(d.ok&&d.session){localStorage.setItem("tge-session",d.session);history.replaceState({},"",url.pathname);enterApp();return}}catch{}history.replaceState({},"",url.pathname);gateState("form");$("#login-err").textContent="That link expired or was already used — enter your email for a fresh one.";$("#login-err").classList.remove("hide");return}if(await checkSession()){enterApp();return}gateState("choose")})();
 </script>
