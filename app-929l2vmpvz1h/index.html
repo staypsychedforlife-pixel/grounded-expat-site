@@ -400,7 +400,7 @@ function maybeShowA2HS(){
  else{hint.textContent=" — add it to your home screen for one-tap access.";}
  $("#a2hs").classList.remove("hide");
 }
-function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot();maybeShowWelcome();track("open")}
+function enterApp(){$("#gate").classList.add("hide");$("#app").classList.remove("hide");boot();showTab("circle");maybeShowWelcome();track("open")}
 function gateState(s){["choose","form","sent","loading"].forEach(x=>$("#login-"+x).classList.toggle("hide",x!==s))}
 async function checkSession(){const t=localStorage.getItem("tge-session");if(!t)return false;try{const r=await fetch("/api/auth/me",{headers:{Authorization:"Bearer "+t}});if(r.ok){const d=await r.json();return !!d.member}}catch{}localStorage.removeItem("tge-session");return false}
 $("#go-join").onclick=()=>$("#join-sheet").classList.remove("hide");
