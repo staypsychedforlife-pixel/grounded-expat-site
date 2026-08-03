@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Library — journals & workbooks · The Grounded Expat</title>
+<title>The Library: journals &amp; workbooks · The Grounded Expat</title>
 <meta name="description" content="Honest, clinically grounded journals and workbooks for the inner side of moving abroad. Start free.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,6 +57,16 @@ a{color:inherit;text-decoration:none}
 .foot{border-top:1px solid var(--line);margin-top:56px;padding:34px 0 60px;text-align:center;color:var(--muted);font-size:14px}
 .foot .b{font-family:var(--serif);font-weight:600;color:var(--pine);font-size:17px}
 .disclaimer{font-size:13px;color:var(--muted);max-width:70ch;margin:14px auto 0;line-height:1.55}
+/* free journals + email capture */
+.s-free{background:var(--oat-alt);padding:clamp(38px,5vw,58px) 0}
+.signup{margin:22px auto 0;max-width:480px}
+.signup form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.signup input[type=email]{flex:1 1 220px;font-family:var(--sans);font-size:16px;padding:13px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink)}
+.signup input[type=email]:focus{outline:none;border-color:var(--pine)}
+.signup .note{font-size:13.5px;color:var(--muted);margin:12px 2px 0;min-height:1.2em}
+.signup .note.ok{color:var(--pine);font-weight:600}
+.signup .note.err{color:#9a3a2a;font-weight:600}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 @media(max-width:720px){.grid,.list .row{grid-template-columns:1fr}.grid > .j.solo{width:auto}}
 @media(max-width:560px){.site-nav{gap:16px}.nav-link{font-size:14px}.site-head .btn{padding:10px 16px;font-size:14px}}
 /* centered content (matches homepage) — header/footer untouched */
@@ -85,7 +95,48 @@ a{color:inherit;text-decoration:none}
 <section class="hero"><div class="wrap">
   <div class="kicker"><span class="seed"></span>The Library</div>
   <h1>Tools for the <em>inner</em> side of moving abroad.</h1>
-  <p class="lead">Honest, clinically grounded journals and workbooks — for culture shock, homesickness, lost identity, and starting over. Self-paced, private, and yours to keep.</p>
+  <p class="lead">Honest, clinically grounded journals and workbooks for culture shock, homesickness, lost identity, and starting over. Self-paced, private, and yours to keep.</p>
+</div></section>
+
+<section class="section s-free" id="free"><div class="wrap" style="text-align:center">
+  <div class="kicker" style="justify-content:center"><span class="seed"></span>Free &middot; open right now</div>
+  <h2 class="serif" style="font-weight:500;font-size:clamp(26px,3vw,38px);line-height:1.08;margin:14px 0 0">Start with a free one.</h2>
+  <p class="sub" style="margin:10px auto 0">Four guided journals, private to you and saved right on your device. Add your email once to open them, then pick the one that meets the moment you&rsquo;re in.</p>
+  <div class="signup" id="join">
+    <form class="join-form" novalidate aria-label="Open the free journals">
+      <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" autocomplete="email">
+      <input type="hidden" name="_form" value="library-free-journals">
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn--clay" type="submit">Open the free journals</button>
+    </form>
+    <p class="note" role="status" aria-live="polite">All four, yours to keep. Unsubscribe anytime.</p>
+  </div>
+  <div class="grid">
+    <article class="j">
+      <span class="tag tag-free">The first week</span>
+      <h3>Your First 7 Days Abroad</h3>
+      <p>A gentle, day-by-day companion for the overwhelming first week. One small page a day, the kind you actually finish.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--ghost" href="/first-7-days/">Open it now &rarr;</a></div>
+    </article>
+    <article class="j">
+      <span class="tag tag-free">Around month three</span>
+      <h3>The Month-3 Dip</h3>
+      <p>For when the shine wears off and you quietly wonder if you made a mistake. It&rsquo;s the most normal, least talked-about part of the whole arc.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--ghost" href="/month-3-dip/">Open it now &rarr;</a></div>
+    </article>
+    <article class="j">
+      <span class="tag tag-free">Missing home</span>
+      <h3>The Goodbye Journal</h3>
+      <p>For airport goodbyes, the guilt, and loving people from far away. A gentle place to set the heavy feelings down.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--ghost" href="/goodbye-journal/">Open it now &rarr;</a></div>
+    </article>
+    <article class="j">
+      <span class="tag tag-free">Starting from scratch</span>
+      <h3>Making Friends in a New Country</h3>
+      <p>For the lonely, brave work of building your people from nothing. You&rsquo;re not cursed. It&rsquo;s just genuinely hard, and this softens it.</p>
+      <div class="foot"><span class="price">Free</span><a class="btn btn--ghost" href="/making-friends/">Open it now &rarr;</a></div>
+    </article>
+  </div>
 </div></section>
 
 
@@ -94,22 +145,16 @@ a{color:inherit;text-decoration:none}
   <h2>Go deeper on the harder chapters.</h2>
   <p class="sub">Self-paced guides for culture shock, identity, relationships, and starting over abroad. Each is available now, self-saving, and yours to keep.</p>
   <div class="grid">
-    <article class="j" style="grid-column:1 / -1;background:var(--pine);border-color:var(--pine)">
-      <span class="tag" style="color:var(--pine);background:var(--cream)">Best value &middot; the bundle</span>
-      <h3 style="color:var(--cream)">The Complete Library</h3>
-      <p style="color:#D8D3C6">Five workbooks in one &mdash; the whole inner side of moving abroad, from the first goodbye to coming home. Save $32 vs. buying them one at a time.</p>
-      <div class="foot"><span class="price" style="color:var(--cream)"><s style="color:#B7AE9E">$99</s> $69 <span style="color:#C9C3B6">· one-time</span></span><a class="btn btn--clay" href="/journals/the-complete-library/">See the bundle →</a></div>
-    </article>
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The Relocation Journal</h3>
-      <p>The flagship. A private journal for the whole inner arc of moving abroad &mdash; landing, the hard middle, becoming, and carrying it home. 9 guided entries.</p>
+      <p>The flagship. A private journal for the whole inner arc of moving abroad: landing, the hard middle, becoming, and carrying it home. 9 guided entries.</p>
       <div class="foot"><span class="price">$19 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-relocation-journal/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The Partner&rsquo;s Journal</h3>
-      <p>For the one who moved for someone else&rsquo;s job or dream. Your grief, your invisible work, your becoming &mdash; finally named. 8 guided entries.</p>
+      <p>For the one who moved for someone else&rsquo;s job or dream. Your grief, your invisible work, your becoming, finally named. 8 guided entries.</p>
       <div class="foot"><span class="price">$19 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-partners-journal/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
@@ -127,7 +172,7 @@ a{color:inherit;text-decoration:none}
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The Expat Marriage Workbook</h3>
-      <p>A move tests even strong relationships. Face it together &mdash; with private reflection and prompts to actually talk through, side by side. 6 sections across 3 parts.</p>
+      <p>A move tests even strong relationships. Face it together, with private reflection and prompts to actually talk through, side by side. 6 sections across 3 parts.</p>
       <div class="foot"><span class="price">$25 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-expat-marriage-workbook/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
@@ -145,19 +190,19 @@ a{color:inherit;text-decoration:none}
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The Third-Culture Family Workbook</h3>
-      <p>Helping your children &mdash; and yourself &mdash; feel at home abroad. For the parent holding the whole family&rsquo;s move. 7 sections.</p>
+      <p>Helping your children, and yourself, feel at home abroad. For the parent holding the whole family&rsquo;s move. 7 sections.</p>
       <div class="foot"><span class="price">$19 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-third-culture-family-workbook/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The LGBTQ+ Abroad Journal</h3>
-      <p>Moving abroad as your whole self &mdash; safety, visibility, finding your people, and who you&rsquo;re becoming. For the queer, trans, and questioning. 7 sections.</p>
+      <p>Moving abroad as your whole self: safety, visibility, finding your people, and who you&rsquo;re becoming. For the queer, trans, and questioning. 7 sections.</p>
       <div class="foot"><span class="price">$19 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-lgbtq-abroad-journal/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
       <span class="tag" style="background:var(--clay);color:var(--cream)">Available now</span>
       <h3>The LGBTQ+ Couples Workbook</h3>
-      <p>For two people holding a queer relationship across a move &mdash; safety, visibility, and staying close under strain. 6 sections across 3 parts.</p>
+      <p>For two people holding a queer relationship across a move: safety, visibility, and staying close under strain. 6 sections across 3 parts.</p>
       <div class="foot"><span class="price">$25 <span>· one-time</span></span><a class="btn btn--ghost" href="/journals/the-lgbtq-couples-workbook/">See what&rsquo;s inside →</a></div>
     </article>
     <article class="j">
@@ -237,6 +282,59 @@ a{color:inherit;text-decoration:none}
 <footer class="foot"><div class="wrap">
   <div class="b">The Grounded Expat</div>
   Created by Stephanie Johnson, LICSW · thegroundedexpat.com
-  <p class="disclaimer">The Grounded Expat offers educational, self-reflection resources — not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
+  <p class="disclaimer">The Grounded Expat offers educational, self-reflection resources, not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
 </div></footer>
+
+<script>
+(function(){
+  var ENDPOINT = "/api/submit";
+  var KIT_FORM_ID = "9638627"; // The Grounded Expat — Free Journal (kit.com)
+  document.querySelectorAll("form.join-form").forEach(function(form){
+    var note = form.parentNode.querySelector(".note");
+    var btn = form.querySelector("button");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var email = (form.email.value || "").trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        note.textContent = "Please enter a valid email address.";
+        note.className = "note err"; return;
+      }
+      if(form._gotcha && form._gotcha.value){ return; } // honeypot
+      var data = {}; new FormData(form).forEach(function(v,k){ data[k]=v; });
+      btn.disabled = true; var label = btn.textContent; btn.textContent = "Sending…";
+      note.textContent = ""; note.className = "note";
+
+      // Add the subscriber to Kit (ConvertKit) — fire-and-forget, never blocks the unlock.
+      if (KIT_FORM_ID) {
+        try {
+          var kitData = new FormData();
+          kitData.append("email_address", email);
+          fetch("https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
+            method: "POST", headers: { "Accept": "application/json" }, body: kitData
+          });
+        } catch (e) { /* best-effort only */ }
+      }
+
+      fetch(ENDPOINT, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+        .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok&&j.ok, j:j}; }); })
+        .then(function(res){
+          if(res.ok){
+            try{localStorage.setItem('tge-gate-unlocked','1');}catch(e){}
+            form.reset();
+            note.innerHTML = 'You&rsquo;re in. Pick whichever one meets the moment you&rsquo;re in, just below.';
+            note.className = "note ok";
+          } else {
+            note.textContent = "Something went wrong. Please try again in a moment.";
+            note.className = "note err";
+          }
+        })
+        .catch(function(){
+          note.textContent = "Couldn’t reach the server. Please try again.";
+          note.className = "note err";
+        })
+        .finally(function(){ btn.disabled = false; btn.textContent = label; });
+    });
+  });
+})();
+</script>
 </body></html>
