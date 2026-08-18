@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work with me &middot; The Grounded Expat</title>
+<meta name="description" content="One-to-one coaching for the emotional side of living abroad, with a licensed clinical social worker who lives it. Single sessions and a six-session program.">
+<link rel="canonical" href="https://thegroundedexpat.com/work-with-me/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work with me &middot; The Grounded Expat">
+<meta property="og:description" content="One-to-one coaching for the part of moving abroad you can't work through on your own.">
+<meta property="og:url" content="https://thegroundedexpat.com/work-with-me/">
+<meta property="og:site_name" content="The Grounded Expat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work with me &middot; The Grounded Expat">
+<meta name="twitter:description" content="One-to-one coaching for the emotional side of living abroad.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--clay-deep:#A8513620;
+  --oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;
+  --muted:#6E6557;--line:rgba(42,38,34,.13);--line-light:rgba(251,248,241,.22);
+  --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif)}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--clay)}
+.kicker .seed{width:8px;height:8px;border-radius:50%;background:var(--clay);position:relative;flex:none}
+.kicker .seed::after{content:"";position:absolute;left:-3px;top:9px;width:14px;height:1.5px;background:var(--clay);opacity:.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;border:1.5px solid var(--pine);background:var(--pine);color:var(--cream);cursor:pointer;transition:transform .12s ease,opacity .12s ease}
+.btn:hover{transform:translateY(-1px);opacity:.93}
+.btn--clay{background:var(--clay);border-color:var(--clay)}
+.btn--ghost{background:transparent;color:var(--pine)}
+.btn--cream{background:var(--cream);border-color:var(--cream);color:var(--pine)}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--pine);letter-spacing:.01em}
+.brand .mark{width:26px;height:26px;flex:none}
+.brand b{font-weight:600}
+.brand .the{color:var(--sage);font-weight:500}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(60px,8vw,108px) 0 clamp(50px,6vw,84px)}
+.hero .halo{position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(194,103,74,.16),rgba(194,103,74,0) 68%);pointer-events:none}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(42px,6vw,80px);line-height:1.02;letter-spacing:-.015em;margin:20px 0 0;max-width:15ch}
+.hero h1 em{font-style:italic;color:var(--clay)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:52ch;margin:24px 0 0;line-height:1.6}
+.signup{margin-top:32px;max-width:480px}
+.signup form{display:flex;gap:10px;flex-wrap:wrap}
+.signup input[type=email]{flex:1 1 220px;font-family:var(--sans);font-size:16px;padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink)}
+.signup input[type=email]:focus{outline:none;border-color:var(--pine)}
+.signup .note{font-size:13.5px;color:var(--muted);margin:12px 2px 0;min-height:1.2em}
+.signup .note.ok{color:var(--pine);font-weight:600}
+.signup .note.err{color:#9a3a2a;font-weight:600}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* strip */
+.strip{background:var(--pine);color:var(--cream)}
+.strip .wrap{padding:26px 28px;display:flex;align-items:center;gap:18px;justify-content:center;text-align:center}
+.strip p{margin:0;font-size:clamp(15px,1.5vw,18px);font-family:var(--serif);font-weight:400;font-style:italic;color:#EDEAE0;max-width:74ch;line-height:1.5}
+.strip b{font-style:normal;font-weight:600;color:var(--cream)}
+
+/* sections */
+.section{padding:clamp(56px,7vw,100px) 0}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.7vw,50px);line-height:1.06;letter-spacing:-.01em;margin:14px 0 0;max-width:22ch}
+.section .sub{font-size:17px;color:var(--muted);max-width:56ch;margin:16px 0 0}
+.s-alt{background:var(--oat-alt)}
+.s-pine{background:var(--pine);color:var(--cream)}
+.s-pine h2{color:var(--cream)}.s-pine .sub{color:#D8D3C6}.s-pine .kicker{color:var(--clay)}
+
+/* what's inside */
+.inside{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px;margin-top:clamp(34px,4vw,54px)}
+.inside .it{display:flex;gap:15px;align-items:flex-start}
+.inside .it .n{flex:none;width:30px;height:30px;border-radius:50%;background:rgba(194,103,74,.14);color:var(--clay);font-family:var(--serif);font-weight:600;font-size:15px;display:flex;align-items:center;justify-content:center;margin-top:3px}
+.inside .it h4{font-family:var(--serif);font-weight:600;font-size:20px;margin:0 0 5px;line-height:1.18}
+.inside .it p{font-size:15px;color:var(--muted);margin:0;line-height:1.55}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(34px,4vw,52px)}
+.who .item{border-top:2px solid var(--clay);padding-top:18px}
+.who .item h4{font-family:var(--serif);font-weight:600;font-size:19px;margin:0 0 6px}
+.who .item p{font-size:14.5px;color:#CFC9BC;margin:0;line-height:1.5}
+
+/* founding perks */
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:clamp(32px,4vw,48px)}
+.perk{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column}
+.perk .num{font-family:var(--serif);font-size:22px;color:var(--clay);font-weight:600}
+.perk h4{font-family:var(--serif);font-weight:600;font-size:19px;margin:12px 0 8px;color:var(--pine);line-height:1.15}
+.perk p{font-size:14.5px;color:var(--muted);margin:0;line-height:1.55}
+.price-line{font-family:var(--serif);font-size:clamp(21px,2.4vw,27px);color:var(--pine);font-weight:600;margin:clamp(30px,4vw,42px) 0 0}
+.price-line span{font-family:var(--sans);font-size:15px;color:var(--muted);font-weight:500}
+
+/* final cta */
+.cta{background:var(--clay);color:var(--cream);text-align:center}
+.cta h2{color:var(--cream);margin:0 auto;max-width:20ch}
+.cta .signup{margin:14px auto 0}
+.cta input[type=email]{border-color:transparent}
+.cta .note{color:#FBEFE9}.cta .note.ok{color:#fff}
+.cta .lead{color:#FBEFE9;max-width:48ch;margin:18px auto 0;font-size:17px}
+
+/* footer */
+.foot{background:var(--pine-deep);color:#CFC9BC;font-size:14px}
+.foot .wrap{padding:54px 28px 40px}
+.foot .top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid var(--line-light);padding-bottom:26px;margin-bottom:22px}
+.foot .brand{color:var(--cream)}
+.foot a:hover{color:var(--cream)}
+.foot .links{display:flex;gap:22px;flex-wrap:wrap}
+.foot .disc{font-size:12.5px;line-height:1.6;color:#9C9587;max-width:80ch;margin:0 0 18px}
+.foot .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#9C9587}
+
+@media(max-width:820px){
+  .inside,.who,.perks{grid-template-columns:1fr 1fr}
+  .perks{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .inside,.who{grid-template-columns:1fr}
+  .inside .it{flex-basis:100%}
+  .site-head .btn{padding:10px 18px;font-size:14px}
+}
+/* centered content (matches homepage) — header/footer untouched */
+.hero .wrap,.section .wrap{text-align:center}
+.hero h1,.hero .lead,.section h2,.section .sub{margin-left:auto;margin-right:auto}
+.hero .signup{margin-left:auto;margin-right:auto}
+.inside{display:flex;flex-wrap:wrap;justify-content:center;gap:26px 34px}
+.inside .it{flex:0 1 calc(50% - 17px);flex-direction:column;align-items:center;text-align:center}
+.perk{align-items:center;text-align:center}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="The Grounded Expat — home">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><span class="the">The</span> Grounded <b>Expat</b></span>
+    </a>
+    <a class="btn btn--clay" href="#join">Join The Circle</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="halo"></div>
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Work with me &middot; one to one</div>
+    <h1>You made the move. That was the part you could plan for.</h1>
+    <p class="lead">You&rsquo;re functioning. Maybe doing pretty well. But somewhere along the way something got harder, and it isn&rsquo;t the visa or the shipping. It&rsquo;s home, or identity, or the friendships that haven&rsquo;t quite happened, or not feeling like yourself here. That&rsquo;s the part I work with.</p>
+    <div style="margin-top:30px;">
+      <a class="btn btn--clay" href="#book" style="font-size:16px;padding:15px 30px;">Start with a free 15 minutes</a>
+    </div>
+  </div>
+</section>
+
+<section class="section s-alt">
+  <div class="wrap" style="display:flex;gap:38px;align-items:center;flex-wrap:wrap;">
+    <img src="/assets/stephanie-2026.jpg" alt="Stephanie Johnson" width="150" height="150" style="width:150px;height:150px;border-radius:50%;object-fit:cover;flex:none;">
+    <div style="flex:1 1 340px;">
+      <div class="kicker"><span class="seed"></span>Hi, I&rsquo;m Stephanie</div>
+      <p style="font-size:18px;line-height:1.65;margin-top:12px;">I&rsquo;ve lived abroad long enough to know the hardest parts usually aren&rsquo;t the ones people warn you about. I&rsquo;ve also worked in behavioral health since 2009 and I&rsquo;m a licensed clinical social worker, which means I can go a bit further with you than &ldquo;give it time.&rdquo;</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>You might be here because</div>
+    <h2>You&rsquo;re doing fine, and you still don&rsquo;t feel fine.</h2>
+    <ul style="margin-top:26px;max-width:60ch;font-size:18px;line-height:1.7;padding-left:20px;">
+      <li>You love where you live and you&rsquo;re lonelier than you expected to be.</li>
+      <li>You&rsquo;re tired of explaining why something feels different now.</li>
+      <li>Your relationship has changed since the move and you can&rsquo;t quite name how.</li>
+      <li>You don&rsquo;t know whether you want to stay or go home.</li>
+      <li>Everyone assumes you&rsquo;re having the adventure of a lifetime.</li>
+      <li>You miss the person you used to be more than you thought you would.</li>
+      <li>You&rsquo;re back home and it doesn&rsquo;t feel like home.</li>
+      <li>Nothing is really wrong. You just don&rsquo;t feel like yourself.</li>
+    </ul>
+    <p style="margin-top:22px;font-size:18px;max-width:60ch;">That&rsquo;s the territory I work in. Whether you&rsquo;re getting ready to go, somewhere in the middle of it, or back home and finding that harder than you expected.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>How it works</div>
+    <h2>Three ways to start.</h2>
+    <p class="sub">All one to one, by video, wherever you are in the world.</p>
+    <div class="inside">
+      <div class="it"><span class="n">1</span><div><h4>A first conversation &middot; free &middot; 15 minutes</h4><p>No preparation and no sales pitch. A chance to say what&rsquo;s going on and see whether working together makes sense. If I&rsquo;m not the right person, I&rsquo;ll say so and point you somewhere better.</p></div></div>
+      <div class="it"><span class="n">2</span><div><h4>A Bearing &middot; one session &middot; $175</h4><p>You&rsquo;re not looking for something long term. You just need somewhere to put what you&rsquo;ve been carrying and an hour to make sense of it. A lot of people come once and carry on from there.</p></div></div>
+      <div class="it"><span class="n">3</span><div><h4>The Crossing &middot; six sessions &middot; $895</h4><p><b>Save 15%.</b> For when this isn&rsquo;t one bad week. Six sessions across about three months, so there&rsquo;s room to live between them, with the Culture Shock Workbook alongside and a private page that&rsquo;s yours to keep.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section s-pine">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Worth saying plainly</div>
+    <h2>A different kind of support.</h2>
+    <p class="sub" style="max-width:58ch;">I&rsquo;m a licensed clinical social worker, and this isn&rsquo;t therapy. No diagnosis, no treatment plan, and no assumption that something is wrong with you.</p>
+    <p class="sub" style="max-width:58ch;margin-top:14px;">Sometimes you don&rsquo;t need therapy. You need somewhere to think out loud, someone who understands the strange middle ground of living abroad, and enough perspective to work out what comes next.</p>
+  </div>
+</section>
+
+<section class="section s-alt" id="book">
+  <div class="wrap" style="text-align:center">
+    <div class="kicker"><span class="seed"></span>Getting started</div>
+    <h2 style="margin-left:auto;margin-right:auto;">You don&rsquo;t have to work this part out on your own.</h2>
+    <p class="sub" style="margin-left:auto;margin-right:auto;">Pick a time that works where you are. We&rsquo;ll talk for fifteen minutes about what&rsquo;s going on and whether I might be the right person to help. No preparation, no pressure, no obligation to continue.</p>
+    <div style="margin-top:30px;">
+      <a class="btn btn--clay" href="https://cal.com/stephanie-johnson-m0kuvj" style="font-size:16px;padding:15px 30px;">Book a free 15 minutes</a>
+    </div>
+    <p style="margin-top:18px;font-size:15px;color:var(--muted);">Or go straight to <a href="https://buy.stripe.com/9B63cugGVc6dc4hbIV4Ja01" style="color:var(--clay);font-weight:600;">A Bearing</a> &middot; $175, or <a href="https://buy.stripe.com/00w8wOaix6LT8S5fZb4Ja02" style="color:var(--clay);font-weight:600;">The Crossing</a> &middot; $895, save 15%</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="disc" style="font-size:14px;color:var(--muted);max-width:70ch;">The Grounded Expat offers coaching and educational resources: not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="/" aria-label="The Grounded Expat — home">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#FBF8F1" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <span style="color:var(--cream)"><span style="color:var(--sage)">The</span> Grounded <b>Expat</b></span>
+      </a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/#join">Free journal</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="mailto:hello@thegroundedexpat.com">hello@thegroundedexpat.com</a>
+        <a href="https://anchorpointpartners.co">For employers &amp; HR &rarr;</a>
+      </div>
+    </div>
+    <p class="disc">The Grounded Expat offers educational, self-reflection resources and community: not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
+    <div class="legal">
+      <div>&copy; 2026 The Grounded Expat &middot; An Anchor Point Partners production</div>
+      <div>Made with care for people far from home.</div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
