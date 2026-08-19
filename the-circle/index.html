@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Circle — a membership for the inner side of living abroad | The Grounded Expat</title>
-<meta name="description" content="The Circle is a membership for people doing the inner work of living abroad — monthly workshops, a warm always-on community with a licensed clinical social worker as host, and a member discount on the full workbook library. Join The Circle.">
+<title>The Circle | You don&rsquo;t have to explain yourself here | The Grounded Expat</title>
+<meta name="description" content="The Circle is a small, steady membership for the inner side of living abroad, with a licensed clinical social worker in the ongoing conversation.">
 <link rel="canonical" href="https://thegroundedexpat.com/the-circle/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The Circle — The Grounded Expat">
-<meta property="og:description" content="A membership for the inner side of living abroad — workshops, a live monthly gathering, a member discount on the workbook library, and a community that gets it. Join The Circle.">
+<meta property="og:title" content="The Circle | The Grounded Expat">
+<meta property="og:description" content="You don&rsquo;t have to explain yourself here. A small, steady membership for the inner side of living abroad.">
 <meta property="og:url" content="https://thegroundedexpat.com/the-circle/">
 <meta property="og:site_name" content="The Grounded Expat">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The Circle — The Grounded Expat">
+<meta name="twitter:title" content="The Circle | The Grounded Expat">
 <meta name="twitter:description" content="A membership for the inner side of living abroad. Join The Circle.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -84,6 +84,13 @@ img{max-width:100%}
 .inside .it h4{font-family:var(--serif);font-weight:600;font-size:20px;margin:0 0 5px;line-height:1.18}
 .inside .it p{font-size:15px;color:var(--muted);margin:0;line-height:1.55}
 
+/* example questions */
+.questions{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:clamp(34px,4vw,52px)}
+.question{background:var(--cream);border:1px solid var(--line);border-radius:16px;padding:24px;text-align:left}
+.question p{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.4;margin:0;color:var(--pine)}
+.question p::before{content:"\201C";color:var(--clay)}
+.question p::after{content:"\201D";color:var(--clay)}
+
 /* who */
 .who{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(34px,4vw,52px)}
 .who .item{border-top:2px solid var(--clay);padding-top:18px}
@@ -118,16 +125,16 @@ img{max-width:100%}
 .foot .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#9C9587}
 
 @media(max-width:820px){
-  .inside,.who,.perks{grid-template-columns:1fr 1fr}
+  .inside,.who,.perks,.questions{grid-template-columns:1fr 1fr}
   .perks{grid-template-columns:1fr}
 }
 @media(max-width:560px){
   body{font-size:16px}
-  .inside,.who{grid-template-columns:1fr}
+  .inside,.who,.questions{grid-template-columns:1fr}
   .inside .it{flex-basis:100%}
   .site-head .btn{padding:10px 18px;font-size:14px}
 }
-/* centered content (matches homepage) — header/footer untouched */
+/* centered content (matches homepage); header/footer untouched */
 .hero .wrap,.section .wrap{text-align:center}
 .hero h1,.hero .lead,.section h2,.section .sub{margin-left:auto;margin-right:auto}
 .hero .signup{margin-left:auto;margin-right:auto}
@@ -140,7 +147,7 @@ img{max-width:100%}
 
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="The Grounded Expat — home">
+    <a class="brand" href="/" aria-label="The Grounded Expat, home">
       <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
       <span><span class="the">The</span> Grounded <b>Expat</b></span>
     </a>
@@ -163,11 +170,11 @@ img{max-width:100%}
 <section class="hero">
   <span class="halo" aria-hidden="true"></span>
   <div class="wrap">
-    <div class="kicker"><span class="seed"></span>The Circle &middot; Membership &mdash; now open</div>
-    <h1>A community that goes <em>wherever you do</em>.</h1>
-    <p class="lead">The Circle is a membership for the inner side of living abroad: a steady monthly rhythm of workshops, 40% off the whole workbook library, and a warm, always-on community of people who genuinely get it. The doors are open. Come in.</p>
+    <div class="kicker"><span class="seed"></span>The Circle &middot; Membership now open</div>
+    <h1>You don&rsquo;t have to <em>explain yourself</em> here.</h1>
+    <p class="lead">Everyone says, &ldquo;How exciting.&rdquo; Almost no one asks how you&rsquo;re really doing.</p>
     <div class="signup" id="join">
-      <a class="btn btn--clay" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle &mdash; $19/month</a>
+      <a class="btn btn--clay" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle, $19/month</a>
       <p class="note">Cancel anytime &middot; a real say in what The Circle becomes.</p>
     </div>
   </div>
@@ -175,33 +182,44 @@ img{max-width:100%}
 
 <section class="strip">
   <div class="wrap">
-    <p>Living abroad can make life feel both incredibly full and unexpectedly lonely. The Circle is where you don&rsquo;t have to carry that alone.</p>
+    <p>A small, steady place for the parts of living abroad that don&rsquo;t fit into the answer you give everyone else.</p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="kicker"><span class="seed"></span>Why a circle</div>
-    <h2>Everyone says, &ldquo;How exciting.&rdquo; Almost no one asks how you&rsquo;re really doing.</h2>
-    <p class="sub">The people back home don&rsquo;t quite understand. The people around you are still finding their way into your life. And somewhere between the two, you&rsquo;re left carrying the homesickness, the second-guessing, the loneliness, and the quiet grief that doesn&rsquo;t always have a name.</p>
-    <p class="sub">So you smile. You cope. You keep going.</p>
-    <p class="sub"><b>The Circle is a place where you don&rsquo;t have to do that alone.</b></p>
-    <p class="sub">A small, steady community for people living abroad, where the in-between is understood, the complicated feelings have somewhere to go, and you don&rsquo;t have to explain why something that was supposed to be exciting can also be hard.</p>
-    <p class="sub">Here, you can just be honest about where you are.</p>
+    <div class="kicker"><span class="seed"></span>Why The Circle</div>
+    <h2>There&rsquo;s more to say than &ldquo;It&rsquo;s great.&rdquo;</h2>
+    <p class="sub">The people back home don&rsquo;t quite understand. The people around you are still finding their way into your life. You can love where you are and still miss the people, ease, and version of yourself you left behind.</p>
+    <p class="sub">The Circle is a small, steady community for that honest middle. You can talk about what&rsquo;s hard without first proving that you&rsquo;re grateful, and without turning your life into a success story before it feels like one.</p>
+    <p class="sub">You can arrive with the thing you haven&rsquo;t known how to say and start there.</p>
   </div>
 </section>
 
 <section class="section s-alt">
   <div class="wrap">
     <div class="kicker"><span class="seed"></span>What&rsquo;s inside</div>
-    <h2>A monthly rhythm that keeps you grounded.</h2>
-    <p class="sub">Most expat groups run on the good version: the photos, the wins, the answer you give when someone asks how it&rsquo;s going. The Circle is the other one. You can come in having a bad month, and nobody needs you to have turned it around by the end of the thread.</p>
+    <h2>A clinician in your corner.</h2>
+    <p class="sub">I&rsquo;m Stephanie, a licensed clinical social worker who is also living abroad. I&rsquo;m part of the ongoing conversation, not just the person who opens the door. You can bring a question to me in the threads, and I&rsquo;ll respond through the week with care, perspective, and respect for the life you&rsquo;re actually living.</p>
     <div class="inside">
-      <div class="it"><span class="n">1</span><div><h4>A monthly theme &amp; workshop</h4><p>Each month, one focus (culture shock, homesickness, identity, belonging) with a guided workshop you can move through in an evening.</p></div></div>
-      <div class="it"><span class="n">2</span><div><h4>Me, in the threads</h4><p>Post anytime in <em>Ask Stephanie</em> and I answer through the week: the support of a therapist who gets it, without the scheduling or the time zones.</p></div></div>
-      <div class="it"><span class="n">3</span><div><h4>40% off the whole library</h4><p>Every workbook, journal, and kit at a standing member price: 40% off, yours to keep, new ones included as they land.</p></div></div>
-      <div class="it"><span class="n">4</span><div><h4>A community that gets it</h4><p>A calm discussion space, not another noisy feed, with a corner for each theme and room to start your own thread. <a href="/the-circle/community" style="color:var(--clay);font-weight:600;">See inside &rarr;</a></p></div></div>
-      <div class="it"><span class="n">5</span><div><h4>Grounding practices</h4><p>Short audio practices and reflections to steady you between the big moments.</p></div></div>
+      <div class="it"><span class="n">1</span><div><h4>A calm place to talk</h4><p>A discussion space with room for the complicated version, not another noisy feed. <a href="/the-circle/community" style="color:var(--clay);font-weight:600;">Open the member app &rarr;</a></p></div></div>
+      <div class="it"><span class="n">2</span><div><h4>A monthly theme and workshop</h4><p>Each month, one focus such as culture shock, homesickness, identity, or belonging, with a guided workshop you can move through in an evening.</p></div></div>
+      <div class="it"><span class="n">3</span><div><h4>Grounding practices</h4><p>Short audio practices and reflections for the days when buying bread is a project and you need somewhere to begin.</p></div></div>
+      <div class="it"><span class="n">4</span><div><h4>A standing member price</h4><p>Members receive 40% off every workbook, journal, and kit in the library. It&rsquo;s part of the membership, but it isn&rsquo;t the reason to join.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Questions you can bring</div>
+    <h2>You don&rsquo;t need to have the right words.</h2>
+    <p class="sub">These are examples of the kinds of questions you might bring to The Circle, not posts from members.</p>
+    <div class="questions">
+      <div class="question"><p>I chose this move. Why am I still so angry about everything I gave up?</p></div>
+      <div class="question"><p>How do I make friends when I&rsquo;m tired of always being the one who reaches out?</p></div>
+      <div class="question"><p>What do I do with the guilt of missing home when my life here is good?</p></div>
+      <div class="question"><p>How do I know whether this is a hard season or a sign I want to leave?</p></div>
     </div>
   </div>
 </section>
@@ -209,12 +227,12 @@ img{max-width:100%}
 <section class="section s-pine">
   <div class="wrap">
     <div class="kicker"><span class="seed"></span>Who it&rsquo;s for</div>
-    <h2>If you&rsquo;ve built a life somewhere that isn&rsquo;t home yet &mdash; you belong here.</h2>
+    <h2>You might recognize yourself here.</h2>
     <div class="who">
-      <div class="item"><h4>The accompanying partner</h4><p>Rebuilding a sense of self in a place you didn&rsquo;t choose.</p></div>
-      <div class="item"><h4>The long-hauler</h4><p>Years in, and still missing a place that feels fully yours.</p></div>
-      <div class="item"><h4>The digital nomad</h4><p>Free and mobile &mdash; and quietly craving something steady.</p></div>
-      <div class="item"><h4>Anyone starting over</h4><p>Reinventing a life abroad, and wanting people alongside you.</p></div>
+      <div class="item"><h4>You&rsquo;re living someone else&rsquo;s move</h4><p>Their job, their dream, your whole life. You&rsquo;re trying to find where you fit inside it.</p></div>
+      <div class="item"><h4>The excitement has worn off</h4><p>Daily life takes more out of you than it used to, and you&rsquo;re wondering when this starts feeling easier.</p></div>
+      <div class="item"><h4>Your life looks good from home</h4><p>You&rsquo;re grateful for it. You&rsquo;re also lonely, homesick, or not quite yourself.</p></div>
+      <div class="item"><h4>You&rsquo;ve been away for years</h4><p>You&rsquo;ve built a life here and still don&rsquo;t know where home is when someone asks.</p></div>
     </div>
   </div>
 </section>
@@ -236,23 +254,23 @@ img{max-width:100%}
   <div class="wrap">
     <div class="kicker"><span class="seed"></span>The membership</div>
     <h2>Join The Circle.</h2>
-    <p class="sub">The Circle is a small, close group: the people who help shape what it becomes. Join now and your rate is locked for as long as you stay.</p>
+    <p class="sub">The Circle is kept intentionally small. There&rsquo;s room to be known, to ask the unfinished question, and to help shape what the community becomes.</p>
     <div class="perks">
       <div class="perk"><span class="num">01</span><h4>Your rate, locked</h4><p>$19/month, held for as long as you stay.</p></div>
       <div class="perk"><span class="num">02</span><h4>You belong here</h4><p>No performing, no catching up; a place that&rsquo;s yours from the moment you walk in.</p></div>
       <div class="perk"><span class="num">03</span><h4>A say in what&rsquo;s next</h4><p>New themes, new workshops, new tools; members help decide what comes next.</p></div>
     </div>
     <p class="price-line">$19 / month <span>&middot; your rate, locked for life &middot; cancel anytime</span></p>
-    <div style="margin-top:26px;"><a class="btn btn--clay" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle &mdash; $19/month</a></div>
+    <div style="margin-top:26px;"><a class="btn btn--clay" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle, $19/month</a></div>
   </div>
 </section>
 
 <section class="section cta">
   <div class="wrap">
     <h2 class="serif">Come into The Circle.</h2>
-    <p class="lead">A soft landing, a steady rhythm, and people who get it &mdash; whenever you&rsquo;re ready.</p>
+    <p class="lead">A small, steady place where you can tell the truth about living abroad, whenever you&rsquo;re ready.</p>
     <div class="signup" style="max-width:480px;">
-      <a class="btn btn--cream" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle &mdash; $19/month</a>
+      <a class="btn btn--cream" href="https://buy.stripe.com/dRm9AScqFfipc4hcMZ4Ja00" style="font-size:16px;padding:15px 30px;">Join The Circle, $19/month</a>
       <p class="note">Your rate, locked for life &middot; cancel anytime.</p>
     </div>
   </div>
@@ -263,7 +281,7 @@ img{max-width:100%}
 <footer class="foot">
   <div class="wrap">
     <div class="top">
-      <a class="brand" href="/" aria-label="The Grounded Expat — home">
+      <a class="brand" href="/" aria-label="The Grounded Expat, home">
         <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#FBF8F1" stroke-width="2.4" stroke-linecap="round"/></svg>
         <span style="color:var(--cream)"><span style="color:var(--sage)">The</span> Grounded <b>Expat</b></span>
       </a>
@@ -286,7 +304,7 @@ img{max-width:100%}
 <script>
 (function(){
   var ENDPOINT = "/api/submit";
-  var KIT_FORM_ID = "9638944"; // The Grounded Expat — The Circle Waitlist (kit.com)
+  var KIT_FORM_ID = "9638944"; // The Grounded Expat, The Circle Waitlist (kit.com)
   document.querySelectorAll("form.join-form").forEach(function(form){
     var note = form.parentNode.querySelector(".note");
     var btn = form.querySelector("button");
@@ -302,7 +320,7 @@ img{max-width:100%}
       btn.disabled = true; var label = btn.textContent; btn.textContent = "Sending…";
       note.textContent = ""; note.className = "note";
 
-      // Add the subscriber to Kit (ConvertKit) — The Circle waitlist form — fire-and-forget.
+      // Add the subscriber to Kit (ConvertKit), The Circle waitlist form, fire-and-forget.
       // Kept separate from the free-journal list so the founding list can be emailed on its own.
       // Never blocks or breaks the signup if Kit is unreachable.
       if (KIT_FORM_ID) {
@@ -321,15 +339,15 @@ img{max-width:100%}
         .then(function(res){
           if(res.ok){
             form.reset();
-            note.innerHTML = 'You&rsquo;re on the founding list. 🌿 I&rsquo;ll email you the moment The Circle opens &mdash; with your founding rate held.';
+            note.innerHTML = 'You&rsquo;re on the founding list. I&rsquo;ll email you the moment The Circle opens, with your founding rate held.';
             note.className = "note ok";
           } else {
-            note.textContent = "Something went wrong — please try again in a moment.";
+            note.textContent = "Something went wrong. Please try again in a moment.";
             note.className = "note err";
           }
         })
         .catch(function(){
-          note.textContent = "Couldn’t reach the server — please try again.";
+          note.textContent = "Couldn’t reach the server. Please try again.";
           note.className = "note err";
         })
         .finally(function(){ btn.disabled = false; btn.textContent = label; });
