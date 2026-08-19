@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Start here &middot; The Grounded Expat</title>
+<meta name="description" content="You don't need to know exactly what's wrong. You just need to know what's feeling hard. A place to find where you are and what might help.">
+<link rel="canonical" href="https://thegroundedexpat.com/start-here/">
+<meta name='impact-site-verification' value='115f34f0-f23f-403c-bf4b-25c2f82f088e'>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Start here &middot; The Grounded Expat">
+<meta property="og:description" content="You don't need to know exactly what's wrong. You just need to know what's feeling hard.">
+<meta property="og:url" content="https://thegroundedexpat.com/start-here/">
+<meta property="og:site_name" content="The Grounded Expat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Start here &middot; The Grounded Expat">
+<meta name="twitter:description" content="Find where you are, and what might actually help.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --pine:#2F4539;--pine-deep:#243529;--clay:#C2674A;--clay-deep:#A8513620;
+  --oat:#F6F1E7;--oat-alt:#EFE5D5;--sage:#8C9B82;--ink:#2A2622;--cream:#FBF8F1;
+  --muted:#6E6557;--line:rgba(42,38,34,.13);--line-light:rgba(251,248,241,.22);
+  --serif:'Fraunces',Georgia,serif;--sans:'Figtree',-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--oat);color:var(--ink);font-family:var(--sans);line-height:1.65;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+.serif{font-family:var(--serif)}
+.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--clay)}
+.kicker .seed{width:8px;height:8px;border-radius:50%;background:var(--clay);position:relative;flex:none}
+.kicker .seed::after{content:"";position:absolute;left:-3px;top:9px;width:14px;height:1.5px;background:var(--clay);opacity:.55}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;border:1.5px solid var(--pine);background:var(--pine);color:var(--cream);cursor:pointer;transition:transform .12s ease,opacity .12s ease}
+.btn:hover{transform:translateY(-1px);opacity:.93}
+.btn--clay{background:var(--clay);border-color:var(--clay)}
+.btn--ghost{background:transparent;color:var(--pine)}
+.btn--cream{background:var(--cream);border-color:var(--cream);color:var(--pine)}
+
+/* header */
+.site-head{position:sticky;top:0;z-index:20;background:rgba(246,241,231,.86);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--line)}
+.site-head .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.site-nav{display:flex;align-items:center;gap:24px}
+.nav-link{font-weight:600;font-size:15px;color:var(--pine);transition:color .12s ease}
+.nav-link:hover{color:var(--clay)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:21px;font-weight:600;color:var(--pine);letter-spacing:.01em}
+.brand .mark{width:26px;height:26px;flex:none}
+.brand b{font-weight:600}
+.brand .the{color:var(--sage);font-weight:500}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:clamp(64px,9vw,118px) 0 clamp(56px,7vw,92px)}
+.hero .halo{position:absolute;right:-160px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle at 50% 50%,rgba(194,103,74,.16),rgba(194,103,74,0) 68%);pointer-events:none}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,6.6vw,86px);line-height:1.01;letter-spacing:-.015em;margin:20px 0 0;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--clay)}
+.hero .brandline{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(22px,2.8vw,32px);color:var(--pine);margin:18px 0 0;letter-spacing:-.01em;line-height:1.22}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--muted);max-width:50ch;margin:24px 0 0;line-height:1.6}
+.hero .lead--sub{font-size:clamp(15.5px,1.25vw,17.5px);margin-top:16px;opacity:.92}
+.signup{margin-top:34px;max-width:480px}
+.signup form{display:flex;gap:10px;flex-wrap:wrap}
+.signup input[type=email]{flex:1 1 220px;font-family:var(--sans);font-size:16px;padding:14px 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--cream);color:var(--ink)}
+.signup input[type=email]:focus{outline:none;border-color:var(--pine)}
+.signup .note{font-size:13.5px;color:var(--muted);margin:12px 2px 0;min-height:1.2em}
+.signup .note.ok{color:var(--pine);font-weight:600}
+.signup .note.err{color:#9a3a2a;font-weight:600}
+.signup .browse{margin:14px 2px 0;font-size:15px}
+.signup .browse a{color:var(--clay);font-weight:600;border-bottom:1.5px solid rgba(194,103,74,.35);padding-bottom:1px}
+.signup .browse a:hover{border-bottom-color:var(--clay)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+/* credibility strip */
+.strip{background:var(--pine);color:var(--cream)}
+.strip .wrap{padding:26px 28px;display:flex;align-items:center;gap:18px;justify-content:center;text-align:center}
+.strip p{margin:0;font-size:clamp(15px,1.5vw,18px);font-family:var(--serif);font-weight:400;font-style:italic;color:#EDEAE0;max-width:74ch;line-height:1.5}
+.strip b{font-style:normal;font-weight:600;color:var(--cream)}
+
+/* sections */
+.section{padding:clamp(58px,7.5vw,104px) 0}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,3.7vw,50px);line-height:1.06;letter-spacing:-.01em;margin:14px 0 0;max-width:20ch}
+.section .sub{font-size:17px;color:var(--muted);max-width:54ch;margin:16px 0 0}
+.s-alt{background:var(--oat-alt)}
+.s-pine{background:var(--pine);color:var(--cream)}
+.s-pine h2{color:var(--cream)}.s-pine .sub{color:#D8D3C6}.s-pine .kicker{color:var(--clay)}
+
+/* coming-soon cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:clamp(34px,4vw,52px);max-width:760px}
+.card{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:30px 28px 26px;display:flex;flex-direction:column}
+.card .tag{align-self:flex-start;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--clay);background:rgba(194,103,74,.12);padding:5px 11px;border-radius:999px}
+.card h3{font-family:var(--serif);font-weight:600;font-size:25px;margin:18px 0 0;line-height:1.12}
+.card p{font-size:15px;color:var(--muted);margin:10px 0 0;line-height:1.55}
+.card .price{margin-top:auto;padding-top:20px;font-family:var(--serif);font-size:20px;color:var(--pine);font-weight:600}
+.card .price span{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:500}
+
+/* releases grid */
+.rel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(30px,4vw,46px)}
+.rel a,.rel div{display:flex;align-items:center;gap:13px;background:var(--cream);border:1px solid var(--line);border-radius:13px;padding:17px 19px;font-weight:500;font-size:15.5px}
+.rel .dot{width:9px;height:9px;border-radius:50%;background:var(--sage);flex:none}
+
+/* who it's for */
+.who{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:clamp(34px,4vw,52px)}
+.who .item{border-top:2px solid var(--clay);padding-top:18px}
+.who .item h4{font-family:var(--serif);font-weight:600;font-size:20px;margin:0 0 6px}
+.who .item p{font-size:14.5px;color:#CFC9BC;margin:0;line-height:1.5}
+
+/* about */
+.about{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,4vw,56px);align-items:center}
+.avatar{width:128px;height:128px;border-radius:50%;background:var(--pine);color:var(--cream);font-family:var(--serif);font-size:46px;font-weight:500;display:flex;align-items:center;justify-content:center;flex:none;object-fit:cover}
+.about p{font-size:17px;line-height:1.7;color:var(--ink);margin:0 0 14px;max-width:60ch}
+.about .name{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--pine)}
+
+/* final cta */
+.cta{background:var(--clay);color:var(--cream);text-align:center}
+.cta h2{color:var(--cream);margin:0 auto;max-width:18ch}
+.cta .signup{margin:30px auto 0}
+.cta input[type=email]{border-color:transparent}
+.cta .note{color:#FBEFE9}.cta .note.ok{color:#fff}
+
+/* centered layout */
+.hero .wrap,.section .wrap{text-align:center}
+.hero h1,.hero .lead,.hero .brandline{margin-left:auto;margin-right:auto}
+.hero .signup{margin-left:auto;margin-right:auto}
+.signup form{justify-content:center}
+.section h2,.section .sub{margin-left:auto;margin-right:auto}
+.cards{margin-left:auto;margin-right:auto}
+.card{align-items:center;text-align:center}
+.card .tag{align-self:center}
+.about{display:flex;flex-direction:column;align-items:center;text-align:center}
+.about p{margin-left:auto;margin-right:auto}
+
+/* footer */
+.foot{background:var(--pine-deep);color:#CFC9BC;font-size:14px}
+.foot .wrap{padding:54px 28px 40px}
+.foot .top{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid var(--line-light);padding-bottom:26px;margin-bottom:22px}
+.foot .brand{color:var(--cream)}
+.foot a:hover{color:var(--cream)}
+.foot .links{display:flex;gap:22px;flex-wrap:wrap}
+.foot .disc{font-size:12.5px;line-height:1.6;color:#9C9587;max-width:80ch;margin:0 0 18px}
+.foot .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:#9C9587}
+
+@media(max-width:820px){
+  .cards,.who{grid-template-columns:1fr 1fr}
+  .rel{grid-template-columns:1fr 1fr}
+  .about{text-align:center}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .cards,.who,.rel{grid-template-columns:1fr}
+  .site-head .btn{padding:10px 18px;font-size:14px}
+  .site-nav{gap:16px}
+  .nav-link{font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="The Grounded Expat — home">
+      <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#2F4539" stroke-width="2.4" stroke-linecap="round"/></svg>
+      <span><span class="the">The</span> Grounded <b>Expat</b></span>
+    </a>
+    <nav class="site-nav">
+      <a href="/about/" class="nav-link">About</a>
+      <a href="/the-circle" class="nav-link">The Circle</a>
+      <a href="/work-with-me/" class="nav-link">Work with me</a>
+      <a href="/journals/" class="nav-link">Library</a>
+      <a href="/kits/" class="nav-link">Kits</a>
+      <a href="/bundles/" class="nav-link">Bundles</a>
+      <a href="/articles/" class="nav-link">Notes</a>
+      <a class="btn btn--clay" href="#join">Start free</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="halo"></div>
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Start here</div>
+    <h1>You don&rsquo;t have to know what&rsquo;s wrong.</h1>
+    <p class="lead">You just have to know what&rsquo;s feeling hard.</p>
+    <p class="lead lead--sub">Find the one below that sounds most like you at the moment. Each one points at a place to start, not a whole program. If two of them sound like you, that&rsquo;s normal. Pick either.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="cards" style="max-width:960px">
+      <div class="card" id="before-you-go">
+        <span class="tag">Before you go</span>
+        <h3>I&rsquo;m thinking about moving</h3>
+        <p>You keep imagining it. You&rsquo;re also quietly working out what it might cost you, and who you&rsquo;d be leaving behind.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/kits/charting-the-course/" style="color:var(--clay);font-weight:600">Charting the Course</a> <span style="color:var(--muted)">&middot; for the deciding stage, when the whole thing feels too big to hold</span></li>
+        <li style="margin-bottom:8px"><a href="/articles/how-to-prepare-to-move-abroad/" style="color:var(--clay);font-weight:600">How to prepare to move abroad</a> <span style="color:var(--muted)">&middot; the practical and the quieter part</span></li>
+        </ul>
+      </div>
+      <div class="card" id="leaving">
+        <span class="tag">Before you go</span>
+        <h3>I&rsquo;m leaving soon</h3>
+        <p>The goodbyes, the guilt, and the strange grief of the last few weeks. The part everyone rushes past.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/goodbye-journal/" style="color:var(--clay);font-weight:600">The Goodbye Journal</a> <span style="color:var(--muted)">&middot; free</span></li>
+        <li style="margin-bottom:8px"><a href="/kits/casting-off/" style="color:var(--clay);font-weight:600">Casting Off</a> <span style="color:var(--muted)">&middot; leaving well, when it&rsquo;s more than logistics</span></li>
+        </ul>
+      </div>
+      <div class="card" id="just-arrived">
+        <span class="tag">Arriving</span>
+        <h3>I just got here</h3>
+        <p>Everything is new, including the things that shouldn&rsquo;t be. Buying bread is a project. So is you.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/first-7-days/" style="color:var(--clay);font-weight:600">Your First 7 Days Abroad</a> <span style="color:var(--muted)">&middot; free, one small page a day</span></li>
+        <li style="margin-bottom:8px"><a href="/kits/the-grounding-kit/" style="color:var(--clay);font-weight:600">The Grounding Kit</a> <span style="color:var(--muted)">&middot; your first 90 days, held</span></li>
+        </ul>
+      </div>
+      <div class="card" id="shine-worn-off">
+        <span class="tag">The hard middle</span>
+        <h3>The excitement has worn off</h3>
+        <p>The shine is gone and you&rsquo;re quietly wondering if you made a mistake. It&rsquo;s the most normal and least talked-about part of the whole arc.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/month-3-dip/" style="color:var(--clay);font-weight:600">The Month-3 Dip</a> <span style="color:var(--muted)">&middot; free</span></li>
+        <li style="margin-bottom:8px"><a href="/kits/rough-waters/" style="color:var(--clay);font-weight:600">Rough Waters</a> <span style="color:var(--muted)">&middot; for the homesickness, the doubt, and the exhaustion underneath</span></li>
+        </ul>
+      </div>
+      <div class="card" id="missing-home">
+        <span class="tag">The hard middle</span>
+        <h3>I miss home</h3>
+        <p>You don&rsquo;t necessarily want to go back. You miss the people, the ease, and the version of yourself who lived there.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/goodbye-journal/" style="color:var(--clay);font-weight:600">The Goodbye Journal</a> <span style="color:var(--muted)">&middot; free, for loving people from far away</span></li>
+        <li style="margin-bottom:8px"><a href="/articles/how-to-deal-with-homesickness-abroad/" style="color:var(--clay);font-weight:600">How to deal with homesickness abroad</a></li>
+        </ul>
+      </div>
+      <div class="card" id="lonely">
+        <span class="tag">The hard middle</span>
+        <h3>I&rsquo;m lonely</h3>
+        <p>You&rsquo;re meeting people. You just haven&rsquo;t found your people. You&rsquo;re not cursed, it&rsquo;s genuinely hard.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/making-friends/" style="color:var(--clay);font-weight:600">Making Friends in a New Country</a> <span style="color:var(--muted)">&middot; free</span></li>
+        <li style="margin-bottom:8px"><a href="/journals/finding-your-people-abroad/" style="color:var(--clay);font-weight:600">Finding Your People Abroad</a> <span style="color:var(--muted)">&middot; a step-by-step path from lonely to a life full of people</span></li>
+        </ul>
+      </div>
+      <div class="card" id="burnout">
+        <span class="tag">The hard middle</span>
+        <h3>I&rsquo;m exhausted</h3>
+        <p>Not tired from one bad week. The deep, cumulative exhaustion of adapting all day, every day, in a place that doesn&rsquo;t run on your defaults.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/journals/the-expat-burnout-workbook/" style="color:var(--clay);font-weight:600">The Expat Burnout Workbook</a> <span style="color:var(--muted)">&middot; name where your energy goes and rebuild a pace you can sustain</span></li>
+        <li style="margin-bottom:8px"><a href="/articles/expat-burnout-signs-and-recovery/" style="color:var(--clay);font-weight:600">Expat burnout, and what actually helps</a></li>
+        </ul>
+      </div>
+      <div class="card" id="identity">
+        <span class="tag">Becoming</span>
+        <h3>I don&rsquo;t feel like myself</h3>
+        <p>The old routines, roles and sources of confidence don&rsquo;t quite fit anymore, and you&rsquo;re not sure who the new version is yet.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/journals/rootless-finding-home-within/" style="color:var(--clay);font-weight:600">Rootless: Finding Home Within</a> <span style="color:var(--muted)">&middot; belonging everywhere and nowhere</span></li>
+        <li style="margin-bottom:8px"><a href="/articles/the-expat-identity-crisis/" style="color:var(--clay);font-weight:600">The expat identity crisis</a></li>
+        </ul>
+      </div>
+      <div class="card" id="partner">
+        <span class="tag">Relationships</span>
+        <h3>I moved for someone else</h3>
+        <p>Their job, their dream, your whole life. The grief and the invisible work of it rarely get named out loud.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/journals/the-partners-journal/" style="color:var(--clay);font-weight:600">The Partner&rsquo;s Journal</a> <span style="color:var(--muted)">&middot; your grief, your invisible work, your becoming</span></li>
+        <li style="margin-bottom:8px"><a href="/journals/the-expat-marriage-workbook/" style="color:var(--clay);font-weight:600">The Expat Marriage Workbook</a> <span style="color:var(--muted)">&middot; for facing it together</span></li>
+        </ul>
+      </div>
+      <div class="card" id="nomad">
+        <span class="tag">Life on the move</span>
+        <h3>I&rsquo;m living on the move</h3>
+        <p>You can go anywhere. Some days that&rsquo;s freedom and some days you&rsquo;ve lost the thread of what it&rsquo;s all for.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/journals/the-digital-nomad-journal/" style="color:var(--clay);font-weight:600">The Digital Nomad Journal</a> <span style="color:var(--muted)">&middot; the freedom, the drift, and the reckoning</span></li>
+        <li style="margin-bottom:8px"><a href="/kits/open-water/" style="color:var(--clay);font-weight:600">Open Water</a> <span style="color:var(--muted)">&middot; the whole emotional arc, six journals deep</span></li>
+        </ul>
+      </div>
+      <div class="card" id="going-home">
+        <span class="tag">Going home</span>
+        <h3>I&rsquo;m going home</h3>
+        <p>Going back isn&rsquo;t going back. You&rsquo;re not the person who left, and home didn&rsquo;t stay still either.</p>
+        <ul style="list-style:none;padding:0;margin:18px 0 0;font-size:15px;line-height:1.5">
+        <li style="margin-bottom:8px"><a href="/journals/the-repatriation-workbook/" style="color:var(--clay);font-weight:600">The Repatriation Workbook</a> <span style="color:var(--muted)">&middot; for coming home a different person than the one who left</span></li>
+        <li style="margin-bottom:8px"><a href="/articles/reverse-culture-shock-coming-home/" style="color:var(--clay);font-weight:600">Reverse culture shock</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section s-pine">
+  <div class="wrap">
+    <div class="kicker"><span class="seed"></span>Not sure what you need</div>
+    <h2>Then don&rsquo;t start by choosing.</h2>
+    <p class="sub">Write down what&rsquo;s actually going on, in whatever shape it comes out. It doesn&rsquo;t have to be clear or make sense yet. You&rsquo;ll get one question back to take a little deeper.</p>
+    <p class="sub">No diagnosis. No advice. No fixing.</p>
+    <div style="margin-top:28px">
+      <a class="btn btn--cream" href="/reflect/" style="font-size:16px;padding:15px 30px;">Reflect with me &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="section s-alt">
+  <div class="wrap">
+    <h2>If you&rsquo;d rather not do this on your own.</h2>
+    <div class="cards">
+      <div class="card">
+        <span class="tag">With others</span>
+        <h3>The Circle</h3>
+        <p>A small, steady place for people living abroad, where the in-between is understood and you don&rsquo;t have to explain why something you chose can still be hard.</p>
+        <p style="margin-top:18px"><a href="/the-circle" style="color:var(--clay);font-weight:600">Come into The Circle &rarr;</a></p>
+      </div>
+      <div class="card">
+        <span class="tag">With me</span>
+        <h3>Work with me</h3>
+        <p>One to one coaching, by video, wherever you are. Start with a free fifteen minutes and no obligation to continue.</p>
+        <p style="margin-top:18px"><a href="/work-with-me/" style="color:var(--clay);font-weight:600">See how it works &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section cta">
+  <div class="wrap">
+    <h2>Or just start free.</h2>
+    <p class="sub" style="color:#FBEFE9">Four guided journals. Yours to keep, private to your device.</p>
+    <div class="signup" id="join">
+      <form class="join-form" novalidate aria-label="Open the free journals">
+        <input type="email" name="email" required placeholder="your@email.com" aria-label="Email address" autocomplete="email">
+        <input type="hidden" name="_form" value="grounded-waitlist">
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Open the free journals</button>
+      </form>
+      <p class="note" role="status" aria-live="polite">Free to start. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <a class="brand" href="/" aria-label="The Grounded Expat — home">
+        <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="13" r="8.5" fill="#C2674A"/><path d="M5 24h22" stroke="#FBF8F1" stroke-width="2.4" stroke-linecap="round"/></svg>
+        <span style="color:var(--cream)"><span style="color:var(--sage)">The</span> Grounded <b>Expat</b></span>
+      </a>
+      <div class="links">
+        <a href="/journals/">Journals</a>
+        <a href="mailto:hello@thegroundedexpat.com">hello@thegroundedexpat.com</a>
+      </div>
+    </div>
+    <p class="disc">The Grounded Expat offers educational, self-reflection resources, not therapy, treatment, diagnosis, or a crisis service. If you or someone you know is in crisis, contact local emergency services or a crisis line immediately.</p>
+    <div class="legal">
+      <div>&copy; 2026 The Grounded Expat</div>
+      <div>Made with care for people far from home.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ENDPOINT = "/api/submit";
+  var KIT_FORM_ID = "9638627"; // The Grounded Expat — Free Journal (kit.com)
+  document.querySelectorAll("form.join-form").forEach(function(form){
+    var note = form.parentNode.querySelector(".note");
+    var btn = form.querySelector("button");
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var email = (form.email.value || "").trim();
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+        note.textContent = "Please enter a valid email address.";
+        note.className = "note err"; return;
+      }
+      if(form._gotcha && form._gotcha.value){ return; } // honeypot
+      var data = {}; new FormData(form).forEach(function(v,k){ data[k]=v; });
+      btn.disabled = true; var label = btn.textContent; btn.textContent = "Sending…";
+      note.textContent = ""; note.className = "note";
+
+      // Add the subscriber to Kit (ConvertKit) for the mailing list — fire-and-forget.
+      // The on-site journal delivery below stays the primary flow; Kit just stores the lead
+      // so it can be emailed later. Never blocks or breaks the signup if Kit is unreachable.
+      if (KIT_FORM_ID) {
+        try {
+          var kitData = new FormData();
+          kitData.append("email_address", email);
+          if (data.name) { kitData.append("fields[first_name]", data.name); }
+          fetch("https://app.kit.com/forms/" + KIT_FORM_ID + "/subscriptions", {
+            method: "POST", headers: { "Accept": "application/json" }, body: kitData
+          });
+        } catch (e) { /* best-effort only */ }
+      }
+
+      fetch(ENDPOINT, {method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)})
+        .then(function(r){ return r.json().catch(function(){return {};}).then(function(j){ return {ok:r.ok&&j.ok, j:j}; }); })
+        .then(function(res){
+          if(res.ok){
+            try{localStorage.setItem('tge-gate-unlocked','1');}catch(e){}
+            form.reset();
+            note.innerHTML = 'You’re in! Your free journals are ready — <a href="/journals/" style="color:inherit;font-weight:600;text-decoration:underline">start reading here →</a>';
+            note.className = "note ok";
+          } else {
+            note.textContent = "Something went wrong — please try again in a moment.";
+            note.className = "note err";
+          }
+        })
+        .catch(function(){
+          note.textContent = "Couldn’t reach the server — please try again.";
+          note.className = "note err";
+        })
+        .finally(function(){ btn.disabled = false; btn.textContent = label; });
+    });
+  });
+})();
+</script>
+</body>
+</html>
