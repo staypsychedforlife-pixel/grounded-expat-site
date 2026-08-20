@@ -141,6 +141,15 @@ img{max-width:100%}
 .inside .it{flex:0 1 calc(50% - 17px);flex-direction:column;align-items:center;text-align:center}
 .perk{align-items:center;text-align:center}
 @media(max-width:560px){.inside .it{flex-basis:100%}}
+
+/* nav fits at tablet/small-laptop widths; 8 items + a wide CTA overflow otherwise */
+.nav-link{white-space:nowrap}
+.brand{white-space:nowrap}
+@media(max-width:1120px){.site-nav{gap:14px}.site-nav .nav-link{font-size:13.5px}}
+@media(max-width:960px){.site-nav{gap:11px}.site-nav .nav-link{font-size:13px}.site-head .btn{padding:9px 14px;font-size:13px}}
+.site-head .wrap{gap:20px}
+.site-head .btn{white-space:nowrap}
+@media(max-width:1120px){.site-head .btn{padding:9px 15px;font-size:13.5px}}
 </style>
 </head>
 <body>
